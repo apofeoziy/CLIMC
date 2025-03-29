@@ -1,0 +1,26 @@
+{
+    "model": {
+        "type": "range_dispatch",
+        "property": "custom_model_data",
+        "fallback": {
+            "type": "model",
+            "model": "item/light_blue_dye"
+        },
+        "entries": [
+            {
+                "threshold": 8892300,
+                "model": {
+                    "type": "model",
+                    "model": "item/materials/diamond_dust"
+                }
+            },
+            {
+                "threshold": 8892301,
+                "model": {
+                    "type": "model",
+                    "model": "item/materials/diamond_shard"
+                }
+            }
+        ]
+    }
+}

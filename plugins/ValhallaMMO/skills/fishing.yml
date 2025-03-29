@@ -1,0 +1,17 @@
+display_name: <lang.skill-fishing-displayname>
+icon: FISHING_ROD
+icon_data: 3510001
+description: <lang.skill-fishing-description>
+
+levelbar_title: <lang.skill-fishing-level-bar>
+levelbar_color: GREEN # Вы можете выбрать между BLUE, YELLOW, GREEN, PINK, PURPLE, RED, WHITE
+levelbar_style: SEGMENTED_6 # Вы можете выбрать между SEGMENTED_6, SEGMENTED_10, SEGMENTED_12, SEGMENTED_20 и SOLID
+
+forgiving_multipliers: true # множители дропа ниже 0 будут, если false, иногда приводить к тому, что при рыбалке ничего не будет выпадать.
+# если true, количество дропа не может быть ниже 1.
+# Это можно установить на false, если вы хотите более гриндовый опыт для ваших игроков, хотя это может быть разочаровывающим для них
+
+# Чтобы избежать необходимости сканировать весь инвентарь игрока на предмет предметов с определенными свойствами, я попрошу вас указать плагину,
+# какие предметы он должен сканировать. Рекомендуется, чтобы это был не очень распространенный предмет, но это не имеет большого значения
+fishing_bait_materials:
+- FIREWORK_STAR

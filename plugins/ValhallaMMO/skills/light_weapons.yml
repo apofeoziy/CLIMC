@@ -1,0 +1,20 @@
+display_name: <lang.skill-light-weapons-displayname>
+icon: IRON_SWORD
+icon_data: 3510001
+description: <lang.skill-light-weapons-description>
+
+levelbar_title: <lang.skill-light-weapons-level-bar>
+levelbar_color: YELLOW # Вы можете выбрать между BLUE, YELLOW, GREEN, PINK, PURPLE, RED, WHITE
+levelbar_style: SEGMENTED_6 # Вы можете выбрать между SEGMENTED_6, SEGMENTED_10, SEGMENTED_12, SEGMENTED_20 и SOLID
+
+# Типы предметов, которые можно наносить на оружие для передачи эффектов зелий. Обычно это должны быть только зелья, но если вы хотите
+# сделать применимыми предметы пищи, вы тоже можете это сделать.
+valid_coating_items:
+- POTION
+- SPLASH_POTION
+- LINGERING_POTION
+- SNOWBALL
+
+dual_wielding_bonus: true # Если true, игроки получат бонус к скорости атаки и снижение иммунитета при использовании двух легких оружий, но потеряют возможность парировать
+dual_wielding_attack_speed: 0.2 # Бонус к скорости атаки, который игроки получают при использовании двух легких оружий
+dual_wielding_immunity_reduction: 0.2 # Бонус к снижению иммунитета, который игроки получают при использовании двух легких оружий

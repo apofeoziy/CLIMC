@@ -1,0 +1,168 @@
+enabled: true # Если отключено, вся функциональность группы отключена
+item_sharing: true # Если отключено, обмен предметами будет невозможен
+exp_sharing: true # Если отключено, обмен опытом будет невозможен
+
+party_company_radius: 30 # Стандартный радиус, в котором члены группы будут считаться "поблизости от вас"
+party_exp_rate: 0.001 # Доля опыта, полученного с хотя бы 1 членом группы поблизости, которая идет в вашу группу.
+# Пример: если вы получаете 1000 опыта с членом группы поблизости, ваша группа продвинется на 1 опыт. Учитывается только опыт, полученный навыками (не обмен опытом или команды)
+
+party_creation_cooldown: 86400000 # Перезарядка для создания группы, чтобы нельзя было спамить (по умолчанию 1 день)
+item_share_cooldown: 3600000 # Перезарядка между обменами предметами (по умолчанию 1 час)
+party_rename_cooldown: 86400000 # Перезарядка между переименованиями группы, чтобы один игрок не мог спамить (по умолчанию 1 день)
+party_description_change_cooldown: 3600000 # Перезарядка между изменениями описания, чтобы один игрок не мог спамить (по умолчанию 1 час)
+
+legal_characters_regex: ^[ a-zA-Z0-9&]+$ # Определяет разрешенные символы в названиях и описаниях.
+# Требует знания регулярных выражений, если вы хотите настроить его, но по умолчанию это просто буквы, цифры, пробелы и символ &
+name_character_minimum: 2
+name_character_maximum: 32 # Ограничение длины названий группы
+description_character_maximum: 256 # Ограничение длины описаний группы
+# Если true, создатели группы могут добавлять цвета в название группы
+# Если true, создатели группы могут добавлять цвета в описание группы
+
+party_chat_format: '&2[PC] &a[%rank%&a] %s &f> %s'
+party_spy_format: '&4[PS] &c[%party%] %s &7> %s'
+party_info_format:
+- <lang.party-info-format>
+
+party_levelup_format: '&6%party% &eповысил уровень до &6%level%&e!' # Другие допустимые плейсхолдеры: %level_numeric% и %level_roman%
+
+defaults:
+  party_capacity: 5 # Стандартная вместимость группы
+  party_chat: true # Если false, группы не смогут использовать чат группы по умолчанию
+  exp_sharing: false # Если false, обмен опытом в группе будет отключен по умолчанию
+  exp_sharing_radius: 25 # Стандартный радиус обмена опытом
+  exp_sharing_multiplier: 0.8 # Стандартная доля обмена опытом. Опыт, полученный с обменом, будет дополнительно умножен на данное значение
+  item_sharing: false # Если false, обмен предметами в группе будет отключен по умолчанию
+  item_sharing_radius: 50 # Если -1, радиус будет считаться бесконечным и может пересекать измерения.
+  company_radius: 20 # Стандартный радиус, в котором вы считаетесь "в компании" с членами вашей группы
+  company_member_cap: 5 # Максимальное количество членов, от которых могут быть получены бонусы "в компании". По умолчанию это означает +25% бонус к лечению при максимуме
+  name_colors: false
+  description_colors: false
+  rename_party: false
+
+default_company_stats: # Стандартные бонусы к характеристикам, предоставляемые каждому члену группы "в компании" с другим членом группы, *за* каждого члена группы поблизости.
+  # Например, с 3 членами группы поблизости вы получаете +15% к лечению
+  HEALTH_REGENERATION_BONUS: 0.05
+
+levels: # Они должны быть в порядке, начинаться с 0, и не иметь пропусков в уровнях (3-2-1-0 плохо, 3-1-2-0 плохо, 0-1-3 плохо, 0-1-2-3 хорошо)
+  '0': # Уровень 0 всегда будет стоить 0 опыта и иметь стандартные характеристики, независимо от того, что указано.
+    name: <lang.party-level-0>
+  '1':
+    name: <lang.party-level-1>
+    exp_required: 500 # Количество опыта, необходимое для перехода с уровня 0 на уровень 1. Поскольку 1% опыта навыков конвертируется в опыт группы, для достижения этого уровня требуется 50 000 общего опыта.
+    party_capacity: 5 # Награды добавляются *поверх* предыдущих уровней или, в данном случае, по умолчанию, так что в этом случае вместимость группы увеличивается до 10 после достижения уровня 1
+    exp_sharing: true # Начинается с 80% эффективности
+    stats:
+      LUCK_BONUS: 0.1 # 0.1-0.5 удачи
+    levelup_description:
+    - <lang.party-level-description-1>
+  '2':
+    name: <lang.party-level-2>
+    exp_required: 2000 # 250 000 опыта
+    party_capacity: 5 # Лимит 15 членов
+    exp_sharing_multiplier: 0.2 # Обратно к 100% эффективности
+    rename_party: true
+    stats:
+      KNOCKBACK_RESISTANCE: 0.05 # 5-25% сопротивления отбрасыванию
+    levelup_description:
+    - <lang.party-level-description-2>
+  '3':
+    name: <lang.party-level-3>
+    exp_required: 6000 # 850 000 опыта
+    party_capacity: 10 # Лимит 25 членов
+    item_sharing: true # Начинается с дальности 50 блоков
+    name_colors: true
+    stats:
+      DAMAGE_RESISTANCE: 0.02 # 2-10% сопротивления урону
+    levelup_description:
+    - <lang.party-level-description-3>
+  '4':
+    name: <lang.party-level-4>
+    exp_required: 24000 # 3 250 000 опыта
+    party_capacity: 20 # Лимит 45 членов
+    item_sharing_radius: 100 # Дальность 150 блоков
+    description_colors: true
+    exp_sharing_multiplier: 0.2 # 120% эффективности
+    company_member_cap: 2 # 7 членов группы поблизости для бонусов
+    company_radius: 10 # Радиус 30 блоков для бонусов "в компании"
+    stats:
+      DIG_SPEED: 0.5 # 5-35% скорости копания
+      MOVEMENT_SPEED_BONUS: 0.04 # 4-28% скорости передвижения
+    levelup_description:
+    - <lang.party-level-description-4>
+  '5':
+    name: <lang.party-level-5>
+    exp_required: 96000 # 12 850 000 опыта
+    party_capacity: 45 # Лимит 80 членов
+    item_sharing_radius: -99999 # Бесконечная дальность (отрицательные числа делают дальность бесконечной)
+    company_member_cap: 3 # 10 членов группы поблизости для бонусов
+    company_radius: 20 # Радиус 50 блоков для бонусов "в компании"
+    stats:
+      DAMAGE_DEALT: 0.03 # 3-30% наносимого урона
+      CRIT_CHANCE_RESISTANCE: 0.05 # 5-50% сопротивления шансу критического удара
+      HEALTH_MULTIPLIER_BONUS: 0.03 # 3-30% здоровья
+    levelup_description:
+    - <lang.party-level-description-5>
+
+
+# Стандартный ранг, который получает каждый член при вступлении
+default_rank: rookie # Ранг здесь должен присутствовать в "ranks" ниже, если нет, система групп будет отключена
+leader_title: <lang.party-rank-leader>
+ranks: # Ранги могут распределяться лидером группы, каждый ранг имеет титул и может иметь дополнительные разрешения
+  rookie:
+    rating: 0
+    title: <lang.party-rank-rookie>
+    permissions: # Допустимые разрешения:
+      - party_chat
+  member:
+    rating: 1
+    title: <lang.party-rank-member>
+    permissions:
+    - item_sharing
+    - party_chat
+  trusted:
+    rating: 2
+    title: <lang.party-rank-trusted>
+    permissions:
+    - invite_member
+    - item_sharing
+    - party_chat
+  officer:
+    rating: 3
+    title: <lang.party-rank-officer>
+    permissions:
+    - party_chat
+    - item_share
+    - open_party
+    - invite_member
+    - kick_members
+  inner_circle:
+    rating: 4
+    title: <lang.party-rank-inner-circle>
+    permissions:
+    - party_chat
+    - item_share
+    - open_party
+    - toggle_exp_share
+    - toggle_item_share
+    - toggle_friendly_fire
+    - invite_member
+    - manage_roles
+    - kick_members
+    - manage_description
+    - manage_name
+# party_chat: доступ к чату группы
+# item_share: возможность делиться предметами с другими членами группы
+# open_party: возможность открыть группу или сделать её только по приглашениям (закрытая = только по приглашениям, открытая = свободное вступление + приглашения)
+# toggle_exp_share: возможность включать и выключать обмен опытом для группы
+# toggle_item_share: возможность включать и выключать обмен предметами
+# toggle_friendly_fire: возможность включать и выключать дружественный огонь (правила PvP сервера применяются независимо от этой настройки)
+# invite_members: возможность приглашать других людей в группу
+# manage_roles: возможность давать и забирать роли, которые ниже собственного ранга члена, людям с рангами ниже своего
+# kick_members: возможность удалять членов из группы с рангами ниже своего
+# manage_description: возможность изменять описание группы
+# manage_name: возможность изменять название группы
+# Лидер по умолчанию имеет все разрешения и является единственным, кто может передать лидерство
+
+party_info: # Эта информация отображается в команде /party info и в основном предназначена для создателя группы
+  - <lang.party-info-format>

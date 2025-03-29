@@ -1,0 +1,33 @@
+{
+    "model": {
+        "type": "range_dispatch",
+        "property": "custom_model_data",
+        "fallback": {
+            "type": "model",
+            "model": "item/iron_hoe"
+        },
+        "entries": [
+            {
+                "threshold": 1829130,
+                "model": {
+                    "type": "model",
+                    "model": "item/gui/button_select_tool"
+                }
+            },
+            {
+                "threshold": 3510001,
+                "model": {
+                    "type": "model",
+                    "model": "item/gui/skillicon_farming"
+                }
+            },
+            {
+                "threshold": 9918290,
+                "model": {
+                    "type": "model",
+                    "model": "item/tools/copper_hoe"
+                }
+            }
+        ]
+    }
+}

@@ -1,0 +1,37 @@
+hologram:
+- '&#FF0000☠ &#FF0000&l%player% &#FF0000☠'
+- '&#00CC00⌛ &#00FF00%despawn-time% &#00CC00⌛'
+- '&#00AAFF%item% &fпредмет &8| &#00AAFF%xp% &fопыт'
+
+help:
+- ' '
+- '&#FF00FF&lAxGraves &7» '
+- ' &7- &f/axgraves reload &7| &#FF00FFПерезагрузить плагин'
+- ' &7- &f/axgraves list &7| &#FF00FFСписок созданных могил'
+- ' '
+
+gui-name: '&0Могила %player%'
+
+# if you restart the server, sometimes the server can't find the owner's name, this will be used for it
+unknown-player: Неизвестный
+
+reload:
+  success: '&#33FF33Плагин успешно перезагружен!'
+  failed: '&#FF3333Не удалось перезагрузить плагин! Что-то не так в файле &f%file%&#FF3333, проверьте консоль или используйте валидатор yaml для исправления ошибок!'
+
+interact:
+  not-your-grave: '&#FFAAFFВы можете открывать только свою могилу!'
+
+death-message:
+  enabled: false
+  message: '&#FFAAAAВы умерли в &f%world% %x%, %y%, %z%&#FFAAAA!'
+
+grave-list:
+  header: '&#FF00FF&l=== МОГИЛЫ ==='
+  grave: '&#FF00FF[ТП] &#FFAAFF%player% &7- &#FFAAFF%world% %x%, %y%, %z% &7(%time%)'
+  no-graves: '&#FFAAFFМогил нет!'
+
+update-notifier: '&#FF88FFДоступна новая версия AxGraves! &#DDDDDD(&#FFFFFFтекущая: &#FF0000%current% &#DDDDDD| &#FFFFFFпоследняя: &#00FF00%latest%&#DDDDDD)'
+
+# do not edit
+version: 5

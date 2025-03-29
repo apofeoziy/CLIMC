@@ -1,0 +1,112 @@
+display_name: <lang.skill-alchemy-displayname>
+icon: BREWING_STAND
+icon_data: 3510001
+description: <lang.skill-alchemy-description>
+
+levelbar_title: <lang.skill-alchemy-level-bar>
+levelbar_color: PURPLE # Вы можете выбрать между BLUE, YELLOW, GREEN, PINK, PURPLE, RED, WHITE
+levelbar_style: SEGMENTED_6 # Вы можете выбрать между SEGMENTED_6, SEGMENTED_10, SEGMENTED_12, SEGMENTED_20, и SOLID
+
+quality_rounding_precision: 10 # Качества предметов будут округляться до ближайшего кратного данного числа, это для уменьшения неоднородностей между индивидуально созданными предметами
+
+transmutation_liquid_flash: true
+transmutation_sound: BLOCK_ENCHANTMENT_TABLE_USE
+transmutation_name: <lang.transmutation_potion>
+transmutation_lore:
+- <lang.transmutation_potion_lore>
+
+# Если true, игроки могут мгновенно опустошать зелья, кликнув на них на котле
+quick_empty_potions: true
+
+# Типы предметов, которые могут быть объединены для слияния эффектов зелий. Обычно это только зелья, но если вы хотите сделать
+# пригодными для этого и другие типы предметов, вы можете это сделать. В любом случае, два объединяемых предмета должны быть одного типа.
+valid_combining_items:
+- POTION
+- SPLASH_POTION
+- LINGERING_POTION
+
+combined_potion_display_name: <lang.combined_potion_name>
+
+# Лечение
+quality_lore: # Косметическое качество, помещаемое на предмет в виде лора, когда его рейтинг качества превышает одно из этих.
+  # Если оставить пустым, они не появятся.
+  '0': <lang.alchemy-quality-rancid>
+  '30': <lang.alchemy-quality-tainted>
+  '60': <lang.alchemy-quality-dirty>
+  '90': <lang.alchemy-quality-cloudy>
+  '120': <lang.alchemy-quality-clear>
+  '150': <lang.alchemy-quality-refined>
+  '200': <lang.alchemy-quality-pure>
+  '300': <lang.alchemy-quality-shimmering>
+
+effects_inverted: # Специфично для модификатора зелья "инвертировать эффекты", по сути эквивалентно использованию ферментированного
+  # глаза паука для инверсии эффектов зелья. Если этот модификатор применяется к эффекту зелья, эти эффекты зелья инвертируются.
+  HEAL:
+    inverted_effect: HARM
+    color: '#220045'
+    duration: 1
+    amplifier: 0
+  SPEED:
+    inverted_effect: SLOW
+    color: '#6a869e'
+    duration: 1800
+    amplifier: 0
+  NIGHT_VISION:
+    inverted_effect: INVISIBILITY
+    color: '#78d6bd'
+    duration: 3600
+    amplifier: 0
+  POISON:
+    inverted_effect: HARM
+    color: '#220045'
+    duration: 1
+    amplifier: 0
+  FIRE_RESISTANCE:
+    inverted_effect: SLOW
+    color: '#6a869e'
+    duration: 1800
+    amplifier: 0
+  INCREASE_DAMAGE:
+    inverted_effect: WEAKNESS
+    color: '#86aac2'
+    duration: 1800
+    amplifier: 0
+
+# Эти лечения включают TEMPERING, SHARPENING_FINE, ENGRAVING, и LEATHER_BINDING. А также ARMOR_FITTING для брони,
+# WAX_COATING для деревянных и каменных инструментов,
+tag_lore: # Лоры лечения, отображаемые на предмете, если hide_treatment_lore равен false. Если какой-либо оставлен пустым, он не появляется.
+  '1': <lang.alchemy-treatment-concentrated>
+  '2': <lang.alchemy-treatment-diluted>
+  '3': <lang.alchemy-treatment-filtered>
+  '4': <lang.alchemy-treatment-empowered>
+  '5': <lang.alchemy-treatment-imbued>
+  '6': <lang.alchemy-treatment-enchanted>
+  '7': <lang.alchemy-treatment-polluted>
+
+# Сообщения об ошибках, уведомляемые игроку, если у его предмета есть тег, который он не должен иметь
+tag_error_disallowed:
+  '1': <lang.alchemy-treatment-disallowed-concentrated>
+  '2': <lang.alchemy-treatment-disallowed-diluted>
+  '3': <lang.alchemy-treatment-disallowed-filtered>
+  '4': <lang.alchemy-treatment-disallowed-empowered>
+  '5': <lang.alchemy-treatment-disallowed-imbued>
+  '6': <lang.alchemy-treatment-disallowed-enchanted>
+  '7': <lang.alchemy-treatment-disallowed-polluted>
+
+# Сообщения об ошибках, уведомляемые игроку, если у его предмета нет тега, который он должен иметь
+tag_error_required:
+  '1': <lang.alchemy-treatment-required-concentrated>
+  '2': <lang.alchemy-treatment-required-diluted>
+  '3': <lang.alchemy-treatment-required-filtered>
+  '4': <lang.alchemy-treatment-required-empowered>
+  '5': <lang.alchemy-treatment-required-imbued>
+  '6': <lang.alchemy-treatment-required-enchanted>
+  '7': <lang.alchemy-treatment-required-polluted>
+
+field_harvest_instant: false # Если true, сбор урожая с поля ломает блоки мгновенно (в отличие от нескольких блоков за раз)
+field_harvest_limit: 256 # Максимальное количество блоков, которое специальная способность "Сбор урожая с поля" может сломать
+
+forgiving_multipliers: true # множители дропа ниже 0 будут, если false, иногда приводить к тому, что добытые блоки не будут ничего выпадать.
+# если true, количество дропа не может быть ниже 1, поэтому будут затронуты только блоки, которые выпадают несколько предметов (такие как руда редстоуна, руда лазурита,
+# руда золота/железа с удачей), но всё остальное будет выпадать как минимум 1 предмет.
+# Это можно установить на false, если вы хотите более гриндовый опыт для ваших игроков, хотя это может быть разочаровывающим для них

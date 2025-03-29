@@ -1,0 +1,32 @@
+[
+  {
+    "id": "lt_armor",
+    "name": "&1 &1 &1 &1 &1 &e&lЛёгкость движения",
+    "lore": [
+      "&7При полном комплекте броны, ",
+      "&7получаешь баф к скорости, ",
+      "&7пониженый урон от падения ",
+      "&7и увеличение урона в дали."
+    ],
+    "piecesRequired": 4,
+    "setBonus": {
+      "SNEAK_MOVEMENT_SPEED_BONUS": 0.2,
+      "SPRINT_MOVEMENT_SPEED_BONUS": 0.2,
+      "FALL_DAMAGE_RESISTANCE": 0.2,
+      "DAMAGE_RANGED": 0.10000000000000002,
+      "JUMP_HEIGHT": 0.5
+    }
+  },
+  {
+    "id": "gold_armor",
+    "name": "&6Тяжеловес",
+    "lore": [],
+    "piecesRequired": 4,
+    "setBonus": {
+      "GENERIC_MAX_HEALTH": 9.99999999999998,
+      "SPRINT_MOVEMENT_SPEED_BONUS": -0.09999999999999999,
+      "SNEAK_MOVEMENT_SPEED_BONUS": -0.09999999999999999,
+      "PVP_RESISTANCE": 0.09999999999999999
+    }
+  }
+]

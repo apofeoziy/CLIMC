@@ -1,0 +1,114 @@
+display_name: <lang.skill-smithing-displayname>
+icon: ANVIL
+icon_data: 3510001
+description: <lang.skill-smithing-description>
+
+levelbar_title: <lang.skill-smithing-level-bar>
+levelbar_color: YELLOW # Вы можете выбрать между BLUE, YELLOW, GREEN, PINK, PURPLE, RED, WHITE
+levelbar_style: SEGMENTED_6 # Вы можете выбрать между SEGMENTED_6, SEGMENTED_10, SEGMENTED_12, SEGMENTED_20 и SOLID
+
+quality_rounding_precision: 10 # Качество предметов будет округлено до ближайшего кратного заданному числу, чтобы уменьшить несоответствия между индивидуально созданными предметами
+
+quality_lore: # Описание, размещаемое на предмете, когда его показатель качества равен или превышает заданное значение ПЛЮС предполагаемая
+  # точка поворота качества материала предмета. Немного сложно объяснить словами, но вот пример:
+  # Алмазное снаряжение превосходит ванильный уровень при качестве выше 70, и я решил, что "хорошее" должно быть на ванильном уровне.
+  # Это означает, что алмазное снаряжение будет считаться "отличным", если оно на 50 очков качества выше этой определенной точки поворота 70, то есть 120.
+  # Алмазное снаряжение достигнет "бесподобного", если превысит 250 очков качества сверх 70, то есть 320
+  '-500': <lang.smithing-quality-terrible> # от -500 до -60 считается "ужасным"
+  '-60': <lang.smithing-quality-shoddy> # от -60 до -30 считается "низкокачественным"
+  '-30': <lang.smithing-quality-decent> # от -30 до 0 считается "приемлемым"
+  '0': <lang.smithing-quality-good> # от 0 до 25 считается "хорошим"
+  '30': <lang.smithing-quality-great> # и т.д.
+  '60': <lang.smithing-quality-flawless>
+  '90': <lang.smithing-quality-masterful>
+  '120': <lang.smithing-quality-fabled>
+  '150': <lang.smithing-quality-peerless> # всё, что на 125 выше нейтрального значения, считается бесподобным
+
+# Теги
+# Теги - это просто числовые метки, применяемые к предмету.
+# Любой числовой тег может быть применен к любому предмету, но только числа из этого списка будут отображать дополнительное описание на предмете
+tag_lore: # Описания тегов, отображаемые на предмете. Если одно оставлено пустым, оно не отображается.
+  '0': <lang.smithing-tag-plated>
+  '1': <lang.smithing-tag-untempered>
+  '2': <lang.smithing-tag-blunt>
+  '3': <lang.smithing-tag-razor-sharp>
+  '4': <lang.smithing-tag-well-fit>
+  '5': <lang.smithing-tag-red-hot>
+  '6': <lang.smithing-tag-white-hot>
+  '7': <lang.smithing-tag-unfit>
+  '8': <lang.smithing-tag-upgrade-slots>
+  '9': <lang.smithing-upgrade-extra-upgrades>
+  # 10-20 заняты улучшениями
+  '21': <lang.smithing-upgrade-deepslate-mining>
+# 22-50 также заняты улучшениями
+# 101, 102 и 103 по умолчанию заняты слотами улучшений 1, 2 и 3 соответственно. Избегайте использования.
+
+# Сообщения об ошибках, которые уведомляют игрока, если их предмет имеет тег, который не разрешен
+tag_error_disallowed:
+  '0': <lang.smithing-tag-disallowed-plated>
+  '1': <lang.smithing-tag-disallowed-untempered>
+  '2': <lang.smithing-tag-disallowed-blunt>
+  '3': <lang.smithing-tag-disallowed-razor-sharp>
+  '4': <lang.smithing-tag-disallowed-well-fit>
+  '5': <lang.smithing-tag-disallowed-red-hot>
+  '6': <lang.smithing-tag-disallowed-white-hot>
+  '7': <lang.smithing-tag-disallowed-unfit>
+  '8': <lang.smithing-tag-upgrade-slots> # все инструменты и броня получают некоторые слоты улучшений при создании
+  '9': <lang.smithing-upgrade-extra-upgrades> # все инструменты и броня могут иметь дополнительно расширенные слоты улучшений
+  '10': <lang.smithing-upgrade-disallowed-mining-speed> # только топоры, кирки, лопаты, мотыги
+  '11': <lang.smithing-upgrade-disallowed-mining-drops> # только топоры, кирки, лопаты, мотыги
+  '12': <lang.smithing-upgrade-disallowed-mining-luck> # только топоры, кирки, лопаты, мотыги
+  '13': <lang.smithing-upgrade-disallowed-attack-damage> # все предметы ближнего боя
+  '14': <lang.smithing-upgrade-disallowed-crit-chance> # все оружие
+  '16': <lang.smithing-upgrade-disallowed-attack-reach> # все предметы ближнего боя
+  '17': <lang.smithing-upgrade-disallowed-bleed-chance> # все оружие
+  '18': <lang.smithing-upgrade-disallowed-armor-penetration> # все оружие
+  '19': <lang.smithing-upgrade-disallowed-immunity-reduction> # все оружие
+  '20': <lang.smithing-upgrade-disallowed-dismount-chance> # все оружие
+  '22': <lang.smithing-upgrade-disallowed-durability> # все предметы
+  '23': <lang.smithing-upgrade-disallowed-entity-drops> # все оружие
+  '24': <lang.smithing-upgrade-disallowed-lifesteal> # все оружие
+  '25': <lang.smithing-upgrade-disallowed-shield-disarming> # все оружие
+  '26': <lang.smithing-upgrade-disallowed-ammo-consumption> # только луки и арбалеты
+  '27': <lang.smithing-upgrade-disallowed-stun-chance> # все оружие
+  '28': <lang.smithing-upgrade-disallowed-immunity> # только броня
+  '29': <lang.smithing-upgrade-disallowed-healing-bonus> # только броня
+  '30': <lang.smithing-upgrade-disallowed-cooldown-reduction> # только броня
+  '31': <lang.smithing-upgrade-disallowed-dodge-chance> # только броня
+  '32': <lang.smithing-upgrade-disallowed-skill-exp> # только броня
+  '33': <lang.smithing-upgrade-disallowed-vanilla-exp> # только броня
+  '34': <lang.smithing-upgrade-disallowed-knockback-resistance> # только броня
+  '35': <lang.smithing-upgrade-disallowed-bleeding-resistance> # только броня
+  '36': <lang.smithing-upgrade-disallowed-crit-resistance> # только броня
+  '37': <lang.smithing-upgrade-disallowed-stun-resistance> # только броня
+  '38': <lang.smithing-upgrade-disallowed-sneak-speed> # только поножи
+  '39': <lang.smithing-upgrade-disallowed-sprint-speed> # только поножи
+  '40': <lang.smithing-upgrade-disallowed-jumps-bonus> # только ботинки
+  '41': <lang.smithing-upgrade-disallowed-jump-height> # только ботинки
+  '42': <lang.smithing-upgrade-disallowed-fire-damage-multiplier> # только нагрудники
+  '43': <lang.smithing-upgrade-disallowed-magic-damage-multiplier> # только нагрудники
+  '44': <lang.smithing-upgrade-disallowed-poison-damage-multiplier> # только нагрудники
+  '45': <lang.smithing-upgrade-disallowed-radiant-damage-multiplier> # только нагрудники
+  '46': <lang.smithing-upgrade-disallowed-necrotic-damage-multiplier> # только нагрудники
+  '47': <lang.smithing-upgrade-disallowed-damage-multiplier> # только нагрудники
+  '48': <lang.smithing-upgrade-disallowed-smithing-quality> # только шлемы
+  '49': <lang.smithing-upgrade-disallowed-alchemy-quality> # только шлемы
+  '50': <lang.smithing-upgrade-disallowed-enchanting-quality> # только шлемы
+# 51, 52 и 53 по умолчанию заняты слотами улучшений 1, 2 и 3 соответственно. Избегайте использования.
+
+# Сообщения об ошибках, которые уведомляют игрока, если их предмет не имеет тег, который ему необходим
+tag_error_required:
+  '0': <lang.smithing-tag-required-plated>
+  '1': <lang.smithing-tag-required-untempered>
+  '2': <lang.smithing-tag-required-blunt>
+  '3': <lang.smithing-tag-required-razor-sharp>
+  '4': <lang.smithing-tag-required-well-fit>
+  '5': <lang.smithing-tag-required-red-hot>
+  '6': <lang.smithing-tag-required-white-hot>
+  '7': <lang.smithing-tag-required-unfit>
+  '8': <lang.smithing-tag-insufficient-upgrade-slots>
+
+# Масштабирование, используемое модификатором динамического количества, который изменяет количество получаемого предмета в зависимости от НАВЫКА КУЗНЕЧНОГО ДЕЛА ИГРОКА
+quantity_scaling: 0.7/300 * %rating% + 0.1,MULTIPLIER,0,0.8
+# Масштабирование, используемое модификатором динамического ремонта, который ремонтирует предмет в зависимости от НАВЫКА КУЗНЕЧНОГО ДЕЛА ИГРОКА
+repair_scaling: (0.7/300) * %rating% + 0.1,MULTIPLIER,none,none

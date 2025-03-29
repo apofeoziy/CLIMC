@@ -1,0 +1,205 @@
+# ДОКУМЕНТАЦИЯ: https://docs.artillex-studios.com/axplayerwarps.html
+
+prefix: '<gradient:#33EEBB:#3388BB><b>AxPlayerWarps</b></gradient> &7» '
+
+database:
+  # варианты: h2, mysql, postgresql
+  type: h2
+  
+  # эти настройки нужны только при использовании mysql или postgresql
+  address: 127.0.0.1
+  port: 3306
+  database: admin
+  username: admin
+  password: admin
+  pool:
+    maximum-pool-size: 10
+    minimum-idle: 10
+    maximum-lifetime: 1800000
+    keepalive-time: 0
+    connection-timeout: 5000
+
+# вы должны определить хотя бы 1
+# требуется перезапуск для обновления
+main-command-aliases:
+- axplayerwarps
+- axpw
+- pw
+- playerwarps
+- playerwarp
+- pwarp
+- pwarps
+
+# требуется перезапуск для обновления
+admin-command-aliases:
+- axplayerwarpsadmin
+- axpwadmin
+- pwadmin
+- playerwarpsadmin
+- playerwarpadmin
+- pwarpadmin
+- pwarpsadmin
+
+warp-creation-cost:
+  # должно ли создание варпов стоить денег?
+  enabled: false
+  # запрашивать у игрока подтверждение, чтобы убедиться,
+  # что он знает о цене создания варпа
+  confirm: true
+  # цена создания
+  price: 1000
+  # валюты определены в currencies.yml
+  currency: Vault
+
+warp-naming:
+  # разрешение пробелов может затруднить автозаполнение варпов
+  allow-spaces: false
+  length:
+    min: 1
+    max: 16
+  # запрещенные имена варпов
+  # поддерживаемые регулярные выражения: (опционально)
+  # - 'name' #  только 'name' запрещено
+  # - 'name*' #  запрещает текст, начинающийся с 'name'
+  # - '*name' #  запрещает текст, заканчивающийся на 'name'
+  # - '*name*' #  запрещает текст, содержащий 'name'
+  disallowed:
+  - '*banned_warp_name*'
+
+# миры, в которых запрещено создание варпов
+# вы можете использовать регулярные выражения из раздела выше (warp-naming.disallowed)
+disallowed-worlds:
+- blacklisted_world_name
+
+# какой материал использовать, если игрок не указал иконку для своего варпа?
+# PLAYER_HEAD по умолчанию будет использовать голову владельца (примечание: иногда может не загрузиться)
+default-material: PLAYER_HEAD
+
+# сколько времени у игроков есть для подтверждения, если варп небезопасен или платный
+confirmation-milliseconds: 10000
+
+# сколько секунд до телепортации игрока?
+# если они двигаются, телепортация будет отменена
+# вы можете обойти это с разрешением axplayerwarps.delay-bypass
+teleport-delay-seconds: 3
+
+warp-description:
+  # сколько строк описания могут написать игроки для своего варпа?
+  max-lines: 3
+  default: Описание не предоставлено.
+
+# примеры значений: categories, warps
+# если вы хотите отключить категории, обязательно измените это на warps
+default-gui: categories
+
+# команды, которые будут выполняться, когда игрок телепортируется на варп
+# вы можете использовать все плейсхолдеры варпа (например, %name%, %x%, %y%, %x% и т.д.) и %player% для имени игрока
+# пример:
+# - "say %player% телепортировался на варп %name%!"
+# обязательно удалите [] для включения этой функции
+teleport-commands: []
+
+# чтобы отключить категории, вы можете установить это как []
+# также убедитесь, что вы удалили селектор категорий из интерфейса
+#
+# вы можете добавлять/удалять категории здесь
+categories:
+  building:
+    name: Строительство
+  shop:
+    name: Магазин
+  farm:
+    name: Ферма
+  pvp:
+    name: PvP
+  event:
+    name: Событие
+  fun:
+    name: Развлечения
+  special:
+    name: Особое
+  other:
+    name: Другое
+
+# это все возможные варианты сортировки, которые вы можете включить/отключить
+# forwards: идет в исходном направлении, например, forwards rating = от наивысшего рейтинга к самому низкому
+# backwards: идет в противоположном направлении, например, backwards rating = от самого низкого рейтинга к наивысшему
+# если вы отключите любой из них, он не будет отображаться в кнопке сортировки
+# вы можете определить значение по умолчанию, установив default в true, ОБРАТИТЕ ВНИМАНИЕ, что только 1 сортировка может быть по умолчанию!
+sorting:
+  alphabetical:
+    forwards:
+      enabled: true
+      default: true
+      name: От А до Я
+    backwards:
+      enabled: true
+      name: От Я до А
+  visits:
+    forwards:
+      enabled: true
+      name: Больше всего посещений
+    backwards:
+      enabled: true
+      name: Меньше всего посещений
+  rating:
+    forwards:
+      enabled: true
+      name: Наивысший рейтинг
+    backwards:
+      enabled: true
+      name: Наименьший рейтинг
+  rating_count:
+    forwards:
+      enabled: true
+      name: Больше всего оценок
+    backwards:
+      enabled: true
+      name: Меньше всего оценок
+  favorites:
+    forwards:
+      enabled: true
+      name: Больше всего в избранном
+    backwards:
+      enabled: true
+      name: Меньше всего в избранном
+  distance:
+    forwards:
+      enabled: true
+      name: Ближайшие
+    backwards:
+      enabled: true
+      name: Самые дальние
+  creation_date:
+    forwards:
+      enabled: true
+      name: Новейшие
+    backwards:
+      enabled: true
+      name: Старейшие
+
+# https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/text/SimpleDateFormat.html
+# некоторые примеры:
+# - день/месяц/год (наиболее используемый) формат: dd/MM/yyyy hh:mm:ss
+# - месяц/день/год (США) формат: MM/dd/yyyy h:mm:ss a
+# - год/месяц/день (по умолчанию) формат: yyyy/MM/dd hh:mm:ss
+date-format: yyyy/MM/dd HH:mm:ss
+
+# 1 - ЧЧ:ММ:СС, например 01:25:35
+# 2 - короткий формат, например 20м
+# 3 - текстовый формат, например 01ч 25м 35с
+timer-format: 1
+
+# должен ли плагин уведомлять вас о новых обновлениях?
+update-notifier:
+  # если включено, сообщение будет отображаться в консоли
+  enabled: true
+  # если включено, сообщение об обновлении будет отправлено всем игрокам, у которых есть разрешение <plugin-name>.update-notify
+  on-join: true
+
+# выводит много случайной информации о плагине в консоль
+# используйте только если разработчики просят вас об этом
+debug: false
+
+# не изменяйте это
+version: 5

@@ -1,0 +1,1 @@
+{"id":"uWqyJZ1AuCiz0Is","name":"test","type":"sequence","entries":[{"id":"ppBM2k0vjZdRFuY","name":"bar1","criteria":[],"modifiers":[],"triggers":[],"message":"Привет! Добро пожаловать на сервер!","type":"action_bar_simple_message","_genericBlueprint":null}],"chapter":"","priority":0,"version":"0.8.0-beta-153"}

@@ -1,0 +1,278 @@
+{
+    "model": {
+        "type": "range_dispatch",
+        "property": "custom_model_data",
+        "fallback": {
+            "type": "model",
+            "model": "item/lime_dye"
+        },
+        "entries": [
+            {
+                "threshold": 1172900,
+                "model": {
+                    "type": "model",
+                    "model": "item/gui/connection_pieces/unlocked_direct_vertical"
+                }
+            },
+            {
+                "threshold": 1172901,
+                "model": {
+                    "type": "model",
+                    "model": "item/gui/connection_pieces/unlocked_direct_horizontal"
+                }
+            },
+            {
+                "threshold": 1172902,
+                "model": {
+                    "type": "model",
+                    "model": "item/gui/connection_pieces/unlocked_direct_corner_botlft"
+                }
+            },
+            {
+                "threshold": 1172903,
+                "model": {
+                    "type": "model",
+                    "model": "item/gui/connection_pieces/unlocked_direct_corner_toplft"
+                }
+            },
+            {
+                "threshold": 1172904,
+                "model": {
+                    "type": "model",
+                    "model": "item/gui/connection_pieces/unlocked_direct_corner_botrgt"
+                }
+            },
+            {
+                "threshold": 1172905,
+                "model": {
+                    "type": "model",
+                    "model": "item/gui/connection_pieces/unlocked_direct_corner_toprgt"
+                }
+            },
+            {
+                "threshold": 1172906,
+                "model": {
+                    "type": "model",
+                    "model": "item/gui/connection_pieces/unlocked_continuous_vertical"
+                }
+            },
+            {
+                "threshold": 1172907,
+                "model": {
+                    "type": "model",
+                    "model": "item/gui/connection_pieces/unlocked_continuous_horizontal"
+                }
+            },
+            {
+                "threshold": 1172908,
+                "model": {
+                    "type": "model",
+                    "model": "item/gui/connection_pieces/unlocked_endpoint_horiz_right"
+                }
+            },
+            {
+                "threshold": 1172909,
+                "model": {
+                    "type": "model",
+                    "model": "item/gui/connection_pieces/unlocked_endpoint_horiz_left"
+                }
+            },
+            {
+                "threshold": 1172910,
+                "model": {
+                    "type": "model",
+                    "model": "item/gui/connection_pieces/unlocked_endpoint_verti_top"
+                }
+            },
+            {
+                "threshold": 1172911,
+                "model": {
+                    "type": "model",
+                    "model": "item/gui/connection_pieces/unlocked_endpoint_verti_bottom"
+                }
+            },
+            {
+                "threshold": 1172912,
+                "model": {
+                    "type": "model",
+                    "model": "item/gui/connection_pieces/unlocked_endpoint_corner_botlft_side"
+                }
+            },
+            {
+                "threshold": 1172913,
+                "model": {
+                    "type": "model",
+                    "model": "item/gui/connection_pieces/unlocked_endpoint_corner_toplft_side"
+                }
+            },
+            {
+                "threshold": 1172914,
+                "model": {
+                    "type": "model",
+                    "model": "item/gui/connection_pieces/unlocked_endpoint_corner_botrgt_side"
+                }
+            },
+            {
+                "threshold": 1172915,
+                "model": {
+                    "type": "model",
+                    "model": "item/gui/connection_pieces/unlocked_endpoint_corner_toprgt_side"
+                }
+            },
+            {
+                "threshold": 1172916,
+                "model": {
+                    "type": "model",
+                    "model": "item/gui/connection_pieces/unlocked_endpoint_corner_botlft_ends"
+                }
+            },
+            {
+                "threshold": 1172917,
+                "model": {
+                    "type": "model",
+                    "model": "item/gui/connection_pieces/unlocked_endpoint_corner_toplft_ends"
+                }
+            },
+            {
+                "threshold": 1172918,
+                "model": {
+                    "type": "model",
+                    "model": "item/gui/connection_pieces/unlocked_endpoint_corner_botrgt_ends"
+                }
+            },
+            {
+                "threshold": 1172919,
+                "model": {
+                    "type": "model",
+                    "model": "item/gui/connection_pieces/unlocked_endpoint_corner_toprgt_ends"
+                }
+            },
+            {
+                "threshold": 1172920,
+                "model": {
+                    "type": "model",
+                    "model": "item/gui/connection_pieces/unlocked_continuous_corner_botlft"
+                }
+            },
+            {
+                "threshold": 1172921,
+                "model": {
+                    "type": "model",
+                    "model": "item/gui/connection_pieces/unlocked_continuous_corner_toplft"
+                }
+            },
+            {
+                "threshold": 1172922,
+                "model": {
+                    "type": "model",
+                    "model": "item/gui/connection_pieces/unlocked_continuous_corner_botrgt"
+                }
+            },
+            {
+                "threshold": 1172923,
+                "model": {
+                    "type": "model",
+                    "model": "item/gui/connection_pieces/unlocked_continuous_corner_toprgt"
+                }
+            },
+            {
+                "threshold": 1829130,
+                "model": {
+                    "type": "model",
+                    "model": "item/gui/button_newrecipe"
+                }
+            },
+            {
+                "threshold": 1829131,
+                "model": {
+                    "type": "model",
+                    "model": "item/gui/button_loot_selection_active"
+                }
+            },
+            {
+                "threshold": 9192780,
+                "model": {
+                    "type": "model",
+                    "model": "item/materials/tutor_lotus"
+                }
+            },
+            {
+                "threshold": 9192781,
+                "model": {
+                    "type": "model",
+                    "model": "item/materials/steelblossom"
+                }
+            },
+            {
+                "threshold": 9192782,
+                "model": {
+                    "type": "model",
+                    "model": "item/materials/shimmerleaf"
+                }
+            },
+            {
+                "threshold": 9192783,
+                "model": {
+                    "type": "model",
+                    "model": "item/materials/goldroot"
+                }
+            },
+            {
+                "threshold": 9192784,
+                "model": {
+                    "type": "model",
+                    "model": "item/materials/pollen_stalks"
+                }
+            },
+            {
+                "threshold": 9192785,
+                "model": {
+                    "type": "model",
+                    "model": "item/materials/knightsreed"
+                }
+            },
+            {
+                "threshold": 9192786,
+                "model": {
+                    "type": "model",
+                    "model": "item/materials/burnt_bark"
+                }
+            },
+            {
+                "threshold": 9192787,
+                "model": {
+                    "type": "model",
+                    "model": "item/materials/ambrosial_nectar"
+                }
+            },
+            {
+                "threshold": 9192788,
+                "model": {
+                    "type": "model",
+                    "model": "item/materials/bustling_fungus"
+                }
+            },
+            {
+                "threshold": 9192789,
+                "model": {
+                    "type": "model",
+                    "model": "item/materials/calcified_seed"
+                }
+            },
+            {
+                "threshold": 9192790,
+                "model": {
+                    "type": "model",
+                    "model": "item/materials/withered_filament"
+                }
+            },
+            {
+                "threshold": 9192791,
+                "model": {
+                    "type": "model",
+                    "model": "item/materials/noxious_spores"
+                }
+            }
+        ]
+    }
+}

@@ -1,0 +1,47 @@
+{
+    "model": {
+        "type": "range_dispatch",
+        "property": "custom_model_data",
+        "fallback": {
+            "type": "model",
+            "model": "item/snowball"
+        },
+        "entries": [
+            {
+                "threshold": 9928310,
+                "model": {
+                    "type": "model",
+                    "model": "item/misc/empty_vial"
+                }
+            },
+            {
+                "threshold": 9928311,
+                "model": {
+                    "type": "model",
+                    "model": "item/misc/antiheal_vial"
+                }
+            },
+            {
+                "threshold": 9928312,
+                "model": {
+                    "type": "model",
+                    "model": "item/misc/poison_vial"
+                }
+            },
+            {
+                "threshold": 9928313,
+                "model": {
+                    "type": "model",
+                    "model": "item/misc/hurt_vial"
+                }
+            },
+            {
+                "threshold": 9928314,
+                "model": {
+                    "type": "model",
+                    "model": "item/misc/holy_water_vial"
+                }
+            }
+        ]
+    }
+}

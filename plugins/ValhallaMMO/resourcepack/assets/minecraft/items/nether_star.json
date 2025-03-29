@@ -1,0 +1,19 @@
+{
+    "model": {
+        "type": "range_dispatch",
+        "property": "custom_model_data",
+        "fallback": {
+            "type": "model",
+            "model": "item/nether_star"
+        },
+        "entries": [
+            {
+                "threshold": 1829130,
+                "model": {
+                    "type": "model",
+                    "model": "item/gui/button_favouriting"
+                }
+            }
+        ]
+    }
+}

@@ -1,0 +1,12 @@
+{
+    "parent": "item/generated",
+    "textures": {
+        "layer0": "item/gui/connection_pieces/unlockable_direct_vertical"
+    },
+    "gui_light": "front",
+    "display": {
+      "gui": {
+        "scale": [1.125, 1.125, 1.125]
+      }
+		}
+}

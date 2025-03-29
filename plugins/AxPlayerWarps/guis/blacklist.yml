@@ -1,0 +1,108 @@
+# ДОКУМЕНТАЦИЯ: https://docs.artillex-studios.com/axplayerwarps.html
+# КОНСТРУКТОР ПРЕДМЕТОВ: https://docs.artillex-studios.com/item-builder.html
+
+title: '&0&lAxPWarps > &8Редактирование %warp%'
+# интерфейс может иметь 1-6 рядов
+rows: 5
+# сколько предметов должно отображаться на одной странице?
+page-size: 21
+
+# ----- ПРЕДМЕТЫ -----
+
+blacklisted:
+  material: BLACK_CANDLE
+  name: '&#33EEBB&l%player%'
+  lore:
+  - '&#AAAAAAЭтот игрок в черном списке!'
+  - ' '
+  - '&#33EEBBДобавлен: &#BBFFDD%added-date%'
+  - ' '
+  - '&#33EEBB&lНажмите &#DDDDDD» &#BBFFDDУдалить из черного списка'
+
+# вы можете добавить столько украшений, сколько пожелаете
+filler:
+  name: ' '
+  slot:
+  - 0-9
+  - 17-18
+  - 26-27
+  - 35-44
+  type: BLACK_STAINED_GLASS_PANE
+
+add:
+  slot: 0
+  # этот шрифт называется 'small caps'
+  name: '&#33EEBB&lДобавить в черный список'
+  type: NAME_TAG
+  lore:
+  - '&#AAAAAAИгроки в черном списке'
+  - '&#AAAAAAникогда не смогут использовать ваш варп!'
+  - ' '
+  - '&#33EEBB&lНажмите &#DDDDDD» &#BBFFDDДобавить игрока в черный список'
+  - '&#33EEBB&lShift + ПКМ &#DDDDDD» &#BBFFDDОчистить черный список'
+  actions:
+  - '[SOUND] ui.button.click|1|1'
+
+back:
+  slot: 8
+  name: '&#33EEBB&lНазад'
+  type: BARRIER
+  lore:
+  - ' '
+  - ' &fНажмите здесь, чтобы вернуться'
+  - ' &fв предыдущее меню!'
+  - ' '
+  - '&#33EEBB&lНажмите &#DDDDDD» &#BBFFDDВернуться в главное меню'
+  actions:
+  - '[BACK]'
+  - '[SOUND] ui.button.click|1|1'
+
+previous-page:
+  slot: 39
+  material: ARROW
+  name: '&#33EEBB&lПредыдущая страница'
+  lore:
+  - ' '
+  - ' &fНажмите здесь, чтобы вернуться'
+  - ' &fна предыдущую страницу!'
+  - ' '
+  - '&#33EEBB&lНажмите &#DDDDDD» &#BBFFDDПредыдущая страница'
+  actions:
+  - '[SOUND] ui.button.click|1|1'
+  - '[PAGE] previous'
+
+refresh:
+  slot: 40
+  material: SUNFLOWER
+  name: '&#33EEBB&lОбновить'
+  lore:
+  - ' '
+  - ' &fНажмите здесь, чтобы'
+  - ' &fобновить страницу!'
+  - ' '
+  - '&#33EEBB&lНажмите &#DDDDDD» &#BBFFDDОбновить страницу'
+  actions:
+  - '[SOUND] ui.button.click|1|1'
+  - '[REFRESH]'
+
+next-page:
+  slot: 41
+  material: ARROW
+  name: '&#33EEBB&lСледующая страница'
+  lore:
+  - ' '
+  - ' &fНажмите здесь, чтобы перейти'
+  - ' &fна следующую страницу!'
+  - ' '
+  - '&#33EEBB&lНажмите &#DDDDDD» &#BBFFDDСледующая страница'
+  actions:
+  - '[SOUND] ui.button.click|1|1'
+  - '[PAGE] next'
+
+#decoration-example:
+#  slot: 10
+#  type: STONE
+#  name: "&eУкрашение!"
+#  actions:
+#    - "[MENU] close"
+#    - "[MESSAGE] &#FF0000Сообщение"

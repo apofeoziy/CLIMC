@@ -1,0 +1,95 @@
+# ДОКУМЕНТАЦИЯ: https://docs.artillex-studios.com/axplayerwarps.html
+# КОНСТРУКТОР ПРЕДМЕТОВ: https://docs.artillex-studios.com/item-builder.html
+
+title: '&0&lAxPWarps > &8Просмотр %warp%'
+# интерфейс может иметь 1-6 рядов
+rows: 5
+
+# ----- ПРЕДМЕТЫ -----
+
+# вы можете добавить столько украшений, сколько пожелаете
+filler:
+  name: ' '
+  slot:
+  - 0-9
+  - 17-18
+  - 26-27
+  - 35-44
+  type: LIME_STAINED_GLASS_PANE
+
+rate:
+  slot: 20
+  # этот шрифт называется 'small caps'
+  name: '&#33EEBB&lОЦЕНИТЬ ВАРП'
+  type: GOLDEN_APPLE
+  lore:
+  - ' '
+  - '&#33EEBBИнформация'
+  - '  &#444444❙ &#BBFFDDРейтинг: &#FFDD00%rating_stars% &#FFAA00%rating_decimal%'
+  - ' '
+  - '&#33EEBBВаша текущая оценка: &#FFDD00%given_rating_stars% &#FFAA00%given_rating_decimal%'
+  - ' '
+  - '&#33EEBB&lЛКМ &#DDDDDD» &#BBFFDDОценить Варп'
+  - '&#33EEBB&lПКМ &#DDDDDD» &#BBFFDDУдалить Вашу Оценку'
+  actions:
+  - '[SOUND] ui.button.click|1|1'
+
+teleport:
+  slot: 22
+  name: '&#33EEBB&lТЕЛЕПОРТИРОВАТЬСЯ'
+  type: ENDER_PEARL
+  lore:
+  - ' '
+  - '&#33EEBBИнформация'
+  - '  &#444444❙ &#BBFFDDЛокация: &f%world%, %x%, %y%, %z%'
+  - ' '
+  - '&#33EEBBСтоимость телепортации: &#BBFFDD%price%'
+  - '&#33EEBBДоступ: &#BBFFDD%access%'
+  - ' '
+  - '&#33EEBB&lЛКМ &#DDDDDD» &#BBFFDDТелепортироваться'
+  actions:
+  - '[SOUND] ui.button.click|1|1'
+
+favorite:
+  slot: 24
+  not-favorite:
+    name: '&#33EEBB&lДОБАВИТЬ В ИЗБРАННОЕ'
+    type: BELL
+    lore:
+    - ' '
+    - '&#33EEBBНаходится в избранном? &#BBFFDDНет'
+    - ' '
+    - '&#33EEBB&lНажмите &#DDDDDD» &#BBFFDDДобавить в Избранное'
+  favorite:
+    name: '&#33EEBB&lУДАЛИТЬ ИЗ ИЗБРАННОГО'
+    type: BELL
+    glow: true
+    lore:
+    - ' '
+    - '&#33EEBBНаходится в избранном? &#BBFFDDДа'
+    - ' '
+    - '&#33EEBB&lНажмите &#DDDDDD» &#BBFFDDУдалить из Избранного'
+  actions:
+  - '[SOUND] ui.button.click|1|1'
+
+back:
+  slot: 40
+  name: '&#33EEBB&lНАЗАД'
+  type: BARRIER
+  lore:
+  - ' '
+  - ' &fНажмите здесь, чтобы вернуться'
+  - ' &fв предыдущее меню!'
+  - ' '
+  - '&#33EEBB&lНажмите &#DDDDDD» &#BBFFDDВернуться в главное меню'
+  actions:
+  - '[BACK]'
+  - '[SOUND] ui.button.click|1|1'
+
+#decoration-example:
+#  slot: 10
+#  type: STONE
+#  name: "&eУкрашение!"
+#  actions:
+#    - "[MENU] close"
+#    - "[MESSAGE] &#FF0000Сообщение"

@@ -1,0 +1,150 @@
+# ДОКУМЕНТАЦИЯ: https://docs.artillex-studios.com/axtrade.html
+# КОНСТРУКТОР ПРЕДМЕТОВ: https://docs.artillex-studios.com/item-builder.html
+
+# ----- НАСТРОЙКИ -----
+
+title: '&0Обмен с: %player%'
+# интерфейс может иметь от 1 до 6 рядов
+rows: 6
+
+# ----- СЛОТЫ -----
+
+# слоты, куда можно поместить предметы
+# убедитесь, что не размещаете декоративные предметы или предметы валюты в этих слотах
+# own-slots и partner-slots должны иметь одинаковое количество слотов
+own-slots:
+- 9-12
+- 18-21
+- 27-30
+- 36-39
+- 45-48
+
+partner-slots:
+- 14-17
+- 23-26
+- 32-35
+- 41-44
+- 50-53
+
+# ----- ПРЕДМЕТЫ -----
+
+# предметы на вашей стороне
+own:
+  confirm-item:
+    slot: 0
+    # вы можете использовать эти плейсхолдеры:
+    # %own-name%"
+    # %partner-name%
+    accept:
+      material: RED_CONCRETE
+      # если хотите, можете добавить текстуры голов, например:
+      #material: "PLAYER_HEAD"
+      #texture: "%own-head%"
+      name: '&#00ffdd&lᴘᴏᴅᴛʙᴇʀᴅɪᴛь ᴏʙᴍᴇɴ'
+      lore:
+      - ''
+      - ' &7- &fВы довольны обменом?'
+      - ''
+      - '&#00ffdd&l> &#00ffddНажмите &8- &#00ffddПодтвердить обмен'
+    cancel:
+      material: LIME_CONCRETE
+      name: '&#00ffdd&lᴏᴛᴍᴇɴɪᴛь ᴘᴏᴅᴛʙᴇʀᴢʜᴅᴇɴɪᴇ'
+      lore:
+      - ''
+      - ' &7- &fХотите что-то изменить?'
+      - ''
+      - '&#00ffdd&l> &#00ffddНажмите &8- &#00ffddОтменить подтверждение'
+  # вы можете определить столько валют, сколько хотите, но убедитесь, что скопировали их также в раздел 'partner'!
+  currency1:
+    slot: 2
+    # для этого нужен установленный Vault
+    currency: Vault
+    material: GOLD_NUGGET
+    name: '&#00ffdd&lᴅᴇɴьɢɪ'
+    # вы можете использовать эти плейсхолдеры:
+    #  %amount% (количество, установленное игроком)
+    #  %tax-amount% (количество после налога)
+    #  %tax-percent% (% налога на валюту)
+    #  %tax-fee% (сумма, взятая из-за налога)
+    lore:
+    - '&7Ваше предложение'
+    - ''
+    - ' &7- &fКоличество: &#00ffdd%amount%$'
+    - ''
+    - '&#00ffdd&l> &#00ffddНажмите &8- &#00ffddИзменить количество'
+  currency2:
+    slot: 3
+    currency: Experience
+    material: EXPERIENCE_BOTTLE
+    name: '&#00ffdd&lᴏᴘыᴛ'
+    lore:
+    - '&7Ваше предложение'
+    - ''
+    - ' &7- &fКоличество: &#00ffdd%amount% опыта'
+    - ''
+    - '&#00ffdd&l> &#00ffddНажмите &8- &#00ffddИзменить количество'
+
+# предметы на стороне вашего партнера по обмену
+partner:
+  confirm-item:
+    slot: 8
+    # вы также можете использовать эти плейсхолдеры:
+    # %own-name%"
+    # %partner-name%
+    accept:
+      material: RED_CONCRETE
+      # если хотите, можете добавить текстуры голов, например:
+      #material: "PLAYER_HEAD"
+      #texture: "%partner-head%"
+      name: '&#00ffdd&lᴏᴢʜɪᴅᴀɴɪᴇ ᴅʀᴜɢᴏɢᴏ ɪɢʀᴏᴋᴀ'
+      lore:
+      - ''
+      - ' &7- &f%partner-name% еще не подтвердил обмен!'
+      - ''
+    cancel:
+      material: LIME_CONCRETE
+      name: '&#00ffdd&lᴏᴢʜɪᴅᴀɴɪᴇ'
+      lore:
+      - ''
+      - ' &7- &f%partner-name% подтвердил обмен!'
+  currency1:
+    slot: 6
+    currency: Vault
+    material: GOLD_NUGGET
+    name: '&#00ffdd&lᴅᴇɴьɢɪ'
+    # вы можете использовать эти плейсхолдеры:
+    #  %amount% (количество, установленное игроком)
+    #  %tax-amount% (количество после налога)
+    #  %tax-percent% (% налога на валюту)
+    #  %tax-fee% (сумма, взятая из-за налога)
+    lore:
+    - '&7Предложение %partner-name%'
+    - ''
+    - ' &7- &fКоличество: &#00ffdd%amount%$'
+    - ''
+    - '&#00ffdd&l> &#00ffddНажмите &8- &#00ffddИзменить количество'
+  currency2:
+    slot: 5
+    currency: Experience
+    material: EXPERIENCE_BOTTLE
+    name: '&#00ffdd&lᴏᴘыᴛ'
+    lore:
+    - '&7Предложение %partner-name%'
+    - ''
+    - ' &7- &fКоличество: &#00ffdd%amount% опыта'
+    - ''
+    - '&#00ffdd&l> &#00ffddНажмите &8- &#00ffddИзменить количество'
+
+decoration-example:
+  slot:
+  - 4
+  - 13
+  - 22
+  - 31
+  - 40
+  - 49
+  material: LIGHT_BLUE_STAINED_GLASS_PANE
+  name: ' '
+
+# не изменяйте это
+version: 1

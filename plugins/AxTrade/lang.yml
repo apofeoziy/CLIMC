@@ -1,0 +1,118 @@
+# ДОКУМЕНТАЦИЯ: https://docs.artillex-studios.com/axtrade.html
+
+player-help:
+- ' '
+- '&#00FFDD&lAxTrade &7»'
+- ' &7- &f/axtrade <игрок> &7| &#00FFDDОтправить запрос на обмен'
+- ' &7- &f/axtrade accept <игрок> &7| &#00FFDDПринять запрос на обмен'
+- ' &7- &f/axtrade deny <игрок> &7| &#00FFDDОтклонить запрос на обмен'
+- ' '
+
+admin-help:
+- ' '
+- '&#00FFDD&lAxTrade &7»'
+- ' &7- &f/axtrade <игрок> &7| &#00FFDDОтправить запрос на обмен'
+- ' &7- &f/axtrade accept <игрок> &7| &#00FFDDПринять запрос на обмен'
+- ' &7- &f/axtrade deny <игрок> &7| &#00FFDDОтклонить запрос на обмен'
+- ' &7- &f/axtrade reload &7| &#00FFDDПерезагрузить плагин'
+- ' &7- &f/axtrade force <игрок> &7| &#00FFDDПринудительно начать обмен'
+- ' &7- &f/axtrade preview &7| &#00FFDDОткрыть интерфейс только для просмотра (для тестирования)'
+- ' '
+
+reload:
+  success: '&#33FF33Плагин успешно перезагружен!'
+  failed: '&#FF3333Не удалось перезагрузить плагин! Что-то не так в файле &f%file%&#FF3333, проверьте консоль или используйте валидатор yaml для исправления ошибок!'
+
+trade:
+  started: '&#CCFFEEВы начали обмен с &#00FFDD%player%&#CCFFEE!'
+  completed: '&#CCFFEEВаш обмен с &#00FFDD%player% &#CCFFEEзавершен!'
+  aborted: '&#CCFFEEВаш обмен с &#00FFDD%player% &#CCFFEEотменен!'
+  blacklisted-item: '&#CCFFEEЭтот предмет находится в черном списке!'
+  inventory-full: '&#CCFFEEВы не можете добавить больше предметов в интерфейс, потому что у вашего партнера по обмену нет свободных слотов.'
+  preview-info: '&#CCFFEEВы открываете интерфейс предварительного просмотра, он предназначен для тестирования вашей конфигурации, нажатие кнопок может вызвать ошибки и может не работать.'
+
+toggle:
+  enabled: '&#CCFFEEВы включили запросы на обмен!'
+  disabled: '&#CCFFEEВы отключили запросы на обмен!'
+
+# сводка после успешного обмена
+summary:
+  get:
+    item: '&#00FF00&l+ &#00FF00%amount%x %item%'
+    currency: '&#00FF00&l+ &#00FF00%amount% %currency%'
+  give:
+    item: '&#FF0000&l- &#FF0000%amount%x %item%'
+    currency: '&#FF0000&l- &#FF0000%amount% %currency%'
+
+currency-editor:
+  success: '&#CCFFEEЗначение успешно изменено!'
+  failed: '&#CCFFEEНеверное значение!'
+  not-enough: '&#CCFFEEУ вас недостаточно этой валюты!'
+
+request:
+  sent-sender: '&#CCFFEEВы успешно отправили запрос на обмен игроку &#00FFDD%player%&#CCFFEE!'
+  sent-receiver:
+    info: '&#CCFFEEВы получили запрос на обмен от &#00FFDD%player%&#CCFFEE!'
+    accept:
+      message: '&#00FF00/trade accept %player%'
+      hover: '&#00FF00Нажмите здесь, чтобы &nпринять&#00FF00 запрос на обмен!'
+    deny:
+      message: '&#FF0000/trade deny %player%'
+      hover: '&#FF0000Нажмите здесь, чтобы &nотклонить&#FF0000 запрос на обмен!'
+  no-request: '&#CCFFEEУ вас нет активного запроса на обмен от &#00FFDD%player%&#CCFFEE!'
+  deny-sender: '&#CCFFEEВаш запрос на обмен был отклонен игроком &#00FFDD%player%&#CCFFEE!'
+  deny-receiver: '&#CCFFEEВы успешно отклонили запрос на обмен от &#00FFDD%player%&#CCFFEE!'
+  cant-trade-self: '&#CCFFEEВы не можете отправить запрос на обмен самому себе!'
+  already-in-trade: '&#CCFFEEИгрок уже торгуется с кем-то!'
+  already-sent: '&#CCFFEEВы уже недавно отправляли запрос на обмен игроку &#00FFDD%player% &#CCFFEE!'
+  too-far: '&#CCFFEEВы слишком далеко от &#00FFDD%player% &#CCFFEE, чтобы отправить запрос на обмен!'
+  not-accepting: '&#CCFFEEЭтот игрок не принимает обмены!'
+  disallowed-gamemode: '&#CCFFEEВы или другой игрок находитесь в запрещенном игровом режиме!'
+  same-ip: '&#CCFFEEВы не можете торговать с аккаунтом, у которого такой же IP, как у вас!'
+  below-required-amount: '&#CCFFEEВы должны обменять как минимум &f%amount% %currency%&#CCFFEE!'
+  blacklisted-world: '&#CCFFEEОбмены отключены в этом мире!'
+  expired: '&#CCFFEEВаш запрос на обмен игроку &#00FFDD%player% &#CCFFEEистек!'
+  disabled-trading: '&#CCFFEEВы отключили обмены! Используйте &#00FFDD/trade toggle &#CCFFEE, чтобы включить.'
+
+# это должно быть 4 строки
+# примечание: в настоящее время первая строка должна быть пустой
+currency-editor-sign:
+- ''
+- '-----------'
+- Напишите новое значение
+- в первой строке
+
+# список звуков: https://www.digminecraft.com/lists/sound_list_pc.php
+# установите "" для отключения
+sounds:
+  # звуки обмена
+  started: entity.player.levelup
+  completed: entity.player.levelup
+  aborted: block.anvil.destroy
+  # запросы на обмен
+  deny: block.anvil.land
+  requested: entity.experience_bottle.throw
+  # звуки интерфейса
+  accept: ui.button.click
+  countdown: ui.button.click
+  cancel: ui.button.click
+
+# может использоваться в заголовке интерфейса как %own-status% и %partner-status%
+placeholders:
+  ready: Готов
+  waiting: Ожидание
+
+commands:
+  invalid-value: '&#FF0000Неверный параметр: &#BB0000%value%'
+  invalid-command: '&#FF0000Неверная команда или подкоманда!'
+  missing-argument: '&#FF0000Отсутствует аргумент! Вы должны указать значение для &#BB0000%value%&#FF0000.'
+  no-permission: '&#FF0000У вас нет разрешения на использование этой команды!'
+  out-of-range: '&#FF0000Число &#BB0000%number% &#FF0000должно быть между &#BB0000%min% &#FF0000и &#BB0000%max%&#FF0000!'
+  player-only: '&#FF0000Вы должны быть игроком, чтобы использовать эту команду!'
+  invalid-player: '&#FF0000Игрок &#BB0000%player% &#FF0000не найден!'
+  invalid-selector: '&#FF0000Вы не можете использовать этот селектор в этой команде!'
+
+update-notifier: '&#AAFFCCДоступна новая версия плагина! &#DDDDDD(&#FFFFFFтекущая: &#FF0000%current% &#DDDDDD| &#FFFFFFпоследняя: &#00FF00%latest%&#DDDDDD)'
+
+# не изменяйте это
+version: 8

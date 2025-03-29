@@ -1,0 +1,8 @@
+display_name: <lang.skill-power-displayname>
+icon: ARMOR_STAND
+icon_data: 3510001
+description: <lang.skill-power-description>
+
+levelbar_title: <lang.skill-power-level-bar>
+levelbar_color: YELLOW # Вы можете выбрать между BLUE, YELLOW, GREEN, PINK, PURPLE, RED, WHITE
+levelbar_style: SEGMENTED_6 # Вы можете выбрать между SEGMENTED_6, SEGMENTED_10, SEGMENTED_12, SEGMENTED_20 и SOLID

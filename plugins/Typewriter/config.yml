@@ -1,0 +1,13 @@
+# Whether the web panel and web sockets are enabled.
+enabled: true
+panel:
+  enabled: true
+  port: 8080
+websocket:
+  # The port of the websocket server. Make sure this port is open.
+  port: 9092
+  # The authentication that is used. Leave unchanged if you don't know what you are doing.
+  # Possible values: none (not recommended), session
+  auth: session
+# The hostname of the server. CHANGE THIS to your servers ip.
+hostname: localhost

@@ -1,0 +1,168 @@
+enabled: true # Если false, мобы не будут получать уровни или характеристики в зависимости от уровня силы окружающих игроков
+monsters_only: true # Если true, только монстры могут получать уровни и характеристики. Если false, животные тоже могут их получать (довольно странно, не рекомендуется)
+
+# Рассчитывает, насколько высок уровень сложности игроков в области. По умолчанию, один игрок будет иметь региональную сложность, равную
+# его уровню силы, но с несколькими игроками она будет немного выше среднего.
+# Пример, игроки уровня 10 и 50: их истинное среднее было бы 30, но с формулой 60*1.2-0.2 = 72, 72/2 = 36 уровень их области будет около 36
+# Если не определено, будет использоваться истинное среднее.
+regional_player_level: (%combined_player_level% * 1.2) / %nearby_player_count%
+# Другие допустимые плейсхолдеры: %min_player_level% для самого низкого уровня окружающего игрока и %max_player_level% для самого высокого уровня окружающего игрока
+# rand() здесь использовать нельзя
+
+wolf_leveling: true # Если true, волки повышают уровень вместе с игроками, что улучшает их характеристики
+default_wolf_leveling: '%level%' # Масштабирование волков не может использовать функцию rand()
+
+
+global: # Характеристики для всех существ. Существам, указанным в разделе `entity`, также могут быть даны характеристики, которые переопределяют глобальные и стандартные характеристики, когда они присутствуют.
+  # Например, зомби получают -100% сопротивления сиянию. Это переопределяет глобальное сопротивление сиянию 100%.
+  # %level% может использоваться как плейсхолдер, но для существ без уровня (пассивные мобы или игроки, например) уровень будет равен 0
+  RADIANT_RESISTANCE: 1 # Почти все существа не являются нежитью, поэтому они не должны получать урон от сияния
+
+default: # Характеристики для всех монстров
+  # Если wolf_leveling также true, то волки включены в эти характеристики
+  # По умолчанию мобы получают 50% критического урона, это добавляется к характеристикам зомби, если у зомби также не указан критический урон.
+  level: '%level% + rand(-5,5)' # %level% здесь относится к среднему уровню силы игрока в локации. В других местах он относится к уровню существа
+  exp_orb_bonus: 0.02 * %level% # Бонусы к сферам опыта
+  loot_bonus: 0.02 * %level%
+  HEALTH_MULTIPLIER_BONUS: -0.3 + (0.033 * %level%) # Изначально снижает здоровье моба на 30%, увеличивается до четырехкратного здоровья на уровне 100
+  WEIGHTLESS_ARMOR: 0.2 * %level% # Дает мобам до 20 базовой брони на уровне 100
+  DAMAGE_DEALT: -0.3 + (0.023 * %level%) # Изначально снижает урон моба на 30%, увеличивается до тройного урона на уровне 100
+  ARMOR_FRACTION_IGNORED: 0.005 * %level% # Дает мобам до 50% игнорирования брони на уровне 100
+  CRIT_CHANCE: 0.005 * %level% # Дает мобам до 50% шанса критического удара на уровне 100
+  CRIT_DAMAGE: '0.5' # Дает мобам +50% критического урона
+  BLEED_RESISTANCE: -4 # Мобы в 5 раз более уязвимы к кровотечению по умолчанию
+
+entity:
+  ZOMBIE: # Все монстры-нежить настроены на получение двойного урона от сияния
+    RADIANT_RESISTANCE: -1 # Зомби получают двойной урон от сияния
+    FIRE_RESISTANCE: -0.5 # Зомби получают +50% урона от огня
+    NECROTIC_RESISTANCE: 1 # Зомби иммунны к некротическому урону
+    POISON_RESISTANCE: 0.5 # Зомби получают -50% урона от яда
+    BLEED_RESISTANCE: 0.5 # Зомби получают -50% урона от кровотечения
+  DROWNED:
+    RADIANT_RESISTANCE: -1
+    NECROTIC_RESISTANCE: 1
+    POISON_RESISTANCE: 0.5
+    BLEED_RESISTANCE: 0.5
+  HUSK:
+    RADIANT_RESISTANCE: -1
+    FIRE_RESISTANCE: 0.3
+    NECROTIC_RESISTANCE: 1
+    POISON_RESISTANCE: 0.5
+    BLEED_RESISTANCE: 0.5
+  ZOMBIE_HORSE:
+    RADIANT_RESISTANCE: -1
+    FIRE_RESISTANCE: -0.5
+    NECROTIC_RESISTANCE: 1
+    POISON_RESISTANCE: 0.5
+    BLEED_RESISTANCE: 0.5
+  ZOMBIE_VILLAGER:
+    RADIANT_RESISTANCE: -1
+    FIRE_RESISTANCE: -0.5
+    NECROTIC_RESISTANCE: 1
+    POISON_RESISTANCE: 0.5
+    BLEED_RESISTANCE: 0.5
+  ZOMBIFIED_PIGLIN:
+    RADIANT_RESISTANCE: -1
+    FIRE_RESISTANCE: 1
+    NECROTIC_RESISTANCE: 1
+    POISON_RESISTANCE: 0.5
+    BLEED_RESISTANCE: 0.5
+  ZOGLIN:
+    RADIANT_RESISTANCE: -1
+    FIRE_RESISTANCE: -0.5
+    NECROTIC_RESISTANCE: 1
+    POISON_RESISTANCE: 0.5
+    BLEED_RESISTANCE: 0.5
+  SKELETON:
+    RADIANT_RESISTANCE: -1
+    FIRE_RESISTANCE: -1
+    MELEE_RESISTANCE: -0.5
+    EXPLOSION_RESISTANCE: -1
+    FALLING_RESISTANCE: -1
+    NECROTIC_RESISTANCE: 1
+    POISON_RESISTANCE: 1
+    BLEED_RESISTANCE: 1
+  STRAY:
+    RADIANT_RESISTANCE: -1
+    FIRE_RESISTANCE: -1
+    MELEE_RESISTANCE: -0.5
+    EXPLOSION_RESISTANCE: -1
+    FALLING_RESISTANCE: -1
+    FREEZING_RESISTANCE: 1
+    NECROTIC_RESISTANCE: 1
+    POISON_RESISTANCE: 1
+    BLEED_RESISTANCE: 1
+  WITHER_SKELETON:
+    RADIANT_RESISTANCE: -1
+    FIRE_RESISTANCE: 1
+    NECROTIC_RESISTANCE: 1
+    POISON_RESISTANCE: 1
+    BLEED_RESISTANCE: 1
+  SKELETON_HORSE:
+    RADIANT_RESISTANCE: -1
+    FIRE_RESISTANCE: -1
+    MELEE_RESISTANCE: -0.5
+    EXPLOSION_RESISTANCE: -1
+    FALLING_RESISTANCE: -1
+    NECROTIC_RESISTANCE: 1
+    POISON_RESISTANCE: 1
+    BLEED_RESISTANCE: 1
+  PHANTOM:
+    RADIANT_RESISTANCE: -1
+    FIRE_RESISTANCE: -1
+    NECROTIC_RESISTANCE: 1
+  BLAZE:
+    RADIANT_RESISTANCE: 0 # Мобы Нижнего мира не получают сопротивления сиянию
+    FIRE_RESISTANCE: 1
+    NECROTIC_RESISTANCE: 0.5
+  GHAST:
+    RADIANT_RESISTANCE: 0
+    NECROTIC_RESISTANCE: 0.5
+  HOGLIN:
+    RADIANT_RESISTANCE: 0
+    NECROTIC_RESISTANCE: 0.5
+  MAGMA_CUBE:
+    RADIANT_RESISTANCE: 0
+    NECROTIC_RESISTANCE: 0.5
+  PIGLIN:
+    RADIANT_RESISTANCE: 0
+    NECROTIC_RESISTANCE: 0.5
+  PIGLIN_BRUTE:
+    RADIANT_RESISTANCE: 0
+    NECROTIC_RESISTANCE: 0.5
+  CAVE_SPIDER:
+    POISON_RESISTANCE: 1
+    MELEE_RESISTANCE: -0.5
+  SPIDER:
+    POISON_RESISTANCE: 1
+  # (мини)Боссы не страдают от уменьшенного здоровья на уровне 0 и получают увеличенное масштабирование уровня игрока
+  ENDER_DRAGON:
+    level: 2 * %level%
+    HEALTH_MULTIPLIER_BONUS: (0.015 * %level%) # Драконы Края получают четырехкратное здоровье на уровне 200
+    PROJECTILE_RESISTANCE: 0.5
+    FIRE_RESISTANCE: 1
+    MAGIC_RESISTANCE: 0.7
+    POISON_RESISTANCE: 0.7
+    ARMOR_FRACTION_IGNORED: 0.5
+  WARDEN:
+    level: 1.25 * %level%
+    HEALTH_MULTIPLIER_BONUS: (0.008 * %level%) # Стражи получают +50% здоровья на уровне 125
+    PROJECTILE_RESISTANCE: 0.5
+    NECROTIC_RESISTANCE: 0.5
+    ARMOR_FRACTION_IGNORED: 0.75
+  WITHER:
+    level: 1.25 * %level%
+    HEALTH_MULTIPLIER_BONUS: (0.016 * %level%) # Иссушители получают тройное здоровье на уровне 125
+    PROJECTILE_RESISTANCE: 0.5
+    RADIANT_RESISTANCE: -1
+    FIRE_RESISTANCE: 1
+    NECROTIC_RESISTANCE: 1
+    POISON_RESISTANCE: 1
+    BLEED_RESISTANCE: 1
+    EXPLOSION_RESISTANCE: 1
+    ARMOR_FRACTION_IGNORED: 0.5
+  ELDER_GUARDIAN:
+    level: 1.25 * %level%
+    HEALTH_MULTIPLIER_BONUS: (0.008 * %level%) # Древние стражи получают двойное здоровье на уровне 125
+    ARMOR_FRACTION_IGNORED: 0.5

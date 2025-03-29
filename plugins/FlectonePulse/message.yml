@@ -1,0 +1,554 @@
+#  ___       ___  __  ___  __        ___ 
+# |__  |    |__  /  `  |  /  \ |\ | |__
+# |    |___ |___ \__,  |  \__/ | \| |___
+#  __             __   ___ 
+# |__) |  | |    /__` |__  
+# |    \__/ |___ .__/ |___   /\
+#                           /  \
+# __/\___  ____/\_____  ___/    \______
+#        \/           \/  
+# 
+# https://flectone.net/pulse/docs/message/
+enable: true
+# https://flectone.net/pulse/docs/message/advancement/
+advancement:
+  enable: true
+  grant: true
+  revoke: true
+  range: -1
+  destination:
+    type: CHAT
+  sound:
+    enable: false
+# https://flectone.net/pulse/docs/message/afk/
+afk:
+  enable: true
+  range: -1
+  delay: 3000
+  ignore:
+    - "afk"
+  destination:
+    type: CHAT
+  ticker:
+    enable: true
+    period: 20
+# https://flectone.net/pulse/docs/message/anvil/
+anvil:
+  enable: false
+# https://flectone.net/pulse/docs/message/auto/
+auto:
+  enable: false
+  types:
+    announcement:
+      random: true
+      destination:
+        type: CHAT
+      ticker:
+        enable: true
+        period: 9000
+      sound:
+        enable: false
+# https://flectone.net/pulse/docs/message/bed/
+bed:
+  enable: true
+  destination:
+    type: ACTION_BAR
+    times:
+      stay: 60
+  sound:
+    enable: false
+# https://flectone.net/pulse/docs/message/book/
+book:
+  enable: false
+# https://flectone.net/pulse/docs/message/brand/
+brand:
+  enable: true
+  random: true
+  destination:
+    type: BRAND
+  ticker:
+    enable: true
+    period: 100
+# https://flectone.net/pulse/docs/message/bubble/
+bubble:
+  enable: true
+  distance: 30.0
+  line-width: 200
+  read-speed: 100.0
+  handicap-chars: 10.0
+  modern:
+    enable: true
+    has-shadow: false
+    height: 0.2
+    scale: 1.0
+    background: "#00000040"
+# https://flectone.net/pulse/docs/message/chat/
+chat:
+  enable: true
+  types:
+    local:
+      enable: true
+      null-recipient: true
+      cancel: true
+      range: 100
+      priority: 0
+      trigger: ""
+      destination:
+        type: CHAT
+      cooldown:
+        enable: false
+      sound:
+        enable: false
+    global:
+      enable: true
+      null-recipient: true
+      cancel: false
+      range: -2
+      priority: 5
+      trigger: "!"
+      destination:
+        type: CHAT
+      cooldown:
+        enable: false
+      sound:
+        enable: false
+# https://flectone.net/pulse/docs/message/clear/
+clear:
+  enable: true
+  sound:
+    enable: false
+  destination:
+    type: CHAT
+# https://flectone.net/pulse/docs/message/death/
+death:
+  enable: true
+  range: -1
+  destination:
+    type: CHAT
+  sound:
+    enable: false
+# https://flectone.net/pulse/docs/message/deop/
+deop:
+  enable: true
+  destination:
+    type: CHAT
+  sound:
+    enable: false
+# https://flectone.net/pulse/docs/message/enchant/
+enchant:
+  enable: true
+  destination:
+    type: CHAT
+  sound:
+    enable: false
+# https://flectone.net/pulse/docs/message/format/
+format:
+  enable: true
+  tags:
+    PING:
+      enable: true
+      trigger: "%ping%"
+    TPS:
+      enable: true
+      trigger: "%tps%"
+    ONLINE:
+      enable: true
+      trigger: "%online%"
+    COORDS:
+      enable: true
+      trigger: "%coords%"
+    STATS:
+      enable: true
+      trigger: "%stats%"
+    SKIN:
+      enable: true
+      trigger: "%skin%"
+    ITEM:
+      enable: true
+      trigger: "%item%"
+    URL:
+      enable: true
+      trigger: "(?<!:\")((https?|ftp|gopher|telnet|file):((//)|(\\\\))+[\\w:#@%/;$()~_?+-=\\\\.&]*)"
+    IMAGE:
+      enable: true
+      trigger: "(?<!:\")((https?|ftp|gopher|telnet|file):\\/\\/(?:i\\.imgur\\.com|media\\.discordapp\\.net)\\/[\\w:#@%/;$()~_?+-=\\\\.&]*)"
+    SPOILER:
+      enable: true
+      trigger: "\\Q||\\E"
+    BOLD:
+      enable: true
+      trigger: "\\Q**\\E"
+    ITALIC:
+      enable: true
+      trigger: "\\Q*\\E"
+    UNDERLINE:
+      enable: true
+      trigger: "\\Q__\\E"
+    OBFUSCATED:
+      enable: true
+      trigger: "\\Q??\\E"
+    STRIKETHROUGH:
+      enable: true
+      trigger: "\\Q~~\\E"
+    HOVER:
+      enable: true
+      trigger: null
+    CLICK:
+      enable: true
+      trigger: null
+    COLOR:
+      enable: true
+      trigger: null
+    KEYBIND:
+      enable: true
+      trigger: null
+    TRANSLATABLE:
+      enable: true
+      trigger: null
+    TRANSLATABLE_FALLBACK:
+      enable: true
+      trigger: null
+    INSERTION:
+      enable: true
+      trigger: null
+    FONT:
+      enable: true
+      trigger: null
+    DECORATION:
+      enable: true
+      trigger: null
+    GRADIENT:
+      enable: true
+      trigger: null
+    RAINBOW:
+      enable: true
+      trigger: null
+    RESET:
+      enable: true
+      trigger: null
+    NEWLINE:
+      enable: true
+      trigger: null
+    TRANSITION:
+      enable: true
+      trigger: null
+    SELECTOR:
+      enable: true
+      trigger: null
+    SCORE:
+      enable: true
+      trigger: null
+    NBT:
+      enable: true
+      trigger: null
+    PRIDE:
+      enable: true
+      trigger: null
+    SHADOW_COLOR:
+      enable: true
+      trigger: null
+  # https://flectone.net/pulse/docs/message/format/color/
+  color:
+    enable: true
+    use-recipient-colors: true
+    values:
+      1: "#ADD8E6"
+      2: "#87CEFA"
+      3: "#A9A9A9"
+      4: "#FFFAFA"
+  # https://flectone.net/pulse/docs/message/format/emoji/
+  emoji:
+    enable: true
+    values:
+      :): "<click:suggest_command:\":)\"><hover:show_text:\":)\">☺</hover></click>"
+      :D: "<click:suggest_command:\":D\"><hover:show_text:\":D\">☻</hover></click>"
+      :(: "<click:suggest_command:\":(\"><hover:show_text:\":(\">☹</hover></click>"
+      :ok:: "<click:suggest_command:\":ok:\"><hover:show_text:\":ok:\">🖒</hover></click>"
+      :+1:: "<click:suggest_command:\":+1:\"><hover:show_text:\":+1:\">🖒</hover></click>"
+      :-1:: "<click:suggest_command:\":-1:\"><hover:show_text:\":-1:\">🖓</hover></click>"
+      :cool:: "<click:suggest_command:\":cool:\"><hover:show_text:\":cool:\">😎</hover></click>"
+      B): "<click:suggest_command:\"B)\"><hover:show_text:\"B)\">😎</hover></click>"
+      :clown:: "<click:suggest_command:\":clown:\"><hover:show_text:\":clown:\">🤡</hover></click>"
+      <3: "<click:suggest_command:\"<3\"><hover:show_text:\"<3\">❤</hover></click>"
+      XD: "<click:suggest_command:\"XD\"><hover:show_text:\"XD\">😆</hover></click>"
+      %): "<click:suggest_command:\"%)\"><hover:show_text:\"%)\">😵</hover></click>"
+      =D: "<click:suggest_command:\"=D\"><hover:show_text:\"=D\">😃</hover></click>"
+      >:(: "<click:suggest_command:\">:(\"><hover:show_text:\">:(\">😡</hover></click>"
+      :idk:: "<click:suggest_command:\":idk:\"><hover:show_text:\":idk:\">¯\\_(ツ)_/¯</hover></click>"
+      :angry:: "<click:suggest_command:\":angry:\"><hover:show_text:\":angry:\">(╯°□°)╯︵ ┻━┻</hover></click>"
+      :happy:: "<click:suggest_command:\":happy:\"><hover:show_text:\":happy:\">＼(＾O＾)／</hover></click>"
+  # https://flectone.net/pulse/docs/message/format/fixation/
+  fixation:
+    enable: false
+    end-dot: false
+    first-letter-uppercase: false
+    non-dot-symbols:
+      - ";"
+      - ":"
+      - "'"
+      - "\""
+      - ","
+      - "?"
+      - "!"
+      - "."
+  # https://flectone.net/pulse/docs/message/format/image/
+  image:
+    enable: true
+    color: "<fcolor:2>"
+  # https://flectone.net/pulse/docs/message/format/mention/
+  mention:
+    enable: true
+    trigger: "@"
+    destination:
+      type: ACTION_BAR
+      times:
+        stay: 60
+    sound:
+      enable: true
+      volume: 0.1
+      pitch: 0.1
+      category: "NEUTRAL"
+      name: "minecraft:entity.experience_orb.pickup"
+  # https://flectone.net/pulse/docs/message/format/moderation/
+  moderation:
+    enable: true
+    # https://flectone.net/pulse/docs/message/format/moderation/caps/
+    caps:
+      enable: false
+      trigger: 0.7
+    # https://flectone.net/pulse/docs/message/format/moderation/flood/
+    flood:
+      enable: false
+      trim-to-single: false
+      max-repeated-symbols: 10
+      max-repeated-words: 2
+    # https://flectone.net/pulse/docs/message/format/moderation/swear/
+    swear:
+      enable: false
+      trigger:
+        - "((у|[нз]а|(хитро|не)?вз?[ыьъ]|с[ьъ]|(и|ра)[зс]ъ?|(о[тб]|под)[ьъ]?|(.\\B)+?[оаеи])?-?([её]б(?!о[рй])|и[пб][ае][тц]).*?|(н[иеа]|([дп]|верт)о|ра[зс]|з?а|с(ме)?|о(т|дно)?|апч)?-?ху([яйиеёю]|ли(?!ган)).*?|(в[зы]|(три|два|четыре)жды|(н|сук)а)?-?бл(я(?!(х|ш[кн]|мб)[ауеыио]).*?|[еэ][дт]ь?)|(ра[сз]|[зн]а|[со]|вы?|п(ере|р[оие]|од)|и[зс]ъ?|[ао]т)?п[иеё]зд.*?|(за)?п[ие]д[аое]?р([оа]м|(ас)?(ну.*?|и(ли)?[нщктл]ь?)?|(о(ч[еи])?|ас)?к(ой)|юг)[ауеы]?|манд([ауеыи](л(и[сзщ])?[ауеиы])?|ой|[ао]вошь?(е?к[ауе])?|юк(ов|[ауи])?)|муд([яаио].*?|е?н([ьюия]|ей))|мля([тд]ь)?|лять|([нз]а|по|пи)х|м[ао]л[ао]фь([яию]|[еёо]й))(?=[\\s,.:;\"']|$)"
+        - "(([уyu]|[нзnz3][аa]|(хитро|не)?[вvwb][зz3]?[ыьъi]|[сsc][ьъ']|(и|[рpr][аa4])[зсzs]ъ?|([оo0][тбtb6]|[пp][оo0][дd9])[ьъ']?|(.\\B)+?[оаеиeo])?-?([еёe][бb6](?!о[рй])|и[пб][ае][тц]).*?|([нn][иеаaie]|([дпdp]|[вv][еe3][рpr][тt])[оo0]|[рpr][аa][зсzc3]|[з3z]?[аa]|с(ме)?|[оo0]([тt]|дно)?|апч)?-?[хxh][уuy]([яйиеёюuie]|ли(?!ган)).*?|([вvw][зы3z]|(три|два|четыре)жды|(н|[сc][уuy][кk])[аa])?-?[бb6][лl]([яy](?!(х|ш[кн]|мб)[ауеыио]).*?|[еэe][дтdt][ь']?)|([рp][аa][сзc3z]|[знzn][аa]|[соsc]|[вv][ыi]?|[пp]([еe][рpr][еe]|[рrp][оиioеe]|[оo0][дd])|и[зс]ъ?|[аоao][тt])?[пpn][иеёieu][зz3][дd9].*?|([зz3][аa])?[пp][иеieu][дd][аоеaoe]?[рrp](ну.*?|[оаoa][мm]|([аa][сcs])?([иiu]([лl][иiu])?[нщктлtlsn]ь?)?|([оo](ч[еиei])?|[аa][сcs])?[кk]([оo]й)?|[юu][гg])[ауеыauyei]?|[мm][аa][нnh][дd]([ауеыayueiи]([лl]([иi][сзc3щ])?[ауеыauyei])?|[оo][йi]|[аоao][вvwb][оo](ш|sh)[ь']?([e]?[кk][ауеayue])?|юк(ов|[ауи])?)|[мm][уuy][дd6]([яyаиоaiuo0].*?|[еe]?[нhn]([ьюия'uiya]|ей))|мля([тд]ь)?|лять|([нз]а|по|пи)х|м[ао]л[ао]фь([яию]|[её]й))(?=[\\s,.:;\"']|$)"
+  # https://flectone.net/pulse/docs/message/format/name_/
+  name-:
+    enable: true
+    team: true
+    visible: false
+    color: "<white>"
+  # https://flectone.net/pulse/docs/message/format/questionanswer/
+  question-answer:
+    enable: false
+    questions:
+      server:
+        range: 0
+        destination:
+          type: CHAT
+        cooldown:
+          enable: false
+        sound:
+          enable: false
+        target: "(?i)\\b(what\\s+is\\s+this\\s+server|what\\'?s\\s+this\\s+server|what\\s+server\\s+is\\s+this)\\b"
+      flectone:
+        range: 0
+        destination:
+          type: CHAT
+        cooldown:
+          enable: false
+        sound:
+          enable: false
+        target: "(?i)\\b(flectone|flectonepulse|flecton)\\b"
+  # https://flectone.net/pulse/docs/message/format/spoiler/
+  spoiler:
+    enable: true
+    color: "<fcolor:2>"
+  # https://flectone.net/pulse/docs/message/format/translate/
+  translate:
+    enable: true
+  # https://flectone.net/pulse/docs/message/format/world/
+  world:
+    enable: true
+    mode: TYPE
+    values:
+      normal: "<color:#98FB98>"
+      nether: "<color:#F08080>"
+      the_end: "<color:#9370DB>"
+      custom: "<color:#98FB98>"
+      world: "<color:#98FB98>"
+      world_nether: "<color:#F08080>"
+      world_the_end: "<color:#9370DB>"
+# https://flectone.net/pulse/docs/message/gamemode/
+gamemode:
+  enable: true
+  destination:
+    type: CHAT
+  sound:
+    enable: false
+# https://flectone.net/pulse/docs/message/greeting/
+greeting:
+  enable: false
+  destination:
+    type: CHAT
+  sound:
+    enable: false
+# https://flectone.net/pulse/docs/message/join/
+join:
+  enable: true
+  first: true
+  range: -1
+  destination:
+    type: CHAT
+  sound:
+    enable: false
+# https://flectone.net/pulse/docs/message/mark/
+mark:
+  enable: false
+  limit: true
+  color: true
+  range: 100
+  duration: 60
+  item: "WOODEN_SWORD"
+  legacy:
+    enable: true
+    size: 1
+    entity: "MAGMA_CUBE"
+  modern:
+    enable: false
+    scale: 1.0
+    block: "BEACON"
+  cooldown:
+    enable: false
+  sound:
+    enable: false
+# https://flectone.net/pulse/docs/message/objective/
+objective:
+  enable: true
+  # https://flectone.net/pulse/docs/message/objective/belowname/
+  belowname:
+    enable: false
+    mode: PING
+    ticker:
+      enable: true
+      period: 100
+  # https://flectone.net/pulse/docs/message/objective/tabname/
+  tabname:
+    enable: false
+    mode: PING
+    ticker:
+      enable: true
+      period: 100
+# https://flectone.net/pulse/docs/message/op/
+op:
+  enable: true
+  destination:
+    type: CHAT
+  sound:
+    enable: false
+# https://flectone.net/pulse/docs/message/quit/
+quit:
+  enable: true
+  range: -1
+  destination:
+    type: CHAT
+  sound:
+    enable: false
+# https://flectone.net/pulse/docs/message/rightclick/
+rightclick:
+  enable: true
+  destination:
+    type: ACTION_BAR
+    times:
+      stay: 60
+  cooldown:
+    enable: false
+  sound:
+    enable: false
+# https://flectone.net/pulse/docs/message/scoreboard/
+scoreboard:
+  enable: false
+  random: true
+  ticker:
+    enable: true
+    period: 100
+# https://flectone.net/pulse/docs/message/seed/
+seed:
+  enable: true
+  destination:
+    type: CHAT
+  sound:
+    enable: false
+# https://flectone.net/pulse/docs/message/setblock/
+setblock:
+  enable: true
+  destination:
+    type: CHAT
+  sound:
+    enable: false
+# https://flectone.net/pulse/docs/message/sign/
+sign:
+  enable: false
+# https://flectone.net/pulse/docs/message/sleep/
+sleep:
+  enable: true
+  destination:
+    type: ACTION_BAR
+    times:
+      stay: 60
+  sound:
+    enable: false
+# https://flectone.net/pulse/docs/message/spawn/
+spawn:
+  enable: true
+  destination:
+    type: CHAT
+  sound:
+    enable: false
+# https://flectone.net/pulse/docs/message/status/
+status:
+  enable: true
+  # https://flectone.net/pulse/docs/message/status/icon/
+  icon:
+    enable: false
+    random: true
+    values:
+      - "server-icon-1.png"
+      - "server-icon-2.png"
+  # https://flectone.net/pulse/docs/message/status/motd/
+  motd:
+    enable: true
+    random: true
+  # https://flectone.net/pulse/docs/message/status/players/
+  players:
+    enable: false
+    control: true
+    max: 69
+    online: -69
+  # https://flectone.net/pulse/docs/message/status/version/
+  version:
+    enable: false
+    protocol: -1
+# https://flectone.net/pulse/docs/message/tab/
+tab:
+  enable: true
+  # https://flectone.net/pulse/docs/message/tab/header/
+  header:
+    enable: true
+    random: true
+    destination:
+      type: TAB_HEADER
+    ticker:
+      enable: true
+      period: 100
+  # https://flectone.net/pulse/docs/message/tab/footer/
+  footer:
+    enable: true
+    random: true
+    destination:
+      type: TAB_FOOTER
+    ticker:
+      enable: true
+      period: 100
+  # https://flectone.net/pulse/docs/message/tab/playerlistname/
+  playerlistname:
+    enable: true
+    ticker:
+      enable: true
+      period: 100

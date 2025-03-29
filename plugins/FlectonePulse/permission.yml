@@ -1,0 +1,1050 @@
+#  ___       ___  __  ___  __        ___ 
+# |__  |    |__  /  `  |  /  \ |\ | |__
+# |    |___ |___ \__,  |  \__/ | \| |___
+#  __             __   ___ 
+# |__) |  | |    /__` |__  
+# |    \__/ |___ .__/ |___   /\
+#                           /  \
+# __/\___  ____/\_____  ___/    \______
+#        \/           \/  
+# 
+# https://flectone.net/pulse/docs/message
+module:
+  name: "flectonepulse.module"
+  type: TRUE
+# https://flectone.net/pulse/docs/command/
+command:
+  name: "flectonepulse.module.command"
+  type: TRUE
+  # https://flectone.net/pulse/docs/command/afk/
+  afk:
+    name: "flectonepulse.module.command.afk"
+    type: TRUE
+    cooldown-bypass:
+      name: "flectonepulse.module.command.afk.cooldown.bypass"
+      type: OP
+    sound:
+      name: "flectonepulse.module.command.afk.sound"
+      type: TRUE
+  # https://flectone.net/pulse/docs/command/ball/
+  ball:
+    name: "flectonepulse.module.command.ball"
+    type: TRUE
+    cooldown-bypass:
+      name: "flectonepulse.module.command.ball.cooldown.bypass"
+      type: OP
+    sound:
+      name: "flectonepulse.module.command.ball.sound"
+      type: TRUE
+  # https://flectone.net/pulse/docs/command/ban/
+  ban:
+    name: "flectonepulse.module.command.ban"
+    type: OP
+    cooldown-bypass:
+      name: "flectonepulse.module.command.ban.cooldown.bypass"
+      type: OP
+    sound:
+      name: "flectonepulse.module.command.ban.sound"
+      type: TRUE
+  # https://flectone.net/pulse/docs/command/banlist/
+  banlist:
+    name: "flectonepulse.module.command.banlist"
+    type: OP
+    cooldown-bypass:
+      name: "flectonepulse.module.command.banlist.cooldown.bypass"
+      type: OP
+    sound:
+      name: "flectonepulse.module.command.banlist.sound"
+      type: TRUE
+  # https://flectone.net/pulse/docs/command/broadcast/
+  broadcast:
+    name: "flectonepulse.module.command.broadcast"
+    type: OP
+    cooldown-bypass:
+      name: "flectonepulse.module.command.broadcast.cooldown.bypass"
+      type: OP
+    sound:
+      name: "flectonepulse.module.command.broadcast.sound"
+      type: TRUE
+  # https://flectone.net/pulse/docs/command/chatcolor/
+  chatcolor:
+    name: "flectonepulse.module.command.chatcolor"
+    type: TRUE
+    other:
+      name: "flectonepulse.module.command.chatcolor.other"
+      type: OP
+    cooldown-bypass:
+      name: "flectonepulse.module.command.chatcolor.cooldown.bypass"
+      type: OP
+    sound:
+      name: "flectonepulse.module.command.chatcolor.sound"
+      type: TRUE
+  # https://flectone.net/pulse/docs/command/chatsetting/
+  chatsetting:
+    name: "flectonepulse.module.command.chatsetting"
+    type: TRUE
+    items:
+      ADVANCEMENT:
+        name: "flectonepulse.module.command.chatsetting.advancement"
+        type: TRUE
+      AFK:
+        name: "flectonepulse.module.command.chatsetting.afk"
+        type: TRUE
+      AUTO:
+        name: "flectonepulse.module.command.chatsetting.auto"
+        type: TRUE
+      BALL:
+        name: "flectonepulse.module.command.chatsetting.ball"
+        type: TRUE
+      BAN:
+        name: "flectonepulse.module.command.chatsetting.ban"
+        type: TRUE
+      BROADCAST:
+        name: "flectonepulse.module.command.chatsetting.broadcast"
+        type: TRUE
+      CHAT:
+        name: "flectonepulse.module.command.chatsetting.chat"
+        type: TRUE
+      COIN:
+        name: "flectonepulse.module.command.chatsetting.coin"
+        type: TRUE
+      COLOR:
+        name: "flectonepulse.module.command.chatsetting.color"
+        type: TRUE
+      DEATH:
+        name: "flectonepulse.module.command.chatsetting.death"
+        type: TRUE
+      DICE:
+        name: "flectonepulse.module.command.chatsetting.dice"
+        type: TRUE
+      DISCORD:
+        name: "flectonepulse.module.command.chatsetting.discord"
+        type: TRUE
+      DO:
+        name: "flectonepulse.module.command.chatsetting.do"
+        type: TRUE
+      GREETING:
+        name: "flectonepulse.module.command.chatsetting.greeting"
+        type: TRUE
+      JOIN:
+        name: "flectonepulse.module.command.chatsetting.join"
+        type: TRUE
+      KICK:
+        name: "flectonepulse.module.command.chatsetting.kick"
+        type: TRUE
+      MAIL:
+        name: "flectonepulse.module.command.chatsetting.mail"
+        type: TRUE
+      ME:
+        name: "flectonepulse.module.command.chatsetting.me"
+        type: TRUE
+      MUTE:
+        name: "flectonepulse.module.command.chatsetting.mute"
+        type: TRUE
+      POLL:
+        name: "flectonepulse.module.command.chatsetting.poll"
+        type: TRUE
+      QUIT:
+        name: "flectonepulse.module.command.chatsetting.quit"
+        type: TRUE
+      REPLY:
+        name: "flectonepulse.module.command.chatsetting.reply"
+        type: TRUE
+      ROCKPAPERSCISSORS:
+        name: "flectonepulse.module.command.chatsetting.rockpaperscissors"
+        type: TRUE
+      SPY:
+        name: "flectonepulse.module.command.chatsetting.spy"
+        type: OP
+      STREAM:
+        name: "flectonepulse.module.command.chatsetting.stream"
+        type: OP
+      TELEGRAM:
+        name: "flectonepulse.module.command.chatsetting.telegram"
+        type: TRUE
+      TELL:
+        name: "flectonepulse.module.command.chatsetting.tell"
+        type: TRUE
+      TICTACTOE:
+        name: "flectonepulse.module.command.chatsetting.tictactoe"
+        type: TRUE
+      TRANSLATETO:
+        name: "flectonepulse.module.command.chatsetting.translateto"
+        type: TRUE
+      TRY:
+        name: "flectonepulse.module.command.chatsetting.try"
+        type: TRUE
+      TWITCH:
+        name: "flectonepulse.module.command.chatsetting.twitch"
+        type: TRUE
+      WARN:
+        name: "flectonepulse.module.command.chatsetting.warn"
+        type: TRUE
+    cooldown-bypass:
+      name: "flectonepulse.module.command.chatsetting.cooldown.bypass"
+      type: OP
+    sound:
+      name: "flectonepulse.module.command.chatsetting.sound"
+      type: TRUE
+  # https://flectone.net/pulse/docs/command/clearchat/
+  clearchat:
+    name: "flectonepulse.module.command.clearchat"
+    type: TRUE
+    other:
+      name: "flectonepulse.module.command.clearchat.other"
+      type: OP
+    cooldown-bypass:
+      name: "flectonepulse.module.command.clearchat.cooldown.bypass"
+      type: OP
+    sound:
+      name: "flectonepulse.module.command.clearchat.sound"
+      type: TRUE
+  # https://flectone.net/pulse/docs/command/clearmail/
+  clearmail:
+    name: "flectonepulse.module.command.clearmail"
+    type: TRUE
+    cooldown-bypass:
+      name: "flectonepulse.module.command.clearmail.cooldown.bypass"
+      type: OP
+    sound:
+      name: "flectonepulse.module.command.clearmail.sound"
+      type: TRUE
+  # https://flectone.net/pulse/docs/command/coin/
+  coin:
+    name: "flectonepulse.module.command.coin"
+    type: TRUE
+    cooldown-bypass:
+      name: "flectonepulse.module.command.coin.cooldown.bypass"
+      type: OP
+    sound:
+      name: "flectonepulse.module.command.coin.sound"
+      type: TRUE
+  # https://flectone.net/pulse/docs/command/dice/
+  dice:
+    name: "flectonepulse.module.command.dice"
+    type: TRUE
+    cooldown-bypass:
+      name: "flectonepulse.module.command.dice.cooldown.bypass"
+      type: OP
+    sound:
+      name: "flectonepulse.module.command.dice.sound"
+      type: TRUE
+  # https://flectone.net/pulse/docs/command/do/
+  do:
+    name: "flectonepulse.module.command.do"
+    type: TRUE
+    cooldown-bypass:
+      name: "flectonepulse.module.command.do.cooldown.bypass"
+      type: OP
+    sound:
+      name: "flectonepulse.module.command.do.sound"
+      type: TRUE
+  # https://flectone.net/pulse/docs/command/flectonepulse/
+  flectonepulse:
+    name: "flectonepulse.module.command.flectonepulse"
+    type: OP
+    cooldown-bypass:
+      name: "flectonepulse.module.command.flectonepulse.cooldown.bypass"
+      type: OP
+    sound:
+      name: "flectonepulse.module.command.flectonepulse.sound"
+      type: TRUE
+  # https://flectone.net/pulse/docs/command/geolocate/
+  geolocate:
+    name: "flectonepulse.module.command.geolocate"
+    type: OP
+    cooldown-bypass:
+      name: "flectonepulse.module.command.geolocate.cooldown.bypass"
+      type: OP
+    sound:
+      name: "flectonepulse.module.command.geolocate.sound"
+      type: TRUE
+  # https://flectone.net/pulse/docs/command/helper/
+  helper:
+    name: "flectonepulse.module.command.helper"
+    type: TRUE
+    see:
+      name: "flectonepulse.module.command.helper.see"
+      type: OP
+    cooldown-bypass:
+      name: "flectonepulse.module.command.helper.cooldown.bypass"
+      type: OP
+    sound:
+      name: "flectonepulse.module.command.helper.sound"
+      type: TRUE
+  # https://flectone.net/pulse/docs/command/ignore/
+  ignore:
+    name: "flectonepulse.module.command.ignore"
+    type: TRUE
+    cooldown-bypass:
+      name: "flectonepulse.module.command.ignore.cooldown.bypass"
+      type: OP
+    sound:
+      name: "flectonepulse.module.command.ignore.sound"
+      type: TRUE
+  # https://flectone.net/pulse/docs/command/ignorelist/
+  ignorelist:
+    name: "flectonepulse.module.command.ignorelist"
+    type: TRUE
+    cooldown-bypass:
+      name: "flectonepulse.module.command.ignorelist.cooldown.bypass"
+      type: OP
+    sound:
+      name: "flectonepulse.module.command.ignorelist.sound"
+      type: TRUE
+  # https://flectone.net/pulse/docs/command/kick/
+  kick:
+    name: "flectonepulse.module.command.kick"
+    type: OP
+    cooldown-bypass:
+      name: "flectonepulse.module.command.kick.cooldown.bypass"
+      type: OP
+    sound:
+      name: "flectonepulse.module.command.kick.sound"
+      type: TRUE
+  # https://flectone.net/pulse/docs/command/mail/
+  mail:
+    name: "flectonepulse.module.command.mail"
+    type: TRUE
+    cooldown-bypass:
+      name: "flectonepulse.module.command.mail.cooldown.bypass"
+      type: OP
+    sound:
+      name: "flectonepulse.module.command.mail.sound"
+      type: TRUE
+  # https://flectone.net/pulse/docs/command/maintenance/
+  maintenance:
+    name: "flectonepulse.module.command.maintenance"
+    type: OP
+    join:
+      name: "flectonepulse.module.command.maintenance.join"
+      type: OP
+    cooldown-bypass:
+      name: "flectonepulse.module.command.maintenance.cooldown.bypass"
+      type: OP
+    sound:
+      name: "flectonepulse.module.command.maintenance.sound"
+      type: TRUE
+  # https://flectone.net/pulse/docs/command/mark/
+  mark:
+    name: "flectonepulse.module.command.mark"
+    type: TRUE
+    cooldown-bypass:
+      name: "flectonepulse.module.command.mark.cooldown.bypass"
+      type: OP
+    sound:
+      name: "flectonepulse.module.command.mark.sound"
+      type: TRUE
+  # https://flectone.net/pulse/docs/command/me/
+  me:
+    name: "flectonepulse.module.command.me"
+    type: TRUE
+    cooldown-bypass:
+      name: "flectonepulse.module.command.me.cooldown.bypass"
+      type: OP
+    sound:
+      name: "flectonepulse.module.command.me.sound"
+      type: TRUE
+  # https://flectone.net/pulse/docs/command/mute/
+  mute:
+    name: "flectonepulse.module.command.mute"
+    type: OP
+    cooldown-bypass:
+      name: "flectonepulse.module.command.mute.cooldown.bypass"
+      type: OP
+    sound:
+      name: "flectonepulse.module.command.mute.sound"
+      type: TRUE
+  # https://flectone.net/pulse/docs/command/mutelist/
+  mutelist:
+    name: "flectonepulse.module.command.mutelist"
+    type: OP
+    cooldown-bypass:
+      name: "flectonepulse.module.command.mutelist.cooldown.bypass"
+      type: OP
+    sound:
+      name: "flectonepulse.module.command.mutelist.sound"
+      type: TRUE
+  # https://flectone.net/pulse/docs/command/online/
+  online:
+    name: "flectonepulse.module.command.online"
+    type: TRUE
+    cooldown-bypass:
+      name: "flectonepulse.module.command.online.cooldown.bypass"
+      type: OP
+    sound:
+      name: "flectonepulse.module.command.online.sound"
+      type: TRUE
+  # https://flectone.net/pulse/docs/command/ping/
+  ping:
+    name: "flectonepulse.module.command.ping"
+    type: TRUE
+    cooldown-bypass:
+      name: "flectonepulse.module.command.ping.cooldown.bypass"
+      type: OP
+    sound:
+      name: "flectonepulse.module.command.ping.sound"
+      type: TRUE
+  # https://flectone.net/pulse/docs/command/poll/
+  poll:
+    name: "flectonepulse.module.command.poll"
+    type: TRUE
+    create:
+      name: "flectonepulse.module.command.poll.create"
+      type: OP
+    cooldown-bypass:
+      name: "flectonepulse.module.command.poll.cooldown.bypass"
+      type: OP
+    sound:
+      name: "flectonepulse.module.command.poll.sound"
+      type: TRUE
+  # https://flectone.net/pulse/docs/command/reply/
+  reply:
+    name: "flectonepulse.module.command.reply"
+    type: TRUE
+    cooldown-bypass:
+      name: "flectonepulse.module.command.reply.cooldown.bypass"
+      type: OP
+    sound:
+      name: "flectonepulse.module.command.reply.sound"
+      type: TRUE
+  # https://flectone.net/pulse/docs/command/rockpaperscissors/
+  rockpaperscissors:
+    name: "flectonepulse.module.command.rockpaperscissors"
+    type: TRUE
+    cooldown-bypass:
+      name: "flectonepulse.module.command.rockpaperscissors.cooldown.bypass"
+      type: OP
+    sound:
+      name: "flectonepulse.module.command.rockpaperscissors.sound"
+      type: TRUE
+  # https://flectone.net/pulse/docs/command/spy/
+  spy:
+    name: "flectonepulse.module.command.spy"
+    type: OP
+    cooldown-bypass:
+      name: "flectonepulse.module.command.spy.cooldown.bypass"
+      type: OP
+    sound:
+      name: "flectonepulse.module.command.spy.sound"
+      type: TRUE
+  # https://flectone.net/pulse/docs/command/stream/
+  stream:
+    name: "flectonepulse.module.command.stream"
+    type: OP
+    cooldown-bypass:
+      name: "flectonepulse.module.command.stream.cooldown.bypass"
+      type: OP
+    sound:
+      name: "flectonepulse.module.command.stream.sound"
+      type: TRUE
+  # https://flectone.net/pulse/docs/command/symbol/
+  symbol:
+    name: "flectonepulse.module.command.symbol"
+    type: TRUE
+    cooldown-bypass:
+      name: "flectonepulse.module.command.symbol.cooldown.bypass"
+      type: OP
+    sound:
+      name: "flectonepulse.module.command.symbol.sound"
+      type: TRUE
+  # https://flectone.net/pulse/docs/command/tell/
+  tell:
+    name: "flectonepulse.module.command.tell"
+    type: TRUE
+    cooldown-bypass:
+      name: "flectonepulse.module.command.tell.cooldown.bypass"
+      type: OP
+    sound:
+      name: "flectonepulse.module.command.tell.sound"
+      type: TRUE
+  # https://flectone.net/pulse/docs/command/tictactoe/
+  tictactoe:
+    name: "flectonepulse.module.command.tictactoe"
+    type: TRUE
+    cooldown-bypass:
+      name: "flectonepulse.module.command.tictactoe.cooldown.bypass"
+      type: OP
+    sound:
+      name: "flectonepulse.module.command.tictactoe.sound"
+      type: TRUE
+  # https://flectone.net/pulse/docs/command/translateto/
+  translateto:
+    name: "flectonepulse.module.command.translateto"
+    type: TRUE
+    cooldown-bypass:
+      name: "flectonepulse.module.command.translateto.cooldown.bypass"
+      type: OP
+    sound:
+      name: "flectonepulse.module.command.translateto.sound"
+      type: TRUE
+  # https://flectone.net/pulse/docs/command/try/
+  try:
+    name: "flectonepulse.module.command.try"
+    type: TRUE
+    cooldown-bypass:
+      name: "flectonepulse.module.command.try.cooldown.bypass"
+      type: OP
+    sound:
+      name: "flectonepulse.module.command.try.sound"
+      type: TRUE
+  # https://flectone.net/pulse/docs/command/unban/
+  unban:
+    name: "flectonepulse.module.command.unban"
+    type: OP
+    cooldown-bypass:
+      name: "flectonepulse.module.command.unban.cooldown.bypass"
+      type: OP
+    sound:
+      name: "flectonepulse.module.command.unban.sound"
+      type: TRUE
+  # https://flectone.net/pulse/docs/command/unmute/
+  unmute:
+    name: "flectonepulse.module.command.unmute"
+    type: OP
+    cooldown-bypass:
+      name: "flectonepulse.module.command.unmute.cooldown.bypass"
+      type: OP
+    sound:
+      name: "flectonepulse.module.command.unmute.sound"
+      type: TRUE
+  # https://flectone.net/pulse/docs/command/unwarn/
+  unwarn:
+    name: "flectonepulse.module.command.unwarn"
+    type: OP
+    cooldown-bypass:
+      name: "flectonepulse.module.command.unwarn.cooldown.bypass"
+      type: OP
+    sound:
+      name: "flectonepulse.module.command.unwarn.sound"
+      type: TRUE
+  # https://flectone.net/pulse/docs/command/warn/
+  warn:
+    name: "flectonepulse.module.command.warn"
+    type: OP
+    cooldown-bypass:
+      name: "flectonepulse.module.command.warn.cooldown.bypass"
+      type: OP
+    sound:
+      name: "flectonepulse.module.command.warn.sound"
+      type: TRUE
+  # https://flectone.net/pulse/docs/command/warnlist/
+  warnlist:
+    name: "flectonepulse.module.command.warnlist"
+    type: OP
+    cooldown-bypass:
+      name: "flectonepulse.module.command.warnlist.cooldown.bypass"
+      type: OP
+    sound:
+      name: "flectonepulse.module.command.warnlist.sound"
+      type: TRUE
+# https://flectone.net/pulse/docs/integration/
+integration:
+  name: "flectonepulse.module.integration"
+  type: TRUE
+  # https://flectone.net/pulse/docs/integration/deepl/
+  deepl:
+    name: "flectonepulse.module.integration.deepl"
+    type: TRUE
+  # https://flectone.net/pulse/docs/integration/discord/
+  discord:
+    name: "flectonepulse.module.integration.discord"
+    type: TRUE
+  # https://flectone.net/pulse/docs/integration/interactivechat/
+  interactivechat:
+    name: "flectonepulse.module.integration.interactivechat"
+    type: TRUE
+  # https://flectone.net/pulse/docs/integration/luckperms/
+  luckperms:
+    name: "flectonepulse.module.integration.luckperms"
+    type: TRUE
+  # https://flectone.net/pulse/docs/integration/placeholderapi/
+  placeholderapi:
+    name: "flectonepulse.module.integration.placeholderapi"
+    type: TRUE
+    use:
+      name: "flectonepulse.module.integration.placeholderapi.use"
+      type: OP
+  # https://flectone.net/pulse/docs/integration/plasmovoice/
+  plasmovoice:
+    name: "flectonepulse.module.integration.plasmovoice"
+    type: TRUE
+  # https://flectone.net/pulse/docs/integration/simplevoice/
+  simplevoice:
+    name: "flectonepulse.module.integration.simplevoice"
+    type: TRUE
+  # https://flectone.net/pulse/docs/integration/skinsrestorer/
+  skinsrestorer:
+    name: "flectonepulse.module.integration.skinsrestorer"
+    type: TRUE
+  # https://flectone.net/pulse/docs/integration/supervanish/
+  supervanish:
+    name: "flectonepulse.module.integration.supervanish"
+    type: TRUE
+  # https://flectone.net/pulse/docs/integration/telegram/
+  telegram:
+    name: "flectonepulse.module.integration.telegram"
+    type: TRUE
+  # https://flectone.net/pulse/docs/integration/triton/
+  triton:
+    name: "flectonepulse.module.integration.triton"
+    type: TRUE
+  # https://flectone.net/pulse/docs/integration/twitch/
+  twitch:
+    name: "flectonepulse.module.integration.twitch"
+    type: TRUE
+  # https://flectone.net/pulse/docs/integration/vault/
+  vault:
+    name: "flectonepulse.module.integration.vault"
+    type: TRUE
+  # https://flectone.net/pulse/docs/integration/yandex/
+  yandex:
+    name: "flectonepulse.module.integration.yandex"
+    type: TRUE
+# https://flectone.net/pulse/docs/message/
+message:
+  name: "flectonepulse.module.message"
+  type: TRUE
+  # https://flectone.net/pulse/docs/message/advancement/
+  advancement:
+    name: "flectonepulse.module.message.advancement"
+    type: TRUE
+    sound:
+      name: "flectonepulse.module.message.advancement.sound"
+      type: TRUE
+  # https://flectone.net/pulse/docs/message/afk/
+  afk:
+    name: "flectonepulse.module.message.afk"
+    type: TRUE
+  # https://flectone.net/pulse/docs/message/anvil/
+  anvil:
+    name: "flectonepulse.module.message.anvil"
+    type: TRUE
+  # https://flectone.net/pulse/docs/message/auto/
+  auto:
+    name: "flectonepulse.module.message.auto"
+    type: TRUE
+    types:
+      announcement:
+        name: "flectonepulse.module.message.auto.sound"
+        type: TRUE
+  # https://flectone.net/pulse/docs/message/bed/
+  bed:
+    name: "flectonepulse.module.message.bed"
+    type: TRUE
+    sound:
+      name: "flectonepulse.module.message.bed.sound"
+      type: TRUE
+  # https://flectone.net/pulse/docs/message/book/
+  book:
+    name: "flectonepulse.module.message.book"
+    type: TRUE
+  # https://flectone.net/pulse/docs/message/brand/
+  brand:
+    name: "flectonepulse.module.message.brand"
+    type: TRUE
+  # https://flectone.net/pulse/docs/message/bubble/
+  bubble:
+    name: "flectonepulse.module.message.bubble"
+    type: TRUE
+  # https://flectone.net/pulse/docs/message/chat/
+  chat:
+    name: "flectonepulse.module.message.chat"
+    type: TRUE
+    types:
+      local:
+        name: "flectonepulse.module.message.chat.local"
+        type: TRUE
+        cooldown-bypass:
+          name: "flectonepulse.module.message.chat.local.cooldown.bypass"
+          type: OP
+        sound:
+          name: "flectonepulse.module.message.chat.local.sound"
+          type: TRUE
+      global:
+        name: "flectonepulse.module.message.chat.global"
+        type: TRUE
+        cooldown-bypass:
+          name: "flectonepulse.module.message.chat.global.cooldown.bypass"
+          type: OP
+        sound:
+          name: "flectonepulse.module.message.chat.global.sound"
+          type: TRUE
+  # https://flectone.net/pulse/docs/message/clear/
+  clear:
+    name: "flectonepulse.module.message.clear"
+    type: TRUE
+    sound:
+      name: "flectonepulse.module.message.clear.sound"
+      type: TRUE
+  # https://flectone.net/pulse/docs/message/death/
+  death:
+    name: "flectonepulse.module.message.death"
+    type: TRUE
+    sound:
+      name: "flectonepulse.module.message.death.sound"
+      type: TRUE
+  # https://flectone.net/pulse/docs/message/deop/
+  deop:
+    name: "flectonepulse.module.message.deop"
+    type: TRUE
+    sound:
+      name: "flectonepulse.module.message.deop.sound"
+      type: TRUE
+  # https://flectone.net/pulse/docs/message/enchant/
+  enchant:
+    name: "flectonepulse.module.message.enchant"
+    type: TRUE
+    sound:
+      name: "flectonepulse.module.message.enchant.sound"
+      type: TRUE
+  # https://flectone.net/pulse/docs/message/format/
+  format:
+    name: "flectonepulse.module.message.format"
+    type: TRUE
+    all:
+      name: "flectonepulse.module.message.format.all"
+      type: OP
+    tags:
+      PING:
+        name: "flectonepulse.module.message.format.ping"
+        type: TRUE
+      TPS:
+        name: "flectonepulse.module.message.format.tps"
+        type: TRUE
+      ONLINE:
+        name: "flectonepulse.module.message.format.online"
+        type: TRUE
+      COORDS:
+        name: "flectonepulse.module.message.format.coords"
+        type: TRUE
+      STATS:
+        name: "flectonepulse.module.message.format.stats"
+        type: TRUE
+      SKIN:
+        name: "flectonepulse.module.message.format.skin"
+        type: TRUE
+      ITEM:
+        name: "flectonepulse.module.message.format.item"
+        type: TRUE
+      URL:
+        name: "flectonepulse.module.message.format.url"
+        type: TRUE
+      IMAGE:
+        name: "flectonepulse.module.message.format.image"
+        type: TRUE
+      SPOILER:
+        name: "flectonepulse.module.message.format.spoiler"
+        type: TRUE
+      BOLD:
+        name: "flectonepulse.module.message.format.bold"
+        type: TRUE
+      ITALIC:
+        name: "flectonepulse.module.message.format.italic"
+        type: TRUE
+      UNDERLINE:
+        name: "flectonepulse.module.message.format.underline"
+        type: TRUE
+      OBFUSCATED:
+        name: "flectonepulse.module.message.format.obfuscated"
+        type: TRUE
+      STRIKETHROUGH:
+        name: "flectonepulse.module.message.format.strikethrough"
+        type: TRUE
+      HOVER:
+        name: "flectonepulse.module.message.format.hover"
+        type: OP
+      CLICK:
+        name: "flectonepulse.module.message.format.click"
+        type: OP
+      COLOR:
+        name: "flectonepulse.module.message.format.color"
+        type: OP
+      KEYBIND:
+        name: "flectonepulse.module.message.format.keybind"
+        type: OP
+      TRANSLATABLE:
+        name: "flectonepulse.module.message.format.translatable"
+        type: OP
+      TRANSLATABLE_FALLBACK:
+        name: "flectonepulse.module.message.format.translatable_fallback"
+        type: OP
+      INSERTION:
+        name: "flectonepulse.module.message.format.insertion"
+        type: OP
+      FONT:
+        name: "flectonepulse.module.message.format.font"
+        type: OP
+      DECORATION:
+        name: "flectonepulse.module.message.format.decoration"
+        type: TRUE
+      GRADIENT:
+        name: "flectonepulse.module.message.format.gradient"
+        type: OP
+      RAINBOW:
+        name: "flectonepulse.module.message.format.rainbow"
+        type: OP
+      RESET:
+        name: "flectonepulse.module.message.format.reset"
+        type: OP
+      NEWLINE:
+        name: "flectonepulse.module.message.format.newline"
+        type: OP
+      TRANSITION:
+        name: "flectonepulse.module.message.format.transition"
+        type: OP
+      SELECTOR:
+        name: "flectonepulse.module.message.format.selector"
+        type: OP
+      SCORE:
+        name: "flectonepulse.module.message.format.score"
+        type: OP
+      NBT:
+        name: "flectonepulse.module.message.format.nbt"
+        type: OP
+      PRIDE:
+        name: "flectonepulse.module.message.format.pride"
+        type: OP
+      SHADOW_COLOR:
+        name: "flectonepulse.module.message.format.shadow_color"
+        type: OP
+    # https://flectone.net/pulse/docs/message/format/color/
+    color:
+      name: "flectonepulse.module.message.format.fcolor"
+      type: TRUE
+    # https://flectone.net/pulse/docs/message/format/emoji/
+    emoji:
+      name: "flectonepulse.module.message.format.emoji"
+      type: TRUE
+    # https://flectone.net/pulse/docs/message/format/fixation/
+    fixation:
+      name: "flectonepulse.module.message.format.fixation"
+      type: TRUE
+    # https://flectone.net/pulse/docs/message/format/image/
+    image:
+      name: "flectonepulse.module.message.format.image"
+      type: TRUE
+    # https://flectone.net/pulse/docs/message/format/mention/
+    mention:
+      name: "flectonepulse.module.message.format.mention"
+      type: TRUE
+      group:
+        name: "flectonepulse.module.message.format.mention.group"
+        type: OP
+      bypass:
+        name: "flectonepulse.module.message.format.mention.bypass"
+        type: FALSE
+      sound:
+        name: "flectonepulse.module.message.format.mention.sound"
+        type: TRUE
+    # https://flectone.net/pulse/docs/message/format/moderation/
+    moderation:
+      name: "flectonepulse.module.message.format.moderation"
+      type: TRUE
+      # https://flectone.net/pulse/docs/message/format/moderation/caps/
+      caps:
+        name: "flectonepulse.module.message.format.moderation.caps"
+        type: TRUE
+        bypass:
+          name: "flectonepulse.module.message.format.moderation.caps.bypass"
+          type: OP
+      # https://flectone.net/pulse/docs/message/format/moderation/flood/
+      flood:
+        name: "flectonepulse.module.message.format.moderation.flood"
+        type: TRUE
+        bypass:
+          name: "flectonepulse.module.message.format.moderation.flood.bypass"
+          type: OP
+      # https://flectone.net/pulse/docs/message/format/moderation/swear/
+      swear:
+        name: "flectonepulse.module.message.format.moderation.swear"
+        type: TRUE
+        bypass:
+          name: "flectonepulse.module.message.format.moderation.swear.bypass"
+          type: OP
+        see:
+          name: "flectonepulse.module.message.format.moderation.swear.see"
+          type: OP
+    # https://flectone.net/pulse/docs/message/format/name_/
+    name-:
+      name: "flectonepulse.module.format.name"
+      type: TRUE
+    # https://flectone.net/pulse/docs/message/format/questionanswer/
+    question-answer:
+      name: "flectonepulse.module.format.questionanswer"
+      type: TRUE
+      questions:
+        server:
+          ask:
+            name: "flectonepulse.module.format.questionanswer.server"
+            type: TRUE
+          sound:
+            name: "flectonepulse.module.format.questionanswer.sound.server"
+            type: TRUE
+          cooldown-bypass:
+            name: "flectonepulse.module.format.questionanswer.cooldown.bypass.server"
+            type: TRUE
+        flectone:
+          ask:
+            name: "flectonepulse.module.format.questionanswer.flectone"
+            type: TRUE
+          sound:
+            name: "flectonepulse.module.format.questionanswer.sound.flectone"
+            type: TRUE
+          cooldown-bypass:
+            name: "flectonepulse.module.format.questionanswer.cooldown.bypass.flectone"
+            type: TRUE
+    # https://flectone.net/pulse/docs/message/format/spoiler/
+    spoiler:
+      name: "flectonepulse.module.format.spoiler"
+      type: TRUE
+    # https://flectone.net/pulse/docs/message/format/translate/
+    translate:
+      name: "flectonepulse.module.format.translate"
+      type: TRUE
+    # https://flectone.net/pulse/docs/message/format/world/
+    world:
+      name: "flectonepulse.module.format.world"
+      type: TRUE
+  # https://flectone.net/pulse/docs/message/gamemode/
+  gamemode:
+    name: "flectonepulse.module.message.gamemode"
+    type: TRUE
+    sound:
+      name: "flectonepulse.module.message.gamemode.sound"
+      type: TRUE
+  # https://flectone.net/pulse/docs/message/greeting/
+  greeting:
+    name: "flectonepulse.module.message.greeting"
+    type: TRUE
+    sound:
+      name: "flectonepulse.module.message.greeting.sound"
+      type: TRUE
+  # https://flectone.net/pulse/docs/message/join/
+  join:
+    name: "flectonepulse.module.message.join"
+    type: TRUE
+    sound:
+      name: "flectonepulse.module.message.join.sound"
+      type: TRUE
+  # https://flectone.net/pulse/docs/message/mark/
+  mark:
+    name: "flectonepulse.module.message.mark"
+    type: TRUE
+    cooldown-bypass:
+      name: "flectonepulse.module.message.mark.cooldown.bypass"
+      type: OP
+    sound:
+      name: "flectonepulse.module.message.mark.sound"
+      type: TRUE
+  # https://flectone.net/pulse/docs/message/objective/
+  objective:
+    name: "flectonepulse.module.message.objective"
+    type: TRUE
+    # https://flectone.net/pulse/docs/message/objective/belowname/
+    belowname:
+      name: "flectonepulse.module.message.objective.belowname"
+      type: TRUE
+    # https://flectone.net/pulse/docs/message/objective/tabname/
+    tabname:
+      name: "flectonepulse.module.message.objective.tabname"
+      type: TRUE
+  # https://flectone.net/pulse/docs/message/op/
+  op:
+    name: "flectonepulse.module.message.op"
+    type: TRUE
+    sound:
+      name: "flectonepulse.module.message.op.sound"
+      type: TRUE
+  # https://flectone.net/pulse/docs/message/quit/
+  quit:
+    name: "flectonepulse.module.message.quit"
+    type: TRUE
+    sound:
+      name: "flectonepulse.module.message.quit.sound"
+      type: TRUE
+  # https://flectone.net/pulse/docs/message/rightclick/
+  rightclick:
+    name: "flectonepulse.module.message.rightclick"
+    type: TRUE
+    cooldown-bypass:
+      name: "flectonepulse.module.message.rightclick.cooldown.bypass"
+      type: OP
+    sound:
+      name: "flectonepulse.module.message.rightclick.sound"
+      type: TRUE
+  # https://flectone.net/pulse/docs/message/scoreboard/
+  scoreboard:
+    name: "flectonepulse.module.message.scoreboard"
+    type: TRUE
+  # https://flectone.net/pulse/docs/message/seed/
+  seed:
+    name: "flectonepulse.module.message.seed"
+    type: TRUE
+    sound:
+      name: "flectonepulse.module.message.seed.sound"
+      type: TRUE
+  # https://flectone.net/pulse/docs/message/setblock/
+  setblock:
+    name: "flectonepulse.module.message.setblock"
+    type: TRUE
+    sound:
+      name: "flectonepulse.module.message.setblock.sound"
+      type: TRUE
+  # https://flectone.net/pulse/docs/message/sign/
+  sign:
+    name: "flectonepulse.module.message.sign"
+    type: TRUE
+  # https://flectone.net/pulse/docs/message/sleep/
+  sleep:
+    name: "flectonepulse.module.message.sleep"
+    type: TRUE
+    sound:
+      name: "flectonepulse.module.message.sleep.sound"
+      type: TRUE
+  # https://flectone.net/pulse/docs/message/spawn/
+  spawn:
+    name: "flectonepulse.module.message.spawn"
+    type: TRUE
+    sound:
+      name: "flectonepulse.module.message.spawn.sound"
+      type: TRUE
+  # https://flectone.net/pulse/docs/message/status/
+  status:
+    name: "flectonepulse.module.message.status"
+    type: TRUE
+    # https://flectone.net/pulse/docs/message/status/icon/
+    icon:
+      name: "flectonepulse.module.message.status.icon"
+      type: TRUE
+    # https://flectone.net/pulse/docs/message/status/motd/
+    motd:
+      name: "flectonepulse.module.message.status.motd"
+      type: TRUE
+    # https://flectone.net/pulse/docs/message/status/players/
+    players:
+      name: "flectonepulse.module.message.status.players"
+      type: TRUE
+      bypass:
+        name: "flectonepulse.module.message.status.players.bypass"
+        type: OP
+    # https://flectone.net/pulse/docs/message/status/version/
+    version:
+      name: "flectonepulse.module.message.status.version"
+      type: TRUE
+  # https://flectone.net/pulse/docs/message/tab/
+  tab:
+    name: "flectonepulse.module.message.tab"
+    type: TRUE
+    # https://flectone.net/pulse/docs/message/status/footer/
+    footer:
+      name: "flectonepulse.module.message.tab.footer"
+      type: TRUE
+    # https://flectone.net/pulse/docs/message/status/header/
+    header:
+      name: "flectonepulse.module.message.tab.header"
+      type: TRUE
+    # https://flectone.net/pulse/docs/message/status/playerlistname/
+    playerlistname:
+      name: "flectonepulse.module.message.tab.footer"
+      type: TRUE

@@ -1,0 +1,26 @@
+{
+    "model": {
+        "type": "range_dispatch",
+        "property": "custom_model_data",
+        "fallback": {
+            "type": "model",
+            "model": "item/brick"
+        },
+        "entries": [
+            {
+                "threshold": 9182610,
+                "model": {
+                    "type": "model",
+                    "model": "item/materials/ring_mold"
+                }
+            },
+            {
+                "threshold": 9182611,
+                "model": {
+                    "type": "model",
+                    "model": "item/materials/necklace_amulet_mold"
+                }
+            }
+        ]
+    }
+}

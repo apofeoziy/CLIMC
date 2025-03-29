@@ -1,0 +1,210 @@
+# ДОКУМЕНТАЦИЯ: https://docs.artillex-studios.com/axplayerwarps.html
+# КОНСТРУКТОР ПРЕДМЕТОВ: https://docs.artillex-studios.com/item-builder.html
+
+title: '&0&lAxPWarps > &8Редактирование %warp%'
+# интерфейс может иметь от 1 до 6 рядов
+rows: 5
+
+# ----- ПРЕДМЕТЫ -----
+
+# вы можете добавить столько украшений, сколько пожелаете
+filler:
+  name: ' '
+  slot:
+  - 0-9
+  - 17-18
+  - 26-27
+  - 35-44
+  type: LIME_STAINED_GLASS_PANE
+
+delete:
+  slot: 0
+  name: '&#EE0000&lУДАЛИТЬ ВАРП'
+  type: TNT
+  lore:
+  - ' '
+  - ' &fНажмите здесь, чтобы удалить варп!'
+  - ' &#FFAAAAЭто необратимо!'
+  - ' '
+  - '&#EE0000&lShift + ПКМ &#DDDDDD» &#FFAAAAУдалить Варп'
+  actions:
+  - '[SOUND] ui.button.click|1|1'
+
+name-icon:
+  slot: 4
+  # этот шрифт называется 'small caps'
+  name: '&#33EEBB&lИМЯ И ИКОНКА'
+  type: ANVIL
+  lore:
+  - ' '
+  - '&#33EEBBТекущее имя:'
+  - '&#444444❙ &#BBFFDD%name%'
+  - '&#AAAAAAЕсли вы переименуете варп, другие игроки'
+  - '&#AAAAAAсмогут занять старое имя!'
+  - ' '
+  - '&#33EEBBТекущая иконка:'
+  - '&#444444❙ &#BBFFDD%icon%'
+  - '&#AAAAAAВы можете изменить иконку, нажав на'
+  - '&#AAAAAAпредмет в вашем нижнем инвентаре!'
+  - ' '
+  - '&#33EEBB&lНажмите &#DDDDDD» &#BBFFDDПереименовать Варп'
+  - '&#33EEBB&lНажмите На Предмет &#DDDDDD» &#BBFFDDИзменить Иконку'
+  - '&#33EEBB&lShift + ПКМ &#DDDDDD» &#BBFFDDСбросить Иконку'
+  actions:
+  - '[SOUND] ui.button.click|1|1'
+
+back:
+  slot: 8
+  name: '&#33EEBB&lНАЗАД'
+  type: BARRIER
+  lore:
+  - ' '
+  - ' &fНажмите здесь, чтобы вернуться'
+  - ' &fв предыдущее меню!'
+  - ' '
+  - '&#33EEBB&lНажмите &#DDDDDD» &#BBFFDDВернуться в Главное Меню'
+  actions:
+  - '[BACK]'
+  - '[SOUND] ui.button.click|1|1'
+
+description:
+  slot: 20
+  name: '&#33EEBB&lОПИСАНИЕ'
+  type: PAPER
+  lore:
+  - ' '
+  - '&#33EEBBТекущее описание:'
+  - ' &#444444❙ &f%description%'
+  - ' '
+  - '&#33EEBB&lЛКМ &#DDDDDD» &#BBFFDDДобавить Строку'
+  - '&#33EEBB&lПКМ &#DDDDDD» &#BBFFDDУдалить Последнюю Строку'
+  - '&#33EEBB&lShift + ПКМ &#DDDDDD» &#BBFFDDОчистить Строки'
+  actions:
+  - '[SOUND] ui.button.click|1|1'
+
+category:
+  slot: 21
+  name: '&#33EEBB&lКАТЕГОРИЯ'
+  type: HOPPER
+  lore:
+  - ' '
+  - '&#33EEBBТекущая категория:'
+  - ' &#444444❙ &#BBFFDD%category%'
+  - ' '
+  - '&#33EEBB&lЛКМ &#DDDDDD» &#BBFFDDПредыдущая Категория'
+  - '&#33EEBB&lПКМ &#DDDDDD» &#BBFFDDСледующая Категория'
+  - '&#33EEBB&lShift + ПКМ &#DDDDDD» &#BBFFDDСбросить Категорию'
+  actions:
+  - '[SOUND] ui.button.click|1|1'
+
+location:
+  slot: 22
+  name: '&#33EEBB&lЛОКАЦИЯ'
+  type: ENDER_PEARL
+  lore:
+  - ' '
+  - '&#33EEBBЛокация телепорта:'
+  - ' &#444444❙ &#BBFFDD%world%, %x%, %y%, %z%'
+  - ' '
+  - '&#33EEBB&lНажмите &#DDDDDD» &#BBFFDDОбновить Локацию'
+  actions:
+  - '[SOUND] ui.button.click|1|1'
+
+access:
+  slot: 23
+  name: '&#33EEBB&lДОСТУП'
+  type: TRIPWIRE_HOOK
+  lore:
+  - ' '
+  - '&#33EEBBТекущий статус:'
+  - ' &#444444❙ &#BBFFDD%access%'
+  - ' '
+  - '&#33EEBB&lЛКМ &#DDDDDD» &#BBFFDDПредыдущий Статус'
+  - '&#33EEBB&lПКМ &#DDDDDD» &#BBFFDDСледующий Статус'
+  - '&#33EEBB&lShift + ПКМ &#DDDDDD» &#BBFFDDСбросить Доступ'
+  actions:
+  - '[SOUND] ui.button.click|1|1'
+
+price:
+  slot: 24
+  name: '&#33EEBB&lЦЕНА ТЕЛЕПОРТА'
+  type: GOLD_NUGGET
+  lore:
+  - ' '
+  - '&#33EEBBТекущая цена:'
+  - ' &#444444❙ &#BBFFDD%price-full%'
+  - ' '
+  - '&#33EEBB&lЛКМ &#DDDDDD» &#BBFFDDПредыдущая Валюта'
+  - '&#33EEBB&lПКМ &#DDDDDD» &#BBFFDDСледующая Валюта'
+  - '&#33EEBB&lShift + ЛКМ &#DDDDDD» &#BBFFDDИзменить Цену'
+  - '&#33EEBB&lShift + ПКМ &#DDDDDD» &#BBFFDDСделать Бесплатным'
+  actions:
+  - '[SOUND] ui.button.click|1|1'
+
+transfer:
+  slot: 36
+  name: '&#33EEBB&lПЕРЕДАТЬ ВЛАДЕНИЕ'
+  type: DIAMOND
+  lore:
+  - ' '
+  - '&#33EEBBТекущий владелец:'
+  - ' &#444444❙ &#BBFFDD%owner%'
+  - ' '
+  - '&#33EEBBЭто необратимо!'
+  - ' '
+  - '&#33EEBB&lShift + ПКМ &#DDDDDD» &#BBFFDDПередать'
+  actions:
+  - '[SOUND] ui.button.click|1|1'
+
+whitelist:
+  slot: 39
+  name: '&#33EEBB&lБЕЛЫЙ СПИСОК'
+  type: WHITE_CANDLE
+  lore:
+  - '&#AAAAAAИгроки из белого списка могут использовать ваш варп'
+  - '&#AAAAAAкогда он установлен в режим доступа по белому списку!'
+  - ' '
+  - ' &fВ настоящее время'
+  - ' &#BBFFDD%whitelisted% &fигроков в белом списке!'
+  - ' '
+  - '&#33EEBB&lНажмите &#DDDDDD» &#BBFFDDРедактировать Белый Список'
+  actions:
+  - '[SOUND] ui.button.click|1|1'
+
+blacklist:
+  slot: 41
+  name: '&#33EEBB&lЧЕРНЫЙ СПИСОК'
+  type: BLACK_CANDLE
+  lore:
+  - '&#AAAAAAИгроки из черного списка'
+  - '&#AAAAAAникогда не смогут использовать ваш варп!'
+  - ' '
+  - ' &fВ настоящее время'
+  - ' &#BBFFDD%blacklisted% &fигроков в черном списке!'
+  - ' '
+  - '&#33EEBB&lНажмите &#DDDDDD» &#BBFFDDРедактировать Черный Список'
+  actions:
+  - '[SOUND] ui.button.click|1|1'
+
+bank:
+  slot: 44
+  name: '&#33EEBB&lБАНК'
+  type: RAW_GOLD
+  lore:
+  - '&#AAAAAAЕсли вы установите цену телепорта,'
+  - '&#AAAAAAденьги будут храниться здесь!'
+  - ' '
+  - '&#33EEBBТекущие деньги:'
+  - ' &#444444❙ &#BBFFDD%earned_money%'
+  - ' '
+  - '&#33EEBB&lНажмите &#DDDDDD» &#BBFFDDСнять Деньги'
+  actions:
+  - '[SOUND] ui.button.click|1|1'
+
+#decoration-example:
+#  slot: 10
+#  type: STONE
+#  name: "&eУкрашение!"
+#  actions:
+#    - "[MENU] close"
+#    - "[MESSAGE] &#FF0000Сообщение"

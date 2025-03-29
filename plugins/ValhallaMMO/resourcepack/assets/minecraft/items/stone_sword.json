@@ -1,0 +1,54 @@
+{
+    "model": {
+        "type": "range_dispatch",
+        "property": "custom_model_data",
+        "fallback": {
+            "type": "model",
+            "model": "item/stone_sword"
+        },
+        "entries": [
+            {
+                "threshold": 1981820,
+                "model": {
+                    "type": "model",
+                    "model": "item/weapons/stone_dagger"
+                }
+            },
+            {
+                "threshold": 1981821,
+                "model": {
+                    "type": "model",
+                    "model": "item/weapons/stone_mace"
+                }
+            },
+            {
+                "threshold": 1981822,
+                "model": {
+                    "type": "model",
+                    "model": "item/weapons/stone_rapier"
+                }
+            },
+            {
+                "threshold": 1981825,
+                "model": {
+                    "type": "model",
+                    "model": "item/weapons/stone_warhammer"
+                }
+            },
+            {
+                "threshold": 1981826,
+                "model": {
+                    "type": "model",
+                    "model": "item/weapons/stone_spear"
+                }
+            },
+            {
+                "threshold": 1981827,
+                "model": {
+                    "type": "model",
+                    "model": "item/weapons/stone_greataxe"
+                }
+            }
+        ]
+    }
+}

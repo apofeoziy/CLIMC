@@ -1,0 +1,190 @@
+# ДОКУМЕНТАЦИЯ: https://docs.artillex-studios.com/axplayerwarps.html
+# КОНСТРУКТОР ПРЕДМЕТОВ: https://docs.artillex-studios.com/item-builder.html
+
+title: '&0&lAxPWarps > &8Категории'
+# интерфейс может иметь 1-6 рядов
+rows: 6
+
+# ----- ПРЕДМЕТЫ -----
+
+# вы можете добавить столько украшений, сколько пожелаете
+filler:
+  name: ' '
+  slot:
+  - 0-10
+  - 16-18
+  - 26-27
+  - 35-36
+  - 44-53
+  type: LIME_STAINED_GLASS_PANE
+
+favorites:
+  slot: 0
+  # этот шрифт называется 'small caps'
+  name: '&#33EEBB&lМои избранные варпы'
+  type: GOLDEN_APPLE
+  lore:
+  - ' '
+  - ' &fНажмите здесь, чтобы просмотреть &#BBFFDD%favorite_warps% &fварпов,'
+  - ' &fкоторые вы добавили в избранное!'
+  - ' '
+  - '&#33EEBB&lНажмите &#DDDDDD» &#BBFFDDОткрыть Избранное'
+  actions:
+  - '[MENU] favorites'
+  - '[SOUND] ui.button.click|1|1'
+
+category-all:
+  slot: 4
+  name: '&#33EEBB&lВсе варпы'
+  type: ENDER_PEARL
+  lore:
+  - ' '
+  - ' &fНажмите здесь, чтобы просмотреть все &#BBFFDD%total_warps%'
+  - ' &fигровых варпов, доступных на сервере!'
+  - ' '
+  - '&#33EEBB&lНажмите &#DDDDDD» &#BBFFDDОткрыть Варпы'
+  actions:
+  - '[CATEGORY] all'
+  - '[SOUND] ui.button.click|1|1'
+
+recents:
+  slot: 8
+  name: '&#33EEBB&lНедавние варпы'
+  type: CLOCK
+  lore:
+  - ' '
+  - ' &fНажмите здесь, чтобы просмотреть варпы,'
+  - ' &fкуда вы телепортировались ранее!'
+  - ' '
+  - '&#33EEBB&lНажмите &#DDDDDD» &#BBFFDDОткрыть Недавние'
+  actions:
+  - '[MENU] recents'
+  - '[SOUND] ui.button.click|1|1'
+
+category-building:
+  slot: 21
+  name: '&#33EEBB&lСтроительство'
+  type: OAK_PLANKS
+  lore:
+  - '&#AAAAAАКАТЕГОРИЯ'
+  - ' '
+  - ' &fНажмите здесь, чтобы просмотреть все'
+  - ' &fигровые варпы в этой категории!'
+  - ' '
+  - '&#33EEBB&lНажмите &#DDDDDD» &#BBFFDDОткрыть Категорию'
+  actions:
+  - '[CATEGORY] building'
+  - '[SOUND] ui.button.click|1|1'
+
+category-shop:
+  slot: 22
+  name: '&#33EEBB&lМагазин'
+  type: EMERALD
+  lore:
+  - '&#AAAAAАКАТЕГОРИЯ'
+  - ' '
+  - ' &fНажмите здесь, чтобы просмотреть все'
+  - ' &fигровые варпы в этой категории!'
+  - ' '
+  - '&#33EEBB&lНажмите &#DDDDDD» &#BBFFDDОткрыть Категорию'
+  actions:
+  - '[CATEGORY] shop'
+  - '[SOUND] ui.button.click|1|1'
+
+category-farm:
+  slot: 23
+  name: '&#33EEBB&lФерма'
+  type: WHEAT
+  lore:
+  - '&#AAAAAАКАТЕГОРИЯ'
+  - ' '
+  - ' &fНажмите здесь, чтобы просмотреть все'
+  - ' &fигровые варпы в этой категории!'
+  - ' '
+  - '&#33EEBB&lНажмите &#DDDDDD» &#BBFFDDОткрыть Категорию'
+  actions:
+  - '[CATEGORY] farm'
+  - '[SOUND] ui.button.click|1|1'
+
+category-pvp:
+  slot: 29
+  name: '&#33EEBB&lПвП'
+  type: TARGET
+  lore:
+  - '&#AAAAAАКАТЕГОРИЯ'
+  - ' '
+  - ' &fНажмите здесь, чтобы просмотреть все'
+  - ' &fигровые варпы в этой категории!'
+  - ' '
+  - '&#33EEBB&lНажмите &#DDDDDD» &#BBFFDDОткрыть Категорию'
+  actions:
+  - '[CATEGORY] pvp'
+  - '[SOUND] ui.button.click|1|1'
+
+category-event:
+  slot: 30
+  name: '&#33EEBB&lСобытие'
+  type: DIAMOND
+  lore:
+  - '&#AAAAAАКАТЕГОРИЯ'
+  - ' '
+  - ' &fНажмите здесь, чтобы просмотреть все'
+  - ' &fигровые варпы в этой категории!'
+  - ' '
+  - '&#33EEBB&lНажмите &#DDDDDD» &#BBFFDDОткрыть Категорию'
+  actions:
+  - '[CATEGORY] event'
+  - '[SOUND] ui.button.click|1|1'
+
+category-fun:
+  slot: 31
+  name: '&#33EEBB&lРазвлечения'
+  type: FIREWORK_ROCKET
+  lore:
+  - '&#AAAAAАКАТЕГОРИЯ'
+  - ' '
+  - ' &fНажмите здесь, чтобы просмотреть все'
+  - ' &fигровые варпы в этой категории!'
+  - ' '
+  - '&#33EEBB&lНажмите &#DDDDDD» &#BBFFDDОткрыть Категорию'
+  actions:
+  - '[CATEGORY] fun'
+  - '[SOUND] ui.button.click|1|1'
+
+category-special:
+  slot: 32
+  name: '&#33EEBB&lОсобые'
+  type: NETHER_STAR
+  lore:
+  - '&#AAAAAАКАТЕГОРИЯ'
+  - ' '
+  - ' &fНажмите здесь, чтобы просмотреть все'
+  - ' &fигровые варпы в этой категории!'
+  - ' '
+  - '&#33EEBB&lНажмите &#DDDDDD» &#BBFFDDОткрыть Категорию'
+  actions:
+  - '[CATEGORY] special'
+  - '[SOUND] ui.button.click|1|1'
+
+category-other:
+  slot: 33
+  name: '&#33EEBB&lПрочее'
+  type: MAP
+  lore:
+  - '&#AAAAAАКАТЕГОРИЯ'
+  - ' '
+  - ' &fНажмите здесь, чтобы просмотреть все'
+  - ' &fигровые варпы в этой категории!'
+  - ' '
+  - '&#33EEBB&lНажмите &#DDDDDD» &#BBFFDDОткрыть Категорию'
+  actions:
+  - '[CATEGORY] other'
+  - '[SOUND] ui.button.click|1|1'
+
+#decoration-example:
+#  slot: 10
+#  type: STONE
+#  name: "&eУкрашение!"
+#  actions:
+#    - "[MENU] close"
+#    - "[MESSAGE] &#FF0000Сообщение"

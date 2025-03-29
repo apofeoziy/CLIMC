@@ -1,0 +1,26 @@
+{
+    "model": {
+        "type": "range_dispatch",
+        "property": "custom_model_data",
+        "fallback": {
+            "type": "model",
+            "model": "item/iron_chestplate"
+        },
+        "entries": [
+            {
+                "threshold": 3510001,
+                "model": {
+                    "type": "model",
+                    "model": "item/gui/skillicon_heavyarmor"
+                }
+            },
+            {
+                "threshold": 9918290,
+                "model": {
+                    "type": "model",
+                    "model": "item/armor/copper_chestplate"
+                }
+            }
+        ]
+    }
+}

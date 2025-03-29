@@ -1,0 +1,14 @@
+display_name: <lang.skill-heavy-armor-displayname>
+icon: IRON_CHESTPLATE
+icon_data: 3510001
+description: <lang.skill-heavy-armor-description>
+
+levelbar_title: <lang.skill-heavy-armor-level-bar>
+levelbar_color: RED # Вы можете выбрать между BLUE, YELLOW, GREEN, PINK, PURPLE, RED, WHITE
+levelbar_style: SEGMENTED_6 # Вы можете выбрать между SEGMENTED_6, SEGMENTED_10, SEGMENTED_12, SEGMENTED_20 и SOLID
+
+rage_effects: # должно быть отформатировано как EFFECT;AMPLIFIER;DURATION;AMPLIFIERPERLEVEL;DURATIONPERLEVEL
+  - INCREASE_DAMAGE;1;200;0.5;50
+  - FAST_DIGGING;1;200;0.5;50
+  - ABSORPTION;1;200;0.5;50
+  - DAMAGE_RESISTANCE;0;200;0.25;50

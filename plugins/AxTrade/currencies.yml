@@ -1,0 +1,90 @@
+# ДОКУМЕНТАЦИЯ: https://docs.artillex-studios.com/axtrade.html
+
+# вы можете создать свои собственные валюты, используя плейсхолдеры
+# убедитесь, что ни один из плейсхолдеров не имеет форматирования
+# требуется PlaceholderAPI
+placeholder-currencies:
+  Example-Currency:
+    register: false
+    name: money
+    # если валюта использует целые числа, отключите это
+    # 100.5 - true
+    # 100 - false
+    uses-double: true
+    # если плейсхолдер обрабатывается даже для оффлайн-игроков, включите это
+    works-offline: false
+    settings:
+      raw-placeholder: '%vault_eco_balance_fixed%'
+      give-command: eco give %player% %amount%
+      take-command: eco take %player% %amount%
+
+# ИНФОРМАЦИЯ ДЛЯ ПЛАГИНОВ С НЕСКОЛЬКИМИ ВАЛЮТАМИ: (например: coinsengine, ultraeconomy, rediseconomy)
+# - вы можете включить столько валют, сколько хотите
+# - 'currency-name' берется из плагина валюты, а 'name' - это то, что AxTrade будет отображать в сводках обмена
+# - в guis.yml вам нужно будет использовать формат <название плагина>-<название валюты>, например: 'CoinsEngine-coins'
+currencies:
+  Experience:
+    register: true
+    name: опыт
+    # опционально: налог (пример: 5 это 5% налога)
+    tax: 0
+    # опционально: минимальное количество валюты, необходимое для обмена, иначе игроки не смогут принять обмен
+    required: 0
+  Vault:
+    register: true
+    name: деньги
+  PlayerPoints:
+    register: true
+    name: очки
+  RoyaleEconomy:
+    register: true
+    name: деньги
+  CoinsEngine:
+    register: true
+    enabled:
+    - currency-name: coins
+      name: монеты
+    - currency-name: money
+      name: деньги
+  UltraEconomy:
+    register: true
+    enabled:
+    - currency-name: coins
+      name: монеты
+  KingdomsX:
+    register: true
+    name: очки нексуса
+  RivalHarvesterHoes:
+    register: true
+    name: эссенция
+  SuperMobCoins:
+    register: true
+    name: мобкоины
+  TheOnly-MobCoins:
+    register: true
+    name: мобкоины
+  TokenManager:
+    register: true
+    name: токены
+  AxQuestBoard:
+    register: true
+    name: очки заданий
+  RedisEconomy:
+    register: true
+    enabled:
+    - currency-name: coins
+      name: монеты
+  BeastTokens:
+    register: true
+    name: токены
+  EcoBits:
+    register: true
+    enabled:
+    - currency-name: crystals
+      name: кристаллы
+  RivalCredits:
+    register: true
+    name: кредиты
+
+# не изменяйте это
+version: 9

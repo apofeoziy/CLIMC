@@ -1,0 +1,337 @@
+starting_perks: []
+
+experience:
+  max_level: 100
+  exp_level_curve: (%level% + 75 * 2^(%level%/7.6)) + 300
+  fishing_catch:
+    COD: 200
+    SALMON: 250
+    PUFFERFISH: 500
+    TROPICAL_FISH: 800
+    BOW: 600
+    ENCHANTED_BOOK: 600
+    FISHING_ROD: 600
+    NAME_TAG: 500
+    NAUTILUS_SHELL: 500
+    SADDLE: 500
+    LILY_PAD: 150
+    BOWL: 150
+    LEATHER: 150
+    LEATHER_BOOTS: 150
+    ROTTEN_FLESH: 100
+    STICK: 100
+    STRING: 100
+    POTION: 150 # зелье воды
+    BONE: 100
+    INK_SAC: 100
+    TRIPWIRE_HOOK: 100
+    BAMBOO: 150
+
+
+special_perks: []
+
+commands: []
+
+messages:
+- <lang.skill-level-up-fishing>
+
+leveling_perks:
+  fishing_fishingspeedbonus_add: 0.02
+  fishing_fishingdrops_add: 0.02
+
+starting_coordinates: 0,6
+
+perks:
+  fishing_perk_1:
+    icon: STRING
+    coords: 0,6
+    name: <lang.fishing_perk_1_name>
+    description: <lang.fishing_perk_1_description>
+    cost: 1
+    hidden: false
+    required_lv: 0
+    perk_rewards:
+      fishing_fishingluck_add: 1.5
+    messages:
+    - <lang.fishing_perk_1_messages>
+    custom_model_data_unlockable: -1
+    custom_model_data_unlocked: -1
+    custom_model_data_visible: -1
+  fishing_perk_2:
+    icon: COD
+    coords: 1,4
+    name: <lang.fishing_perk_2_name>
+    description: <lang.fishing_perk_2_description>
+    cost: 1
+    hidden: false
+    required_lv: 20
+    perk_rewards:
+      fishing_fishingessencemultiplier_add: 0.5
+    messages:
+    - <lang.fishing_perk_2_messages>
+    requireperk_all:
+    - fishing_perk_1
+    connection_line:
+      '1':
+        position: 0,4
+        locked: GRAY_DYE:1172713
+        unlockable: ORANGE_DYE:1172813
+        unlocked: LIME_DYE:1172913
+      '2':
+        position: 0,5
+        locked: GRAY_DYE:1172711
+        unlockable: ORANGE_DYE:1172811
+        unlocked: LIME_DYE:1172911
+  fishing_perk_3:
+    icon: SALMON
+    coords: 2,2
+    name: <lang.fishing_perk_3_name>
+    description: <lang.fishing_perk_3_description>
+    cost: 1
+    hidden: false
+    required_lv: 40
+    perk_rewards:
+      fishing_fishingspeedbonus_add: 0.4
+      fishing_fishingluck_add: 2
+    messages:
+    - <lang.fishing_perk_3_messages>
+    requireperk_all:
+    - fishing_perk_2
+    connection_line:
+      '1':
+        position: 1,2
+        locked: GRAY_DYE:1172713
+        unlockable: ORANGE_DYE:1172813
+        unlocked: LIME_DYE:1172913
+      '2':
+        position: 1,3
+        locked: GRAY_DYE:1172711
+        unlockable: ORANGE_DYE:1172811
+        unlocked: LIME_DYE:1172911
+  fishing_perk_4:
+    icon: PUFFERFISH
+    coords: 3,0
+    name: <lang.fishing_perk_4_name>
+    description: <lang.fishing_perk_4_description>
+    cost: 1
+    hidden: false
+    required_lv: 60
+    perk_rewards:
+      fishing_fishingdrops_add: 0.25
+    messages:
+    - <lang.fishing_perk_4_messages>
+    requireperk_all:
+    - fishing_perk_3
+    connection_line:
+      '1':
+        position: 2,0
+        locked: GRAY_DYE:1172713
+        unlockable: ORANGE_DYE:1172813
+        unlocked: LIME_DYE:1172913
+      '2':
+        position: 2,1
+        locked: GRAY_DYE:1172711
+        unlockable: ORANGE_DYE:1172811
+        unlocked: LIME_DYE:1172911
+  fishing_perk_5:
+    icon: TROPICAL_FISH
+    coords: 6,3
+    name: <lang.fishing_perk_5_name>
+    description: <lang.fishing_perk_5_description>
+    cost: 1
+    hidden: false
+    required_lv: 80
+    perk_rewards:
+      fishing_fishingspeedbonus_add: 0.6
+      fishing_fishingluck_add: 2.5
+    messages:
+    - <lang.fishing_perk_5_messages>
+    requireperk_all:
+    - fishing_perk_4
+    connection_line:
+      '1':
+        position: 4,0
+        locked: GRAY_DYE:1172715
+        unlockable: ORANGE_DYE:1172815
+        unlocked: LIME_DYE:1172915
+      '2':
+        position: 4,1
+        locked: GRAY_DYE:1172720
+        unlockable: ORANGE_DYE:1172820
+        unlocked: LIME_DYE:1172920
+      '3':
+        position: 5,1
+        locked: GRAY_DYE:1172723
+        unlockable: ORANGE_DYE:1172823
+        unlocked: LIME_DYE:1172923
+      '4':
+        position: 5,2
+        locked: GRAY_DYE:1172720
+        unlockable: ORANGE_DYE:1172820
+        unlocked: LIME_DYE:1172920
+      '5':
+        position: 6,2
+        locked: GRAY_DYE:1172719
+        unlockable: ORANGE_DYE:1172819
+        unlocked: LIME_DYE:1172919
+  fishing_perk_6:
+    icon: FISHING_ROD
+    coords: 5,5
+    name: <lang.fishing_perk_6_name>
+    description: <lang.fishing_perk_6_description>
+    cost: 1
+    hidden: false
+    required_lv: 100
+    perk_rewards:
+      fishing_fishingdrops_add: 0.25
+      fishing_fishingessencemultiplier_add: 1
+    messages:
+    - <lang.fishing_perk_6_messages>
+    requireperk_all:
+    - fishing_perk_5
+    connection_line:
+      '1':
+        position: 6,5
+        locked: GRAY_DYE:1172714
+        unlockable: ORANGE_DYE:1172814
+        unlocked: LIME_DYE:1172914
+      '2':
+        position: 6,4
+        locked: GRAY_DYE:1172710
+        unlockable: ORANGE_DYE:1172810
+        unlocked: LIME_DYE:1172910
+  fishing_perk_combo:
+    icon: ANVIL
+    coords: 4,4
+    name: <lang.fishing_perk_combo_name>
+    description: <lang.fishing_perk_combo_description>
+    cost: 1
+    hidden: false
+    required_lv: 50
+    perk_rewards:
+      recipes_unlock:
+      - salvage_leather_helmet
+      - salvage_leather_chestplate
+      - salvage_leather_leggings
+      - salvage_leather_boots
+      - salvage_chainmail_helmet
+      - salvage_chainmail_chestplate
+      - salvage_chainmail_leggings
+      - salvage_chainmail_boots
+      - salvage_golden_helmet
+      - salvage_golden_chestplate
+      - salvage_golden_leggings
+      - salvage_golden_boots
+      - salvage_iron_helmet
+      - salvage_iron_chestplate
+      - salvage_iron_leggings
+      - salvage_iron_boots
+      - salvage_diamond_helmet
+      - salvage_diamond_chestplate
+      - salvage_diamond_leggings
+      - salvage_diamond_boots
+      - salvage_wooden_sword
+      - salvage_wooden_pickaxe
+      - salvage_wooden_axe
+      - salvage_wooden_shovel
+      - salvage_wooden_hoe
+      - salvage_wooden_dagger
+      - salvage_wooden_mace
+      - salvage_wooden_rapier
+      - salvage_wooden_greataxe
+      - salvage_wooden_warhammer
+      - salvage_wooden_spear
+      - salvage_stone_sword
+      - salvage_stone_pickaxe
+      - salvage_stone_axe
+      - salvage_stone_shovel
+      - salvage_stone_hoe
+      - salvage_stone_dagger
+      - salvage_stone_mace
+      - salvage_stone_rapier
+      - salvage_stone_greataxe
+      - salvage_stone_warhammer
+      - salvage_stone_spear
+      - salvage_golden_sword
+      - salvage_golden_pickaxe
+      - salvage_golden_axe
+      - salvage_golden_shovel
+      - salvage_golden_hoe
+      - salvage_golden_dagger
+      - salvage_golden_mace
+      - salvage_golden_rapier
+      - salvage_golden_greataxe
+      - salvage_golden_warhammer
+      - salvage_golden_spear
+      - salvage_iron_sword
+      - salvage_iron_pickaxe
+      - salvage_iron_axe
+      - salvage_iron_shovel
+      - salvage_iron_hoe
+      - salvage_iron_dagger
+      - salvage_iron_mace
+      - salvage_iron_rapier
+      - salvage_iron_greataxe
+      - salvage_iron_warhammer
+      - salvage_iron_spear
+      - salvage_diamond_sword
+      - salvage_diamond_pickaxe
+      - salvage_diamond_axe
+      - salvage_diamond_shovel
+      - salvage_diamond_hoe
+      - salvage_diamond_dagger
+      - salvage_diamond_mace
+      - salvage_diamond_rapier
+      - salvage_diamond_greataxe
+      - salvage_diamond_warhammer
+      - salvage_diamond_spear
+    messages:
+    - <lang.fishing_perk_combo_messages>
+    requireperk_all:
+    - fishing_perk_1
+    other_levels_required:
+    - SMITHING:70
+  fishing_perk_ng1:
+    icon: TOTEM_OF_UNDYING
+    coords: 1,6
+    name: <lang.fishing_perk_ng1_name>
+    description: <lang.fishing_perk_ng1_description>
+    cost: 0
+    hidden: true
+    required_lv: 100
+    perk_rewards:
+      reset_skill_fishing: 0
+      p:fishing_newgameplus_add: 1
+      p:fishing_fishingdrops_add: 0.5
+      p:fishing_fishingluck_add: 2.5
+      p:fishing_fishingspeedbonus_add: 0.25
+      p:fishing_fishingexpmultiplier_add: -0.5
+      p:perks_permanently_unlocked_add:
+      - fishing_perk_ng1
+      p:perks_unlocked_remove:
+      - fishing_perk_ng1
+    messages:
+    - <lang.fishing_perk_ng1_messages>
+  fishing_perk_ng2:
+    icon: TOTEM_OF_UNDYING
+    coords: 1,6
+    name: <lang.fishing_perk_ng2_name>
+    description: <lang.fishing_perk_ng2_description>
+    cost: 0
+    hidden: true
+    required_lv: 100
+    requireperk_all:
+    - fishing_perk_ng1
+    perk_rewards:
+      reset_skill_fishing: 0
+      p:fishing_newgameplus_add: 1
+      p:fishing_fishingdrops_add: 0.5
+      p:fishing_fishingluck_add: 2.5
+      p:fishing_fishingspeedbonus_add: 0.25
+      p:fishing_fishingexpmultiplier_add: -0.17
+      p:perks_permanently_unlocked_add:
+      - fishing_perk_ng2
+      p:perks_unlocked_remove:
+      - fishing_perk_ng2
+    messages:
+    - <lang.fishing_perk_ng2_messages>

@@ -1,0 +1,54 @@
+{
+    "model": {
+        "type": "range_dispatch",
+        "property": "custom_model_data",
+        "fallback": {
+            "type": "model",
+            "model": "item/paper"
+        },
+        "entries": [
+            {
+                "threshold": 1829130,
+                "model": {
+                    "type": "model",
+                    "model": "item/gui/button_toggle_unlocked_for_everyone"
+                }
+            },
+            {
+                "threshold": 1829131,
+                "model": {
+                    "type": "model",
+                    "model": "item/gui/button_set_tool_requirement"
+                }
+            },
+            {
+                "threshold": 1829132,
+                "model": {
+                    "type": "model",
+                    "model": "item/gui/button_toggle_exact_meta"
+                }
+            },
+            {
+                "threshold": 1829133,
+                "model": {
+                    "type": "model",
+                    "model": "item/gui/button_set_tool_requirement_offset"
+                }
+            },
+            {
+                "threshold": 6788200,
+                "model": {
+                    "type": "model",
+                    "model": "item/materials/polishing_compound"
+                }
+            },
+            {
+                "threshold": 9827320,
+                "model": {
+                    "type": "model",
+                    "model": "item/materials/attuned_scroll"
+                }
+            }
+        ]
+    }
+}

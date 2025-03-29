@@ -1,0 +1,6 @@
+action:
+  message:
+    format: |2
+
+      <gray> [ <bold><speaker></bold><reset><gray> ]
+      <reset><white> <message>

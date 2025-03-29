@@ -1,0 +1,485 @@
+# PERSISTENCY
+# Database credentials for profile storage
+# If the database credentials are wrong or absent, the plugin will use a sqlite implementation to store profiles instead.
+# If the sqlite implementation failed, the plugin will use PersistentDataContainer instead. This is hard to manage and
+# disables some stat-related features such as leaderboards. If you notice this occurring in your console, it's recommended you
+# try and fix or add the database implementation or sqlite implementation.
+db_host: host
+db_database: database
+db_username: username
+db_password: password
+db_port: 3306
+db_ping_delay: 24000
+db_persist_delay: 6000
+# Leaderboards are also reset after this happens.
+# Should a crash happen, it will not roll back too much progress. Resets immediately persist someone's profile
+profile_caching: 10000
+# immediately reset the cache, so it shouldn't really matter how high this is set to.
+minimum_exp: 500
+
+# RESOURCE PACK
+# Self hosting details
+resourcepack_port: -1
+server_ip: putiphere
+resourcepack_version: 1.0
+
+# Misc
+admin_gui_filler_removal: true
+# to better indicate and distinguish clickable buttons and slots from non-functional slots, but if a custom GUI for example is used then this filler material is not required
+resource_pack_config_override: true
+# This option can be toggled in-game with /val resourcepack <enable/disable>
+
+# GENERAL
+# The plugin features item and player stat properties that give the player permanent potion effects, this is how said effects are stacked
+# to each-other if multiple of the same type are present.
+# Valid modes are
+# HIGHEST : only the highest amplifier of all effects is considered
+# ADD : all effect amplifiers are added to each-other. For example, having 2x REGENERATION II results in REGENERATION IV
+permanent_effect_stacking: HIGHEST
+
+selectable_loot_modifiers: false
+# If not, the loot displayed will be equal to the raw item drop in the loot table
+
+forgettable_perks: false
+# Forgetting a perk may refund resources invested into it and will display a message that they've forgotten the perk
+forgettable_perks_refund_skillpoints: true
+forgettable_perks_refund_items: false
+forgettable_perks_refund_money: false
+forgettable_perks_refund_exp: false
+forgettable_perks_refund_prestigepoints: false
+
+metrics: true
+language: en-us
+
+world_blacklist:
+- exampleworldlol
+
+# A duration of >0 repeats the message every game tick, updating the duration along the way.
+# A duration of ==0 shows the message only once
+# A duration of <0 doesn't show any message
+cooldown_status_duration: 100
+
+armor_scale: 40
+# so by default 20 armor points will grant roughly 5 armor icons. Of course, players can still exceed this value, it will just not be displayed.
+
+# The way boss bars are presented for active global buffs
+# Each global buff is presented for an amount of time, then continues to the next, and once all buffs are presented it clears the bar for
+# another period after which the cycle repeats
+# so BUFF1, BUFF2, BUFF3, nothing, BUFF1, BUFF2, ...
+globalbuff_bossbar_duration: 10
+globalbuff_cycle_pause: 300
+# The boss bar is also shown to players if they just joined the server or if a global buff has just been activated
+
+custom_effect_display: true
+# This may improve performance, but players will also be completely unaware of any potion effects currently active on them
+
+skilltree_arrow_data_n: 3511002
+skilltree_arrow_data_ne: 3511003
+skilltree_arrow_data_e: 3511004
+skilltree_arrow_data_se: 3511005
+skilltree_arrow_data_s: 3511006
+skilltree_arrow_data_sw: 3511007
+skilltree_arrow_data_w: 3511008
+skilltree_arrow_data_nw: 3511001
+
+# Disabled skills are not registered and thus not visible in the skill trees, you can also not gain EXP for them.
+# Power is the only skill that cannot be disabled
+# Disabling a skill is fine, but the plugin is balanced assuming these skills are enabled. Smithing and alchemy especially.
+# It's up to you to balance the plugin should you disable any of them.
+enabled_skills:
+  smithing: true
+  enchanting: true
+  alchemy: true
+  farming: true
+  fishing: true
+  mining: true
+  woodcutting: true
+  digging: true
+  weapons_light: true
+  weapons_heavy: true
+  armor_light: true
+  armor_heavy: true
+  archery: true
+
+# The plugin features customizable mining speeds, which requires packet listening and sending to work. If you have other
+# plugins that affect block mining speed, they will clash! Turn this off if you're absolutely sure you want to use the other
+# plugin's custom mining speed mechanics, but keep in mind ValhallaMMO's dig speed attributes and mechanics will stop doing anything.
+custom_mining_speeds: true
+block_break_delay: true
+# Having this enabled is more true to vanilla, which also has this mechanic, but the option to disable it is here regardless.
+block_recovery: true
+block_recovery_delay: 60
+block_recovery_speed: 0.015
+
+# GAMEPLAY
+
+inventory_repairing_vanilla: true
+inventory_repairing_valhalla: true
+
+# If true, a player cannot be oneshot if the damage comes from a player
+oneshot_protection_players: true
+# If true, a player cannot be oneshot if the damage comes from a non-player
+oneshot_protection_mobs: true
+# If true, a player cannot be oneshot if the damage comes from the environment (fall damage, explosions, anvil, etc.)
+oneshot_protection_environment: true
+# Represents a multiplier applied on the victim's max hp. Oneshot protection is broken if damage exceeds this value
+# For example, if a player has 20 health, they need to take 60 damage in a single hit to not receive oneshot protection
+oneshot_protection_limit: 3
+oneshot_protection_sound: ITEM_TOTEM_USE
+
+item_duplication_whitelist:
+- STRING
+- CHICKEN
+- COOKED_CHICKEN
+- FEATHER
+- COD
+- COOKED_COD
+- LEATHER
+- BEEF
+- COOKED_BEEF
+- GLOW_INK_SAC
+- RABBIT
+- COOKED_RABBIT
+- RABBIT_HIDE
+- MUTTON
+- COOKED_MUTTON
+- BONE
+- INK_SAC
+- ROTTEN_FLESH
+- SPIDER_EYE
+- ENDER_PEARL
+- IRON_INGOT
+- GOLD_NUGGET
+- GOLD_INGOT
+- BLAZE_ROD
+- GUNPOWDER
+- ARROW
+- PRISMARINE_SHARD
+- PRISMARINE_CRYSTALS
+- EMERALD
+- GHAST_TEAR
+- MAGMA_CREAM
+- PHANTOM_MEMBRANE
+- SHULKER_SHELL
+- SLIMEBALL
+- GLASS_BOTTLE
+- GLOWSTONE_DUST
+- REDSTONE
+- STICK
+- SUGAR
+- COAL
+
+lightning_draw_range: 128
+# To turn this mechanic off, set range to 0
+
+skill_gap_pvp_prevention: false
+skill_gap_pvp_level: 20
+
+# Adds an additional effect to the luck stat. Chance-based effects will now roll once extra for each point of luck the player has.
+# As example: If a player has 20% crit chance and 1 luck, if a player hits something and doesn't crit this effect is re-rolled for a favourable outcome.
+# So 20% crit becomes roughly 36% crit.
+# The opposite is also true, where negative luck instead rolls for an unfavourable outcome. With -1 luck, 20% crit would become 4% crit
+# Comparable to the "advantage" mechanic in Dungeons and Dragons, or the 57-leaf clover from Risk of Rain 2
+custom_luck: true
+
+validation_surrounding_quantity: 20
+validation_vacinity_radius: 5
+validation_vacinity_height: 2
+
+fishing_luck_lots: 0.5
+fishing_luck_rain: 1
+fishing_luck_fullmoon: 3
+fishing_luck_newmoon: 0
+
+# Items may be given a property that prevents/punishes players for using equipment that is too far above their own skill
+# level. Example: if a level 0 light weapons player uses a 250 quality netherite sword before level x its effect will be
+# greatly reduced
+# The following formula outputs a multiplier that's applied on the given penalties with the purpose to reduce the
+# penalty the closer the player gets to the intended usage level, and remove them once they've reached it.
+# By default, this formula roughly gives the full penalty until the player has reached half the intended level, then it
+# starts reducing more rapidly. At 90%, this penalty is halved. At 96% it's a quarter, at 98% an eighth.
+# %fraction_level% is equal to PLAYERLEVEL / INTENDEDLEVEL, so if an item's intended level is 70 but the player is only
+# level 35, this will be 0.5.
+# Example: a netherite sword is configured to "require" light weapons level 80 to be used properly, the player is only
+# light weapons level 60 so the player is 75% of the way there. The formula with this number outputs 0.9, so the player's
+# damage is (-0.7 * 0.9) = -0.63 = 63% weaker
+# To make this formula less severe I recommend decreasing the exponent (^8) to a lower positive number
+# The output of this formula can never exceed 1 or go below 0
+item_skill_requirement_formula: -%fraction_level%^8 + 1
+item_skill_requirement_penalties:
+  durability: -11
+  damage: -0.7
+  projectile_speed: -0.7
+  speed: -0.7
+  armor: -0.7
+  resistance: -0.9
+  attribute: -0.7
+item_skill_requirement_warning: CHAT
+# when they are using an overleveled item.
+item_skill_requirement_warning_delay: 600000
+
+# COMBAT & DAMAGE
+
+# If true, damage multipliers (such as crit, power attacks, ranged multipliers, etc.) are multiplied with eachother as
+# opposed to added on top of eachother. Having multipliers be multiplied with eachother results in much greater damage
+# compared to additive multipliers.
+damage_multipliers_multiplicative: false
+
+damage_indicator_format: '&c%icon%%dps%%mitigated%%crit%'
+damage_indicator_crit: ' <lang.damage_indicator_crit>'
+dummies_only: true
+damage_indicator_actionbar_format: '&c%icon%%dps%%mitigated%%crit%'
+damage_indicator_chunk_limit: 5
+
+damage_indicator_fire: '&c🔥'
+damage_indicator_magic: '&d🎆'
+damage_indicator_projectile: '&c🏹'
+damage_indicator_explosion: '&6💥'
+damage_indicator_poison: '&2☠'
+damage_indicator_falling: '&c👞'
+damage_indicator_melee: '&c⚔'
+damage_indicator_bleeding: '&4💧'
+damage_indicator_freezing: '&b❄'
+damage_indicator_lightning: '&e⚡'
+damage_indicator_bludgeoning: '&c🔨'
+damage_indicator_radiant: '&f✝'
+damage_indicator_necrotic: '&7💀'
+
+# ValhallaMMO features a diminishing returns system aimed to counter mob grinders.
+# After x number of exp "events" in a single chunk, any exp gained is reduced
+# This resets on restarts, and is unique per player.
+# This only affects the combat skills, being light weapons, heavy weapons, archery, and martial combat
+chunk_exp_nerf_quantity: 20
+chunk_exp_nerf_factor: 0.1
+chunk_exp_orbs_nerf_factor: 0.3
+
+# This affects the "velocity damage multiplier" mechanics specifically
+# The given number is what the entity's velocity is being divided by to determine bonus damage
+# So if an entity gets +10% velocity bonus damage, and their travel velocity is 0.5, having this value set at 0.1 would
+# equate to 0.5/0.1 = 5, 5 * 10% = 50% extra damage.
+# For reference, walking velocity is about 0.23, running speed is 0.3, sprint jumping is 0.37
+velocity_damage_constant: 0.33
+
+# The inaccuracy constant determines the random spread of shot arrows. The higher this value, the more severe the spread.
+inaccuracy_constant: 0.015
+# The default "inaccuracy" of dispensers
+dispenser_inaccuracy: 7
+multishot_all_hit: true
+multishot_damage_reduction: 0.5
+infinity_ammo_consumption_reduction: 0.5
+
+# Various skills have abilities that may "stun" targets, which are just a collection of potion effects
+# These potion effects are defined as...
+stun_effects:
+  SLOW: 5
+  SLOW_DIGGING: 5
+  BLINDNESS: 5
+  WEAKNESS: 5
+# After a target is stunned, they may not be stunned again for this amount of time (in ticks)
+stun_immunity_duration: 100
+# Non-player enemies might be able to stun as well, but they don't have a profile to base the stun duration off of
+# How long should enemies be able to stun others for? (in ticks)
+default_stun_duration: 20
+
+# Time frame after a combat action the player will still be considered "in combat" in
+combat_time_frame: 15000
+
+# Various abilities can cause targets to bleed, how long should the delay between bleed damage ticks be (in minecraft ticks) with 1 stack of bleeding
+bleed_delay: 40
+# For each additional stack of bleeding, the delay between ticks is reduced and so bleeding becomes faster. By default, 5 stacks of bleed will reduce the time between
+# damage ticks from 40 to 20, and so the bleeding is doubled. 40-35-30-25-20
+bleed_stacked_delay: -5
+bleed_max_stacks: 4
+
+breach_armor_penetration: 10%
+tp_arrow_out_of_combat_only: true
+
+# ValhallaMMO features a parry system, where a successful parry heavily debuffs the parried enemy and reduces the damage
+# taken from the attack, while a failed one puts the parrier at a temporary vulnerability
+parry_enemy_debuffs:
+  ARMOR_FRACTION: -0.5
+  STUN: 69
+
+parry_failed_debuffs:
+  ARMOR_FRACTION: -0.25
+  SLOW: 0
+  WEAKNESS: 0
+
+parry_projectiles: true
+parried_projectiles_reflect: true
+
+parry_sound: BLOCK_IRON_TRAPDOOR_OPEN
+parry_success_sound: ENTITY_ITEM_BREAK
+parry_failed_sound: ITEM_SHIELD_BREAK
+parry_sparks: true
+
+dodge_effect: SWEEP_ATTACK
+dodge_message: <lang.status-attack-dodged>
+
+custom_damage_system: true
+# Damage calculation for armor and armor toughness. Armor is effective only against the given damage sources,
+# everything else is not mitigated by how many armor points you have.
+# Valid arguments are %damage%, %toughness%, and %armor%
+# This default formula doubles the player's effective HP every 10 armor points, or up to 6x eHP at 50 armor,
+# and further reduces heavy damage with toughness. Toughness is not very effective if the player doesn't have
+# a lot of armor or if the player doesn't take very heavy damage. This formula normally breaks at extreme damage numbers,
+# but damage reduction cannot go below a certain fraction to make sure the formula can never go into the negatives
+damage_formula_physical: '%damage% * (15 / (15 + %armor%)) * (1 / (1 + (0.001 * %toughness%
+  * %damage%)))'
+damage_formula_mode: SET
+# SET sets physical damage to the outcome of this formula. The outcome cannot go below 0
+# MULTIPLY multiplies the original damage and sets that as the final damage. The outcome cannot go below 0
+damage_reduction_cap: 0.1
+# Damage mitigation applies before the armor check, so it can still reduce damage taken
+
+# The types of damage armor is effective against. Formatted like TYPE:ARMOREFFECTIVENESS, where ARMOREFFECTIVENESS represents how effective the armor
+# is against this damage type. 1 being 100% effective, no debuff. 0.5 being half as effective. Can be considered armor penetration native to damage types
+armor_effective_types:
+- PROJECTILE:1
+- FALLING_BLOCK:1
+- BLUDGEONING:0.7
+- ENTITY_ATTACK:1
+- ENTITY_SWEEP_ATTACK:1
+- ENTITY_EXPLOSION:0.7
+- BLOCK_EXPLOSION:0.7
+- CONTACT:1
+- FALL:1
+- LAVA:0.5
+negative_armor_damage_buff: 0.025
+# their damage taken increases by this value for each point of armor they are in the negative. (-10 armor would result in a 25% damage taken increase)
+
+# ValhallaMMO features a dodge mechanic, these are its balance options
+prevent_dodge_not_facing_attacker: true
+# they are not facing the attacker
+facing_angle: 70
+# the target to be "facing" the attacker, the effective angle of vision is double this value.
+# example: if this value is 90, the attacker can be anywhere within 180 degrees in front of the target for the target to
+# "see" the shooter. Anywhere outside of that front 180 degrees will be considered "facing away"
+
+# ValhallaMMO also feature a reflect mechanic. Reflect chance is defined by player stats and circumstances
+reflect_damage_type: THORNS
+
+# ValhallaMMO features a custom crit mechanic, which sound should it have, if any?
+crit_sound_effect: ENCHANT_THORNS_HIT
+# Should it play a flash effect when a custom crit is inflicted?
+crit_particle_effect: true
+
+# Damage mitigation obtained from specific enchantments. These mitigations reduce damage before armor comes into play.
+# These mitigations also stack on top of any additional damage mitigation attributes the armor may be given,
+# as example: a protection V chestplate that also has +15% damage mitigations will effectively have 22.5% damage mitigation
+protection_effectiveness: 0.015
+protection_cap: 0.45
+protection_magic_effectiveness: 0.03
+protection_magic_cap: 0.9
+protection_poison_effectiveness: 0.03
+protection_poison_cap: 0.9
+protection_bludgeoning_effectiveness: 0
+protection_bludgeoning_cap: 0
+protection_melee_effectiveness: 0
+protection_melee_cap: 0
+protection_lightning_effectiveness: 0.03
+protection_lightning_cap: 0.9
+protection_freezing_effectiveness: 0.03
+protection_freezing_cap: 0.9
+protection_radiant_effectiveness: 0.04
+protection_radiant_cap: 1.0
+protection_necrotic_effectiveness: 0.04
+protection_necrotic_cap: 1.0
+fire_protection_effectiveness: 0.05
+fire_protection_cap: 1
+projectile_protection_effectiveness: 0.03
+projectile_protection_cap: 0.9
+blast_protection_effectiveness: 0.04
+blast_protection_cap: 1
+feather_falling_effectiveness: 0.15
+feather_falling_cap: 0.9
+
+buff_resistance_reduction: 0.2
+
+light_damage_resistance: 0.0
+light_melee_resistance: 0.0125
+light_projectile_resistance: 0.025
+light_bludgeoning_resistance: 0.0125
+light_fire_resistance: 0.0
+light_explosion_resistance: 0.025
+light_magic_resistance: 0.0
+light_poison_resistance: 0.0
+light_freezing_resistance: 0.0
+light_lightning_resistance: 0.0
+light_radiant_resistance: 0.0
+light_necrotic_resistance: 0.0
+light_fall_resistance: 0.0
+light_stun_resistance: 0.0
+light_bleeding_resistance: 0.0
+light_crit_chance_resistance: 0.075
+light_crit_damage_resistance: 0.0
+light_knockback_resistance: 0.0
+
+heavy_damage_resistance: 0.0
+heavy_melee_resistance: 0.025
+heavy_projectile_resistance: 0.05
+heavy_bludgeoning_resistance: 0.0
+heavy_fire_resistance: 0.0
+heavy_explosion_resistance: 0.05
+heavy_magic_resistance: 0.0
+heavy_poison_resistance: 0.0
+heavy_freezing_resistance: 0.0
+heavy_lightning_resistance: 0.0
+heavy_radiant_resistance: 0.0
+heavy_necrotic_resistance: 0.0
+heavy_fall_resistance: 0.0
+heavy_stun_resistance: 0.0
+heavy_bleeding_resistance: 0.0
+heavy_crit_chance_resistance: 0.075
+heavy_crit_damage_resistance: 0.0
+heavy_knockback_resistance: 0.05
+
+weightless_damage_resistance: 0.0
+weightless_melee_resistance: 0.0
+weightless_projectile_resistance: 0.0
+weightless_bludgeoning_resistance: 0.0
+weightless_fire_resistance: 0.0
+weightless_explosion_resistance: 0.0
+weightless_magic_resistance: 0.0
+weightless_poison_resistance: 0.0
+weightless_freezing_resistance: 0.0
+weightless_lightning_resistance: 0.0
+weightless_radiant_resistance: 0.0
+weightless_necrotic_resistance: 0.0
+weightless_fall_resistance: 0.0
+weightless_stun_resistance: 0.0
+weightless_bleeding_resistance: 0.0
+weightless_crit_chance_resistance: 0.0
+weightless_crit_damage_resistance: 0.0
+weightless_knockback_resistance: 0.0
+
+# ValhallaMMO changes trident damage to instead scale off its melee damage
+trident_damage_ranged: 1.3
+trident_damage_ranged_loyalty: 1.0
+trident_impaling_damage_ranged: 2
+trident_impaling_damage_melee: 1
+trident_impaling_damage_water: true
+
+# CRAFTING
+
+disable_vanilla_menu: []
+immersive_on_regular_click: []
+
+cauldron_max_capacity: 3
+# High numbers will allow players to stealthily store many items which may not be desirable
+cauldron_item_duration: 20
+cauldron_item_blacklist:
+- BUCKET
+- WATER_BUCKET
+- LAVA_BUCKET
+- SNOW_BUCKET
+- GLASS_BOTTLE
+
+model_data_nextpage: 3511004
+model_data_prevpage: 3511008
+model_data_craft_view: 3511001
+model_data_tinker_view: 3511002
+
+# If true, items crafted with a custom crafting method will be dropped on top of the crafting block. If false, they will
+# be added to the player's inventory.
+craft_item_drop: true

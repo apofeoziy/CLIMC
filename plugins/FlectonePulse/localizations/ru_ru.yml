@@ -1,0 +1,854 @@
+#  ___       ___  __  ___  __        ___ 
+# |__  |    |__  /  `  |  /  \ |\ | |__
+# |    |___ |___ \__,  |  \__/ | \| |___
+#  __             __   ___ 
+# |__) |  | |    /__` |__  
+# |    \__/ |___ .__/ |___   /\
+#                           /  \
+# __/\___  ____/\_____  ___/    \______
+#        \/           \/  
+# 
+# https://flectone.net/pulse/docs/message/
+cooldown: "<color:#ff7171><b>⁉</b> Слишком быстро, попробуй через <time>"
+time:
+  format: "dd'д' HH'ч' mm'м' ss.SSS'с'"
+  permanent: "НАВСЕГДА"
+  zero: "0с"
+# https://flectone.net/pulse/docs/command/
+command:
+  prompt:
+    message: "сообщение"
+    hard: "сложно?"
+    accept: "принять"
+    turn: "включить"
+    reason: "причина"
+    category: "категория"
+    id: "айди"
+    time: "время"
+    repeat-time: "время повторения"
+    multiple-vote: "мульти голосование"
+    player: "игрок"
+    number: "число"
+    color: "цвет"
+    language: "язык"
+    url: "ссылка"
+    move: "ход"
+  # https://flectone.net/pulse/docs/command/ball/
+  ball:
+    format: "<color:#9370DB>❓ <display_name> спросил: <message> <br>🔮 Магический шар: <u><answer></u>"
+    answers:
+      - "Бесспорно"
+      - "Никаких сомнений"
+      - "Определённо да"
+      - "Это база"
+      - "Можешь быть уверен в этом"
+      - "Вероятнее всего"
+      - "Хорошие перспективы"
+      - "Да"
+      - "Пока не ясно, попробуй снова"
+      - "Спроси позже"
+      - "Лучше не рассказывать"
+      - "Сейчас нельзя предсказать"
+      - "Сконцентрируйся и спроси опять"
+      - "Даже не думай"
+      - "Нет."
+      - "Перспективы не очень хорошие"
+      - "Весьма сомнительно"
+  # https://flectone.net/pulse/docs/command/ban/
+  ban:
+    null-player: "<color:#ff7171><b>⁉</b> Игрок не найден"
+    null-time: "<color:#ff7171><b>⁉</b> Невозможное время"
+    reasons:
+      default: "Ты заблокирован на этом сервере"
+    server: "<color:#ff7171>🔒 <fcolor:2><moderator></fcolor> заблокировал игрока <fcolor:2><player></fcolor> <fcolor:1><hover:show_text:\"<fcolor:1>Айди: <id><br>Дата: <date><br>Время: <time><br>Осталось: <time_left><br>Модератор: <moderator><br>Причина: <reason>\">[ПОДРОБНЕЕ]</hover>"
+    person: "<color:#ff7171>🔒 БАН 🔒 <fcolor:1><br><br>Дата: <date><br><br>Время: <time><br><br>Осталось: <time_left><br><br>Модератор: <moderator><br><br>Причина: <reason>"
+    connection-attempt: "<color:#ff7171>🔒 Заблокированный <fcolor:2><player></fcolor> попытался подключиться <fcolor:1><hover:show_text:\"<fcolor:1>Айди: <id><br>Дата: <date><br>Время: <time><br>Осталось: <time_left><br>Модератор: <moderator><br>Причина: <reason>\">[ПОДРОБНЕЕ]</hover>"
+  # https://flectone.net/pulse/docs/command/banlist/
+  banlist:
+    empty: "<color:#98FB98>☺ Блокировки не найдены"
+    null-page: "<color:#ff7171><b>⁉</b> Страница не найдена"
+    null-player: "<color:#ff7171><b>⁉</b> Игрок не найден"
+    global:
+      header: "<fcolor:2>▋ Блокировки: <count> <br>"
+      line: "<hover:show_text:\"<fcolor:1>Разблокировать <display_name>\"><click:run_command:\"<command>\"><color:#ff7171>☒ <display_name></click></hover> <fcolor:1><hover:show_text:\"<fcolor:1>Айди: <id><br>Дата: <date><br>Время: <time><br>Модератор: <moderator><br>Причина: <reason>\">[ПОДРОБНЕЕ]</hover>"
+      footer: "<br>▋ <fcolor:2><click:run_command:\"<command> <prev_page>\">←</click> <fcolor:1>Page: <current_page>/<last_page> <fcolor:2><click:run_command:\"<command> <next_page>\">→"
+    player:
+      header: "<fcolor:2>▋ Все блокировки: <count> <br>"
+      line: "<hover:show_text:\"<fcolor:1>Разблокировать <display_name>\"><click:run_command:\"<command>\"><color:#ff7171>☒ <display_name></click></hover> <fcolor:1><hover:show_text:\"<fcolor:1>Айди: <id><br>Дата: <date><br>Время: <time><br>Модератор: <moderator><br>Причина: <reason>\">[ПОДРОБНЕЕ]</hover>"
+      footer: "<br>▋ <fcolor:2><click:run_command:\"<command> <prev_page>\">←</click> <fcolor:1>Page: <current_page>/<last_page> <fcolor:2><click:run_command:\"<command> <next_page>\">→"
+  # https://flectone.net/pulse/docs/command/broadcast/
+  broadcast:
+    format: "<color:#ffd500>🕫 Сообщение для всех от <display_name> <br>❝ <message> ❠"
+  # https://flectone.net/pulse/docs/command/chatcolor/
+  chatcolor:
+    null-player: "<color:#ff7171><b>⁉</b> Игрок не найден"
+    null-color: "<color:#ff7171><b>⁉</b> Цвета введены неверно"
+    format: "<color:#98FB98>★ Теперь цвета <fcolor:1>сообщение</fcolor> <fcolor:2>сообщение</fcolor> <fcolor:3>сообщение <fcolor:4>сообщение"
+  # https://flectone.net/pulse/docs/command/chatsetting/
+  chatsetting:
+    no-permission: "<color:#ff7171><b>⁉</b> Нет разрешения на изменение этой настройки"
+    disable:
+      you: "<color:#ff7171><b>⁉</b> Команда скрыта, проверь /chatsetting"
+      he: "<color:#ff7171><b>⁉</b> Он выключил команду с помощью /chatsetting"
+      server: "<color:#ff7171><b>⁉</b> Команда отключена на сервере"
+    header: "          Настройки чата"
+    items:
+      ADVANCEMENT:
+        - - "<fcolor:2>Достижения"
+          - "<color:#98FB98>Показываются"
+        - - "<fcolor:2>Достижения"
+          - "<color:#ff7171>Скрыты"
+      AFK:
+        - - "<fcolor:2>Команда /afk"
+          - "<color:#98FB98>Показывается"
+        - - "<fcolor:2>Команда /afk"
+          - "<color:#ff7171>Скрыта"
+      AUTO:
+        - - "<fcolor:2>Авто сообщения"
+          - "<color:#98FB98>Показываются"
+        - - "<fcolor:2>Авто сообщения"
+          - "<color:#ff7171>Скрыты"
+      BALL:
+        - - "<fcolor:2>Команда /ball"
+          - "<color:#98FB98>Показывается"
+        - - "<fcolor:2>Команда /ball"
+          - "<color:#ff7171>Скрыта"
+      BAN:
+        - - "<fcolor:2>Команда /ban"
+          - "<color:#98FB98>Показывается"
+        - - "<fcolor:2>Команда /ban"
+          - "<color:#ff7171>Скрыта"
+      BROADCAST:
+        - - "<fcolor:2>Команда /broadcast"
+          - "<color:#98FB98>Показывается"
+        - - "<fcolor:2>Команда /broadcast"
+          - "<color:#ff7171>Скрыта"
+      CHAT:
+        - - "<fcolor:2>Чат"
+          - "<fcolor:1>Выбран чат <bold><chat>"
+      COIN:
+        - - "<fcolor:2>Команда /coin"
+          - "<color:#98FB98>Показывается"
+        - - "<fcolor:2>Команда /coin"
+          - "<color:#ff7171>Скрыта"
+      COLOR:
+        - - "<fcolor:2>Цвета"
+          - "<fcolor:1>сообщение"
+          - "<fcolor:2>сообщение"
+          - "<fcolor:3>сообщение"
+          - "<fcolor:4>сообщение"
+      DEATH:
+        - - "<fcolor:2>Смерти"
+          - "<color:#98FB98>Показываются"
+        - - "<fcolor:2>Смерти"
+          - "<color:#ff7171>Скрыты"
+      DICE:
+        - - "<fcolor:2>Команда /dice"
+          - "<color:#98FB98>Показывается"
+        - - "<fcolor:2>Команда /dice"
+          - "<color:#ff7171>Скрыта"
+      DISCORD:
+        - - "<fcolor:2>Сообщения для/из Discord"
+          - "<color:#98FB98>Показываются"
+        - - "<fcolor:2>Сообщения для/из Discord"
+          - "<color:#ff7171>Скрыты"
+      DO:
+        - - "<fcolor:2>Команда /do"
+          - "<color:#98FB98>Показывается"
+        - - "<fcolor:2>Команда /do"
+          - "<color:#ff7171>Скрыта"
+      GREETING:
+        - - "<fcolor:2>Приветственное сообщение"
+          - "<color:#98FB98>Показывается"
+        - - "<fcolor:2>Приветственное сообщение"
+          - "<color:#ff7171>Скрыта"
+      JOIN:
+        - - "<fcolor:2>Оповещения о входе"
+          - "<color:#98FB98>Показываются"
+        - - "<fcolor:2>Оповещения о входе"
+          - "<color:#ff7171>Скрыты"
+      KICK:
+        - - "<fcolor:2>Команда /kick"
+          - "<color:#98FB98>Показывается"
+        - - "<fcolor:2>Команда /kick"
+          - "<color:#ff7171>Скрыта"
+      MAIL:
+        - - "<fcolor:2>Команда /mail"
+          - "<color:#98FB98>Показывается"
+        - - "<fcolor:2>Команда /mail"
+          - "<color:#ff7171>Скрыта"
+      ME:
+        - - "<fcolor:2>Команда /me"
+          - "<color:#98FB98>Показывается"
+        - - "<fcolor:2>Команда /me"
+          - "<color:#ff7171>Скрыта"
+      MUTE:
+        - - "<fcolor:2>Команда /mute"
+          - "<color:#98FB98>Показывается"
+        - - "<fcolor:2>Команда /mute"
+          - "<color:#ff7171>Скрыта"
+      POLL:
+        - - "<fcolor:2>Команда /poll"
+          - "<color:#98FB98>Показывается"
+        - - "<fcolor:2>Команда /poll"
+          - "<color:#ff7171>Скрыта"
+      QUIT:
+        - - "<fcolor:2>Оповещения о выходе"
+          - "<color:#98FB98>Показываются"
+        - - "<fcolor:2>Оповещения о выходе"
+          - "<color:#ff7171>Скрыты"
+      REPLY:
+        - - "<fcolor:2>Команда /reply"
+          - "<color:#98FB98>Показывается"
+        - - "<fcolor:2>Команда /reply"
+          - "<color:#ff7171>Скрыта"
+      ROCKPAPERSCISSORS:
+        - - "<fcolor:2>Команда /rockpaperscissors"
+          - "<color:#98FB98>Показывается"
+        - - "<fcolor:2>Команда /rockpaperscissors"
+          - "<color:#ff7171>Скрыта"
+      SPY:
+        - - "<fcolor:2>Режим слежки"
+          - "<color:#98FB98>Включён"
+        - - "<fcolor:2>Режим слежки"
+          - "<color:#ff7171>Выключен"
+      STREAM:
+        - - "<fcolor:2>Режим стримера"
+          - "<color:#98FB98>Включён"
+        - - "<fcolor:2>Режим стримера"
+          - "<color:#ff7171>Выключен"
+      TELL:
+        - - "<fcolor:2>Команда /tell"
+          - "<color:#98FB98>Показывается"
+        - - "<fcolor:2>Команда /tell"
+          - "<color:#ff7171>Скрыта"
+      TELEGRAM:
+        - - "<fcolor:2>Сообщения для/из Telegram"
+          - "<color:#98FB98>Показываются"
+        - - "<fcolor:2>Сообщения для/из Telegram"
+          - "<color:#ff7171>Скрыты"
+      TICTACTOE:
+        - - "<fcolor:2>Команда /tictactoe"
+          - "<color:#98FB98>Показывается"
+        - - "<fcolor:2>Команда /tictactoe"
+          - "<color:#ff7171>Скрыта"
+      TRANSLATETO:
+        - - "<fcolor:2>Команда /translate"
+          - "<color:#98FB98>Показывается"
+        - - "<fcolor:2>Команда /translate"
+          - "<color:#ff7171>Скрыта"
+      TRY:
+        - - "<fcolor:2>Команда /try"
+          - "<color:#98FB98>Показывается"
+        - - "<fcolor:2>Команда /try"
+          - "<color:#ff7171>Скрыта"
+      TWITCH:
+        - - "<fcolor:2>Сообщения для/из Twitch"
+          - "<color:#98FB98>Показываются"
+        - - "<fcolor:2>Сообщения для/из Twitch"
+          - "<color:#ff7171>Скрыты"
+      WARN:
+        - - "<fcolor:2>Команда /warn"
+          - "<color:#98FB98>Показывается"
+        - - "<fcolor:2>Команда /warn"
+          - "<color:#ff7171>Скрыта"
+  # https://flectone.net/pulse/docs/command/clearchat/
+  clearchat:
+    null-player: "<color:#ff7171><b>⁉</b> Игрок не найден"
+    format: "<fcolor:1>💬 Чат очищен"
+  # https://flectone.net/pulse/docs/command/clearmail/
+  clearmail:
+    null-mail: "<color:#ff7171><b>⁉</b> Письма не найдено"
+    format: "<fcolor:2>✉ [УДАЛЕНО] Письмо #<id> для <display_name> » <fcolor:1><message>"
+  # https://flectone.net/pulse/docs/command/coin/
+  coin:
+    head: "орёл"
+    tail: "решка"
+    format: "<fcolor:1>✎ <display_name> подбросил монетку - <result>"
+    format-draw: "<fcolor:1>✎ <display_name> неудачно подбросил монетку ребром :)"
+  # https://flectone.net/pulse/docs/command/dice/
+  dice:
+    symbols:
+      1: "⚀"
+      2: "⚁"
+      3: "⚂"
+      4: "⚃"
+      5: "⚄"
+      6: "⚅"
+    format: "<fcolor:1>✎ <display_name> кинул кубики <message> (<sum>)"
+  # https://flectone.net/pulse/docs/command/do/
+  do:
+    format: "<fcolor:1>✎ <message> (<i><display_name></i>)"
+  # https://flectone.net/pulse/docs/command/flectonepulse/
+  flectonepulse:
+    format-false: "<color:#ff7171>★ Возникла проблема при перезагрузке"
+    format-true: "<fcolor:2>★ <u>FlectonePulse</u> успешно перезагружен! (<i><time></i>)"
+    format-true-text: "<fcolor:2>★ ВАЖНО! Перезагружен только текст, для ПОЛНОЙ перезагрузки нужно использовать: <br><fcolor:1>/flectonepulse reload"
+  # https://flectone.net/pulse/docs/command/geolocate/
+  geolocate:
+    null-player: "<color:#ff7171><b>⁉</b> Игрок не найден"
+    null-or-error: "<color:#ff7171><b>⁉</b> Ошибка, попробуй чуть позже"
+    format: "<fcolor:1>Геолокация <display_name><br>Страна: <fcolor:2><country><br><fcolor:1>Регион: <fcolor:2><region_name><br><fcolor:1>Город: <fcolor:2><city><br><fcolor:1>Часовой пояс: <fcolor:2><timezone><br><fcolor:1>Мобильный интернет? <fcolor:2><mobile><br><fcolor:1>ВПН? <fcolor:2><proxy><br><fcolor:1>Хостинг? <fcolor:2><hosting><br><fcolor:1>Айпи: <fcolor:2><query>"
+  # https://flectone.net/pulse/docs/command/helper/
+  helper:
+    null-helper: "<color:#ff7171><b>⁉</b> Сейчас нет людей, кто бы смог помочь"
+    global: "<fcolor:2>👤 <display_name> просит помощи ⏩ <fcolor:1><message>"
+    player: "<fcolor:2>👤 Запрос отправлен, ожидай ответа"
+  # https://flectone.net/pulse/docs/command/ignore/
+  ignore:
+    null-player: "<color:#ff7171><b>⁉</b> Игрок не найден"
+    myself: "<color:#ff7171><b>⁉</b> Нельзя игнорировать самого себя"
+    he: "<color:#ff7171><b>⁉</b> Он тебя игнорирует"
+    you: "<color:#ff7171><b>⁉</b> Ты его игнорируешь"
+    format-true: "<color:#ff7171>☹ Ты игнорируешь <display_name>"
+    format-false: "<color:#98FB98>☺ Ты перестал игнорировать <display_name>"
+  # https://flectone.net/pulse/docs/command/ignorelist/
+  ignorelist:
+    empty: "<color:#98FB98>☺ Игнорируемых игроков нет"
+    null-page: "<color:#ff7171><b>⁉</b> Страница не найдена"
+    header: "<fcolor:2>▋ Игнорирования: <count> <br>"
+    line: "<hover:show_text:\"<fcolor:1>Перестать игнорировать <display_name>\"><click:run_command:\"<command>\"><color:#ff7171>☒ <display_name></click></hover> <fcolor:1>Дата: <date>"
+    footer: "<br>▋ <fcolor:2><click:run_command:\"<command> <prev_page>\">←</click> <fcolor:1>Страница: <current_page>/<last_page> <fcolor:2><click:run_command:\"<command> <next_page>\">→"
+  # https://flectone.net/pulse/docs/command/kick/
+  kick:
+    null-player: "<color:#ff7171><b>⁉</b> Игрок не найден"
+    reasons:
+      default: "Исключён модератором"
+    server: "<color:#ff7171>🔒 <fcolor:2><moderator></fcolor> исключил <fcolor:2><player></fcolor> <fcolor:1><hover:show_text:\"<fcolor:1>Айди: <id><br>Дата: <date><br>Модератор: <moderator><br>Причина: <reason>\">[ПОДРОБНЕЕ]</hover>"
+    person: "<color:#ff7171>🔒 КИК 🔒 <fcolor:1><br><br>Айди: <id><br><br>Дата: <date><br><br>Модератор: <moderator><br><br>Причина: <reason>"
+  # https://flectone.net/pulse/docs/command/mail/
+  mail:
+    null-player: "<color:#ff7171><b>⁉</b> Игрок не найден"
+    sender: "<fcolor:2>✉ Письмо #<id> для <display_name> » <fcolor:1><message>"
+    receiver: "<fcolor:2>✉ Письмо от <display_name> » <fcolor:1><message>"
+  # https://flectone.net/pulse/docs/command/maintenance/
+  maintenance:
+    not: "<color:#ff7171><b>⁉</b> Технические работы не идут"
+    already: "<color:#ff7171><b>⁉</b> Технические работы уже идут"
+    server-description: "<color:#ff7171>В настоящее время проводятся технические работы"
+    server-version: "Технические работы"
+    kick: "<color:#ff7171>★ На сервере ведутся технические работы"
+    format-true: "<fcolor:1>★ Ты <fcolor:2>включил</fcolor:2> технические работы на сервере"
+    format-false: "<fcolor:1>★ Ты <fcolor:2>выключил</fcolor:2> технические работы на сервере"
+  # https://flectone.net/pulse/docs/command/me/
+  me:
+    format: "<fcolor:1>✎ <display_name> <message>"
+  # https://flectone.net/pulse/docs/command/mute/
+  mute:
+    null-player: "<color:#ff7171><b>⁉</b> Игрок не найден"
+    null-time: "<color:#ff7171><b>⁉</b> Невозможное время"
+    reasons:
+      default: "Ты был замучен на сервере"
+    server: "<color:#ff7171>🔒 <fcolor:2><moderator></fcolor> выдал мут игроку <fcolor:2><player></fcolor> <fcolor:1><hover:show_text:\"<fcolor:1>Айди: <id><br>Дата: <date><br>Время: <time><br>Осталось: <time_left><br>Модератор: <moderator><br>Причина: <reason>\">[ПОДРОБНЕЕ]</hover>"
+    person: "<color:#ff7171>🔒 Ты замучен, осталось <time_left>"
+  # https://flectone.net/pulse/docs/command/mutelist/
+  mutelist:
+    empty: "<color:#98FB98>☺ Муты не найдены"
+    null-page: "<color:#ff7171><b>⁉</b> Страница не найдена"
+    null-player: "<color:#ff7171><b>⁉</b> Игрок не найден"
+    global:
+      header: "<fcolor:2>▋ Муты: <count> <br>"
+      line: "<hover:show_text:\"<fcolor:1>Размутить <display_name>\"><click:run_command:\"<command>\"><color:#ff7171>☒ <display_name></click></hover> <fcolor:1><hover:show_text:\"<fcolor:1>Айди: <id><br>Дата: <date><br>Время: <time><br>Модератор: <moderator><br>Причина: <reason>\">[ПОДРОБНЕЕ]</hover>"
+      footer: "<br>▋ <fcolor:2><click:run_command:\"<command> <prev_page>\">←</click> <fcolor:1>Страница: <current_page>/<last_page> <fcolor:2><click:run_command:\"<command> <next_page>\">→"
+    player:
+      header: "<fcolor:2>▋ Все муты: <count> <br>"
+      line: "<hover:show_text:\"<fcolor:1>Размутить <display_name>\"><click:run_command:\"<command>\"><color:#ff7171>☒ <display_name></click></hover> <fcolor:1><hover:show_text:\"<fcolor:1>Айди: <id><br>Дата: <date><br>Время: <time><br>Модератор: <moderator><br>Причина: <reason>\">[ПОДРОБНЕЕ]</hover>"
+      footer: "<br>▋ <fcolor:2><click:run_command:\"<command> <prev_page>\">←</click> <fcolor:1>Страница: <current_page>/<last_page> <fcolor:2><click:run_command:\"<command> <next_page>\">→"
+  # https://flectone.net/pulse/docs/command/online/
+  online:
+    null-player: "<color:#ff7171><b>⁉</b> Игрок не найден"
+    format-current: "<fcolor:1>⌛ <display_name> сейчас на сервере"
+    format-first: "<fcolor:1>⌛ <display_name> впервые зашёл на сервер <time> назад"
+    format-last: "<fcolor:1>⌛ <display_name> <fcolor:1>последний раз был на сервере <time> назад"
+    format-total: "<fcolor:1>⌛ <display_name> <fcolor:1>всего провёл на сервере <time>"
+  # https://flectone.net/pulse/docs/command/ping/
+  ping:
+    null-player: "<color:#ff7171><b>⁉</b> Игрок не найден"
+    format: "<fcolor:1>🖧 Пинг игрока <fcolor:2><player></fcolor:2> равен <ping>"
+  # https://flectone.net/pulse/docs/command/poll/
+  poll:
+    null-poll: "<color:#ff7171><b>⁉</b> Голосование не найдено"
+    expired: "<color:#ff7171><b>⁉</b> Голосование завершено"
+    already: "<color:#ff7171><b>⁉</b> Ты уже проголосовал в этом голосовании"
+    vote-true: "<color:#4eff52>👍 Ты выбрал <answer_id> в голосовании #<id>. Всего таких голосов <count>"
+    vote-false: "<color:#ff4e4e>🖓 Ты передумал об <answer_id> в голосовании #<id>. Всего таких голосов <count> без тебя"
+    count-answers: "<color:#4eff52><bold><count></bold> за [<answer_key>] - <answer_value> <br>"
+    vote-button: "<color:#4eff52><hover:show_text:\"<color:#4eff52>Проголосовать за <bold><answer_key>\"><click:run_command:\"/poll vote <id> <number>\">[<answer_key>] - <answer_value> <br>"
+    format-start: "<br><color:#fce303>🗐 Создано голосование #<id> <br>❓ <message> <br><answers>"
+    format-over: "<br><color:#fce303>🗐 Голосование #<id> завершено <br>❓ <message> <br>Результат: <br><answers>"
+  # https://flectone.net/pulse/docs/command/reply/
+  reply:
+    null-receiver: "<color:#ff7171><b>⁉</b> Некому отвечать"
+  # https://flectone.net/pulse/docs/command/rockpaperscissors/
+  rockpaperscissors:
+    null-player: "<color:#ff7171><b>⁉</b> Игрок не найден"
+    null-game: "<color:#ff7171><b>⁉</b> Этой игры не существует"
+    wrong-move: "<color:#ff7171><b>⁉</b> Такой ход невозможен"
+    already: "<color:#ff7171><b>⁉</b> Ты уже сходил"
+    myself: "<color:#ff7171><b>⁉</b> Ты не можешь играть с самим собой"
+    sender: "<fcolor:2>✂ <fcolor:1>Теперь ходит <display_name>"
+    receiver: "<fcolor:2>✂ <display_name> <fcolor:1>предложил сыграть в камень-ножницы-бумага"
+    format-move: "<fcolor:2>✂ <fcolor:1>Выбери свой ход <fcolor:2><click:run_command:\"/rps <target> rock <uuid>\">[🪨 камень]</click> <click:run_command:\"/rps <target> scissors <uuid>\">[✂ ножницы]</click> <click:run_command:\"/rps <target> paper <uuid>\">[🧻 бумага]</click>"
+    format-win: "<color:#98FB98>✂ Выйграл <display_name>! <b><sender_move></b> на <b><receiver_move></b>"
+    format-draw: "<color:#98FB98>✂ Ничья! Вы оба выбрали <b><move>"
+    strategies:
+      rock: "камень"
+      scissors: "ножницы"
+      paper: "бумага"
+  # https://flectone.net/pulse/docs/command/spy/
+  spy:
+    format-true: "<fcolor:1>[👁] Ты <color:#98FB98>включил <fcolor:1>слежку"
+    format-false: "<fcolor:1>[👁] Ты <color:#F08080>выключил <fcolor:1>слежку"
+    format-log: "<fcolor:1>[👁] <display_name> <color:#98FB98><action> <fcolor:1>→ <fcolor:2><message>"
+  # https://flectone.net/pulse/docs/command/stream/
+  stream:
+    already: "<color:#ff7171><b>⁉</b> Ты уже включил трансляцию"
+    not: "<color:#ff7171><b>⁉</b> Ты не включил трансляцию"
+    prefix-true: "<color:#ff4e4e>⏻</color:#ff4e4e> "
+    prefix-false: ""
+    url-tag: "<fcolor:2><click:open_url:\"<url>\"><hover:show_text:\"<fcolor:2><url>\"><url></hover></click>"
+    format-start: "<br><color:#ff4e4e>🔔 <fcolor:1>Объявление <color:#ff4e4e>🔔<br><br><fcolor:1><display_name> начал трансляцию<br><br><urls><br>"
+    format-end: "<fcolor:2>★ Спасибо за трансляцию на нашем сервере!"
+  # https://flectone.net/pulse/docs/command/symbol/
+  symbol:
+    format: "<click:suggest_command:\"<message>\"><fcolor:2>🖥 Нажми, чтобы использовать: <fcolor:1><message>"
+    categories:
+      activities: "мероприятие"
+      animals: "животные"
+      arrows: "стрелки"
+      body: "тело"
+      clothes: "одежда"
+      environment: "окружение"
+      faces: "лицо"
+      food: "еда"
+      greenery: "зелень"
+      hands: "руки"
+      misc: "разное"
+      numbers: "числа"
+      people: "люди"
+      shapes: "фигуры"
+      symbols: "символы"
+      things: "вещи"
+      transport: "транспорт"
+  # https://flectone.net/pulse/docs/command/tell/
+  tell:
+    null-player: "<color:#ff7171><b>⁉</b> Игрок не найден"
+    sender: "<fcolor:2>✉ Ты → <display_name> » <fcolor:1><message>"
+    receiver: "<fcolor:2>✉ <display_name> → Тебе » <fcolor:1><message>"
+    myself: "<fcolor:2>✉ [Заметка] <fcolor:1><message>"
+  # https://flectone.net/pulse/docs/command/tictactoe/
+  tictactoe:
+    null-player: "<color:#ff7171><b>⁉</b> Игрок не найден"
+    myself: "<color:#ff7171><b>⁉</b> Ты не можешь играть с самим собой"
+    wrong-game: "<color:#ff7171><b>⁉</b> Этой игры не существует"
+    wrong-move: "<color:#ff7171><b>⁉</b> Такой ход невозможен"
+    wrong-by-player: "<color:#ff7171><b>⁉</b> Игра закончена, потому что один из игроков не в сети"
+    symbol:
+      empty: "<hover:show_text:\"<fcolor:1>Ход <move>\"><click:run_command:\"/tictactoe %d <move>\">☐</click></hover>"
+      first: "<fcolor:2>☑</fcolor:2>"
+      first-remove: "<color:#ff7171>☑</color:#ff7171>"
+      first-win: "<color:#98FB98>☑</color:#98FB98>"
+      second: "<fcolor:2>☒</fcolor:2>"
+      second-remove: "<color:#ff7171>☒</color:#ff7171>"
+      second-win: "<color:#98FB98>☒</color:#98FB98>"
+    field: "<fcolor:1><br>|[#][#][#]| <title> <current_move> <br>|[#][#][#]| <br>|[#][#][#]| <last_move><br>"
+    current-move: "<fcolor:2>☐ → <symbol></fcolor:2>"
+    last-move: "<fcolor:2>Последний ход (<move>)</fcolor:2>"
+    format-move: "<fcolor:2>Ход <player> </fcolor:2>"
+    format-win: "<color:#98FB98><player> выйграл</color:#98FB98>"
+    format-draw: "<color:#98FB98>Ничья 👬</color:#98FB98>"
+    sender: "<fcolor:1>☐ Предложение сыграть в крестики-нолики отправлено для <display_name>"
+    format-create: "<click:run_command:\"/tictactoe %d create\"><fcolor:1>☐ Есть предложение сыграть в крестики-нолики от <display_name>, принять? [+]"
+  # https://flectone.net/pulse/docs/command/translateto/
+  translateto:
+    null-or-error: "<color:#ff7171><b>⁉</b> Ошибка, возможно указан неправильный язык"
+    format: "<fcolor:1>📖 Перевод на [<language>] → <fcolor:2><message>"
+  # https://flectone.net/pulse/docs/command/try/
+  try:
+    format-true: "<color:#98FB98>☺ <display_name> <message> <percent>%"
+    format-false: "<color:#F08080>☹ <display_name> <message> <percent>%"
+  # https://flectone.net/pulse/docs/command/unban/
+  unban:
+    null-player: "<color:#ff7171><b>⁉</b> Игрок не найден"
+    not-banned: "<color:#ff7171><b>⁉</b> Игрок не заблокирован"
+    format: "<color:#98FB98>🔓 <fcolor:2><moderator></fcolor> разблокировал игрока <fcolor:2><player></fcolor>"
+  # https://flectone.net/pulse/docs/command/unmute/
+  unmute:
+    null-player: "<color:#ff7171><b>⁉</b> Игрок не найден"
+    not-muted: "<color:#ff7171><b>⁉</b> Игрок не замучен"
+    format: "<color:#98FB98>🔓 <fcolor:2><moderator></fcolor> размутил игрока <fcolor:2><player></fcolor>"
+  # https://flectone.net/pulse/docs/command/unwarn/
+  unwarn:
+    null-player: "<color:#ff7171><b>⁉</b> Игрок не найден"
+    not-warned: "<color:#ff7171><b>⁉</b> Игрок не имеет предупреждений"
+    format: "<color:#98FB98>🔓 <fcolor:2><moderator></fcolor> снял предупреждение с игрока <fcolor:2><player></fcolor>"
+  # https://flectone.net/pulse/docs/command/warn/
+  warn:
+    null-player: "<color:#ff7171><b>⁉</b> Игрок не найден"
+    null-time: "<color:#ff7171><b>⁉</b> Невозможное время"
+    reasons:
+      default: "Ты получил предупреждение"
+    server: "<color:#ff7171>🔒 <fcolor:2><moderator></fcolor> выдал предупреждение игроку <fcolor:2><player></fcolor> <fcolor:1><hover:show_text:\"<fcolor:1>Айди: <id><br>Дата: <date><br>Время: <time><br>Осталось: <time_left><br>Модератор: <moderator><br>Причина: <reason>\">[ПОДРОБНЕЕ]</hover>"
+    person: "<color:#ff7171>🔒 Ты получил предупреждение на <time>"
+  # https://flectone.net/pulse/docs/command/warnlist/
+  warnlist:
+    empty: "<color:#98FB98>☺ Предупреждения не найдены"
+    null-page: "<color:#ff7171><b>⁉</b> Страница не найдена"
+    null-player: "<color:#ff7171><b>⁉</b> Игрок не найден"
+    global:
+      header: "<fcolor:2>▋ Предупреждения: <count> <br>"
+      line: "<hover:show_text:\"<fcolor:1>Снять предупреждение <display_name>\"><click:run_command:\"<command>\"><color:#ff7171>☒ <display_name></click></hover> <fcolor:1><hover:show_text:\"<fcolor:1>Айди: <id><br>Дата: <date><br>Время: <time><br>Модератор: <moderator><br>Причина: <reason>\">[ПОДРОБНЕЕ]</hover>"
+      footer: "<br>▋ <fcolor:2><click:run_command:\"<command> <prev_page>\">←</click> <fcolor:1>Страница: <current_page>/<last_page> <fcolor:2><click:run_command:\"<command> <next_page>\">→"
+    player:
+      header: "<fcolor:2>▋ Все предупреждения: <count> <br>"
+      line: "<hover:show_text:\"<fcolor:1>Снять предупреждение <display_name>\"><click:run_command:\"<command>\"><color:#ff7171>☒ <display_name></click></hover> <fcolor:1><hover:show_text:\"<fcolor:1>Айди: <id><br>Дата: <date><br>Время: <time><br>Модератор: <moderator><br>Причина: <reason>\">[ПОДРОБНЕЕ]</hover>"
+      footer: "<br>▋ <fcolor:2><click:run_command:\"<command> <prev_page>\">←</click> <fcolor:1>Страница: <current_page>/<last_page> <fcolor:2><click:run_command:\"<command> <next_page>\">→"
+# https://flectone.net/pulse/docs/integration/
+integration:
+  # https://flectone.net/pulse/docs/integration/discord/
+  discord:
+    for-minecraft: "<fcolor:2><name> <fcolor:1>» <fcolor:4><message>"
+    info-channel:
+      айди: "ТПС <tps>"
+    message-channel:
+      CHAT:
+        content: "<final_message>"
+        webhook:
+          enable: false
+          avatar: "https://mc-heads.net/avatar/<skin>/32.png"
+          content: ""
+        embed:
+          enable: false
+          color: ""
+          title: ""
+          url: ""
+          author:
+            name: ""
+            url: ""
+            icon-url: "https://mc-heads.net/avatar/<skin>/16.png"
+          description: ""
+          thumbnail: ""
+          image: ""
+          timestamp: true
+          footer:
+            text: ""
+            icon-url: "https://mc-heads.net/avatar/<skin>/16.png"
+  # https://flectone.net/pulse/docs/integration/telegram/
+  telegram:
+    for-minecraft: "<fcolor:2><name> <fcolor:1>» <fcolor:4><message>"
+    message-channel:
+      CHAT: "<final_message>"
+  # https://flectone.net/pulse/docs/integration/twitch/
+  twitch:
+    for-minecraft: "<fcolor:2><name> <fcolor:1>» <fcolor:4><message>"
+    message-channel:
+      CHAT: "<final_message>"
+# https://flectone.net/pulse/docs/message/
+message:
+  # https://flectone.net/pulse/docs/message/advancement/
+  advancement:
+    task:
+      format: "<color:#4eff52>🌠 <fcolor:2><display_name> <fcolor:1>получил достижение <advancement>"
+      tag: "<color:#4eff52>[<hover:show_text:\"<color:#4eff52><lang:<title>> <br><lang:<description>>\"><lang:<title>></hover>]"
+    goal:
+      format: "<color:#FFFF00>🌠 <fcolor:2><display_name> <fcolor:1>выполнил цель <advancement>"
+      tag: "<color:#FFFF00>[<hover:show_text:\"<color:#FFFF00><lang:<title>> <br><lang:<description>>\"><lang:<title>></hover>]"
+    challenge:
+      format: "<color:#834eff>🌠 <fcolor:2><display_name> <fcolor:1>завершил испытание <advancement>"
+      tag: "<color:#834eff>[<hover:show_text:\"<color:#834eff><lang:<title>> <br><lang:<description>>\"><lang:<title>></hover>]"
+    revoke:
+      many-to-one: "<fcolor:1>🌠 Отозвано <fcolor:2><number></fcolor:2> достижений у игрока <display_name>"
+      one-to-one: "<fcolor:1>🌠 Отозвано достижение <fcolor:2><advancement></fcolor:2> у игрока <display_name>"
+    grant:
+      many-to-one: "<fcolor:1>🌠 Выдано <fcolor:2><number></fcolor:2> достижений игроку <display_name>"
+      one-to-one: "<fcolor:1>🌠 Достижение <fcolor:2><advancement></fcolor:2> выдано игроку <display_name>"
+  # https://flectone.net/pulse/docs/message/afk/
+  afk:
+    suffix: " <color:#FFFF00>⌚</color>"
+    format-true:
+      global: "<gradient:#ffd500:#FFFF00>⌚ <player> отошёл"
+      local: "<gradient:#ffd500:#FFFF00>⌚ Ты отошёл от игры"
+    format-false:
+      global: "<gradient:#ffd500:#FFFF00>⌚ <player> вернулся"
+      local: "<gradient:#ffd500:#FFFF00>⌚ Ты вернулся в игру"
+  # https://flectone.net/pulse/docs/message/auto/
+  auto:
+    types:
+      announcement:
+        - "<br><fcolor:1>   ✉ Заходи в телеграм ✉ <br><fcolor:2>    <u><click:open_url:\"https://t.me/flectone\"><hover:show_text:\"<fcolor:2>https://t.me/flectone\">https://t.me/flectone</hover></click></u><br>"
+        - "<br><fcolor:1>⚡ Поддержи <fcolor:2>FlectonePulse</fcolor:2> на Boosty <br><fcolor:1>⚡ <u><click:open_url:\"https://boosty.to/thefaser/\"><hover:show_text:\"<fcolor:2>https://boosty.to/thefaser/\">https://boosty.to/thefaser/</hover></click></u><br>"
+        - "<br><fcolor:1>      ❝ Заходи в дискорд ❠<br><fcolor:2>    <u><click:open_url:\"https://discord.flectone.net\"><hover:show_text:\"<fcolor:2>https://discord.flectone.net\">https://discord.flectone.net</hover></click></u><br>"
+        - "<br><fcolor:1>◇ Сервер использует <click:open_url:\"https://flectone.net/pulse/\"><hover:show_text:\"<fcolor:2>https://flectone.net/pulse/\"><fcolor:2>FlectonePulse</hover></click> :)<br>"
+  # https://flectone.net/pulse/docs/message/bed/
+  bed:
+    no-sleep: "<fcolor:1>🛌 Вы можете спать только ночью или во время грозы"
+    not-safe: "<fcolor:1>🛌 Вы не можете уснуть, пока рядом есть монстры"
+    obstructed: "<fcolor:1>🛌 Эта кровать заблокирована"
+    occupied: "<fcolor:1>🛌 Эта кровать занята"
+    too-far-away: "<fcolor:1>🛌 Вы не можете уснуть, кровать слишком далеко"
+  # https://flectone.net/pulse/docs/message/brand/
+  brand:
+    values:
+      - "<white>Майнкрафт"
+      - "<aqua>Майнкрафт"
+  # https://flectone.net/pulse/docs/message/bubble/
+  bubble:
+    format: "<fcolor:3><message>"
+  # https://flectone.net/pulse/docs/message/chat/
+  chat:
+    null-chat: "<color:#ff7171><b>⁉</b> На сервер выключен чат"
+    null-recipient: "<color:#ff7171><b>⁉</b> Тебя никто не услышал"
+    types:
+      local: "<display_name><fcolor:3>: <message> <translateto:\"<message_to_translate>\">"
+      global: "<display_name> <world_prefix>»<fcolor:4> <message> <translateto:\"<message_to_translate>\">"
+  # https://flectone.net/pulse/docs/message/clear/
+  clear:
+    single: "<fcolor:1>🌊 Удалено <fcolor:2><number></fcolor:2> предметов у игрока <display_name>"
+    multiple: "<fcolor:1>🌊 Удалено <fcolor:2><number></fcolor:2> предметов у <fcolor:2><count></fcolor:2> игроков"
+  # https://flectone.net/pulse/docs/message/death/
+  death:
+    types:
+      death.attack.anvil: "<color:#778899>🪦 <fcolor:1><display_name> раздавлен упавшей наковальней"
+      death.attack.anvil.player: "<color:#778899>🪦 <fcolor:1><display_name> был раздавлен упавшей наковальней, пока боролся с <killer>"
+      death.attack.arrow: "<color:#778899>🪦 <fcolor:1><display_name> застрелен <killer>"
+      death.attack.arrow.item: "<color:#778899>🪦 <fcolor:1><display_name> застрелен <killer> с помощью <fcolor:2>[<i><by_item></i>]"
+      death.attack.badRespawnPoint.message: "<color:#778899>🪦 <fcolor:1><display_name> стал жертвой <fcolor:2>[<click:open_url:\"https://www.youtube.com/watch?v=dQw4w9WgXcQ\"><hover:show_text:\"<fcolor:2>MCPE-28723\">жестоких правил игры</hover></click>]"
+      death.attack.cactus: "<color:#778899>🪦 <fcolor:1><display_name> исколот до смерти"
+      death.attack.cactus.player: "<color:#778899>🪦 <fcolor:1><display_name> наткнулся на кактус, спасаясь от <killer>"
+      death.attack.cramming: "<color:#778899>🪦 <fcolor:1><display_name> расплющен в лепёшку"
+      death.attack.cramming.player: "<color:#778899>🪦 <fcolor:1><display_name> расплющен <killer>"
+      death.attack.dragonBreath: "<color:#778899>🪦 <fcolor:1><display_name> испепелён дыханием дракона"
+      death.attack.dragonBreath.player: "<color:#778899>🪦 <fcolor:1><display_name> сварился заживо в драконьем дыхании из-за <killer>"
+      death.attack.drown: "<color:#778899>🪦 <fcolor:1><display_name> утонул"
+      death.attack.drown.player: "<color:#778899>🪦 <fcolor:1><display_name> утонул, спасаясь от <killer>"
+      death.attack.dryout: "<color:#778899>🪦 <fcolor:1><display_name> умер от обезвоживания"
+      death.attack.dryout.player: "<color:#778899>🪦 <fcolor:1><display_name> умер от обезвоживания, спасаясь от <killer>"
+      death.attack.even_more_magic: "<color:#778899>🪦 <fcolor:1><display_name> был убит неизведанной магией"
+      death.attack.explosion: "<color:#778899>🪦 <fcolor:1><display_name> взорвался"
+      death.attack.explosion.player: "<color:#778899>🪦 <fcolor:1><display_name> был взорван <killer>"
+      death.attack.explosion.item: "<color:#778899>🪦 <fcolor:1><display_name> был взорван <killer> с помощью <fcolor:2>[<i><by_item></i>]"
+      death.attack.explosion.player.item: "<color:#778899>🪦 <fcolor:1><display_name> был взорван <killer> с помощью <fcolor:2>[<i><by_item></i>]"
+      death.attack.fall: "<color:#778899>🪦 <fcolor:1><display_name> разбился вдребезги"
+      death.attack.fall.player: "<color:#778899>🪦 <fcolor:1><display_name> разбился вдребезги, спасаясь от <killer>"
+      death.attack.fallingBlock: "<color:#778899>🪦 <fcolor:1><display_name> раздавлен упавшим блоком"
+      death.attack.fallingBlock.player: "<color:#778899>🪦 <fcolor:1><display_name> был раздавлен упавшим блоком, пока боролся с <killer>"
+      death.attack.fallingStalactite: "<color:#778899>🪦 <fcolor:1><display_name> был пронзён обрушившимся сталактитом"
+      death.attack.fallingStalactite.player: "<color:#778899>🪦 <fcolor:1><display_name> был пронзён обрушившимся сталактитом, пока боролся с <killer>"
+      death.attack.fireball: "<color:#778899>🪦 <fcolor:1><display_name> убит файерболом <killer>"
+      death.attack.fireball.item: "<color:#778899>🪦 <fcolor:1><display_name> убит файерболом <killer> с помощью <fcolor:2>[<i><by_item></i>]"
+      death.attack.fireworks: "<color:#778899>🪦 <fcolor:1><display_name> с треском разлетелся"
+      death.attack.fireworks.item: "<color:#778899>🪦 <fcolor:1><display_name> с треском разлетелся из-за фейерверка <killer>, выпущенного из <fcolor:2>[<i><by_item></i>]"
+      death.attack.fireworks.player: "<color:#778899>🪦 <fcolor:1><display_name> с треском разлетелся, пока боролся с <killer>"
+      death.attack.flyIntoWall: "<color:#778899>🪦 <fcolor:1><display_name> преобразовал кинетическую энергию во внутреннюю"
+      death.attack.flyIntoWall.player: "<color:#778899>🪦 <fcolor:1><display_name> преобразовал кинетическую энергию во внутреннюю, спасаясь от <killer>"
+      death.attack.freeze: "<color:#778899>🪦 <fcolor:1><display_name> замёрз насмерть"
+      death.attack.freeze.player: "<color:#778899>🪦 <fcolor:1><display_name> замёрз насмерть благодаря <killer>"
+      death.attack.generic: "<color:#778899>🪦 <fcolor:1><display_name> умер"
+      death.attack.generic.player: "<color:#778899>🪦 <fcolor:1><display_name> умер из-за <killer>"
+      death.attack.genericKill: "<color:#778899>🪦 <fcolor:1><display_name> убит"
+      death.attack.genericKill.player: "<color:#778899>🪦 <fcolor:1><display_name> был убит, сражаясь с <killer>"
+      death.attack.hotFloor: "<color:#778899>🪦 <fcolor:1><display_name> обнаружил, что пол — это лава"
+      death.attack.hotFloor.player: "<color:#778899>🪦 <fcolor:1><display_name> зашёл в опасную зону из-за <killer>"
+      death.attack.indirectMagic: "<color:#778899>🪦 <fcolor:1><display_name> был убит <killer> с помощью магии"
+      death.attack.indirectMagic.item: "<color:#778899>🪦 <fcolor:1><display_name> был убит <killer> с помощью <fcolor:2>[<i><by_item></i>]"
+      death.attack.inFire: "<color:#778899>🪦 <fcolor:1><display_name> умер в огне"
+      death.attack.inFire.player: "<color:#778899>🪦 <fcolor:1><display_name> сгорел в огне, пока боролся с <killer>"
+      death.attack.inWall: "<color:#778899>🪦 <fcolor:1><display_name> погребён заживо"
+      death.attack.inWall.player: "<color:#778899>🪦 <fcolor:1><display_name> был погребён заживо, пока боролся с <killer>"
+      death.attack.lava: "<color:#778899>🪦 <fcolor:1><display_name> решил поплавать в лаве"
+      death.attack.lava.player: "<color:#778899>🪦 <fcolor:1><display_name> упал в лаву, убегая от <killer>"
+      death.attack.lightningBolt: "<color:#778899>🪦 <fcolor:1><display_name> был поражён молнией"
+      death.attack.lightningBolt.player: "<color:#778899>🪦 <fcolor:1><display_name> был поражён молнией, пока боролся с <killer>"
+      death.attack.mace_smash: "<color:#778899>🪦 <fcolor:1><display_name> был сокрушён <killer>"
+      death.attack.mace_smash.item: "<color:#778899>🪦 <fcolor:1><display_name> был сокрушён <killer> с помощью <fcolor:2>[<i><by_item></i>]"
+      death.attack.magic: "<color:#778899>🪦 <fcolor:1><display_name> был убит магией"
+      death.attack.magic.player: "<color:#778899>🪦 <fcolor:1><display_name> был убит магией, убегая от <killer>"
+      death.attack.mob: "<color:#778899>🪦 <fcolor:1><display_name> был убит <killer>"
+      death.attack.mob.item: "<color:#778899>🪦 <fcolor:1><display_name> был убит <killer> с помощью <fcolor:2>[<i><by_item></i>]"
+      death.attack.onFire: "<color:#778899>🪦 <fcolor:1><display_name> сгорел заживо"
+      death.attack.onFire.item: "<color:#778899>🪦 <fcolor:1><display_name> был сожжён дотла, пока боролся с <killer>, держащим <fcolor:2>[<i><by_item></i>]"
+      death.attack.onFire.player: "<color:#778899>🪦 <fcolor:1><display_name> был сожжён дотла, пока боролся с <killer>"
+      death.attack.outOfWorld: "<color:#778899>🪦 <fcolor:1><display_name> выпал из мира"
+      death.attack.outOfWorld.player: "<color:#778899>🪦 <fcolor:1><display_name> не захотел жить в том же мире, что и <killer>"
+      death.attack.outsideBorder: "<color:#778899>🪦 <fcolor:1><display_name> покинул пределы этого мира"
+      death.attack.outsideBorder.player: "<color:#778899>🪦 <fcolor:1><display_name> покинул пределы этого мира, пока боролся с <killer>"
+      death.attack.player: "<color:#778899>🪦 <fcolor:1><display_name> был убит <killer>"
+      death.attack.player.item: "<color:#778899>🪦 <fcolor:1><display_name> был убит <killer> с помощью <fcolor:2>[<i><by_item></i>]"
+      death.attack.sonic_boom: "<color:#778899>🪦 <fcolor:1><display_name> был уничтожен звуковым зарядом"
+      death.attack.sonic_boom.item: "<color:#778899>🪦 <fcolor:1><display_name> был уничтожен звуковым зарядом, спасаясь от <killer>, держащего <fcolor:2>[<i><by_item></i>]"
+      death.attack.sonic_boom.player: "<color:#778899>🪦 <fcolor:1><display_name> был уничтожен звуковым зарядом, спасаясь от <killer>"
+      death.attack.stalagmite: "<color:#778899>🪦 <fcolor:1><display_name> пронзён сталагмитом"
+      death.attack.stalagmite.player: "<color:#778899>🪦 <fcolor:1><display_name> был пронзён сталагмитом, пока боролся с <killer>"
+      death.attack.starve: "<color:#778899>🪦 <fcolor:1><display_name> умер от голода"
+      death.attack.starve.player: "<color:#778899>🪦 <fcolor:1><display_name> умер от голода, пока боролся с <killer>"
+      death.attack.sting: "<color:#778899>🪦 <fcolor:1><display_name> изжален до смерти"
+      death.attack.sting.item: "<color:#778899>🪦 <fcolor:1><display_name> был изжален до смерти <killer> с помощью <fcolor:2>[<i><by_item></i>]"
+      death.attack.sting.player: "<color:#778899>🪦 <fcolor:1><display_name> изжален до смерти <killer>"
+      death.attack.sweetBerryBush: "<color:#778899>🪦 <fcolor:1><display_name> искололся до смерти в кустах сладких ягод"
+      death.attack.sweetBerryBush.player: "<color:#778899>🪦 <fcolor:1><display_name> искололся до смерти в кустах сладких ягод, спасаясь от <killer>"
+      death.attack.thorns: "<color:#778899>🪦 <fcolor:1><display_name> был убит, пытаясь навредить <killer>"
+      death.attack.thorns.item: "<color:#778899>🪦 <fcolor:1><display_name> был убит <fcolor:2>[<i><by_item></i>]</fcolor:2>, пытаясь навредить <killer>"
+      death.attack.thrown: "<color:#778899>🪦 <fcolor:1><display_name> был избит <killer>"
+      death.attack.thrown.item: "<color:#778899>🪦 <fcolor:1><display_name> был избит <killer> с помощью <fcolor:2>[<i><by_item></i>]"
+      death.attack.trident: "<color:#778899>🪦 <fcolor:1><display_name> был пронзён <killer>"
+      death.attack.trident.item: "<color:#778899>🪦 <fcolor:1><display_name> пронзён <killer> с помощью <fcolor:2>[<i><by_item></i>]"
+      death.attack.wither: "<color:#778899>🪦 <fcolor:1><display_name> иссушён"
+      death.attack.wither.player: "<color:#778899>🪦 <fcolor:1><display_name> был иссушён, пока боролся с <killer>"
+      death.attack.witherSkull: "<color:#778899>🪦 <fcolor:1><display_name> был поражён черепом из <killer>"
+      death.attack.witherSkull.item: "<color:#778899>🪦 <fcolor:1><display_name> был поражён черепом из <killer> с помощью <fcolor:2>[<i><by_item></i>]"
+      death.fell.accident.generic: "<color:#778899>🪦 <fcolor:1><display_name> разбился насмерть"
+      death.fell.accident.ladder: "<color:#778899>🪦 <fcolor:1><display_name> свалился с лестницы"
+      death.fell.accident.other_climbable: "<color:#778899>🪦 <fcolor:1><display_name> сорвался"
+      death.fell.accident.scaffolding: "<color:#778899>🪦 <fcolor:1><display_name> сорвался с подмосток"
+      death.fell.accident.twisting_vines: "<color:#778899>🪦 <fcolor:1><display_name> сорвался с вьющейся лозы"
+      death.fell.accident.vines: "<color:#778899>🪦 <fcolor:1><display_name> сорвался с лианы"
+      death.fell.accident.weeping_vines: "<color:#778899>🪦 <fcolor:1><display_name> сорвался с плакучей лозы"
+      death.fell.assist: "<color:#778899>🪦 <fcolor:1><display_name> свалился благодаря <killer>"
+      death.fell.assist.item: "<color:#778899>🪦 <fcolor:1><display_name> был обречён на падение <killer> с помощью <fcolor:2>[<i><by_item></i>]"
+      death.fell.finish: "<color:#778899>🪦 <fcolor:1><display_name> упал с высоты и был добит <killer>"
+      death.fell.finish.item: "<color:#778899>🪦 <fcolor:1><display_name> упал с высоты и был добит <killer> с помощью <fcolor:2>[<i><by_item></i>]"
+      death.fell.killer: "<color:#778899>🪦 <fcolor:1><display_name> был обречён на падение"
+  # https://flectone.net/pulse/docs/message/deop/
+  deop:
+    format: "<fcolor:1>🤖 <display_name> больше не является оператором сервера"
+  # https://flectone.net/pulse/docs/message/enchant/
+  enchant:
+    single: "<fcolor:1>📖 Наложены чары «<fcolor:2><lang:<enchant>> <lang:<level>></fcolor:2>» на предмет <display_name>"
+    multiple: "<fcolor:1>📖 Наложены чары «<fcolor:2><lang:<enchant>> <lang:<level>></fcolor:2>» на предмет <fcolor:2><count></fcolor:2> сущностей"
+  # https://flectone.net/pulse/docs/message/format/
+  format:
+    tags:
+      PING: "<fcolor:2><ping></fcolor>"
+      TPS: "<fcolor:2><tps></fcolor>"
+      ONLINE: "<fcolor:2><online></fcolor>"
+      COORDS: "<fcolor:2><x> <y> <z></fcolor>"
+      STATS: "<color:#ff7171><hp>♥</color> <color:#3de0d8><armor>🛡 <color:#e33059><attack>🗡 <color:#4eff52><exp>⏺ <color:#f0a01f><food>🍖"
+      SKIN: "<image:\"<message>\"><u>👨 Скин</u></image>"
+      ITEM: "<fcolor:2>[<message>]</fcolor>"
+      URL: "<click:open_url:\"<message>\"><hover:show_text:\"<fcolor:2>Открыть ссылку <br><u><message>\"><fcolor:2><u>🗗 Ссылка</u></fcolor:2></hover></click>"
+      IMAGE: "<image:\"<message>\"><u>🖃 Картинка</u></image>"
+    # https://flectone.net/pulse/docs/message/format/mention/
+    mention:
+      person: "<fcolor:2>Тебя упомянули!"
+      format: "<fcolor:2>@<target></fcolor>"
+    # https://flectone.net/pulse/docs/message/format/moderation/
+    moderation:
+      # https://flectone.net/pulse/docs/message/format/moderation/swear/
+      swear:
+        symbol: "❤"
+    # https://flectone.net/pulse/docs/message/format/name_/
+    name-:
+      display: "<click:suggest_command:\"/msg <player> \"><hover:show_text:\"<fcolor:2>Написать <player>\"><vault_prefix><stream_prefix><fcolor:2><player></fcolor><afk_suffix><vault_suffix></hover></click>"
+      entity: "<fcolor:2><hover:show_text:\"<fcolor:2><lang:<name>> <br><fcolor:1>Тип <fcolor:2><lang:<type>> <br><fcolor:1>Айди <fcolor:2><uuid>\"><lang:<name>></hover></fcolor:2>"
+      unknown: "<fcolor:2><name></fcolor:2>"
+      prefix: "<vault_prefix><stream_prefix>"
+      suffix: "<afk_suffix><vault_suffix>"
+    # https://flectone.net/pulse/docs/message/format/questionanswer/
+    question-answer:
+      questions:
+        server: "<fcolor:2>[Вопрос-Ответ] @<player><fcolor:1>, это ванильный сервер в Майнкрафте!"
+        flectone: "<fcolor:2>[Вопрос-Ответ] @<player><fcolor:1>, это бренд и проекты созданные TheFaser'ом"
+    # https://flectone.net/pulse/docs/message/format/spoiler/
+    spoiler:
+      symbol: "█"
+      hover: "<fcolor:2><message>"
+    # https://flectone.net/pulse/docs/message/format/translate/
+    translate:
+      action: "<click:run_command:\"/translateto <language> <language> <message>\"><hover:show_text:\"<fcolor:2>Перевести сообщение\"><fcolor:1>[📖]"
+  # https://flectone.net/pulse/docs/message/gamemode/
+  gamemode:
+    self:
+      creative: "<fcolor:1>🗘 Твой режим игры изменён на <fcolor:2>Творческий режим"
+      survival: "<fcolor:1>🗘 Твой режим игры изменён на <fcolor:2>Режим выживания"
+      adventure: "<fcolor:1>🗘 Твой режим игры изменён на <fcolor:2>Режим приключения"
+      spectator: "<fcolor:1>🗘 Твой режим игры изменён на <fcolor:2>Режим наблюдателя"
+    other:
+      creative: "<fcolor:1>🗘 Режим игры игрока <display_name> изменён на <fcolor:2>Творческий режим"
+      survival: "<fcolor:1>🗘 Режим игры игрока <display_name> изменён на <fcolor:2>Режим выживания"
+      adventure: "<fcolor:1>🗘 Режим игры игрока <display_name> изменён на <fcolor:2>Режим приключения"
+      spectator: "<fcolor:1>🗘 Режим игры игрока <display_name> изменён на <fcolor:2>Режим наблюдателя"
+  # https://flectone.net/pulse/docs/message/greeting/
+  greeting:
+    format: "<br>[#][#][#][#][#][#][#][#]<br>[#][#][#][#][#][#][#][#]<br>[#][#][#][#][#][#][#][#]<br>[#][#][#][#][#][#][#][#]<br>[#][#][#][#][#][#][#][#]  <fcolor:1>Привет,<br>[#][#][#][#][#][#][#][#]  <player><br>[#][#][#][#][#][#][#][#]<br>[#][#][#][#][#][#][#][#]<br>"
+  # https://flectone.net/pulse/docs/message/join/
+  join:
+    format: "<color:#4eff52>→ <display_name>"
+    format-first-time: "<color:#4eff52>→ <display_name> <fcolor:1>впервые тут!"
+  # https://flectone.net/pulse/docs/message/op/
+  op:
+    format: "<fcolor:1>🤖 <display_name> назначен оператором сервера"
+  # https://flectone.net/pulse/docs/message/scoreboard/
+  scoreboard:
+    values:
+      - - "<fcolor:2>FlectonePulse"
+        - " "
+        - "<fcolor:2>ТПС <tps>"
+        - " "
+      - - "<fcolor:1>FlectonePulse"
+        - " "
+        - "<fcolor:1>Пинг <ping>"
+        - " "
+  # https://flectone.net/pulse/docs/message/quit/
+  quit:
+    format: "<color:#ff4e4e>← <display_name>"
+  # https://flectone.net/pulse/docs/message/rightclick/
+  rightclick:
+    format: "<fcolor:1>◁ <display_name> ▷"
+  # https://flectone.net/pulse/docs/message/seed/
+  seed:
+    format: "<fcolor:1>🌐 Ключ генератора: [<fcolor:2><hover:show_text:'<fcolor:2>Нажми, чтобы скопировать в буфер обмена'><click:copy_to_clipboard:<seed>><seed></click></fcolor:2>]"
+  # https://flectone.net/pulse/docs/message/setblock/
+  setblock:
+    format: "<fcolor:1>⏹ Изменён блок в точке <fcolor:2><x></fcolor:2>, <fcolor:2><y></fcolor:2>, <fcolor:2><z></fcolor:2>"
+  # https://flectone.net/pulse/docs/message/sleep/
+  sleep:
+    not-possible: "<fcolor:1>🛌 Никакой отдых не поможет пропустить эту ночь"
+    players-sleeping: "<fcolor:1>🛌 <fcolor:2><sleep_count></fcolor:2> из <fcolor:2><all_count></fcolor:2> игроков спят"
+    skipping-night: "<fcolor:1>🛌 Вы проспите всю ночь"
+  # https://flectone.net/pulse/docs/message/spawn/
+  spawn:
+    not-valid: "<fcolor:1>🛌 У вас нет кровати или заряженного якоря возрождения, либо доступ к ним затруднён"
+    set: "<fcolor:1>🛌 Точка возрождения установлена"
+    single: "<fcolor:1>🛌 Установлена точка возрождения <fcolor:2><x></fcolor:2>, <fcolor:2><y></fcolor:2>, <fcolor:2><z></fcolor:2> [<fcolor:2><angle></fcolor:2>] в <fcolor:2><world></fcolor:2> для <display_name>"
+    multiple: "<fcolor:1>🛌 Установлена точка возрождения <fcolor:2><x></fcolor:2>, <fcolor:2><y></fcolor:2>, <fcolor:2><z></fcolor:2> [<fcolor:2><angle></fcolor:2>] в <fcolor:2><world></fcolor:2> для <fcolor:2><count></fcolor:2> игроков"
+  # https://flectone.net/pulse/docs/message/status/
+  status:
+    # https://flectone.net/pulse/docs/message/status/motd/
+    motd:
+      values:
+        - "<fcolor:1>Добро пожаловать на сервер!"
+        - "<fcolor:1>Присоединяйся и наслаждайся уникальным опытом игры!"
+        - "<fcolor:1>У нас дружелюбное сообщество - будь вежлив и уважай других!"
+        - "<fcolor:1>Приятной игры! Если есть вопросы, обращайся к администрации"
+    # https://flectone.net/pulse/docs/message/status/players/
+    players:
+      samples:
+        - name: "<players>"
+          id: null
+      full: "<color:#ff7171>Сервер полон"
+    # https://flectone.net/pulse/docs/message/status/version/
+    version:
+      name: "Майнкрафт сервер"
+  # https://flectone.net/pulse/docs/message/tab/
+  tab:
+    # https://flectone.net/pulse/docs/message/tab/header/
+    header:
+      lists:
+        - - " "
+          - "<fcolor:1>👾"
+          - " "
+        - - " "
+          - "<fcolor:1>❤"
+          - " "
+    # https://flectone.net/pulse/docs/message/tab/footer/
+    footer:
+      lists:
+        - - " "
+          - "<fcolor:1>ТПС <tps>, Онлайн <online>"
+          - " "
+        - - " "
+          - "<fcolor:1>Привет <fcolor:2><player></fcolor:2>!"
+          - " "
+    # https://flectone.net/pulse/docs/message/tab/playerlistname/
+    playerlistname:
+      format: "<world_prefix>▋ <reset><vault_prefix><stream_prefix><fcolor:2><player><afk_suffix><vault_suffix>"

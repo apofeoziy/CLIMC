@@ -1,0 +1,237 @@
+{
+	"credit": "Made with Blockbench",
+	"textures": {
+		"1": "item/tools/copper_hoe"
+	},
+	"elements": [
+		{
+			"name": "copper_hoe_0",
+			"from": [7, 0, 1],
+			"to": [10, 1, 4],
+			"faces": {
+				"north": {"uv": [10, 1, 7, 2], "texture": "#1"},
+				"east": {"uv": [9, 1, 10, 4], "rotation": 90, "texture": "#1"},
+				"south": {"uv": [7, 3, 10, 4], "texture": "#1"},
+				"west": {"uv": [7, 1, 8, 4], "rotation": 270, "texture": "#1"},
+				"up": {"uv": [7, 1, 10, 4], "texture": "#1"},
+				"down": {"uv": [7, 4, 10, 1], "texture": "#1"}
+			}
+		},
+		{
+			"name": "copper_hoe_1",
+			"from": [6, 0, 2],
+			"to": [7, 1, 3],
+			"faces": {
+				"north": {"uv": [7, 2, 6, 3], "texture": "#1"},
+				"east": {"uv": [6, 2, 7, 3], "rotation": 90, "texture": "#1"},
+				"south": {"uv": [6, 2, 7, 3], "texture": "#1"},
+				"west": {"uv": [6, 2, 7, 3], "rotation": 270, "texture": "#1"},
+				"up": {"uv": [6, 2, 7, 3], "texture": "#1"},
+				"down": {"uv": [6, 3, 7, 2], "texture": "#1"}
+			}
+		},
+		{
+			"name": "copper_hoe_2",
+			"from": [10, 0, 2],
+			"to": [11, 1, 8],
+			"faces": {
+				"north": {"uv": [11, 2, 10, 3], "texture": "#1"},
+				"east": {"uv": [10, 2, 11, 8], "rotation": 90, "texture": "#1"},
+				"south": {"uv": [10, 7, 11, 8], "texture": "#1"},
+				"west": {"uv": [10, 2, 11, 8], "rotation": 270, "texture": "#1"},
+				"up": {"uv": [10, 2, 11, 8], "texture": "#1"},
+				"down": {"uv": [10, 8, 11, 2], "texture": "#1"}
+			}
+		},
+		{
+			"name": "copper_hoe_3",
+			"from": [11, 0, 3],
+			"to": [14, 1, 6],
+			"faces": {
+				"north": {"uv": [14, 3, 11, 4], "texture": "#1"},
+				"east": {"uv": [13, 3, 14, 6], "rotation": 90, "texture": "#1"},
+				"south": {"uv": [11, 5, 14, 6], "texture": "#1"},
+				"west": {"uv": [11, 3, 12, 6], "rotation": 270, "texture": "#1"},
+				"up": {"uv": [11, 3, 14, 6], "texture": "#1"},
+				"down": {"uv": [11, 6, 14, 3], "texture": "#1"}
+			}
+		},
+		{
+			"name": "copper_hoe_4",
+			"from": [9, 0, 4],
+			"to": [10, 1, 5],
+			"faces": {
+				"north": {"uv": [10, 4, 9, 5], "texture": "#1"},
+				"east": {"uv": [9, 4, 10, 5], "rotation": 90, "texture": "#1"},
+				"south": {"uv": [9, 4, 10, 5], "texture": "#1"},
+				"west": {"uv": [9, 4, 10, 5], "rotation": 270, "texture": "#1"},
+				"up": {"uv": [9, 4, 10, 5], "texture": "#1"},
+				"down": {"uv": [9, 5, 10, 4], "texture": "#1"}
+			}
+		},
+		{
+			"name": "copper_hoe_5",
+			"from": [9, 0, 6],
+			"to": [10, 1, 9],
+			"faces": {
+				"north": {"uv": [10, 6, 9, 7], "texture": "#1"},
+				"east": {"uv": [9, 6, 10, 9], "rotation": 90, "texture": "#1"},
+				"south": {"uv": [9, 8, 10, 9], "texture": "#1"},
+				"west": {"uv": [9, 6, 10, 9], "rotation": 270, "texture": "#1"},
+				"up": {"uv": [9, 6, 10, 9], "texture": "#1"},
+				"down": {"uv": [9, 9, 10, 6], "texture": "#1"}
+			}
+		},
+		{
+			"name": "copper_hoe_6",
+			"from": [11, 0, 6],
+			"to": [13, 1, 7],
+			"faces": {
+				"north": {"uv": [13, 6, 11, 7], "texture": "#1"},
+				"east": {"uv": [12, 6, 13, 7], "rotation": 90, "texture": "#1"},
+				"south": {"uv": [11, 6, 13, 7], "texture": "#1"},
+				"west": {"uv": [11, 6, 12, 7], "rotation": 270, "texture": "#1"},
+				"up": {"uv": [11, 6, 13, 7], "texture": "#1"},
+				"down": {"uv": [11, 7, 13, 6], "texture": "#1"}
+			}
+		},
+		{
+			"name": "copper_hoe_7",
+			"from": [8, 0, 7],
+			"to": [9, 1, 10],
+			"faces": {
+				"north": {"uv": [9, 7, 8, 8], "texture": "#1"},
+				"east": {"uv": [8, 7, 9, 10], "rotation": 90, "texture": "#1"},
+				"south": {"uv": [8, 9, 9, 10], "texture": "#1"},
+				"west": {"uv": [8, 7, 9, 10], "rotation": 270, "texture": "#1"},
+				"up": {"uv": [8, 7, 9, 10], "texture": "#1"},
+				"down": {"uv": [8, 10, 9, 7], "texture": "#1"}
+			}
+		},
+		{
+			"name": "copper_hoe_8",
+			"from": [7, 0, 8],
+			"to": [8, 1, 11],
+			"faces": {
+				"north": {"uv": [8, 8, 7, 9], "texture": "#1"},
+				"east": {"uv": [7, 8, 8, 11], "rotation": 90, "texture": "#1"},
+				"south": {"uv": [7, 10, 8, 11], "texture": "#1"},
+				"west": {"uv": [7, 8, 8, 11], "rotation": 270, "texture": "#1"},
+				"up": {"uv": [7, 8, 8, 11], "texture": "#1"},
+				"down": {"uv": [7, 11, 8, 8], "texture": "#1"}
+			}
+		},
+		{
+			"name": "copper_hoe_9",
+			"from": [6, 0, 9],
+			"to": [7, 1, 12],
+			"faces": {
+				"north": {"uv": [7, 9, 6, 10], "texture": "#1"},
+				"east": {"uv": [6, 9, 7, 12], "rotation": 90, "texture": "#1"},
+				"south": {"uv": [6, 11, 7, 12], "texture": "#1"},
+				"west": {"uv": [6, 9, 7, 12], "rotation": 270, "texture": "#1"},
+				"up": {"uv": [6, 9, 7, 12], "texture": "#1"},
+				"down": {"uv": [6, 12, 7, 9], "texture": "#1"}
+			}
+		},
+		{
+			"name": "copper_hoe_10",
+			"from": [5, 0, 10],
+			"to": [6, 1, 13],
+			"faces": {
+				"north": {"uv": [6, 10, 5, 11], "texture": "#1"},
+				"east": {"uv": [5, 10, 6, 13], "rotation": 90, "texture": "#1"},
+				"south": {"uv": [5, 12, 6, 13], "texture": "#1"},
+				"west": {"uv": [5, 10, 6, 13], "rotation": 270, "texture": "#1"},
+				"up": {"uv": [5, 10, 6, 13], "texture": "#1"},
+				"down": {"uv": [5, 13, 6, 10], "texture": "#1"}
+			}
+		},
+		{
+			"name": "copper_hoe_11",
+			"from": [4, 0, 11],
+			"to": [5, 1, 14],
+			"faces": {
+				"north": {"uv": [5, 11, 4, 12], "texture": "#1"},
+				"east": {"uv": [4, 11, 5, 14], "rotation": 90, "texture": "#1"},
+				"south": {"uv": [4, 13, 5, 14], "texture": "#1"},
+				"west": {"uv": [4, 11, 5, 14], "rotation": 270, "texture": "#1"},
+				"up": {"uv": [4, 11, 5, 14], "texture": "#1"},
+				"down": {"uv": [4, 14, 5, 11], "texture": "#1"}
+			}
+		},
+		{
+			"name": "copper_hoe_12",
+			"from": [3, 0, 12],
+			"to": [4, 1, 15],
+			"faces": {
+				"north": {"uv": [4, 12, 3, 13], "texture": "#1"},
+				"east": {"uv": [3, 12, 4, 15], "rotation": 90, "texture": "#1"},
+				"south": {"uv": [3, 14, 4, 15], "texture": "#1"},
+				"west": {"uv": [3, 12, 4, 15], "rotation": 270, "texture": "#1"},
+				"up": {"uv": [3, 12, 4, 15], "texture": "#1"},
+				"down": {"uv": [3, 15, 4, 12], "texture": "#1"}
+			}
+		},
+		{
+			"name": "copper_hoe_13",
+			"from": [2, 0, 13],
+			"to": [3, 1, 15],
+			"faces": {
+				"north": {"uv": [3, 13, 2, 14], "texture": "#1"},
+				"east": {"uv": [2, 13, 3, 15], "rotation": 90, "texture": "#1"},
+				"south": {"uv": [2, 14, 3, 15], "texture": "#1"},
+				"west": {"uv": [2, 13, 3, 15], "rotation": 270, "texture": "#1"},
+				"up": {"uv": [2, 13, 3, 15], "texture": "#1"},
+				"down": {"uv": [2, 15, 3, 13], "texture": "#1"}
+			}
+		}
+	],
+	"gui_light": "front",
+	"display": {
+		"thirdperson_righthand": {
+			"rotation": [45, 0, 90],
+			"translation": [-6.5, 4, 0.5],
+			"scale": [0.85, 0.85, 0.85]
+		},
+		"thirdperson_lefthand": {
+			"rotation": [45, 0, -90],
+			"translation": [7.5, 4, 0.5],
+			"scale": [0.85, 0.85, 0.85]
+		},
+		"firstperson_righthand": {
+			"rotation": [55, 0, 90],
+			"translation": [1.13, 3.2, -2.12],
+			"scale": [0.68, 0.68, 0.68]
+		},
+		"firstperson_lefthand": {
+			"rotation": [55, 0, -90],
+			"translation": [11.3, 3.2, -2.12],
+			"scale": [0.68, 0.68, 0.68]
+		},
+		"ground": {
+			"rotation": [90, 0, 0],
+			"translation": [0, 2, 4],
+			"scale": [0.5, 0.5, 0.5]
+		},
+		"gui": {
+			"rotation": [90, 0, 0]
+		},
+		"head": {
+			"rotation": [180, 0, -90],
+			"translation": [7.5, 4.5, -10]
+		},
+		"fixed": {
+			"rotation": [90, 90, 0],
+			"translation": [0, 0, 7]
+		}
+	},
+	"groups": [
+		{
+			"name": "copper_hoe",
+			"origin": [8, 8, 8],
+			"color": 0,
+			"children": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
+		}
+	]
+}

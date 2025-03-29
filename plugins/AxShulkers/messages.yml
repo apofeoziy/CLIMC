@@ -1,0 +1,40 @@
+# ДОКУМЕНТАЦИЯ: https://docs.artillex-studios.com/axshulkers.html
+# если вы хотите отключить сообщение, просто установите его в ""
+
+reloaded: '&#33FF33Плагин успешно перезагружен!'
+cleared: '&#33FF33Шалкер в вашей руке был удален из базы данных!'
+cooldown: '&#FF3333Вы не можете открывать шалкеры еще &f%seconds% &#FF3333секунд!'
+
+# список звуков: https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/Sound.html
+open:
+  sound: BLOCK_SHULKER_BOX_OPEN
+  message: '&#33FF33Вы открыли шалкер!'
+
+close:
+  sound: BLOCK_SHULKER_BOX_CLOSE
+  message: '&#FF3333Вы закрыли шалкер!'
+
+help:
+- ' '
+- '&#CC00FF&lAxShulkers &7» '
+- ' &7- &f/axshulkers reload &7| &#CC00FFПерезагрузить плагин'
+- ' &7- &f/axshulkers clear &7| &#CC00FFПревращает шалкер в руке в обычный'
+- ' '
+
+# название интерфейса шалкера
+# используется только когда у шалкера нет пользовательского имени
+shulker-title: '&0Шалкер'
+
+errors:
+  no-permission: '&#FF3333У вас нет прав для выполнения этой команды!'
+  no-shulker: '&#FF3333Вы не держите шалкер в руке или он уже очищен!'
+  creative-copy-item: '&#FF3333Похоже, вы скопировали шалкер, но не беспокойтесь, мы исправили это для вас!'
+  banned-item: '&#FF3333Вы не можете положить этот предмет в шалкеры!'
+  blacklisted-world: '&#FF3333Вы не можете открывать шалкеры в этом мире!'
+  cant-run-commands: '&#FF3333Вы не можете выполнять команды, пока шалкер открыт!'
+  moving-disabled: '&#FF3333Вы не можете двигаться, пока шалкер открыт!'
+
+update-notifier: '&#DD88FFДоступна новая версия AxShulkers! &#DDDDDD(&#FFFFFFтекущая: &#FF0000%current% &#DDDDDD| &#FFFFFFпоследняя: &#00FF00%latest%&#DDDDDD)'
+
+# не изменяйте это
+version: 5

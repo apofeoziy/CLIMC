@@ -1,0 +1,16 @@
+display_name: <lang.skill-farming-displayname>
+icon: IRON_HOE
+icon_data: 3510001
+description: <lang.skill-farming-description>
+
+levelbar_title: <lang.skill-farming-level-bar>
+levelbar_color: GREEN # Вы можете выбрать между BLUE, YELLOW, GREEN, PINK, PURPLE, RED, WHITE
+levelbar_style: SEGMENTED_6 # Вы можете выбрать между SEGMENTED_6, SEGMENTED_10, SEGMENTED_12, SEGMENTED_20 и SOLID
+
+field_harvest_instant: false # Если true, сбор урожая с поля ломает блоки мгновенно (в отличие от нескольких блоков за раз)
+field_harvest_limit: 256 # Максимальное количество блоков, которое специальная способность "Сбор урожая с поля" может сломать
+
+forgiving_multipliers: true # множители дропа ниже 0 будут, если false, иногда приводить к тому, что добытые блоки не будут ничего выпадать.
+# если true, количество дропа не может быть ниже 1, поэтому будут затронуты только блоки, которые выпадают несколько предметов (такие как руда редстоуна, руда лазурита,
+# руда золота/железа с удачей), но всё остальное будет выпадать как минимум 1 предмет.
+# Это можно установить на false, если вы хотите более гриндовый опыт для ваших игроков, хотя это может быть разочаровывающим для них

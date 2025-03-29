@@ -1,0 +1,19 @@
+{
+    "model": {
+        "type": "range_dispatch",
+        "property": "custom_model_data",
+        "fallback": {
+            "type": "model",
+            "model": "item/wooden_pickaxe"
+        },
+        "entries": [
+            {
+                "threshold": 8877280,
+                "model": {
+                    "type": "model",
+                    "model": "item/tools/netherite_jewelry_hammer"
+                }
+            }
+        ]
+    }
+}

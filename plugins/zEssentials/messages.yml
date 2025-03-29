@@ -1,0 +1,952 @@
+########################################################################################################################
+#
+#  ███████╗███████╗░██████╗░██████╗███████╗███╗░░██╗████████╗██╗░█████╗░██╗░░░░░░██████╗
+#  ╚════██║██╔════╝██╔════╝██╔════╝██╔════╝████╗░██║╚══██╔══╝██║██╔══██╗██║░░░░░██╔════╝
+#  ░░███╔═╝█████╗░░╚█████╗░╚█████╗░█████╗░░██╔██╗██║░░░██║░░░██║███████║██║░░░░░╚█████╗░
+#  ██╔══╝░░██╔══╝░░░╚═══██╗░╚═══██╗██╔══╝░░██║╚████║░░░██║░░░██║██╔══██║██║░░░░░░╚═══██╗
+#  ███████╗███████╗██████╔╝██████╔╝███████╗██║░╚███║░░░██║░░░██║██║░░██║███████╗██████╔╝
+#  ╚══════╝╚══════╝╚═════╝░╚═════╝░╚══════╝╚═╝░░╚══╝░░░╚═╝░░░╚═╝╚═╝░░╚═╝╚══════╝╚═════╝░
+#
+# Messages type:
+# NONE - Does not display the message
+# TCHAT - Default type, sends one or more messages in chat
+# ACTION - Sends the message in the action bar
+# TCHAT_AND_ACTION - Sends message in action bar and chat
+# CENTER - Send one or more messages in the chat, but they will be centered
+# TITLE - Sends a username
+#
+########################################################################################################################
+
+prefix: "<primary>zEssentials <secondary>• "
+you: "вы"
+trash: "&8Корзина"
+console: "Консоль"
+expired: "Истекло"
+player-not-found: "&f%player% <error>не найден."
+module-disable: "<error>Модуль &f%name% <error>отключен. Вы не можете использовать эту команду."
+code-not-found: "<red>Не удается найти код."
+rules:
+  - "#ffd353ℹ пʀᴀʙилᴀ сᴇʀʙᴇʀᴀ#3f3f3f:"
+  - "#3f3f3f• &7Уважайте всех игроков и персонал."
+  - "#3f3f3f• &7Запрещено гриферство и воровство."
+  - "#3f3f3f• &7Запрещено читерство и взлом."
+  - "#3f3f3f• &7Поддерживайте чат чистым и уважительным."
+  - "#3f3f3f• &7Запрещен спам и реклама."
+
+# Commands
+command-syntax-error: "<error>Вы должны выполнить команду следующим образом#656665: &f%syntax%"
+command-no-permission: "<error>У вас нет разрешения на выполнение этой команды."
+command-no-console: "<error>Только игрок может выполнить эту команду."
+command-no-arg: "<error>Невозможно найти команду с её аргументами."
+command-syntaxe-help: "&f%syntax% #656665» &7%description%"
+
+command-reload: "<success>Вы только что перезагрузили конфигурационные файлы."
+command-reload-module: "<success>Вы только что перезагрузили конфигурационные файлы модуля &f%module%<success>."
+command-reload-error: "&f%module% <error>не найден!"
+command-essentials: "&ezEssentials&8, &eВерсия &f%version%"
+
+
+# GameMode commands
+command-gamemode: "&fРежим игры установлен на&e %gamemode%&f для &b%player%&f."
+command-gamemode-invalid: "<error>Вы должны указать действительного игрока."
+
+
+# Weather commands
+command-day: "&fВы только что принесли &eдневной свет&f в мир <success>%world%&f."
+command-night: "&fВы только что принесли &eночь&f в мир <success>%world%&f."
+command-sun: "&fВы только что принесли &eсолнце&f в мир <success>%world%&f."
+
+
+# Admins commands
+command-top: "&7Вы только что были телепортированы на &eверх&7."
+command-top-error: "<error>Не удается найти безопасную позицию для телепортации."
+command-speed-invalid: "<error>Вы должны указать действительного игрока."
+command-speed-fly: "&7Вы только что установили скорость &nполета&r&7 на &f%speed%&7 для &f%player%&7. &8(&f2 &7по умолчанию&8)"
+command-speed-walk: "&7Вы только что установили скорость &nходьбы&r&7 на &f%speed%&7 для &f%player%&7. &8(&f2 &7по умолчанию&8)"
+command-speed-error: "<error>Вы должны ввести число между &60<error> и &610<error>. &8(&f2 &7по умолчанию&8)"
+command-god-enable: "&7Режим бога <success>включен &7для &f%player%<success>."
+command-god-disable: "&7Режим бога <error>выключен &7для &f%player%<success>."
+command-night-vision-enable: "&7Ночное зрение <success>включено &7для &f%player%<success>."
+command-night-vision-disable: "&7Ночное зрение <error>выключено &7для &f%player%<success>."
+command-heal-sender: "&7Вы только что исцелили игрока &f%player%&7."
+command-heal-receiver: "<success>Вы были исцелены."
+command-heal-error: "<error>Вы не можете исцелить того, кто мертв!"
+command-more-error: "<error>Вы не можете сделать этот предмет в руке."
+command-more-success: "&7Вы только что увеличили количество предмета до &f64&7."
+command-feed-sender: "&7Вы только что накормили игрока &f%player%&7."
+command-feed-receiver: "<success>Вы были накормлены."
+command-feed-error: "<error>Вы не можете накормить того, кто мертв!"
+command-compact-type: "<error>Невозможно сжать материал &f%material%<error>."
+command-compact-error: "<error>У вас нет &f%item%<error> в вашем инвентаре."
+command-compact-success: "&7Вы только что преобразовали #0EEA93x%amount% #99E0FF%item% &7в #0EEA93x%toAmount% #99E0FF%toItem%&7."
+command-compact-success-all: "&7Вы только что преобразовали все ваши предметы."
+command-hat-success: "&7Вы только что надели #0ef0ce%item% &7на свою голову."
+command-hat-error: "<error>Вы не можете надеть воздух на голову."
+command-player-weather-reset: "&7Вы только что изменили погоду на погоду сервера."
+command-player-weather-downfall: "&7Вы только что включили дождь для себя."
+command-player-time-reset: "&7Вы только что изменили время на время сервера."
+command-player-time-change: "&7Вы изменили свое время."
+command-fly-enable: "&7Режим полета <success>включен &7для &f%player%<success>."
+command-fly-disable: "&7Режим полета <error>выключен &7для &f%player%<success>."
+command-fly-error-world: "<error>Вы не можете летать в этом мире."
+command-fly-enable-seconds: "&7Режим полета <success>включен &7для &f%player%<success>. &8(&7оставшееся время %time%&8)"
+command-fly-error: "<error>У вас больше нет доступного времени полета."
+command-fly-end: "<error>Вы исчерпали все время полета, вы больше не можете летать."
+command-fly-error-other: "<error>%player% больше не имеет доступного времени полета."
+command-fly-add: "<success>Вы только что добавили %time% <success>времени полета для &f%player%<success>."
+command-fly-get: "<success>%player%&8: &f%player%<success>."
+command-fly-info-empty: "<error>У вас нет доступного времени полета."
+command-fly-info: "<success>У вас есть &f%time%<success>."
+command-fly-remove: "<success>Вы только что удалили %time% <success>времени полета у &f%player%<success>."
+command-fly-set: "<success>Вы только что установили %time% <success>времени полета для &f%player%<success>."
+command-furnace-type: "<error>Невозможно выплавить материал &f%material%<error>."
+command-furnace-error: "<error>У вас нет &f%item%<error> в вашем инвентаре."
+command-furnace-success: "&7Вы только что преобразовали #0EEA93x%amount% #34cfe0%item% &7в #0EEA93x%toAmount% #34cfe0%toItem%&7."
+command-skull: "<success>Вы только что получили голову игрока &f%name%<success>."
+command-repair-error: "<error>Предмет в вашей руке не может быть отремонтирован."
+command-repair-success: "<success>Вы только что отремонтировали предмет в вашей руке."
+command-repair-all-error: "<error>У вас нет предметов для ремонта."
+command-repair-all-success: "<success>Вы только что отремонтировали все предметы в вашем инвентаре."
+command-ext: "&fПо воле Maxlego08, вы больше не горите."
+command-near-empty: "<error>Рядом с вами нет игроков."
+command-near-player: "&fИгроки рядом с вами&7:%players%"
+command-near-info: " &7%player% &8(&e%distance%м&8)"
+command-play-time:
+  - "&7Вы играли&8: <primary>%playtime%"
+  - "&7Текущая сессия&8: <primary>%playtime_session%"
+command-bottom: "&7Вы только что были телепортированы на &eдно&7."
+command-bottom-error: "<error>Не удается найти безопасную позицию для телепортации."
+command-remove: "&7Удалено <success>%amount% &7сущностей."
+command-seen-offline:
+  type: WITHOUT_PREFIX
+  message: "#99E0FFИгрок &f%player% #99E0FFбыл <error>оффлайн #99E0FFс &7%date%#99E0FF."
+command-seen-online:
+  type: WITHOUT_PREFIX
+  message: "#99E0FFИгрок &f%player% #99E0FFбыл <success>онлайн #99E0FFс %date%#99E0FF."
+command-seen-playtime:
+  type: WITHOUT_PREFIX
+  message: "#99E0FFВремя игры&8: &f%playtime%"
+command-seen-uuid:
+  type: WITHOUT_PREFIX
+  message: "#99E0FFUUID&8: &f%uuid%"
+command-seen-ip:
+  type: WITHOUT_PREFIX
+  message: "#99E0FFIP-адрес&8:&f%ips%"
+command-seen-address: " <click:run_command:'/seenip %ip%'><hover:show_text:'&fПоказать игроков с тем же адресом'>%ip%</hover></click>"
+command-seen-ip-empty: "<error>Не удается найти игроков с IP &f%ip%<error>."
+command-seen-ip-line: "#99E0FFИгроки с IP &f%ip%&8:%players%"
+command-seen-ip-info: " <white><click:run_command:'/seen %name%'><hover:show_text:'&fПоказать информацию об игроке'>%name%</hover></click><dark_gray>"
+command-seen-last-location:
+  type: WITHOUT_PREFIX
+  message: "#99E0FFПоследнее местоположение&8: &f%world%, %x%, %y%, %z%"
+command-seen-first-join:
+  type: WITHOUT_PREFIX
+  message: "#99E0FFПервый вход&8: &f%created_at%"
+
+# Economy
+command-economy-not-found: "<error> Невозможно найти экономику с названием &f%name%<error>."
+command-economy-give-all-sender: "#99E0FFВы только что дали &f%economyFormat% #99E0FFвсем игрокам онлайн."
+command-economy-give-sender: "#99E0FFВы только что дали &f%economyFormat% #99E0FFигроку &7%player%#99E0FF."
+command-economy-give-receiver: "#99E0FFВы только что получили &f%economyFormat%."
+command-economy-set-sender: "#99E0FFВы только что установили &f%economyFormat% #99E0FFдля игрока &7%player%#99E0FF."
+command-economy-set-receiver: "#99E0FFВаш баланс был изменен на &f%economyFormat%."
+command-economy-take-sender: "#99E0FFВы только что забрали &f%economyFormat% #99E0FFу игрока &7%player%#99E0FF."
+command-economy-take-receiver: "#99E0FFВы только что потеряли &f%economyFormat%."
+command-economy-show-empty: "&f%player% <error>не имеет денег."
+command-economy-show-info: "&7- #99E0FF%economy% &f%amount%."
+command-money:
+  - "#99E0FFУ вас есть&8:"
+  - " &7- #99E0FF%economy-name-money% &f%economy-money%."
+  - " &7- #99E0FF%economy-name-coins% &f%economy-coins%."
+command-money-other:
+  - "#99E0FFУ %player% есть&8:"
+  - " &7- #99E0FF%economy-name-money% &f%economy-money%."
+  - " &7- #99E0FF%economy-name-coins% &f%economy-coins%."
+command-pay-negative: "<error>Сумма для оплаты должна быть положительной."
+command-pay-min: "<error>Минимальная сумма, которую вы можете заплатить, составляет &f%amount%<error>."
+command-pay-max: "<error>Максимальная сумма, которую вы можете заплатить, составляет &f%amount%<error>."
+command-pay-sender: "#99E0FFВы только что отправили #F8F327%amount%#99E0FF игроку &f%player%#99E0FF."
+command-pay-receiver: "&f%player% #99E0FFтолько что отправил вам #F8F327%amount%#99E0FF."
+command-pay-disable: "<error>Вы не можете отправить %name%."
+command-pay-self: "<error>Вы не можете отправить деньги самому себе."
+command-pay-not-enough: "<error>У вас недостаточно денег."
+
+
+# Teleport commands
+command-tpa-error: "<error>Вы уже отправили запрос игроку #99E0FF%player%<error>."
+command-tpa-error-same: "<error>Вы не можете телепортироваться к самому себе."
+command-tpa-here-error: "<error>Вы уже отправили запрос игроку #99E0FF%player%<error>."
+command-tpa-here-error-same: "<error>Вы не можете телепортироваться к самому себе."
+command-tpa-error-offline: "<error>Невозможно найти игрока, должно быть, он не в сети."
+command-tpa-error-to-late-empty: "<error>У вас нет запроса на телепортацию."
+command-tpa-error-to-late-expire: "<error>Запрос на телепортацию истек."
+command-tpa-sender:
+  - "#00FF00✔ #99E0FFОтправлен запрос на телепортацию игроку &f%displayName%#99E0FF."
+  - "  <hover:show_text:'<error>✘ Отменить телепортацию'><click:run_command:/tpacancel %player%>#99E0FFВведите #00FF00/tpacancel %player%#99E0FF, чтобы отменить ваш запрос.</click></hover>"
+command-tpa-receiver:
+  - ""
+  - "#F8F327⚠ &f%displayName% #99E0FFзапрашивает телепортацию к вам!"
+  - "  <hover:show_text:'#00FF00✔ Принять телепортацию'><click:run_command:/tpaccept>#99E0FFВведите #00FF00/tpaccept #99E0FF, чтобы #00FF00<u>принять</u>#99E0FF.</click></hover>"
+  - "  <hover:show_text:'<error>✘ Отклонить телепортацию'><click:run_command:/tpdeny>#99E0FFВведите <error>/tpdeny #99E0FF, чтобы <error><u>отклонить</u>#99E0FF.</click></hover>"
+  - ""
+  - "&7&oУ вас есть 60 секунд, чтобы принять запрос на телепортацию."
+command-tpa-here-sender:
+  - "#00FF00✔ #99E0FFОтправлен запрос на телепортацию игроку &f%displayName%#99E0FF."
+  - "  <hover:show_text:'<error>✘ Отменить телепортацию'><click:run_command:/tpacancel %player%>#99E0FFВведите #00FF00/tpacancel %player%#99E0FF, чтобы отменить ваш запрос.</click></hover>"
+command-tpa-here-receiver:
+  - ""
+  - "#F8F327⚠ &f%displayName% #99E0FFзапрашивает телепортировать вас к нему!"
+  - "  <hover:show_text:'#00FF00✔ Принять телепортацию'><click:run_command:/tpaccept>#99E0FFВведите #00FF00/tpaccept #99E0FF, чтобы #00FF00<u>принять</u>#99E0FF.</click></hover>"
+  - "  <hover:show_text:'<error>✘ Отклонить телепортацию'><click:run_command:/tpdeny>#99E0FFВведите <error>/tpdeny #99E0FF, чтобы <error><u>отклонить</u>#99E0FF.</click></hover>"
+  - ""
+  - "&7&oУ вас есть 60 секунд, чтобы принять запрос на телепортацию."
+command-tpa-accept-receiver: "#99E0FFВы только что #00FF00приняли #99E0FFзапрос на телепортацию от #99E0FF%player%<success>."
+command-tpa-accept-sender: "#99E0FF%player%<success> только что принял ваш запрос на телепортацию."
+command-tpa-here-accept-receiver: "#99E0FFВы только что #00FF00приняли #99E0FFзапрос на телепортацию от #99E0FF%player%<success>."
+command-tpa-here-accept-sender: "#99E0FF%player%<success> только что принял ваш запрос на телепортацию."
+command-teleport-ignore-player: "<error>Вы не можете отправить запрос на телепортацию игроку #99E0FF%player%<error>, он игнорирует вас."
+command-teleport-world: "<error>Вы должны быть в одном мире для телепортации."
+command-tpa-error-to-late: "<error>У вас нет запроса на телепортацию."
+command-tpa-error-to-late-2: "<error>Запрос истек."
+command-tp-deny-sender: "#00FF00✔ Отклонен запрос на телепортацию от &f%player%#00FF00."
+command-tp-deny-receiver: "<error>✘ &f%player% <error>отклонил ваш запрос на телепортацию."
+command-tp-cancel-error: "<error>Вы не отправляли запрос на телепортацию игроку &f%player%<error>."
+command-tp-cancel-sender: "<error>Отменен #99E0FFваш запрос на телепортацию к %player%."
+command-tp-cancel-receiver: "&f%player% <error>отменил свой запрос на телепортацию к вам."
+command-world-teleport-self: "<success>Вы только что были телепортированы в мир &f%world%<success>."
+command-world-teleport-other: "<success>Вы только что телепортировали игрока &f%player% <success>в мир &f%world%<success>."
+command-tp: "&fВы только что телепортировались к игроку #34cfe0%player%&f."
+command-tp-location: "&fВы только что телепортировались на #34cfe0%x%&f, #34cfe0%y%&f, #34cfe0%z%&f."
+command-tp-location-other: "&fВы только что телепортировали #34cfe0%player% &fна #34cfe0%x%&f, #34cfe0%y%&f, #34cfe0%z%&f."
+command-tp-all: "&fВы только что телепортировали всех игроков к себе."
+command-tp-self: "&fВы только что телепортировали #34cfe0%player%&f на свою позицию."
+command-back: "&7Возвращение на предыдущую локацию."
+command-back-error: "<error>У вас нет последней локации. Невозможно вернуться."
+command-random-tp-error: "<error>Безопасная локация не найдена после нескольких попыток, пожалуйста, попробуйте снова."
+
+
+# First join
+join-message: "#99E0FF%player% &7присоединился к игре"
+quit-message: "#99E0FF%player% &7покинул игру"
+first-join-message: "&7Добро пожаловать #99E0FF%player% &7на <название вашего сервера>! &8(&f%totalUserFormat% &7зарегистрированных игроков&8)"
+first-join-motd:
+  - ""
+  - "#00FF00✔ #99E0FFДобро пожаловать %player%#99E0FF !"
+  - ""
+  - "#858ef8Discord&8: #99E0FF<hover:show_text:'&fПрисоединяйтесь к #858ef8Discord &fсервера!'><click:open_url:'https://discord.groupez.dev/'>https://discord.groupez.dev/</click></hover>"
+  - "&7Веб-сайт&8: #99E0FF<hover:show_text:'&fОткрыть веб-сайт &f!'><click:open_url:'https://minecraft-inventory-builder.com/'>https://minecraft-inventory-builder.com/</click></hover>"
+  - ""
+
+# Spawn
+command-set-spawn: "&fВы только что установили точку спавна."
+command-spawn-not-define: "<error>Спавн не существует. Пожалуйста, свяжитесь с администратором."
+command-spawn-location-invalid: "<error>Спавн недействителен, пожалуйста, свяжитесь с администратором"
+
+
+# Описание команд
+description-reload: "Перезагрузить конфигурационные файлы"
+description-gamemode: "Изменить игровой режим игрока"
+description-gamemode-creative: "Изменить игровой режим игрока на творческий"
+description-gamemode-survival: "Изменить игровой режим игрока на выживание"
+description-gamemode-adventure: "Изменить игровой режим игрока на приключение"
+description-gamemode-spectator: "Изменить игровой режим игрока на наблюдатель"
+description-day: "Установить день в вашем мире"
+description-night: "Установить ночь в вашем мире"
+description-sun: "Установить солнечную погоду в вашем мире"
+description-top: "Телепортироваться наверх"
+description-speed: "Изменить скорость игрока"
+description-enderchest: "Открыть ваш эндер-сундук"
+description-endersee: "Открыть эндер-сундук игрока"
+description-tpa: "Телепортироваться к игроку"
+description-tpa-here: "Телепортировать игрока к вам"
+description-tpa-accept: "Принять запрос на телепортацию"
+description-tpa-deny: "Отклонить запрос на телепортацию"
+description-tpa-cancel: "Отменить запрос на телепортацию"
+description-tp-all: "Телепортировать всех игроков к вам"
+description-god: "Включить/выключить режим бога"
+description-heal: "Вылечить игрока"
+description-more: "Получить больше предметов"
+description-tp-world: "Телепортироваться в другой мир"
+description-trash: "Открыть мусорку"
+description-feed: "Накормить игрока"
+description-craft: "Открыть верстак"
+description-enchanting: "Открыть стол зачарований"
+description-invsee: "Открыть инвентарь игрока"
+description-compact: "Сжать материал"
+description-hat: "Создать себе красивую шляпу"
+description-tp: "Телепортироваться к игроку"
+description-tp-self: "Телепортировать игрока к вам"
+description-player-weather: "Изменить вашу погоду"
+description-player-time: "Изменить ваше время"
+description-money: "Показать ваши деньги"
+description-eco: "Управление экономикой сервера"
+description-eco-set: "Установить баланс указанного игрока на указанную сумму денег"
+description-eco-take: "Забрать указанную сумму денег у указанного игрока"
+description-eco-give: "Дать указанному игроку указанную сумму денег"
+description-eco-give-random: "Дать указанному игроку случайную сумму денег"
+description-eco-give-all: "Дать всем игрокам указанную сумму денег"
+description-eco-reset: "Сбросить баланс указанного игрока до начального баланса сервера"
+description-eco-show: "Показать деньги игрока"
+description-pay: "Заплатить другому игроку со своего баланса"
+description-fly: "Включить/выключить полет"
+description-fly-add: "Добавить время полета"
+description-fly-get: "Показать информацию о полете игрока"
+description-fly-info: "Показать информацию о вашем временном полете"
+description-fly-remove: "Удалить время полета"
+description-fly-set: "Установить время полета"
+description-anvil: "Открыть наковальню"
+description-cartographytable: "Открыть стол картографа"
+description-grindstone: "Открыть точильный камень"
+description-loom: "Открыть ткацкий станок"
+description-stonecutter: "Открыть камнерез"
+description-smithingtable: "Открыть стол кузнеца"
+description-back: "Телепортироваться на предыдущее местоположение"
+description-set-spawn: "Установить точку возрождения сервера"
+description-spawn: "Телепортироваться на точку возрождения"
+description-warp-set: "Создать варп"
+description-warp-use: "Телепортироваться на варп"
+description-warp-del: "Удалить варп"
+description-warp-list: "Показать список варпов"
+description-tp-random: "Случайная телепортация в мире"
+description-set-home: "Создать дом"
+description-del-home: "Удалить дом"
+description-del-home-confirm: "Подтвердить удаление дома"
+description-set-home-confirm: "Подтвердить создание дома"
+description-home: "Телепортироваться домой"
+description-kick: "Выгнать игрока"
+description-kick-all: "Выгнать всех игроков"
+description-kitty-cannon: "Запустить котика, зачем ты хочешь это сделать? монстр"
+description-ban: "Забанить игрока"
+description-mute: "Заглушить игрока"
+description-un-mute: "Разглушить игрока"
+description-un-ban: "Разбанить игрока"
+description-sanction: "Открыть инвентарь санкций"
+description-chat-history: "Показать сообщения чата игрока"
+description-chat-clear: "Очистить чат"
+description-chat-disable: "Отключить чат"
+description-chat-enable: "Включить чат"
+description-chat-broadcast: "Отправить сообщение всем"
+description-message: "Отправить личное сообщение игроку"
+description-reply: "Ответить на личное сообщение"
+description-message-toggle: "Включить/выключить личные сообщения"
+description-socialspy: "Отображать личные сообщения игроков"
+description-furnace: "Переплавить все предметы в вашей руке"
+description-skull: "Получить голову игрока"
+description-repair: "Починить предмет в вашей руке"
+description-repair-all: "Починить все предметы в вашем инвентаре"
+description-ext: "Остановить горение"
+description-near: "Показать игроков рядом с вами"
+description-play-time: "Показать время игры игрока"
+description-bottom: "Телепортироваться вниз"
+description-compact-all: "Сжать предметы в ваших инвентарях"
+description-version: "Показать версию плагина"
+description-kill-all: "Убить сущности"
+description-seen: "Показать информацию об игроке"
+description-seen-ip: "Показать игроков с одинаковым IP"
+description-kit: "Получить набор"
+description-kit-editor: "Редактировать набор"
+description-kit-create: "Создать новый набор"
+description-kit-delete: "Удалить набор"
+description-cooldown: "Показать кулдауны игрока"
+description-cooldown-delete: "Удалить кулдаун"
+description-cooldown-create: "Создать кулдаун"
+description-item-name: "Изменить название предмета"
+description-item-lore: "Показать свои подкоманды"
+description-item-lore-set: "Определить строку описания"
+description-item-lore-add: "Добавить строку к описанию"
+description-item-lore-clear: "Очистить описание предмета"
+description-give: "Выдать предметы"
+description-give-all: "Выдать предметы всем онлайн-игрокам"
+description-power-tools: "Добавить команду к вашим предметам"
+description-pay-toggle: "Включить/выключить платежи в сторону игрока"
+description-power-tools-toggle: "Включить/выключить инструменты силы"
+description-kit-show: "Показать набор"
+description-mail: "Открыть почтовый ящик"
+description-rules: "Прочитать правила сервера"
+description-hologram: "Показать команды голограммы"
+description-hologram-create: "Создать голограмму"
+description-hologram-delete: "Удалить голограмму"
+description-hologram-edit: "Редактировать голограмму"
+description-hologram-list: "Показать список голограмм"
+description-hologram-remove-line: "Удалить строку из голограммы"
+description-hologram-add-line: "Добавить строку к голограмме"
+description-hologram-set-line: "Определить строку голограммы"
+description-hologram-insert-before-line: "Вставить строку перед другой"
+description-hologram-insert-after-line: "Вставить строку после другой"
+description-hologram-move-here: "Переместить голограмму на вашу позицию"
+description-hologram-move-to: "Переместить голограмму на местоположение"
+description-hologram-scale: "Изменить масштаб голограммы"
+description-hologram-translation: "Изменить перевод голограммы"
+description-hologram-billboard: "Изменить биллборд голограммы"
+description-hologram-text-alignment: "Изменить выравнивание текста голограммы"
+description-hologram-text-shadow: "Изменить тень текста голограммы"
+description-hologram-shadow-strength: "Изменить силу тени голограммы"
+description-hologram-shadow-radius: "Изменить радиус тени голограммы"
+description-hologram-text-background: "Изменить фон текста голограммы"
+description-hologram-see-through: "Изменить прозрачность голограммы"
+description-hologram-yaw: "Изменить рыскание голограммы"
+description-hologram-pitch: "Изменить тангаж голограммы"
+description-hologram-teleport: "Телепортироваться к голограмме"
+description-scoreboard: "Включить/выключить табло"
+description-balance-top: "Показать топ баланса"
+description-balance-top-refresh: "Обновить топ баланса"
+description-mail-open: "Открыть почтовый ящик игрока"
+description-mail-give: "Дать предмет в почтовый ящик игрока"
+description-mail-giveall: "Дать предметы в почтовые ящики игроков"
+description-voteparty-information: "Показать голосовую вечеринку"
+description-voteparty-set: "Установить количество голосов в голосовой вечеринке"
+description-voteparty-add: "Добавить голоса в голосовую вечеринку"
+description-voteparty-remove: "Удалить голоса из голосовой вечеринки"
+description-vote-information: "Показать информацию о том, как голосовать"
+description-vote-set: "Установить количество голосов для игрока"
+description-vote-add: "Добавить голоса игроку"
+description-vote-remove: "Удалить голоса у игрока"
+description-enchant: "Добавить зачарование на предмет"
+description-night-vision: "Включить или выключить ночное зрение"
+description-sudo: "Заставить игрока выполнить команду"
+description-worldedit-give: "Дать предмет worldedit игроку"
+description-worldedit-set: "Установить все блоки вашего выбора"
+description-worldedit-walls: "Установить все блоки вашего выбора со стенами"
+description-worldedit-sphere: "Установить все блоки вашего выбора со сферой"
+description-worldedit-fill: "Заполнить все блоки вашего выбора"
+description-worldedit-cyl: "Заполнить все блоки вашего выбора цилиндром"
+description-worldedit-cut: "Вырезать все блоки вашего выбора"
+description-worldedit-stop: "Остановить текущую сессию"
+description-worldedit-confirm: "Подтвердить действие worldedit"
+description-worldedit-cancel: "Отменить текущий выбор"
+description-worldedit-pos1: "Установить первую позицию выбора"
+description-worldedit-pos2: "Установить вторую позицию выбора"
+description-worldedit-option: "Настроить использование worldedit"
+description-worldedit-option-inventory: "Использовать ваш инвентарь для взятия или добавления предметов"
+description-worldedit-option-bossbar: "Включить или выключить индикатор прогресса worldedit"
+description-vault-give: "Дать предметы в хранилище игрока"
+description-vault-add-slot: "Добавить слот в хранилище игрока"
+description-vault-set-slot: "Установить слот в хранилище игрока"
+description-show-item: "Показать предмет игрока"
+description-freeze: "Заморозить игрока"
+description-experience: "Управление опытом игрока"
+description-experience-query: "Запросить опыт игрока"
+description-experience-set: "Установить опыт игрока"
+description-experience-grant: "Выдать опыт игроку"
+description-delete-world: "Удалить данные, связанные с миром"
+description-clearinventory: "Очистить инвентарь игрока"
+description-suicide: "Убить себя"
+description-discord-link: "Привязать ваш аккаунт Discord"
+description-discord-unlink: "Отвязать ваш аккаунт Discord"
+description-clear-random-word: "Очистить случайные слова"
+description-pub: "Отправить выделенное сообщение в чат"
+description-step: "Сохранить шаг"
+
+# Time format
+format-second: " секунда"
+format-seconds: " секунд"
+format-minute: " минута"
+format-minutes: " минут"
+format-hour: " час"
+format-hours: " часов"
+format-day: " д"
+format-days: " дней"
+cooldown: "<error>✘ Вы должны подождать &f%cooldown% <error>перед выполнением этого действия."
+cooldown-commands: "<error>✘ Вы должны подождать &f%cooldown% <error>перед выполнением этой команды."
+
+
+# Teleportation
+teleport-move: "<error>Вы не должны двигаться!"
+teleport-damage: "<error>Вы не должны получать урон во время телепортации."
+teleport-error-location: "<error>Невозможно безопасно телепортировать вас."
+
+teleport-message:
+  type: ACTION
+  message: "&7Телепортация через #0EEA93%seconds% &7секунд, вы не должны двигаться."
+teleport-success:
+  type: ACTION
+  message: "#99E0FFВы успешно телепортировались!"
+
+teleport-message-spawn:
+  - message: "&7Телепортация через #0EEA93%seconds% &7секунд, вы не должны двигаться."
+  - type: ACTION
+    message: "&7Телепортация через #0EEA93%seconds% &7секунд, вы не должны двигаться."
+teleport-message-spawn-console: "<success>Вы телепортировали игрока <white>%player% <success>на спавн."
+teleport-success-spawn:
+  - message: "&7Вы телепортировались на #0EEA93спавн &7!"
+  - type: ACTION
+    message: "&7Вы телепортировались на #0EEA93спавн &7!"
+teleport-message-warp:
+  - message: "&7Телепортация через #0EEA93%seconds% &7секунд, вы не должны двигаться."
+  - type: ACTION
+    message: "&7Телепортация через #0EEA93%seconds% &7секунд, вы не должны двигаться."
+teleport-success-warp:
+  - message: "&7Вы телепортировались на варп #0EEA93%name% &7!"
+  - type: ACTION
+    message: "&7Вы телепортировались на варп #0EEA93%name% &7!"
+teleport-message-random:
+  type: ACTION
+  message: "&7Телепортация через #0EEA93%seconds% &7секунд, вы не должны двигаться."
+teleport-success-random:
+  type: ACTION
+  message: "#99E0FFВы успешно телепортировались!"
+teleport-message-home:
+  - message: "&7Телепортация через #0EEA93%seconds% &7секунд, вы не должны двигаться."
+  - type: ACTION
+    message: "&7Телепортация через #0EEA93%seconds% &7секунд, вы не должны двигаться."
+teleport-success-home:
+  - message: "&7Вы телепортировались домой #0EEA93%name% &7!"
+  - type: ACTION
+    message: "&7Вы телепортировались домой #0EEA93%name% &7!"
+
+
+# Warps
+command-warp-already-exist: "<error>Варп &f%name% <error>уже существует. &7Используйте команду &n<hover:show_text:'&fИспользовать эту команду'><click:suggest_command:'/setwarp %name% true'>/setwarp %name% true</click></hover>&r для изменения варпа"
+command-warp-doesnt-exist: "<error>Варп &f%name% <error>не существует."
+command-warp-no-permission: "<error>У вас нет разрешения на использование варпа &f%name%<error>."
+command-warp-create:
+  - "#00ff00Вы создали варп &f%name% #00ff00на вашей позиции."
+  - "&7Разрешение для варпа: <hover:show_text:'&fСкопировать команду для добавления разрешения игроку'><click:SUGGEST_COMMAND:'/lp user <username> permission set essentials.warp.%name%'>&f&nessentials.warp.%name%</click></hover>"
+command-warp-use:
+  - "<error>Использование&8: &f/warp <пункт назначения>"
+  - "&7Варпы&8:&f%destinations%"
+command-warp-destination: " <hover:show_text:'&fНажмите для телепортации на варп &n%name%'><click:run_command:'/warp %name%'>&f%name%</click></hover>&7"
+command-warp-list: "&7Варпы&8:&f%destinations%"
+command-warp-list-info: " <hover:show_text:'&fНажмите для телепортации на варп &n%name%'><click:run_command:'/warp %name%'>&f%name%</click></hover>&7"
+command-warp-delete: "#00ff00Вы удалили варп &f%name%#00ff00."
+command-warp-invalid: "<error>Варп &f%name% <error>имеет недопустимое местоположение."
+
+
+# Homes
+command-set-home-invalide-name: "&f%name% <error>недопустимое имя, пожалуйста, выберите другое."
+command-set-home-too-long: "&f%name% <error>слишком длинное, пожалуйста, выберите другое."
+command-set-home-too-short: "&f%name% <error>слишком короткое имя, пожалуйста, выберите другое."
+command-set-home-max: "<error>Вы не можете иметь больше &f%max%<error> домов."
+command-set-home-world: "<error>Вы не можете создать дом здесь"
+command-set-home-create:
+  - ""
+  - "#99E0FFВы создали дом &f%name%#99E0FF. &8(&7%current%&8/&7%max%&8)"
+  - "&fИспользуйте команду &n<hover:show_text:'&fНажмите для телепортации домой'><click:suggest_command:'/home %name%'>/home %name%</click></hover>&r для телепортации"
+  - ""
+command-set-home-create-confirm:
+  - ""
+  - "#99E0FFДом &f%name%#99E0FF уже существует. Вы хотите перезаписать его?"
+  - "<hover:show_text:'&fНажмите, чтобы перезаписать дом %name%'><click:run_command:'/sethomeconfirm %name%'><success>ᴨᴏᴅᴛʙᴇᴩᴅᴎᴛь</click></hover>"
+  - ""
+command-home-doesnt-exist: "<error>Дом &f%name%<error> не существует."
+
+# Available placeholders:
+# %count% - Home count
+# %max% - Max player's home
+command-home-information-multi-line-header:
+  - ""
+  - "#8cc0ccʙᴀɯᴎ ᴅᴏᴍᴀ <success>♦ &7(%count%) &8- &7(Макс: %max%)"
+
+# Available placeholders:
+# %count% - Home count
+# %max% - Max player's home
+# %name% - Home name
+# %world% - Home world
+# %environment% - Home world environment
+# %x% - Home location x
+# %y% - Home location y
+# %z% - Home location z
+command-home-information-multi-line-content:
+  type: WITHOUT_PREFIX
+  message: " #8cc0cc♢ &f%name% &7в %world% (%environment%) <success><hover:show_text:'&7Нажмите для телепортации домой &f&n%name%'><click:run_command:'/home %name%'>[НАЖМИТЕ]</click></hover>"
+
+# Available placeholders:
+# %count% - Home count
+# %max% - Max player's home
+command-home-information-multi-line-footer:
+  type: WITHOUT_PREFIX
+  message: ""
+
+# Available placeholders:
+# %count% - Home count
+# %max% - Max player's home
+# %name% - Home name
+# %world% - Home world
+# %environment% - Home world environment
+# %x% - Home location x
+# %y% - Home location y
+# %z% - Home location z
+command-home-information-in-line:
+  type: WITHOUT_PREFIX
+  message: "#8cc0ccʙᴀɯᴎ ᴅᴏᴍᴀ <success>♦ &7(%count%/%max%) &8:&f%homes%"
+command-home-information-in-line-info: " <hover:show_text:'&7Нажмите для телепортации домой &f&n%name%'><click:run_command:'/home %name%'>&f%name%</click></hover>&7"
+
+command-home-icon-error: "<error>У вас должен быть предмет в руке, чтобы изменить иконку вашего дома."
+command-home-icon-success: "#00ff00Вы изменили иконку дома &f%name%#00ff00."
+command-home-icon-reset: "#00ff00Вы сбросили иконку дома &f%name%#00ff00."
+command-home-delete: "#99E0FFВы удалили дом &f%name%#99E0FF."
+command-home-delete-confirm:
+  - ""
+  - "#99E0FFВы действительно хотите удалить дом &f%name%#99E0FF."
+  - "<success><hover:show_text:'&fНажмите, чтобы удалить дом %name%'><click:run_command:'/delhomeconfirm %name%'>ᴨᴏᴅᴛʙᴇᴩᴅᴎᴛь</click></hover>"
+  - ""
+command-home-admin-delete: "#00ff00Вы удалили дом &f%name%#00ff00 игрока &b%player%#00ff00."
+command-home-admin-set: "#00ff00Вы создали дом &f%name%#00ff00 для игрока &b%player%#00ff00."
+command-home-admin-list: "#8cc0ccДома игрока %player%&8:&f%homes%"
+command-home-admin-list-info: " <hover:show_text:'&7Нажмите для телепортации домой &f&n%name%'><click:run_command:'/home %player%:%name%'>&f%name%</click></hover>&7"
+command-home-error-teleport: "<error>Не удалось найти позицию для телепортации, пожалуйста, удалите свой дом."
+
+
+# Sanction
+command-kick-notify:
+  type: WITHOUT_PREFIX
+  message: "<hover:show_text:'<gray>Кем: <white>%sender%<newline><gray>Длительность: <white>%duration%<newline><gray>Причина: <white>%reason%<newline><gray>Дата: <white>%created_at%'><click:run_command:'/sc %target%'>&8(#f59e07Санкция&8) #8aebeb%player% #e33414кикнул игрока #e0d12d%target%#e33414.</click></hover>"
+command-ban-notify:
+  type: WITHOUT_PREFIX
+  message: "<hover:show_text:'<gray>Кем: <white>%sender%<newline><gray>Длительность: <white>%duration%<newline><gray>Причина: <white>%reason%<newline><gray>Дата: <white>%created_at%<newline><gray>Истекает: <white>%expired_at%'><click:run_command:'/sc %target%'>&8(#f59e07Санкция&8) #8aebeb%player% #e33414забанил игрока #e0d12d%target%#e33414.</click></hover>"
+command-mute-notify:
+  type: WITHOUT_PREFIX
+  message: "<hover:show_text:'<gray>Кем: <white>%sender%<newline><gray>Длительность: <white>%duration%<newline><gray>Причина: <white>%reason%<newline><gray>Дата: <white>%created_at%<newline><gray>Истекает: <white>%expired_at%'><click:run_command:'/sc %target%'>&8(#f59e07Санкция&8) #8aebeb%player% #e33414замутил игрока #e0d12d%target%#e33414.</click></hover>"
+command-unmute-notify:
+  type: WITHOUT_PREFIX
+  message: "<hover:show_text:'<gray>Кем: <white>%sender%<newline><gray>Длительность: <white>%duration%<newline><gray>Причина: <white>%reason%<newline><gray>Дата: <white>%created_at%'><click:run_command:'/sc %target%'>&8(#f59e07Санкция&8) #8aebeb%player% #e33414размутил игрока #e0d12d%target%#e33414.</click></hover>"
+command-unban-notify:
+  type: WITHOUT_PREFIX
+  message: "<hover:show_text:'<gray>Кем: <white>%sender%<newline><gray>Длительность: <white>%duration%<newline><gray>Причина: <white>%reason%<newline><gray>Дата: <white>%created_at%'><click:run_command:'/sc %target%'>&8(#f59e07Санкция&8) #8aebeb%player% #e33414разбанил игрока #e0d12d%target%#e33414.</click></hover>"
+command-ban-error-duration: "<error>Длительность бана должна быть не менее 1 секунды."
+command-mute-error-duration: "<error>Длительность мута должна быть не менее 1 секунды."
+command-un-mute-error: "&f%player% <error>не замучен."
+command-un-ban-error: "&f%player% <error>не забанен."
+command-sanction-error: "<error>Вы не можете наказать этого игрока. Он защищен."
+message-kick:
+  - ""
+  - "<error>Вы были кикнуты с сервера по причине:"
+  - "%reason%"
+  - ""
+  - "&fMinecraft-Inventory-Builder.com"
+  - ""
+message-mute:
+  - ""
+  - "&fВы потеряли свой <u>голос</u>."
+  - "&fДлительность&8: <gradient:#7ae856:#a1d909>%duration%</gradient>"
+  - "&fПричина&8: #82d1ff%reason%"
+  - ""
+message-unmute:
+  - ""
+  - "&fВы вернули свой <u>голос</u>, поздравляем!"
+  - "&fПричина&8: #82d1ff%reason%"
+  - ""
+message-mute-talk:
+  - ""
+  - "&fВы не имеете права говорить."
+  - ""
+  - "&fДлительность&8: <gradient:#7ae856:#a1d909>%duration%</gradient>"
+  - "&fПричина&8: #82d1ff%reason%"
+  - ""
+message-ban:
+  - ""
+  - "<error>Вы были забанены на сервере по причине:"
+  - "&f%reason%"
+  - "&fДлительность&8: &7%duration%"
+  - ""
+  - "&fMinecraft-Inventory-Builder.com"
+  - ""
+message-ban-join:
+  - ""
+  - "<error>Вы забанены на сервере:"
+  - "&f%reason%"
+  - "&fОставшееся время&8: &7%remaining%"
+  - ""
+  - "&fMinecraft-Inventory-Builder.com"
+  - ""
+
+message-freeze:
+    - ""
+    - "&fВы были заморожены."
+    - ""
+message-un-freeze:
+  - ""
+  - "&fВы были разморожены."
+  - ""
+command-freeze-success: "&7Вы заморозили игрока &f%player%&7."
+command-un-freeze_success: "&7Вы разморозили игрока &f%player%&7."
+
+# Chat
+chat-error: "<error>Невозможно позволить вам говорить, ваши данные не загружены."
+chat-alphanumeric-regex: "<error>Вы используете запрещенный символ."
+chat-cooldown: "<error>Пожалуйста, подождите перед отправкой следующего сообщения. &8(&7%cooldown%&8)"
+chat-same: "<error>Вы не можете отправить то же самое предложение."
+chat-link: "<error>Вы не можете отправлять ссылки в чат."
+chat-disable: "<error>Чат в настоящее время недоступен."
+chat-caps: "<error>Не нужно кричать, чтобы говорить!"
+chat-flood: "<error>Вы не можете так говорить."
+
+chat-default-format: "<white>%displayName% <#656665>• <gray>%message%"
+chat-messages-empty: "&f%player% <error>не написал сообщение."
+chat-messages-line:
+  type: WITHOUT_PREFIX
+  message: "&f%date% &7%message%"
+chat-messages-footer:
+  type: WITHOUT_PREFIX
+  message: "<click:run_command:'/chathistory %player% %previousPage%'><hover:show_text:'Предыдущая страница'><white>⬅</hover></click> <gray>%page%/%maxPage% <click:run_command:'/chathistory %player% %nextPage%'><hover:show_text:'Следующая страница'><white>➡</hover></click>"
+command-chat-clear: "<success>Чат был очищен."
+command-chat-disable-error: "<error>Чат уже отключен."
+command-chat-disable-success: "<success>Вы отключили чат."
+command-chat-enable-error: "<error>Чат уже включен."
+command-chat-enable-success: "<success>Вы включили чат."
+command-chat-broadcast:
+  type: WITHOUT_PREFIX
+  message: "<primary>ᴏʙъяʙᴧᴇʜᴎᴇ <secondary>• <white>%message%"
+
+
+# Messages
+command-message-self: "<error>Вы не можете разговаривать сами с собой."
+command-message-disable: "&f%player% <error>отключил личные сообщения."
+command-message-mute: "<error>Вам не разрешено говорить."
+command-message-me: "<hover:show_text:'&fНажмите, чтобы ответить'><click:suggest_command:'/r '>&8(#f533f5я &7-> #34cfe0%target%&8) #e6e1e6<message></click></hover>"
+command-message-other: "<hover:show_text:'&fНажмите, чтобы ответить'><click:suggest_command:'/r '>&8(#34cfe0%target% &7-> #f533f5я&8) #e6e1e6<message></click></hover>"
+command-message-social-spy:
+  type: WITHOUT_PREFIX
+  message: "&8(&7SocialSpy&8) &8(<hover:show_text:'&fОткрыть санкции для %sender%'><click:run_command:'/sc %sender%'>#34cfe0%sender%</click></hover> &7-> <hover:show_text:'&fОткрыть санкции для %receiver%'><click:run_command:'/sc %receiver%'>#f533f5%receiver%</click></hover>&8) #e6e1e6%message%"
+command-message-error: "<error>Вам некому отвечать."
+command-message-toggle-enable: "&7Личные сообщения <success>включены &7для &f%player%<success>."
+command-message-toggle-disable: "&7Личные сообщения <error>отключены &7для &f%player%<success>."
+command-social-spy-enable: "&7Социальный шпионаж <success>включен &7для &f%player%<success>."
+command-social-spy-disable: "&7Социальный шпионаж <error>отключен &7для &f%player%<success>."
+command-warp-empty: "<error>Варпы не определены, используйте команду &f/setwarp <name>"
+command-pay-toggle-enable: "&7Оплата <success>включена &7для &f%player%<success>."
+command-pay-toggle-disable: "&7Оплата <error>отключена &7для &f%player%<error>."
+command-power-tools-toggle-enable: "<success>Все ваши инструменты силы были включены &7для &f%player%<success>."
+command-power-tools-toggle-disable: "<error>Все ваши инструменты силы были отключены &7для &f%player%<error>."
+
+
+# Kit
+command-kit-no-permission: "<error>У вас нет разрешения на использование набора &f%kit%<error>."
+command-kit-not-found: "<error>Не удалось найти набор &f%kit%<error>."
+command-kit-already-exists: "<error>Набор &f%kit% <error>уже существует."
+command-kit-information-in-line-empty: "#8cc0ccВаши наборы <success>♦ &7(%count%/%max%)&8: <error>Нет доступных наборов"
+command-kit-information-in-line: "#8cc0ccВаши наборы&8:&f%kits%"
+command-kit-information-in-line-info-available: " <hover:show_text:'&7Нажмите, чтобы получить набор &f&n%name%'><click:run_command:'/kit %name%'><#1fde65>%name%</click></hover>&7"
+command-kit-information-in-line-info-unavailable: " <hover:show_text:'&7Вы должны подождать <u>%time%</u> перед получением набора &f&n%name%'><st><#de1f1f>%name%</st></hover>&7"
+command-kit-information-multi-line-header: ""
+command-kit-information-multi-line-content-available: "<#8cc0cc>♢ <hover:show_text:'&7Нажмите, чтобы получить набор &f&n%name%'><click:run_command:'/kit %name%'><#1fde65>%name% </click></hover>"
+command-kit-information-multi-line-content-unavailable: "<#8cc0cc>♢ <hover:show_text:'&7Вы должны подождать <u>%time%</u> перед получением набора &f&n%name%'><st><#de1f1f>%name%</st></hover> &8(&7%time%&8)"
+command-kit-information-multi-line-footer: ""
+command-kit-editor-save: "<success>Вы только что изменили набор &f%kit%<success>."
+command-kit-create: "<success>Вы только что создали набор &f%kit%<success>."
+command-kit-delete: "<success>Вы только что удалили набор &f%kit%<success>."
+
+
+# Cooldown
+command-cooldown-header: "&fКулдауны игрока %player% &8(&7%amount%&8)"
+command-cooldown-empty: "&f%player% <error>не имеет кулдаунов."
+# Available placeholders:
+# %key% - The key to the cooldown
+# %value% - The cooldown expiration timestamp
+# %timeLeft% - The time remaining before cooldown expiration
+# %createdAt% - Cooldown creation date
+# %player% - the Player's nickname
+command-cooldown-line:
+  type: WITHOUT_PREFIX
+  message: "&f%key% <secondary>- &7%createdAt% <secondary>- <success>%timeLeft% <secondary>- <hover:show_text:'&fНажмите, чтобы удалить кулдаун'><click:run_command:'/cooldown delete %player% %key%'>&8[<error>Удалить&8]</click></hover>"
+command-cooldown-not-found: "&f%cooldown% <error>не найден."
+command-cooldown-delete: "<success>Вы только что удалили кулдаун &f%cooldown% <success>у &n%player%&r<success>."
+# Available placeholders:
+# %key% - The key to the cooldown
+# %player% - the Player's nickname
+# %duration% - the duration of the cooldown
+command-cooldown-create: "<success>Вы только что создали кулдаун &f%key% <success>для &n%player%&r<success>."
+
+
+command-item-empty: "<error>У вас нет предмета в руке."
+command-item-clear: "<success>Вы очистили имя этого предмета"
+command-item-set: "<success>Вы переименовали предмет в руке на &f%name%<success>."
+command-item-lore-add: "<success>Вы только что добавили строку &f%text%<success>."
+command-item-lore-set: "<success>Вы только что установили строку %line% на &f%text%<success>."
+command-item-lore-clear: "<success>Вы только что очистили описание предмета."
+command-item-lore-set-error: "<error>Не удается найти строку &f%line%<error>."
+command-give-error: "<error>Не удается найти предмет &f%item%<error>."
+command-give: "<success>Вы только что дали &n&fx%amount% %item%&r <success>игроку &f%player%<success>."
+command-give-all: "<success>Вы только что дали &n&fx%amount% %item%&r <success>всем онлайн-игрокам."
+command-give-vault: "<success>Вы только что дали &n&fx%amount% %item%&r <success>в хранилище &f%player%<success>."
+
+command-power-tool-error-item: "<error>У вас нет предмета в руке."
+command-power-tool-error-reset: "<error>На этом предмете нет записанной команды."
+command-power-tool-info: "<success>Вы только что поместили команду &f/%command%<success> на предмет &f%item%<success>."
+command-power-tool-reset: "<success>Вы только что удалили команду с предмета &f%item%<success>."
+
+mailbox-remove-full: "<error>У вас должно быть место в инвентаре, чтобы получить предмет."
+mailbox-remove-expire: "<error>Вы больше не можете получить этот предмет, срок его действия истек."
+mailbox-add:
+  type: ACTION
+  message: "<success>Предмет был добавлен в ваш почтовый ящик &8(&f/mail&8)"
+mailbox-give-error: "<error>Не удается найти предмет &f%item%<error>."
+mailbox-give: "<success>Вы только что дали &n&fx%amount% %item%&r <success>в почтовый ящик игрока &f%player%<success>."
+mailbox-give-all: "<success>Вы только что дали &n&fx%amount% %item%&r <success>в почтовые ящики онлайн-игроков."
+
+
+hologram-create-error: "<error>Голограмма &f%name% <error>уже существует."
+hologram-create:
+  type: WITHOUT_PREFIX
+  messages:
+    - "<success>Вы только что создали голограмму &f%name%<success>."
+    - "&7Используйте команду &n<click:suggest_command:'/hologram %command% %name%'>/hologram %command% %name%</click>&r&7 для редактирования голограммы"
+hologram-delete: "<success>Голограмма &f%name% <success>была удалена."
+hologram-doesnt-exist: "<error>Голограмма &f%name% <error>не существует."
+hologram-is-not-a-text: "<error>Голограмма &f%name% <error>не является текстовой голограммой."
+hologram-is-not-a-block: "<error>Голограмма &f%name% <error>не является блочной голограммой."
+hologram-is-not-a-item: "<error>Голограмма &f%name% <error>не является предметной голограммой."
+hologram-add-line: "<success>Вы только что добавили строку в голограмму &f%name%<success>."
+hologram-set-line: "<success>Вы только что установили строку &f%line%<success> для голограммы &f%name%<success>."
+hologram-insert-before-line: "<success>Вы только что добавили новую строку перед строкой &f%line%<success> для голограммы &f%name%<success>."
+hologram-insert-after-line: "<success>Вы только что добавили новую строку после строки &f%line%<success> для голограммы &f%name%<success>."
+hologram-line-doesnt-exist: "<error>Строка &f%line% <error>не существует для голограммы &f%name%<error>."
+hologram-remove-line: "<success>Вы только что удалили строку &f%line%<success> из голограммы &f%name%<success>."
+hologram-scale: "<success>Вы только что изменили масштаб голограммы &f%name% <success>на &7%x%&8, &7%y%&8, &7%z%<success>."
+hologram-translation: "<success>Вы только что изменили перевод голограммы &f%name% <success>на &7%x%&8, &7%y%&8, &7%z%<success>."
+hologram-move-here: "<success>Вы только что телепортировали голограмму &f%name%<success> на вашу позицию."
+hologram-move-to: "<success>Вы только что телепортировали голограмму &f%name% <success>на &7%x%&8, &7%y%&8, &7%z%<success>."
+hologram-billboard: "<success>Вы только что изменили биллборд голограммы &f%name%<success> на &f%billboard%<success>."
+hologram-text-alignment: "<success>Вы только что изменили выравнивание текста голограммы &f%name%<success> на &f%textAlignment%<success>."
+hologram-yaw: "<success>Вы только что изменили рыскание голограммы &f%name%<success> на &f%yaw%<success>."
+hologram-pitch: "<success>Вы только что изменили тангаж голограммы &f%name%<success> на &f%pitch%<success>."
+hologram-text-background: "<success>Вы только что изменили цвет фона голограммы &f%name%<success> на &f%color%<success>."
+hologram-text-background-error: "<error>Не удалось разобрать цвет фона."
+hologram-text-shadow: "<success>Вы установили тень текста на &f%textshadow% <success>для голограммы &f%name%<success>."
+hologram-see-through: "<success>Вы установили прозрачность на &f%seethrough% <success>для голограммы &f%name%<success>."
+hologram-shadow-strength: "<success>Вы установили силу тени на &f%shadow% <success>для голограммы &f%name%<success>."
+hologram-shadow-radius: "<success>Вы установили радиус тени на &f%shadow% <success>для голограммы &f%name%<success>."
+hologram-view-distance: "<success>Вы установили дистанцию обзора на &f%distance% <success>для голограммы &f%name%<success>."
+hologram-list-empty: "<error>Нет голограмм, для создания используйте команду &f/holo create <name>"
+hologram-list:
+  type: WITHOUT_PREFIX
+  message: "&f%name% &8- &7%world%: %x%, %y%, %z% &8- <hover:show_text:'&7Нажмите, чтобы телепортироваться к этой голограмме'><click:run_command:'/holo tp %name%'><green>Телепорт</click> </hover><hover:show_text:'<red>Нажмите, чтобы удалить эту голограмму'><click:suggest_command:'/holo delete %name%'><red>Удалить</click></hover>"
+hologram-item-error: "<error>Вы не можете использовать воздух для этой голограммы."
+hologram-item: "<success>Вы только что изменили предмет голограммы &f%name%<success>."
+hologram-block: "<success>Вы только что изменили блок голограммы &f%name%<success> на &f%material%<success>."
+
+scoreboard-disable: "<error>Вы только что отключили табло."
+scoreboard-enable: "<success>Вы только что включили табло."
+
+command-baltop-error: "<error>Не удается найти экономику &f%name%<error>."
+command-baltop-header:
+  type: WITHOUT_PREFIX
+  message: "#00f986Больше всего денег &8(&f%page%&8/&7%maxPage%&8) <click:run_command:'/baltop %previousPage%'>&f◀</click> &8- <click:run_command:'/baltop %nextPage%'>&f▶</click>"
+command-baltop:
+  type: WITHOUT_PREFIX
+  message: "#00f986#%position% &f%name%&8: %amount%"
+
+command-voteparty-set: "<success>Вы только что установили voteparty на &f%amount% <success>голосов."
+command-voteparty-add: "<success>Вы только что добавили &f%amount% <success>голос в voteparty."
+command-voteparty-remove: "<success>Вы только что удалили &f%amount% <success>голос из voteparty."
+command-voteparty-informations: "<green>VoteParty: <white>%amount%<dark_gray>/<yellow>%objective%"
+
+command-vote-add: "<success>Вы только что добавили голос для &f%player%<success>."
+command-vote-add-error: "<error>Сайт &f%site% <error>не существует!"
+command-vote:
+  type: ACTION
+  message: "<success>Вы только что проголосовали и получили ключ голосования."
+
+vote-offline:
+  - ""
+  - "<success>Вы проголосовали <gold>%amount% раз <success>пока были оффлайн, используйте команду <yellow><click:run_command:'/mailbox'>/mailbox</click> <success>чтобы получить ваши награды!"
+  - ""
+
+vault-lore:
+  - ""
+  - "&fИнформация"
+  - " #f8b175• &7Количество&8: &e%quantity%"
+  - ""
+  - "&f<b>➥</b> #fc99f8Левый клик &7чтобы взять 1"
+  - "&f<b>➥</b> #fc99f8Правый клик &7чтобы взять 64"
+  - "&f<b>➥</b> #fc99f8Shift + Правый клик &7чтобы взять все"
+command-vault-not-found: "<error>Не удается найти хранилище &f%vaultId%<error>."
+command-vault-no-permission: "<error>У вас нет разрешения на просмотр хранилища."
+command-vault-set-slot: "<success>Вы только что установили количество слотов для &f%player% <success>на &7%slots%<success> слотов."
+command-vault-add-slot: "<success>Вы только что добавили &7%amount% <success>слот для &f%player%<success>."
+command-vault-change-icon-error: "<error>У вас есть предмет в руке."
+command-vault-change-icon-success: "<success>Вы только что изменили иконку вашего хранилища."
+command-vault-reset-icon: "<success>Вы только что сбросили иконку вашего хранилища."
+command-vault-rename-start: "<success>Пожалуйста, напишите в чате новое имя хранилища."
+command-vault-rename-success: "<success>Вы только что установили имя хранилища на &f%name%<success>."
+command-vault-rename-error: "<error>Вы не можете использовать это имя для вашего хранилища."
+command-vault-rename-reset: "<success>Вы только что сбросили имя вашего хранилища."
+
+
+command-enchant-invalid: "<error>Вы должны указать действительного игрока."
+command-enchant-error-enchant: "<error>Невозможно найти зачарование &f%name%<error>."
+command-enchant-error-item-self: "<error>У вас должен быть предмет в руке."
+command-enchant-error-item-player: "<error>У %player% нет предмета в руке."
+command-enchant-remove-self: "<success>Зачарование &f%enchant% <success>было удалено с вашего предмета в руке."
+command-enchant-remove-player: "<success>Зачарование &f%enchant% <success>было удалено с предмета из руки &f%player%<success>."
+command-enchant-success-self: "<success>Зачарование &f%enchant% <success>было применено к вашему предмету в руке."
+command-enchant-success-player: "<success>Зачарование &f%enchant% <success>было применено к предмету из руки &f%player%<success>."
+
+command-sudo-error: "<error>Вы не можете заставить игрока выполнять команды."
+command-sudo-command: "<success>Вы только что заставили игрока <white>%player% <success>выполнить команду <white>/%command%<success>."
+command-sudo-message: "<success>Вы только что заставили игрока <white>%player% <success>отправить сообщение <white>%message%<success>."
+
+# WorldEdit
+command-worldedit-give-error: "<error>Не удается найти предмет &f%name%<error>"
+command-worldedit-give-sender: "<success>Вы только что дали &f%item% <success>игроку &f%player%<success>."
+command-worldedit-give-receiver: "<success>Вы только что получили &f%item%<success>."
+command-worldedit-material-not-found: "<error>Не удается найти материал &f%material%<error>."
+command-worldedit-confirm-price:
+  - ""
+  - "<success>Цена<dark_gray>: <white>%price%"
+  - "<success>Блоки<dark_gray>:<white>%materials%"
+  - "<success>Продолжительность<dark_gray>: <white>%duration% <dark_gray>(<gray>%blocks% блоков со скоростью %speed% блок%s%/с)"
+  - ""
+  - "<#45ff55><hover:show_text:'&fНажмите, чтобы подтвердить действие'><click:run_command:'/pw confirm'>Нажмите здесь для подтверждения</click></hover><gray>"
+command-worldedit-confirm-price-cut:
+  - ""
+  - "<success>Цена<dark_gray>: <white>%price%"
+  - "<success>Продолжительность<dark_gray>: <white>%duration% <dark_gray>(<gray>%blocks% блоков со скоростью %speed% блок%s%/с)"
+  - ""
+  - "<#45ff55><hover:show_text:'&fНажмите, чтобы подтвердить действие'><click:run_command:'/pw confirm'>Нажмите здесь для подтверждения</click></hover><gray>"
+command-worldedit-confirm-material: " <white><hover:show_text:'<white>Количество<dark_gray>: <aqua>%amount%<newline><white>Общая цена<dark_gray>: <aqua>%price%<newline><white>Цена за блок<dark_gray>: <aqua>%price-per-block%'><lang:%translation-key%></hover><gray>"
+command-worldedit-confirm-error: "<error>Вы не можете сделать это сейчас."
+command-worldedit-stop-empty: "<error>У вас нет активной сессии."
+command-worldedit-stop-error: "<error>Вы не можете прекратить редактирование в данный момент."
+command-worldedit-error-item: "<error>У вас должен быть инструмент worldedit в руке."
+command-worldedit-error-max: "<error>Вы не можете использовать этот инструмент, он был использован максимально."
+command-worldedit-option-inventory-enable: "<success>Вы только что активировали worldedit для использования вашего инвентаря."
+command-worldedit-option-inventory-disable: "<error>Вы только что отключили worldedit для использования вашего инвентаря."
+command-worldedit-option-bossbar-enable: "<success>Вы только что активировали индикатор прогресса worldedit."
+command-worldedit-option-bossbar-disable: "<error>Вы только что отключили индикатор прогресса worldedit."
+command-worldedit-cancel: "<success>Вы только что отменили свой текущий выбор."
+
+worldedit-selection-error: "<error>Вы должны выбрать две позиции перед выполнением этой команды."
+worldedit-already-running: "<error>У вас уже есть редактирование в процессе, пожалуйста, подождите, пока оно не будет завершено."
+worldedit-not-enough-money: "<error>У вас недостаточно денег для этой сессии."
+worldedit-not-enough-items: "<error>У вас нет предметов в инвентаре, вы не можете этого сделать."
+worldedit-selection-pos1: "<success>Вы только что определили первую позицию."
+worldedit-selection-pos2: "<success>Вы только что определили вторую позицию."
+worldedit-selection-volume: "<error>Вы не можете изменить более &f%blocks% <error>блоков одновременно."
+worldedit-selection-distance: "<error>Расстояние между двумя точками в вашем выборе слишком велико. <dark_gray>(<gray>Максимум <white>%distance% <gray>блоков<dark_gray>)"
+
+worldedit-start-calculate-price: "&7Расчет цены в процессе, пожалуйста, подождите..."
+worldedit-start-check-inventory: "&7Проверка наличия достаточного количества предметов в вашем инвентаре, пожалуйста, подождите..."
+worldedit-start-running: "&7Запуск текущей сессии, пожалуйста, подождите..."
+worldedit-finish: "<success>Сессия завершена!"
+worldedit-refund:
+  - "<success>Вам был возвращен платеж"
+  - ""
+  - "<success>Цена<dark_gray>: <white>%price%"
+  - "<success>Блоки<dark_gray>:<red>%materials%"
+worldedit-refund-material: " <white><hover:show_text:'<white>Количество<dark_gray>: <aqua>%amount%<newline><white>Общая цена<dark_gray>: <aqua>%price%<newline><white>Цена за блок<dark_gray>: <aqua>%price-per-block%'><lang:%translation-key%></hover><gray>"
+worldedit-refund-empty: " Нет блоков для возврата"
+worldedit-bossbar: "#45ff45Оставшееся время<dark_gray>: <white>%time%"
+worldedit-speed-error: "<error>У вас нет разрешения на установку блоков в секунду."
+worldedit-permission-error: "<error>Вы не можете использовать worldedit здесь."
+experience-granted: "<success>Вы только что дали <white>%amount% %type% <success>игроку <white>%player%<success>."
+experience-setted: "<success>Вы только что установили <white>%amount% %type% <success>для <white>%player%<success>."
+experience-queried: "<success>У <white>%player% <success>есть <white>%amount% <success>%type%."
+command-clearinventory-success: "<success>Вы очистили свой инвентарь."
+command-clearinventory-success-other: "<success>Вы очистили инвентарь &f%player%<success>."
+
+# Discord
+command-link-account-already-linked: "<error>Вы уже привязаны к аккаунту."
+command-link-account-invalid-code: "<error>Неверный код."
+command-link-account-success: "<success>Вы только что привязали свой аккаунт <white>%discord%<success>."
+command-link-account-disabled: "<error>Вы не можете привязать свой аккаунт в данный момент."
+command-link-account-not-linked: "<error>Вы не привязаны к аккаунту."
+command-link-account-reset: "<success>Вы только что сбросили привязку своего аккаунта."
+
+random-word-clear: "<success>Случайное слово было очищено."
+command-pub-pattern-error: "<error>Ваше сообщение содержит запрещенные символы."
+command-pub:
+  type: WITHOUT_PREFIX
+  message: "&8[&fPUB&8] <white>%player%<dark_gray>: <red>%message%"
+step-doesnt-exist: "<error>Шаг &f%step% <error>не существует."
+step-already-exist: "<error>Шаг &f%step% <error>уже существует."

@@ -1,0 +1,202 @@
+{
+  "blockLootTables": {
+    "SAND": "digging",
+    "DIRT_PATH": "digging",
+    "MANGROVE_LEAVES": "woodcutting",
+    "DIRT": "digging",
+    "JUNGLE_LEAVES": "woodcutting",
+    "FLOWERING_AZALEA_LEAVES": "woodcutting",
+    "MYCELIUM": "digging",
+    "RED_SAND": "digging",
+    "DARK_OAK_LEAVES": "woodcutting",
+    "GRAVEL": "digging",
+    "OAK_LEAVES": "woodcutting",
+    "PODZOL": "digging",
+    "SPRUCE_LEAVES": "woodcutting",
+    "COARSE_DIRT": "digging",
+    "ACACIA_LEAVES": "woodcutting",
+    "GRASS_BLOCK": "digging",
+    "BIRCH_LEAVES": "woodcutting",
+    "AZALEA_LEAVES": "woodcutting",
+    "MUD": "digging"
+  },
+  "entityLootTables": {},
+  "lootTableAdditions": [
+    [
+      {
+        "namespace": "minecraft",
+        "key": "chests/bastion_treasure"
+      },
+      "trinkets"
+    ],
+    [
+      {
+        "namespace": "minecraft",
+        "key": "chests/village/village_weaponsmith"
+      },
+      "trinkets"
+    ],
+    [
+      {
+        "namespace": "minecraft",
+        "key": "chests/ruined_portal"
+      },
+      "trinkets"
+    ],
+    [
+      {
+        "namespace": "minecraft",
+        "key": "archaeology/desert_pyramid"
+      },
+      "trinkets"
+    ],
+    [
+      {
+        "namespace": "minecraft",
+        "key": "chests/stronghold_corridor"
+      },
+      "trinkets"
+    ],
+    [
+      {
+        "namespace": "minecraft",
+        "key": "chests/simple_dungeon"
+      },
+      "trinkets"
+    ],
+    [
+      {
+        "namespace": "minecraft",
+        "key": "archaeology/trail_ruins_rare"
+      },
+      "trinkets"
+    ],
+    [
+      {
+        "namespace": "minecraft",
+        "key": "chests/pillager_outpost"
+      },
+      "trinkets"
+    ],
+    [
+      {
+        "namespace": "minecraft",
+        "key": "chests/stronghold_library"
+      },
+      "trinkets"
+    ],
+    [
+      {
+        "namespace": "minecraft",
+        "key": "chests/underwater_ruin_big"
+      },
+      "trinkets"
+    ],
+    [
+      {
+        "namespace": "minecraft",
+        "key": "archaeology/ocean_ruin_warm"
+      },
+      "trinkets"
+    ],
+    [
+      {
+        "namespace": "minecraft",
+        "key": "chests/nether_bridge"
+      },
+      "trinkets"
+    ],
+    [
+      {
+        "namespace": "minecraft",
+        "key": "archaeology/ocean_ruin_cold"
+      },
+      "trinkets"
+    ],
+    [
+      {
+        "namespace": "minecraft",
+        "key": "chests/woodland_mansion"
+      },
+      "trinkets"
+    ],
+    [
+      {
+        "namespace": "minecraft",
+        "key": "chests/igloo_chest"
+      },
+      "trinkets"
+    ],
+    [
+      {
+        "namespace": "minecraft",
+        "key": "chests/village/village_armorer"
+      },
+      "trinkets"
+    ],
+    [
+      {
+        "namespace": "minecraft",
+        "key": "chests/buried_treasure"
+      },
+      "trinkets"
+    ],
+    [
+      {
+        "namespace": "minecraft",
+        "key": "chests/abandoned_mineshaft"
+      },
+      "trinkets"
+    ],
+    [
+      {
+        "namespace": "minecraft",
+        "key": "chests/ancient_city"
+      },
+      "trinkets"
+    ],
+    [
+      {
+        "namespace": "minecraft",
+        "key": "chests/end_city_treasure"
+      },
+      "trinkets"
+    ],
+    [
+      {
+        "namespace": "minecraft",
+        "key": "chests/shipwreck_treasure"
+      },
+      "trinkets"
+    ],
+    [
+      {
+        "namespace": "minecraft",
+        "key": "chests/spawn_bonus_chest"
+      },
+      "trinkets"
+    ],
+    [
+      {
+        "namespace": "minecraft",
+        "key": "chests/village/village_toolsmith"
+      },
+      "trinkets"
+    ],
+    [
+      {
+        "namespace": "minecraft",
+        "key": "chests/jungle_temple"
+      },
+      "trinkets"
+    ],
+    [
+      {
+        "namespace": "minecraft",
+        "key": "chests/desert_pyramid"
+      },
+      "trinkets"
+    ]
+  ],
+  "fishingLootTableTreasure": "fishing"
+}

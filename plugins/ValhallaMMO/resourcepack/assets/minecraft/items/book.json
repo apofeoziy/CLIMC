@@ -1,0 +1,19 @@
+{
+    "model": {
+        "type": "range_dispatch",
+        "property": "custom_model_data",
+        "fallback": {
+            "type": "model",
+            "model": "item/book"
+        },
+        "entries": [
+            {
+                "threshold": 1829130,
+                "model": {
+                    "type": "model",
+                    "model": "item/gui/button_return_to_menu"
+                }
+            }
+        ]
+    }
+}

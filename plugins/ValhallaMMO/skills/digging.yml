@@ -1,0 +1,67 @@
+display_name: <lang.skill-digging-displayname>
+icon: IRON_SHOVEL
+icon_data: 3510002
+description: <lang.skill-digging-description>
+
+levelbar_title: <lang.skill-digging-level-bar>
+levelbar_color: GREEN # Вы можете выбрать между BLUE, YELLOW, GREEN, PINK, PURPLE, RED, WHITE
+levelbar_style: SEGMENTED_6 # Вы можете выбрать между SEGMENTED_6, SEGMENTED_10, SEGMENTED_12, SEGMENTED_20, и SOLID
+
+forgiving_multipliers: true # множители дропа ниже 0 будут, если false, иногда приводить к тому, что добытые блоки не будут ничего выпадать.
+# если true, количество дропа не может быть ниже 1, поэтому только блоки, которые выпадают несколько предметов (такие как руда редстоуна, лазурита,
+# золотая/железная руда с удачей) будут затронуты, но все остальное будет выпадать как минимум 1 предмет.
+# Это можно установить на false, если вы хотите более сложный опыт для ваших игроков, хотя это может быть разочаровывающим для них
+
+# Копание включает некоторые бонусы археологии, один из них заключается в том, что с определенным % шансом, когда блок добывается или выкапывается, соседние блоки,
+# которые не соприкасаются с воздухом, могут быть преобразованы в подозрительный песок/гравий, содержащий некоторую добычу.
+# Материалы форматируются как МАТЕРИАЛ:МНОЖИТЕЛЬ, где множитель указывает, насколько шанс преобразования должен быть умножен
+# для каждого материала. Это позволяет более точно контролировать, какие блоки должны чаще или реже преобразовываться. (множитель по умолчанию 1)
+archaeology_convertable_gravel: # Следующие блоки могут быть преобразованы в подозрительный гравий
+  - GRAVEL:1
+
+archaeology_convertable_sand: # Следующие блоки могут быть преобразованы в подозрительный песок
+  - SAND:1
+  - SANDSTONE:1
+
+archaeology_rare_loot_tables: # Редкие таблицы добычи. Если таблица добычи не указана ближайшими структурами, будет выбрана случайная таблица из этого списка
+  - TRAIL_RUINS_ARCHAEOLOGY_RARE
+  - DESERT_PYRAMID_ARCHAEOLOGY
+
+archaeology_common_loot_tables: # Обычные таблицы добычи. Так же, как и выше, будет выбрана случайная запись, если шанс генерации редкой добычи не сработал
+  - DESERT_WELL_ARCHAEOLOGY
+  - OCEAN_RUIN_COLD_ARCHAEOLOGY
+  - OCEAN_RUIN_WARM_ARCHAEOLOGY
+  - TRAIL_RUINS_ARCHAEOLOGY_COMMON
+
+archaeology_valid_vacinity_structures:
+- ANCIENT_CITY:4:TRAIL_RUINS_ARCHAEOLOGY_RARE
+- BASTION_REMNANT:2:TRAIL_RUINS_ARCHAEOLOGY_RARE
+- DESERT_PYRAMID:1:DESERT_PYRAMID_ARCHAEOLOGY
+- END_CITY:1:TRAIL_RUINS_ARCHAEOLOGY_RARE
+- FORTRESS:8:TRAIL_RUINS_ARCHAEOLOGY_COMMON
+- JUNGLE_PYRAMID:1:TRAIL_RUINS_ARCHAEOLOGY_RARE
+- MANSION:2:TRAIL_RUINS_ARCHAEOLOGY_RARE
+- MINESHAFT:4:TRAIL_RUINS_ARCHAEOLOGY_COMMON
+- MINESHAFT_MESA:4:TRAIL_RUINS_ARCHAEOLOGY_COMMON
+- MONUMENT:2:TRAIL_RUINS_ARCHAEOLOGY_RARE
+- NETHER_FOSSIL:0:TRAIL_RUINS_ARCHAEOLOGY_COMMON
+- OCEAN_RUIN_COLD:0:OCEAN_RUIN_COLD_ARCHAEOLOGY
+- OCEAN_RUIN_WARM:0:OCEAN_RUIN_WARM_ARCHAEOLOGY
+- PILLAGER_OUTPOST:0:TRAIL_RUINS_ARCHAEOLOGY_COMMON
+- RUINED_PORTAL:0:TRAIL_RUINS_ARCHAEOLOGY_RARE
+- RUINED_PORTAL_DESERT:0:TRAIL_RUINS_ARCHAEOLOGY_RARE
+- RUINED_PORTAL_JUNGLE:0:TRAIL_RUINS_ARCHAEOLOGY_RARE
+- RUINED_PORTAL_MOUNTAIN:0:TRAIL_RUINS_ARCHAEOLOGY_RARE
+- RUINED_PORTAL_NETHER:0:TRAIL_RUINS_ARCHAEOLOGY_RARE
+- RUINED_PORTAL_OCEAN:0:TRAIL_RUINS_ARCHAEOLOGY_RARE
+- RUINED_PORTAL_SWAMP:0:TRAIL_RUINS_ARCHAEOLOGY_RARE
+- SHIPWRECK:0:TRAIL_RUINS_ARCHAEOLOGY_COMMON
+- SHIPWRECK_BEACHED:0:TRAIL_RUINS_ARCHAEOLOGY_COMMON
+- STRONGHOLD:4:TRAIL_RUINS_ARCHAEOLOGY_RARE
+- SWAMP_HUT:0:TRAIL_RUINS_ARCHAEOLOGY_COMMON
+- TRAIL_RUINS:1:TRAIL_RUINS_ARCHAEOLOGY_COMMON
+- VILLAGE_DESERT:2:TRAIL_RUINS_ARCHAEOLOGY_COMMON
+- VILLAGE_PLAINS:2:TRAIL_RUINS_ARCHAEOLOGY_COMMON
+- VILLAGE_SAVANNA:2:TRAIL_RUINS_ARCHAEOLOGY_COMMON
+- VILLAGE_SNOWY:2:TRAIL_RUINS_ARCHAEOLOGY_COMMON
+- VILLAGE_TAIGA:2:TRAIL_RUINS_ARCHAEOLOGY_COMMON

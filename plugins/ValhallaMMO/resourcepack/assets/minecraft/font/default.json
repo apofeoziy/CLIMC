@@ -1,0 +1,1752 @@
+{
+    "providers":[
+        {
+            "type": "bitmap",
+            "file": "minecraft:font/skills_gui.png",
+            "ascent": 24,
+            "height": 137,
+            "chars": [
+                "\uF001"
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "minecraft:font/immersive_recipe_selection.png",
+            "ascent": 24,
+            "height": 137,
+            "chars": [
+                "\uF002"
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "minecraft:font/editor_gridrecipe_gui.png",
+            "ascent": 24,
+            "height": 137,
+            "chars": [
+                "\uF201"
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "minecraft:font/editor_cookingrecipe_gui.png",
+            "ascent": 24,
+            "height": 137,
+            "chars": [
+                "\uF202"
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "minecraft:font/editor_smithingrecipe_gui.png",
+            "ascent": 24,
+            "height": 137,
+            "chars": [
+                "\uF203"
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "minecraft:font/editor_brewingrecipe_gui.png",
+            "ascent": 24,
+            "height": 137,
+            "chars": [
+                "\uF204"
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "minecraft:font/editor_immersiverecipe_gui.png",
+            "ascent": 24,
+            "height": 137,
+            "chars": [
+                "\uF205"
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "minecraft:font/editor_cauldronrecipe_gui.png",
+            "ascent": 24,
+            "height": 137,
+            "chars": [
+                "\uF206"
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "minecraft:font/editor_alloyrecipe_gui.png",
+            "ascent": 24,
+            "height": 137,
+            "chars": [
+                "\uF207"
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "minecraft:font/loot_table_free_selection.png",
+            "ascent": 24,
+            "height": 119,
+            "chars": [
+                "\uF100"
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "minecraft:font/editor_ingredientselection_gui.png",
+            "ascent": 24,
+            "height": 137,
+            "chars": [
+                "\uF300"
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "minecraft:font/editor_modifierselection_gui.png",
+            "ascent": 24,
+            "height": 137,
+            "chars": [
+                "\uF301"
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "minecraft:font/editor_ingredientoptionselection_gui.png",
+            "ascent": 24,
+            "height": 137,
+            "chars": [
+                "\uF302"
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "minecraft:font/editor_recipeoverview_gui.png",
+            "ascent": 24,
+            "height": 137,
+            "chars": [
+                "\uF303"
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "minecraft:font/editor_recipeselection_craftingtable_gui.png",
+            "ascent": 24,
+            "height": 137,
+            "chars": [
+                "\uF304"
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "minecraft:font/editor_recipeselection_brewing_gui.png",
+            "ascent": 24,
+            "height": 137,
+            "chars": [
+                "\uF305"
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "minecraft:font/editor_recipeselection_smithing_gui.png",
+            "ascent": 24,
+            "height": 137,
+            "chars": [
+                "\uF306"
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "minecraft:font/editor_recipeselection_furnace_gui.png",
+            "ascent": 24,
+            "height": 137,
+            "chars": [
+                "\uF307"
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "minecraft:font/editor_recipeselection_blastfurnace_gui.png",
+            "ascent": 24,
+            "height": 137,
+            "chars": [
+                "\uF308"
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "minecraft:font/editor_recipeselection_smoker_gui.png",
+            "ascent": 24,
+            "height": 137,
+            "chars": [
+                "\uF309"
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "minecraft:font/editor_recipeselection_campfire_gui.png",
+            "ascent": 24,
+            "height": 137,
+            "chars": [
+                "\uF30A"
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "minecraft:font/editor_recipeselection_immersive_gui.png",
+            "ascent": 24,
+            "height": 137,
+            "chars": [
+                "\uF30B"
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "minecraft:font/editor_recipeselection_cauldron_gui.png",
+            "ascent": 24,
+            "height": 137,
+            "chars": [
+                "\uF30C"
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "minecraft:font/editor_recipeselection_alloy_gui.png",
+            "ascent": 24,
+            "height": 137,
+            "chars": [
+                "\uF30D"
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "minecraft:font/editor_recipeselection_disabled_gui.png",
+            "ascent": 24,
+            "height": 137,
+            "chars": [
+                "\uF30E"
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "minecraft:font/editor_validationselection_gui.png",
+            "ascent": 24,
+            "height": 137,
+            "chars": [
+                "\uF30F"
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "minecraft:font/editor_loot_table.png",
+            "ascent": 24,
+            "height": 137,
+            "chars": [
+                "\uF310"
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "minecraft:font/editor_loottableoverview.png",
+            "ascent": 24,
+            "height": 137,
+            "chars": [
+                "\uF311"
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "minecraft:font/editor_loottableselection.png",
+            "ascent": 24,
+            "height": 137,
+            "chars": [
+                "\uF312"
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "minecraft:font/editor_loot_pool.png",
+            "ascent": 24,
+            "height": 137,
+            "chars": [
+                "\uF313"
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "minecraft:font/editor_predicateselection_gui.png",
+            "ascent": 24,
+            "height": 137,
+            "chars": [
+                "\uF314"
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "minecraft:font/editor_tableselection_blocks_gui.png",
+            "ascent": 24,
+            "height": 137,
+            "chars": [
+                "\uF315"
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "minecraft:font/editor_tableselection_containers_gui.png",
+            "ascent": 24,
+            "height": 137,
+            "chars": [
+                "\uF316"
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "minecraft:font/editor_tableselection_entities_gui.png",
+            "ascent": 24,
+            "height": 137,
+            "chars": [
+                "\uF317"
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "minecraft:font/editor_tableselection_fishing_gui.png",
+            "ascent": 24,
+            "height": 137,
+            "chars": [
+                "\uF318"
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "minecraft:font/editor_loot_entry.png",
+            "ascent": 24,
+            "height": 137,
+            "chars": [
+                "\uF319"
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "minecraft:font/editor_armor_sets.png",
+            "ascent": 24,
+            "height": 137,
+            "chars": [
+                "\uF31A"
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "minecraft:font/editor_customitems.png",
+            "ascent": 24,
+            "height": 137,
+            "chars": [
+                "\uF31B"
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "minecraft:font/trinkets_gui_0r.png",
+            "ascent": 24,
+            "height": 137,
+            "chars": [
+                "\uF541"
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "minecraft:font/book_page.png",
+            "ascent": 24,
+            "height": 139,
+            "chars": [
+                "\uF928"
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "space:font/space_split.png",
+            "ascent": -32768,
+            "height": -3,
+            "chars": [
+                "\uF801"
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "space:font/space_split.png",
+            "ascent": -32768,
+            "height": -4,
+            "chars": [
+                "\uF802"
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "space:font/space_split.png",
+            "ascent": -32768,
+            "height": -5,
+            "chars": [
+                "\uF803"
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "space:font/space_split.png",
+            "ascent": -32768,
+            "height": -6,
+            "chars": [
+                "\uF804"
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "space:font/space_split.png",
+            "ascent": -32768,
+            "height": -7,
+            "chars": [
+                "\uF805"
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "space:font/space_split.png",
+            "ascent": -32768,
+            "height": -8,
+            "chars": [
+                "\uF806"
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "space:font/space_split.png",
+            "ascent": -32768,
+            "height": -9,
+            "chars": [
+                "\uF807"
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "space:font/space_split.png",
+            "ascent": -32768,
+            "height": -10,
+            "chars": [
+                "\uF808"
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "space:font/space_split.png",
+            "ascent": -32768,
+            "height": -18,
+            "chars": [
+                "\uF809"
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "space:font/space_split.png",
+            "ascent": -32768,
+            "height": -34,
+            "chars": [
+                "\uF80A"
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "space:font/space_split.png",
+            "ascent": -32768,
+            "height": -66,
+            "chars": [
+                "\uF80B"
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "space:font/space_split.png",
+            "ascent": -32768,
+            "height": -130,
+            "chars": [
+                "\uF80C"
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "space:font/space_split.png",
+            "ascent": -32768,
+            "height": -258,
+            "chars": [
+                "\uF80D"
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "space:font/space_split.png",
+            "ascent": -32768,
+            "height": -514,
+            "chars": [
+                "\uF80E"
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "space:font/space_split.png",
+            "ascent": -32768,
+            "height": -1026,
+            "chars": [
+                "\uF80F"
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "space:font/space_split.png",
+            "ascent": -65536,
+            "height": -32770,
+            "chars": [
+                "\uF800"
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "space:font/space_split.png",
+            "ascent": -32768,
+            "height": 0,
+            "chars": [
+                "\uF821"
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "space:font/space_split.png",
+            "ascent": -32768,
+            "height": 1,
+            "chars": [
+                "\uF822"
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "space:font/space_split.png",
+            "ascent": -32768,
+            "height": 2,
+            "chars": [
+                "\uF823"
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "space:font/space_split.png",
+            "ascent": -32768,
+            "height": 3,
+            "chars": [
+                "\uF824"
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "space:font/space_split.png",
+            "ascent": -32768,
+            "height": 4,
+            "chars": [
+                "\uF825"
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "space:font/space_split.png",
+            "ascent": -32768,
+            "height": 5,
+            "chars": [
+                "\uF826"
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "space:font/space_split.png",
+            "ascent": -32768,
+            "height": 6,
+            "chars": [
+                "\uF827"
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "space:font/space_split.png",
+            "ascent": -32768,
+            "height": 7,
+            "chars": [
+                "\uF828"
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "space:font/space_split.png",
+            "ascent": -32768,
+            "height": 15,
+            "chars": [
+                "\uF829"
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "space:font/space_split.png",
+            "ascent": -32768,
+            "height": 31,
+            "chars": [
+                "\uF82A"
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "space:font/space_split.png",
+            "ascent": -32768,
+            "height": 63,
+            "chars": [
+                "\uF82B"
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "space:font/space_split.png",
+            "ascent": -32768,
+            "height": 127,
+            "chars": [
+                "\uF82C"
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "space:font/space_split.png",
+            "ascent": -32768,
+            "height": 255,
+            "chars": [
+                "\uF82D"
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "space:font/space_split.png",
+            "ascent": -32768,
+            "height": 511,
+            "chars": [
+                "\uF82E"
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "space:font/space_split.png",
+            "ascent": -32768,
+            "height": 1023,
+            "chars": [
+                "\uF82F"
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "space:font/space_split.png",
+            "ascent": -65536,
+            "height": 32767,
+            "chars": [
+                "\uF820"
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "space:font/space_nosplit.png",
+            "ascent": -32768,
+            "height": -3,
+            "chars": [
+                "\uF811"
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "space:font/space_nosplit.png",
+            "ascent": -32768,
+            "height": -4,
+            "chars": [
+                "\uF812"
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "space:font/space_nosplit.png",
+            "ascent": -32768,
+            "height": -5,
+            "chars": [
+                "\uF813"
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "space:font/space_nosplit.png",
+            "ascent": -32768,
+            "height": -6,
+            "chars": [
+                "\uF814"
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "space:font/space_nosplit.png",
+            "ascent": -32768,
+            "height": -7,
+            "chars": [
+                "\uF815"
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "space:font/space_nosplit.png",
+            "ascent": -32768,
+            "height": -8,
+            "chars": [
+                "\uF816"
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "space:font/space_nosplit.png",
+            "ascent": -32768,
+            "height": -9,
+            "chars": [
+                "\uF817"
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "space:font/space_nosplit.png",
+            "ascent": -32768,
+            "height": -10,
+            "chars": [
+                "\uF818"
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "space:font/space_nosplit.png",
+            "ascent": -32768,
+            "height": -18,
+            "chars": [
+                "\uF819"
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "space:font/space_nosplit.png",
+            "ascent": -32768,
+            "height": -34,
+            "chars": [
+                "\uF81A"
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "space:font/space_nosplit.png",
+            "ascent": -32768,
+            "height": -66,
+            "chars": [
+                "\uF81B"
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "space:font/space_nosplit.png",
+            "ascent": -32768,
+            "height": -130,
+            "chars": [
+                "\uF81C"
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "space:font/space_nosplit.png",
+            "ascent": -32768,
+            "height": -258,
+            "chars": [
+                "\uF81D"
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "space:font/space_nosplit.png",
+            "ascent": -32768,
+            "height": -514,
+            "chars": [
+                "\uF81E"
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "space:font/space_nosplit.png",
+            "ascent": -32768,
+            "height": -1026,
+            "chars": [
+                "\uF81F"
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "space:font/space_nosplit.png",
+            "ascent": -65536,
+            "height": -32770,
+            "chars": [
+                "\uF810"
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "space:font/space_nosplit.png",
+            "ascent": -32768,
+            "height": 0,
+            "chars": [
+                "\uF831"
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "space:font/space_nosplit.png",
+            "ascent": -32768,
+            "height": 1,
+            "chars": [
+                "\uF832"
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "space:font/space_nosplit.png",
+            "ascent": -32768,
+            "height": 2,
+            "chars": [
+                "\uF833"
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "space:font/space_nosplit.png",
+            "ascent": -32768,
+            "height": 3,
+            "chars": [
+                "\uF834"
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "space:font/space_nosplit.png",
+            "ascent": -32768,
+            "height": 4,
+            "chars": [
+                "\uF835"
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "space:font/space_nosplit.png",
+            "ascent": -32768,
+            "height": 5,
+            "chars": [
+                "\uF836"
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "space:font/space_nosplit.png",
+            "ascent": -32768,
+            "height": 6,
+            "chars": [
+                "\uF837"
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "space:font/space_nosplit.png",
+            "ascent": -32768,
+            "height": 7,
+            "chars": [
+                "\uF838"
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "space:font/space_nosplit.png",
+            "ascent": -32768,
+            "height": 15,
+            "chars": [
+                "\uF839"
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "space:font/space_nosplit.png",
+            "ascent": -32768,
+            "height": 31,
+            "chars": [
+                "\uF83A"
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "space:font/space_nosplit.png",
+            "ascent": -32768,
+            "height": 63,
+            "chars": [
+                "\uF83B"
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "space:font/space_nosplit.png",
+            "ascent": -32768,
+            "height": 127,
+            "chars": [
+                "\uF83C"
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "space:font/space_nosplit.png",
+            "ascent": -32768,
+            "height": 255,
+            "chars": [
+                "\uF83D"
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "space:font/space_nosplit.png",
+            "ascent": -32768,
+            "height": 511,
+            "chars": [
+                "\uF83E"
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "space:font/space_nosplit.png",
+            "ascent": -32768,
+            "height": 1023,
+            "chars": [
+                "\uF83F"
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "space:font/space_nosplit.png",
+            "ascent": -65536,
+            "height": 32767,
+            "chars": [
+                "\uF830"
+            ]
+        },
+        { "type": "bitmap",
+            "file": "minecraft:font/effect_icons/speed.png", "ascent": 8, "height": 8,
+            "chars": [ "\uED00" ]
+        },
+        { "type": "bitmap",
+            "file": "minecraft:font/effect_icons/slow.png", "ascent": 8, "height": 8,
+            "chars": [ "\uED01" ]
+        },
+        { "type": "bitmap",
+            "file": "minecraft:font/effect_icons/fast_digging.png", "ascent": 8, "height": 8,
+            "chars": [ "\uED02" ]
+        },
+        { "type": "bitmap",
+            "file": "minecraft:font/effect_icons/slow_digging.png", "ascent": 8, "height": 8,
+            "chars": [ "\uED03" ]
+        },
+        { "type": "bitmap",
+            "file": "minecraft:font/effect_icons/increase_damage.png", "ascent": 8, "height": 8,
+            "chars": [ "\uED04" ]
+        },
+        { "type": "bitmap",
+            "file": "minecraft:font/effect_icons/heal.png", "ascent": 8, "height": 8,
+            "chars": [ "\uED05" ]
+        },
+        { "type": "bitmap",
+            "file": "minecraft:font/effect_icons/harm.png", "ascent": 8, "height": 8,
+            "chars": [ "\uED06" ]
+        },
+        { "type": "bitmap",
+            "file": "minecraft:font/effect_icons/jump.png", "ascent": 8, "height": 8,
+            "chars": [ "\uED07" ]
+        },
+        { "type": "bitmap",
+            "file": "minecraft:font/effect_icons/confusion.png", "ascent": 8, "height": 8,
+            "chars": [ "\uED08" ]
+        },
+        { "type": "bitmap",
+            "file": "minecraft:font/effect_icons/regeneration.png", "ascent": 8, "height": 8,
+            "chars": [ "\uED09" ]
+        },
+        { "type": "bitmap",
+            "file": "minecraft:font/effect_icons/damage_resistance.png", "ascent": 8, "height": 8,
+            "chars": [ "\uED0A" ]
+        },
+        { "type": "bitmap",
+            "file": "minecraft:font/effect_icons/fire_resistance.png", "ascent": 8, "height": 8,
+            "chars": [ "\uED0B" ]
+        },
+        { "type": "bitmap",
+            "file": "minecraft:font/effect_icons/water_breathing.png", "ascent": 8, "height": 8,
+            "chars": [ "\uED0C" ]
+        },
+        { "type": "bitmap",
+            "file": "minecraft:font/effect_icons/invisibility.png", "ascent": 8, "height": 8,
+            "chars": [ "\uED0D" ]
+        },
+        { "type": "bitmap",
+            "file": "minecraft:font/effect_icons/blindness.png", "ascent": 8, "height": 8,
+            "chars": [ "\uED0E" ]
+        },
+        { "type": "bitmap",
+            "file": "minecraft:font/effect_icons/darkness.png", "ascent": 8, "height": 8,
+            "chars": [ "\uED0F" ]
+        },
+        { "type": "bitmap",
+            "file": "minecraft:font/effect_icons/night_vision.png", "ascent": 8, "height": 8,
+            "chars": [ "\uED10" ]
+        },
+        { "type": "bitmap",
+            "file": "minecraft:font/effect_icons/hunger.png", "ascent": 8, "height": 8,
+            "chars": [ "\uED11" ]
+        },
+        { "type": "bitmap",
+            "file": "minecraft:font/effect_icons/weakness.png", "ascent": 8, "height": 8,
+            "chars": [ "\uED12" ]
+        },
+        { "type": "bitmap",
+            "file": "minecraft:font/effect_icons/poison.png", "ascent": 8, "height": 8,
+            "chars": [ "\uED13" ]
+        },
+        { "type": "bitmap",
+            "file": "minecraft:font/effect_icons/wither.png", "ascent": 8, "height": 8,
+            "chars": [ "\uED14" ]
+        },
+        { "type": "bitmap",
+            "file": "minecraft:font/effect_icons/health_boost.png", "ascent": 8, "height": 8,
+            "chars": [ "\uED15" ]
+        },
+        { "type": "bitmap",
+            "file": "minecraft:font/effect_icons/absorption.png", "ascent": 8, "height": 8,
+            "chars": [ "\uED16" ]
+        },
+        { "type": "bitmap",
+            "file": "minecraft:font/effect_icons/saturation.png", "ascent": 8, "height": 8,
+            "chars": [ "\uED17" ]
+        },
+        { "type": "bitmap",
+            "file": "minecraft:font/effect_icons/glowing.png", "ascent": 8, "height": 8,
+            "chars": [ "\uED18" ]
+        },
+        { "type": "bitmap",
+            "file": "minecraft:font/effect_icons/levitation.png", "ascent": 8, "height": 8,
+            "chars": [ "\uED19" ]
+        },
+        { "type": "bitmap",
+            "file": "minecraft:font/effect_icons/luck.png", "ascent": 8, "height": 8,
+            "chars": [ "\uED1A" ]
+        },
+        { "type": "bitmap",
+            "file": "minecraft:font/effect_icons/unluck.png", "ascent": 8, "height": 8,
+            "chars": [ "\uED1B" ]
+        },
+        { "type": "bitmap",
+            "file": "minecraft:font/effect_icons/slow_falling.png", "ascent": 8, "height": 8,
+            "chars": [ "\uED1C" ]
+        },
+        { "type": "bitmap",
+            "file": "minecraft:font/effect_icons/conduit_power.png", "ascent": 8, "height": 8,
+            "chars": [ "\uED1D" ]
+        },
+        { "type": "bitmap",
+            "file": "minecraft:font/effect_icons/dolphins_grace.png", "ascent": 8, "height": 8,
+            "chars": [ "\uED1E" ]
+        },
+        { "type": "bitmap",
+            "file": "minecraft:font/effect_icons/bad_omen.png", "ascent": 8, "height": 8,
+            "chars": [ "\uED1F" ]
+        },
+        { "type": "bitmap",
+            "file": "minecraft:font/effect_icons/hero_of_the_village.png", "ascent": 8, "height": 8,
+            "chars": [ "\uED20" ]
+        },
+        { "type": "bitmap",
+            "file": "minecraft:font/effect_icons/infested.png", "ascent": 8, "height": 8,
+            "chars": [ "\uED21" ]
+        },
+        { "type": "bitmap",
+            "file": "minecraft:font/effect_icons/oozing.png", "ascent": 8, "height": 8,
+            "chars": [ "\uED22" ]
+        },
+        { "type": "bitmap",
+            "file": "minecraft:font/effect_icons/weaving.png", "ascent": 8, "height": 8,
+            "chars": [ "\uED23" ]
+        },
+        { "type": "bitmap",
+            "file": "minecraft:font/effect_icons/wind_charged.png", "ascent": 8, "height": 8,
+            "chars": [ "\uED24" ]
+        },
+        { "type": "bitmap",
+            "file": "minecraft:font/effect_icons/bow_strength.png", "ascent": 8, "height": 8,
+            "chars": [ "\uEE00" ]
+        },
+        { "type": "bitmap",
+            "file": "minecraft:font/effect_icons/arrow_damage.png", "ascent": 8, "height": 8,
+            "chars": [ "\uEE01" ]
+        },
+        { "type": "bitmap",
+            "file": "minecraft:font/effect_icons/ammo_consumption.png", "ascent": 8, "height": 8,
+            "chars": [ "\uEE02" ]
+        },
+        { "type": "bitmap",
+            "file": "minecraft:font/effect_icons/arrow_velocity.png", "ascent": 8, "height": 8,
+            "chars": [ "\uEE03" ]
+        },
+        { "type": "bitmap",
+            "file": "minecraft:font/effect_icons/arrow_accuracy.png", "ascent": 8, "height": 8,
+            "chars": [ "\uEE04" ]
+        },
+        { "type": "bitmap",
+            "file": "minecraft:font/effect_icons/arrow_piercing.png", "ascent": 8, "height": 8,
+            "chars": [ "\uEE05" ]
+        },
+        { "type": "bitmap",
+            "file": "minecraft:font/effect_icons/knockback.png", "ascent": 8, "height": 8,
+            "chars": [ "\uEE06" ]
+        },
+        { "type": "bitmap",
+            "file": "minecraft:font/effect_icons/stun_chance.png", "ascent": 8, "height": 8,
+            "chars": [ "\uEE07" ]
+        },
+        { "type": "bitmap",
+            "file": "minecraft:font/effect_icons/bleed_chance.png", "ascent": 8, "height": 8,
+            "chars": [ "\uEE08" ]
+        },
+        { "type": "bitmap",
+            "file": "minecraft:font/effect_icons/bleed_damage.png", "ascent": 8, "height": 8,
+            "chars": [ "\uEE09" ]
+        },
+        { "type": "bitmap",
+            "file": "minecraft:font/effect_icons/bleed_duration.png", "ascent": 8, "height": 8,
+            "chars": [ "\uEE0A" ]
+        },
+        { "type": "bitmap",
+            "file": "minecraft:font/effect_icons/crit_chance.png", "ascent": 8, "height": 8,
+            "chars": [ "\uEE0B" ]
+        },
+        { "type": "bitmap",
+            "file": "minecraft:font/effect_icons/crit_damage.png", "ascent": 8, "height": 8,
+            "chars": [ "\uEE0C" ]
+        },
+        { "type": "bitmap",
+            "file": "minecraft:font/effect_icons/armor_penetration_flat.png", "ascent": 8, "height": 8,
+            "chars": [ "\uEE0D" ]
+        },
+        { "type": "bitmap",
+            "file": "minecraft:font/effect_icons/light_armor_penetration_flat.png", "ascent": 8, "height": 8,
+            "chars": [ "\uEE0E" ]
+        },
+        { "type": "bitmap",
+            "file": "minecraft:font/effect_icons/heavy_armor_penetration_flat.png", "ascent": 8, "height": 8,
+            "chars": [ "\uEE0F" ]
+        },
+        { "type": "bitmap",
+            "file": "minecraft:font/effect_icons/armor_penetration_fraction.png", "ascent": 8, "height": 8,
+            "chars": [ "\uEE10" ]
+        },
+        { "type": "bitmap",
+            "file": "minecraft:font/effect_icons/light_armor_penetration_fraction.png", "ascent": 8, "height": 8,
+            "chars": [ "\uEE11" ]
+        },
+        { "type": "bitmap",
+            "file": "minecraft:font/effect_icons/heavy_armor_penetration_fraction.png", "ascent": 8, "height": 8,
+            "chars": [ "\uEE12" ]
+        },
+        { "type": "bitmap",
+            "file": "minecraft:font/effect_icons/heavy_armor_damage.png", "ascent": 8, "height": 8,
+            "chars": [ "\uEE13" ]
+        },
+        { "type": "bitmap",
+            "file": "minecraft:font/effect_icons/light_armor_damage.png", "ascent": 8, "height": 8,
+            "chars": [ "\uEE14" ]
+        },
+        { "type": "bitmap",
+            "file": "minecraft:font/effect_icons/immunity_bonus_fraction.png", "ascent": 8, "height": 8,
+            "chars": [ "\uEE15" ]
+        },
+        { "type": "bitmap",
+            "file": "minecraft:font/effect_icons/immunity_bonus_flat.png", "ascent": 8, "height": 8,
+            "chars": [ "\uEE16" ]
+        },
+        { "type": "bitmap",
+            "file": "minecraft:font/effect_icons/immunity_reduction.png", "ascent": 8, "height": 8,
+            "chars": [ "\uEE17" ]
+        },
+        { "type": "bitmap",
+            "file": "minecraft:font/effect_icons/damage_unarmed.png", "ascent": 8, "height": 8,
+            "chars": [ "\uEE18" ]
+        },
+        { "type": "bitmap",
+            "file": "minecraft:font/effect_icons/damage_melee.png", "ascent": 8, "height": 8,
+            "chars": [ "\uEE19" ]
+        },
+        { "type": "bitmap",
+            "file": "minecraft:font/effect_icons/damage_ranged.png", "ascent": 8, "height": 8,
+            "chars": [ "\uEE1A" ]
+        },
+        { "type": "bitmap",
+            "file": "minecraft:font/effect_icons/damage_all.png", "ascent": 8, "height": 8,
+            "chars": [ "\uEE1B" ]
+        },
+        { "type": "bitmap",
+            "file": "minecraft:font/effect_icons/attack_reach.png", "ascent": 8, "height": 8,
+            "chars": [ "\uEE1C" ]
+        },
+        { "type": "bitmap",
+            "file": "minecraft:font/effect_icons/velocity_damage.png", "ascent": 8, "height": 8,
+            "chars": [ "\uEE1D" ]
+        },
+        { "type": "bitmap",
+            "file": "minecraft:font/effect_icons/dismount_chance.png", "ascent": 8, "height": 8,
+            "chars": [ "\uEE1E" ]
+        },
+        { "type": "bitmap",
+            "file": "minecraft:font/effect_icons/custom_damage_resistance.png", "ascent": 8, "height": 8,
+            "chars": [ "\uEE1F" ]
+        },
+        { "type": "bitmap",
+            "file": "minecraft:font/effect_icons/explosion_resistance.png", "ascent": 8, "height": 8,
+            "chars": [ "\uEE20" ]
+        },
+        { "type": "bitmap",
+            "file": "minecraft:font/effect_icons/fall_damage_resistance.png", "ascent": 8, "height": 8,
+            "chars": [ "\uEE21" ]
+        },
+        { "type": "bitmap",
+            "file": "minecraft:font/effect_icons/custom_fire_resistance.png", "ascent": 8, "height": 8,
+            "chars": [ "\uEE22" ]
+        },
+        { "type": "bitmap",
+            "file": "minecraft:font/effect_icons/magic_resistance.png", "ascent": 8, "height": 8,
+            "chars": [ "\uEE23" ]
+        },
+        { "type": "bitmap",
+            "file": "minecraft:font/effect_icons/bleed_resistance.png", "ascent": 8, "height": 8,
+            "chars": [ "\uEE24" ]
+        },
+        { "type": "bitmap",
+            "file": "minecraft:font/effect_icons/stun_resistance.png", "ascent": 8, "height": 8,
+            "chars": [ "\uEE25" ]
+        },
+        { "type": "bitmap",
+            "file": "minecraft:font/effect_icons/poison_resistance.png", "ascent": 8, "height": 8,
+            "chars": [ "\uEE26" ]
+        },
+        { "type": "bitmap",
+            "file": "minecraft:font/effect_icons/projectile_resistance.png", "ascent": 8, "height": 8,
+            "chars": [ "\uEE27" ]
+        },
+        { "type": "bitmap",
+            "file": "minecraft:font/effect_icons/melee_resistance.png", "ascent": 8, "height": 8,
+            "chars": [ "\uEE28" ]
+        },
+        { "type": "bitmap",
+            "file": "minecraft:font/effect_icons/dodge_chance.png", "ascent": 8, "height": 8,
+            "chars": [ "\uEE29" ]
+        },
+        { "type": "bitmap",
+            "file": "minecraft:font/effect_icons/healing_bonus.png", "ascent": 8, "height": 8,
+            "chars": [ "\uEE2A" ]
+        },
+        { "type": "bitmap",
+            "file": "minecraft:font/effect_icons/food_consumption.png", "ascent": 8, "height": 8,
+            "chars": [ "\uEE2B" ]
+        },
+        { "type": "bitmap",
+            "file": "minecraft:font/effect_icons/cooldown_reduction.png", "ascent": 8, "height": 8,
+            "chars": [ "\uEE2C" ]
+        },
+        { "type": "bitmap",
+            "file": "minecraft:font/effect_icons/explosion_power.png", "ascent": 8, "height": 8,
+            "chars": [ "\uEE2D" ]
+        },
+        { "type": "bitmap",
+            "file": "minecraft:font/effect_icons/crafting_speed.png", "ascent": 8, "height": 8,
+            "chars": [ "\uEE2E" ]
+        },
+        { "type": "bitmap",
+            "file": "minecraft:font/effect_icons/alchemy_quality.png", "ascent": 8, "height": 8,
+            "chars": [ "\uEE2F" ]
+        },
+        { "type": "bitmap",
+            "file": "minecraft:font/effect_icons/alchemy_quality_fraction.png", "ascent": 8, "height": 8,
+            "chars": [ "\uEE30" ]
+        },
+        { "type": "bitmap",
+            "file": "minecraft:font/effect_icons/enchanting_quality.png", "ascent": 8, "height": 8,
+            "chars": [ "\uEE31" ]
+        },
+        { "type": "bitmap",
+            "file": "minecraft:font/effect_icons/enchanting_quality_fraction.png", "ascent": 8, "height": 8,
+            "chars": [ "\uEE32" ]
+        },
+        { "type": "bitmap",
+            "file": "minecraft:font/effect_icons/anvil_quality_flat.png", "ascent": 8, "height": 8,
+            "chars": [ "\uEE33" ]
+        },
+        { "type": "bitmap",
+            "file": "minecraft:font/effect_icons/anvil_quality_fraction.png", "ascent": 8, "height": 8,
+            "chars": [ "\uEE34" ]
+        },
+        { "type": "bitmap",
+            "file": "minecraft:font/effect_icons/brewing_ingredient_consumption.png", "ascent": 8, "height": 8,
+            "chars": [ "\uEE35" ]
+        },
+        { "type": "bitmap",
+            "file": "minecraft:font/effect_icons/brewing_speed.png", "ascent": 8, "height": 8,
+            "chars": [ "\uEE36" ]
+        },
+        { "type": "bitmap",
+            "file": "minecraft:font/effect_icons/potion_consumption.png", "ascent": 8, "height": 8,
+            "chars": [ "\uEE37" ]
+        },
+        { "type": "bitmap",
+            "file": "minecraft:font/effect_icons/throwing_velocity.png", "ascent": 8, "height": 8,
+            "chars": [ "\uEE38" ]
+        },
+        { "type": "bitmap",
+            "file": "minecraft:font/effect_icons/smithing_quality.png", "ascent": 8, "height": 8,
+            "chars": [ "\uEE39" ]
+        },
+        { "type": "bitmap",
+            "file": "minecraft:font/effect_icons/smithing_quality_fraction.png", "ascent": 8, "height": 8,
+            "chars": [ "\uEE3A" ]
+        },
+        { "type": "bitmap",
+            "file": "minecraft:font/effect_icons/mining_rare_drops.png", "ascent": 8, "height": 8,
+            "chars": [ "\uEE3B" ]
+        },
+        { "type": "bitmap",
+            "file": "minecraft:font/effect_icons/mining_drops.png", "ascent": 8, "height": 8,
+            "chars": [ "\uEE3C" ]
+        },
+        { "type": "bitmap",
+            "file": "minecraft:font/effect_icons/woodcutting_rare_drops.png", "ascent": 8, "height": 8,
+            "chars": [ "\uEE3D" ]
+        },
+        { "type": "bitmap",
+            "file": "minecraft:font/effect_icons/woodcutting_drops.png", "ascent": 8, "height": 8,
+            "chars": [ "\uEE3E" ]
+        },
+        { "type": "bitmap",
+            "file": "minecraft:font/effect_icons/digging_rare_drops.png", "ascent": 8, "height": 8,
+            "chars": [ "\uEE3F" ]
+        },
+        { "type": "bitmap",
+            "file": "minecraft:font/effect_icons/digging_drops.png", "ascent": 8, "height": 8,
+            "chars": [ "\uEE40" ]
+        },
+        { "type": "bitmap",
+            "file": "minecraft:font/effect_icons/farming_rare_drops.png", "ascent": 8, "height": 8,
+            "chars": [ "\uEE41" ]
+        },
+        { "type": "bitmap",
+            "file": "minecraft:font/effect_icons/farming_drops.png", "ascent": 8, "height": 8,
+            "chars": [ "\uEE42" ]
+        },
+        { "type": "bitmap",
+            "file": "minecraft:font/effect_icons/fishing_luck.png", "ascent": 8, "height": 8,
+            "chars": [ "\uEE43" ]
+        },
+        { "type": "bitmap",
+            "file": "minecraft:font/effect_icons/skill_exp_gain.png", "ascent": 8, "height": 8,
+            "chars": [ "\uEE44" ]
+        },
+        { "type": "bitmap",
+            "file": "minecraft:font/effect_icons/vanilla_exp_gain.png", "ascent": 8, "height": 8,
+            "chars": [ "\uEE45" ]
+        },
+        { "type": "bitmap",
+            "file": "minecraft:font/effect_icons/damage_taken.png", "ascent": 8, "height": 8,
+            "chars": [ "\uEE46" ]
+        },
+        { "type": "bitmap",
+            "file": "minecraft:font/effect_icons/reflect_chance.png", "ascent": 8, "height": 8,
+            "chars": [ "\uEE47" ]
+        },
+        { "type": "bitmap",
+            "file": "minecraft:font/effect_icons/reflect_fraction.png", "ascent": 8, "height": 8,
+            "chars": [ "\uEE48" ]
+        },
+        { "type": "bitmap",
+            "file": "minecraft:font/effect_icons/smithing_masterpiece_flat.png", "ascent": 8, "height": 8,
+            "chars": [ "\uEE49" ]
+        },
+        { "type": "bitmap",
+            "file": "minecraft:font/effect_icons/smithing_masterpiece_fraction.png", "ascent": 8, "height": 8,
+            "chars": [ "\uEE4A" ]
+        },
+        { "type": "bitmap",
+            "file": "minecraft:font/effect_icons/enchanting_masterpiece_flat.png", "ascent": 8, "height": 8,
+            "chars": [ "\uEE4B" ]
+        },
+        { "type": "bitmap",
+            "file": "minecraft:font/effect_icons/enchanting_masterpiece_fraction.png", "ascent": 8, "height": 8,
+            "chars": [ "\uEE4C" ]
+        },
+        { "type": "bitmap",
+            "file": "minecraft:font/effect_icons/alchemy_masterpiece_flat.png", "ascent": 8, "height": 8,
+            "chars": [ "\uEE4D" ]
+        },
+        { "type": "bitmap",
+            "file": "minecraft:font/effect_icons/alchemy_masterpiece_fraction.png", "ascent": 8, "height": 8,
+            "chars": [ "\uEE4E" ]
+        },
+        { "type": "bitmap",
+            "file": "minecraft:font/effect_icons/custom_luck.png", "ascent": 8, "height": 8,
+            "chars": [ "\uEE4F" ]
+        },
+        { "type": "bitmap",
+            "file": "minecraft:font/effect_icons/armor_flat.png", "ascent": 8, "height": 8,
+            "chars": [ "\uEE50" ]
+        },
+        { "type": "bitmap",
+            "file": "minecraft:font/effect_icons/armor_fraction.png", "ascent": 8, "height": 8,
+            "chars": [ "\uEE51" ]
+        },
+        { "type": "bitmap",
+            "file": "minecraft:font/effect_icons/armor_toughness_flat.png", "ascent": 8, "height": 8,
+            "chars": [ "\uEE52" ]
+        },
+        { "type": "bitmap",
+            "file": "minecraft:font/effect_icons/armor_toughness_fraction.png", "ascent": 8, "height": 8,
+            "chars": [ "\uEE53" ]
+        },
+        { "type": "bitmap",
+            "file": "minecraft:font/effect_icons/attack_damage.png", "ascent": 8, "height": 8,
+            "chars": [ "\uEE54" ]
+        },
+        { "type": "bitmap",
+            "file": "minecraft:font/effect_icons/attack_speed.png", "ascent": 8, "height": 8,
+            "chars": [ "\uEE55" ]
+        },
+        { "type": "bitmap",
+            "file": "minecraft:font/effect_icons/knockback_resistance.png", "ascent": 8, "height": 8,
+            "chars": [ "\uEE56" ]
+        },
+        { "type": "bitmap",
+            "file": "minecraft:font/effect_icons/max_health_flat.png", "ascent": 8, "height": 8,
+            "chars": [ "\uEE57" ]
+        },
+        { "type": "bitmap",
+            "file": "minecraft:font/effect_icons/max_health_fraction.png", "ascent": 8, "height": 8,
+            "chars": [ "\uEE58" ]
+        },
+        { "type": "bitmap",
+            "file": "minecraft:font/effect_icons/movement_speed.png", "ascent": 8, "height": 8,
+            "chars": [ "\uEE59" ]
+        },
+        { "type": "bitmap",
+            "file": "minecraft:font/effect_icons/chocolate_milk.png", "ascent": 8, "height": 8,
+            "chars": [ "\uEE5A" ]
+        },
+        { "type": "bitmap",
+            "file": "minecraft:font/effect_icons/milk.png", "ascent": 8, "height": 8,
+            "chars": [ "\uEE5B" ]
+        },
+        { "type": "bitmap",
+            "file": "minecraft:font/effect_icons/sneak_movement_speed.png", "ascent": 8, "height": 8,
+            "chars": [ "\uEE5C" ]
+        },
+        { "type": "bitmap",
+            "file": "minecraft:font/effect_icons/sprint_movement_speed.png", "ascent": 8, "height": 8,
+            "chars": [ "\uEE5D" ]
+        },
+        { "type": "bitmap",
+            "file": "minecraft:font/effect_icons/damage_explosion.png", "ascent": 8, "height": 8,
+            "chars": [ "\uEE5E" ]
+        },
+        { "type": "bitmap",
+            "file": "minecraft:font/effect_icons/damage_fire.png", "ascent": 8, "height": 8,
+            "chars": [ "\uEE5F" ]
+        },
+        { "type": "bitmap",
+            "file": "minecraft:font/effect_icons/damage_magic.png", "ascent": 8, "height": 8,
+            "chars": [ "\uEE60" ]
+        },
+        { "type": "bitmap",
+            "file": "minecraft:font/effect_icons/damage_poison.png", "ascent": 8, "height": 8,
+            "chars": [ "\uEE61" ]
+        },
+        { "type": "bitmap",
+            "file": "minecraft:font/effect_icons/damage_bludgeoning.png", "ascent": 8, "height": 8,
+            "chars": [ "\uEE62" ]
+        },
+        { "type": "bitmap",
+            "file": "minecraft:font/effect_icons/damage_lightning.png", "ascent": 8, "height": 8,
+            "chars": [ "\uEE63" ]
+        },
+        { "type": "bitmap",
+            "file": "minecraft:font/effect_icons/damage_freezing.png", "ascent": 8, "height": 8,
+            "chars": [ "\uEE64" ]
+        },
+        { "type": "bitmap",
+            "file": "minecraft:font/effect_icons/damage_radiant.png", "ascent": 8, "height": 8,
+            "chars": [ "\uEE65" ]
+        },
+        { "type": "bitmap",
+            "file": "minecraft:font/effect_icons/damage_necrotic.png", "ascent": 8, "height": 8,
+            "chars": [ "\uEE66" ]
+        },
+        { "type": "bitmap",
+            "file": "minecraft:font/effect_icons/cooking_speed.png", "ascent": 8, "height": 8,
+            "chars": [ "\uEE67" ]
+        },
+        { "type": "bitmap",
+            "file": "minecraft:font/effect_icons/jump_height.png", "ascent": 8, "height": 8,
+            "chars": [ "\uEE68" ]
+        },
+        { "type": "bitmap",
+            "file": "minecraft:font/effect_icons/jumps.png", "ascent": 8, "height": 8,
+            "chars": [ "\uEE69" ]
+        },
+        { "type": "bitmap",
+            "file": "minecraft:font/effect_icons/extra_explosion_damage.png", "ascent": 8, "height": 8,
+            "chars": [ "\uEE6A" ]
+        },
+        { "type": "bitmap",
+            "file": "minecraft:font/effect_icons/extra_fire_damage.png", "ascent": 8, "height": 8,
+            "chars": [ "\uEE6B" ]
+        },
+        { "type": "bitmap",
+            "file": "minecraft:font/effect_icons/extra_magic_damage.png", "ascent": 8, "height": 8,
+            "chars": [ "\uEE6C" ]
+        },
+        { "type": "bitmap",
+            "file": "minecraft:font/effect_icons/extra_poison_damage.png", "ascent": 8, "height": 8,
+            "chars": [ "\uEE6D" ]
+        },
+        { "type": "bitmap",
+            "file": "minecraft:font/effect_icons/extra_bludgeoning_damage.png", "ascent": 8, "height": 8,
+            "chars": [ "\uEE6E" ]
+        },
+        { "type": "bitmap",
+            "file": "minecraft:font/effect_icons/extra_lightning_damage.png", "ascent": 8, "height": 8,
+            "chars": [ "\uEE6F" ]
+        },
+        { "type": "bitmap",
+            "file": "minecraft:font/effect_icons/extra_freezing_damage.png", "ascent": 8, "height": 8,
+            "chars": [ "\uEE70" ]
+        },
+        { "type": "bitmap",
+            "file": "minecraft:font/effect_icons/extra_radiant_damage.png", "ascent": 8, "height": 8,
+            "chars": [ "\uEE71" ]
+        },
+        { "type": "bitmap",
+            "file": "minecraft:font/effect_icons/extra_necrotic_damage.png", "ascent": 8, "height": 8,
+            "chars": [ "\uEE72" ]
+        },
+        { "type": "bitmap",
+            "file": "minecraft:font/effect_icons/bludgeoning_resistance.png", "ascent": 8, "height": 8,
+            "chars": [ "\uEE73" ]
+        },
+        { "type": "bitmap",
+            "file": "minecraft:font/effect_icons/lightning_resistance.png", "ascent": 8, "height": 8,
+            "chars": [ "\uEE74" ]
+        },
+        { "type": "bitmap",
+            "file": "minecraft:font/effect_icons/freezing_resistance.png", "ascent": 8, "height": 8,
+            "chars": [ "\uEE75" ]
+        },
+        { "type": "bitmap",
+            "file": "minecraft:font/effect_icons/radiant_resistance.png", "ascent": 8, "height": 8,
+            "chars": [ "\uEE76" ]
+        },
+        { "type": "bitmap",
+            "file": "minecraft:font/effect_icons/necrotic_resistance.png", "ascent": 8, "height": 8,
+            "chars": [ "\uEE77" ]
+        },
+        { "type": "bitmap",
+            "file": "minecraft:font/effect_icons/stun.png", "ascent": 8, "height": 8,
+            "chars": [ "\uEE78" ]
+        },
+        { "type": "bitmap",
+            "file": "minecraft:font/effect_icons/durability.png", "ascent": 8, "height": 8,
+            "chars": [ "\uEE79" ]
+        },
+        { "type": "bitmap",
+            "file": "minecraft:font/effect_icons/entity_drops.png", "ascent": 8, "height": 8,
+            "chars": [ "\uEE7A" ]
+        },
+        { "type": "bitmap",
+            "file": "minecraft:font/effect_icons/light_armor.png", "ascent": 8, "height": 8,
+            "chars": [ "\uEE7B" ]
+        },
+        { "type": "bitmap",
+            "file": "minecraft:font/effect_icons/heavy_armor.png", "ascent": 8, "height": 8,
+            "chars": [ "\uEE7C" ]
+        },
+        { "type": "bitmap",
+            "file": "minecraft:font/effect_icons/crit_chance_resistance.png", "ascent": 8, "height": 8,
+            "chars": [ "\uEE7D" ]
+        },
+        { "type": "bitmap",
+            "file": "minecraft:font/effect_icons/crit_damage_resistance.png", "ascent": 8, "height": 8,
+            "chars": [ "\uEE7E" ]
+        },
+        { "type": "bitmap",
+            "file": "minecraft:font/effect_icons/fire.png", "ascent": 8, "height": 8,
+            "chars": [ "\uEE7F" ]
+        },
+        { "type": "bitmap",
+            "file": "minecraft:font/effect_icons/instant_explosion_damage.png", "ascent": 8, "height": 8,
+            "chars": [ "\uEE80" ]
+        },
+        { "type": "bitmap",
+            "file": "minecraft:font/effect_icons/instant_fire_damage.png", "ascent": 8, "height": 8,
+            "chars": [ "\uEE81" ]
+        },
+        { "type": "bitmap",
+            "file": "minecraft:font/effect_icons/instant_poison_damage.png", "ascent": 8, "height": 8,
+            "chars": [ "\uEE82" ]
+        },
+        { "type": "bitmap",
+            "file": "minecraft:font/effect_icons/instant_magic_damage.png", "ascent": 8, "height": 8,
+            "chars": [ "\uEE83" ]
+        },
+        { "type": "bitmap",
+            "file": "minecraft:font/effect_icons/instant_melee_damage.png", "ascent": 8, "height": 8,
+            "chars": [ "\uEE84" ]
+        },
+        { "type": "bitmap",
+            "file": "minecraft:font/effect_icons/instant_projectile_damage.png", "ascent": 8, "height": 8,
+            "chars": [ "\uEE85" ]
+        },
+        { "type": "bitmap",
+            "file": "minecraft:font/effect_icons/instant_bludgeoning_damage.png", "ascent": 8, "height": 8,
+            "chars": [ "\uEE86" ]
+        },
+        { "type": "bitmap",
+            "file": "minecraft:font/effect_icons/instant_lightning_damage.png", "ascent": 8, "height": 8,
+            "chars": [ "\uEE87" ]
+        },
+        { "type": "bitmap",
+            "file": "minecraft:font/effect_icons/instant_freezing_damage.png", "ascent": 8, "height": 8,
+            "chars": [ "\uEE88" ]
+        },
+        { "type": "bitmap",
+            "file": "minecraft:font/effect_icons/instant_radiant_damage.png", "ascent": 8, "height": 8,
+            "chars": [ "\uEE89" ]
+        },
+        { "type": "bitmap",
+            "file": "minecraft:font/effect_icons/instant_necrotic_damage.png", "ascent": 8, "height": 8,
+            "chars": [ "\uEE8A" ]
+        },
+        { "type": "bitmap",
+            "file": "minecraft:font/effect_icons/bleed.png", "ascent": 8, "height": 8,
+            "chars": [ "\uEE8B" ]
+        },
+        { "type": "bitmap",
+            "file": "minecraft:font/effect_icons/antibleed.png", "ascent": 8, "height": 8,
+            "chars": [ "\uEE8C" ]
+        },
+        { "type": "bitmap",
+            "file": "minecraft:font/effect_icons/recall.png", "ascent": 8, "height": 8,
+            "chars": [ "\uEE8D" ]
+        },
+        { "type": "bitmap",
+            "file": "minecraft:font/effect_icons/custom_heal.png", "ascent": 8, "height": 8,
+            "chars": [ "\uEE8E" ]
+        },
+        { "type": "bitmap",
+            "file": "minecraft:font/effect_icons/lapis_save_chance.png", "ascent": 8, "height": 8,
+            "chars": [ "\uEE8F" ]
+        },
+        { "type": "bitmap",
+            "file": "minecraft:font/effect_icons/exp_refund_chance.png", "ascent": 8, "height": 8,
+            "chars": [ "\uEE90" ]
+        },
+        { "type": "bitmap",
+            "file": "minecraft:font/effect_icons/exp_refund_fraction.png", "ascent": 8, "height": 8,
+            "chars": [ "\uEE91" ]
+        },
+        { "type": "bitmap",
+            "file": "minecraft:font/effect_icons/lingering_duration_multiplier.png", "ascent": 8, "height": 8,
+            "chars": [ "\uEE92" ]
+        },
+        { "type": "bitmap",
+            "file": "minecraft:font/effect_icons/lingering_radius_multiplier.png", "ascent": 8, "height": 8,
+            "chars": [ "\uEE93" ]
+        },
+        { "type": "bitmap",
+            "file": "minecraft:font/effect_icons/splash_intensity_minimum.png", "ascent": 8, "height": 8,
+            "chars": [ "\uEE94" ]
+        },
+        { "type": "bitmap",
+            "file": "minecraft:font/effect_icons/entity_rare_drops.png", "ascent": 8, "height": 8,
+            "chars": [ "\uEE95" ]
+        },
+        { "type": "bitmap",
+            "file": "minecraft:font/effect_icons/dig_speed.png", "ascent": 8, "height": 8,
+            "chars": [ "\uEE96" ]
+        },
+        { "type": "bitmap",
+            "file": "minecraft:font/effect_icons/mining_level.png", "ascent": 8, "height": 8,
+            "chars": [ "\uEE97" ]
+        },
+        { "type": "bitmap",
+            "file": "minecraft:font/effect_icons/fall_damage.png", "ascent": 8, "height": 8,
+            "chars": [ "\uEE98" ]
+        },
+        { "type": "bitmap",
+            "file": "minecraft:font/effect_icons/crossbow_magazine.png", "ascent": 8, "height": 8,
+            "chars": [ "\uEE99" ]
+        },
+        { "type": "bitmap",
+            "file": "minecraft:font/effect_icons/scale.png", "ascent": 8, "height": 8,
+            "chars": [ "\uEE9A" ]
+        },
+        { "type": "bitmap",
+            "file": "minecraft:font/effect_icons/block_reach.png", "ascent": 8, "height": 8,
+            "chars": [ "\uEE9B" ]
+        },
+        { "type": "bitmap",
+            "file": "minecraft:font/effect_icons/step_height.png", "ascent": 8, "height": 8,
+            "chars": [ "\uEE9C" ]
+        },
+        { "type": "bitmap",
+            "file": "minecraft:font/effect_icons/attack_reach_multiplier.png", "ascent": 8, "height": 8,
+            "chars": [ "\uEE9D" ]
+        },
+        { "type": "bitmap",
+            "file": "minecraft:font/effect_icons/shield_disarming.png", "ascent": 8, "height": 8,
+            "chars": [ "\uEE9E" ]
+        },
+        { "type": "bitmap",
+            "file": "minecraft:font/effect_icons/lifesteal.png", "ascent": 8, "height": 8,
+            "chars": [ "\uEE9F" ]
+        },
+        { "type": "bitmap",
+            "file": "minecraft:font/effect_icons/gravity.png", "ascent": 8, "height": 8,
+            "chars": [ "\uEEA0" ]
+        },
+        { "type": "bitmap",
+            "file": "minecraft:font/effect_icons/safe_fall_distance.png", "ascent": 8, "height": 8,
+            "chars": [ "\uEEA1" ]
+        },
+        { "type": "bitmap",
+            "file": "minecraft:font/effect_icons/fall_damage_multiplier.png", "ascent": 8, "height": 8,
+            "chars": [ "\uEEA2" ]
+        },
+        { "type": "bitmap",
+            "file": "minecraft:font/effect_icons/pvp_resistance.png", "ascent": 8, "height": 8,
+            "chars": [ "\uEEA3" ]
+        },
+        { "type": "bitmap",
+            "file": "minecraft:font/effect_icons/player_damage.png", "ascent": 8, "height": 8,
+            "chars": [ "\uEEA4" ]
+        },
+        { "type": "bitmap",
+            "file": "minecraft:font/effect_icons/mounted_damage.png", "ascent": 8, "height": 8,
+            "chars": [ "\uEEA5" ]
+        }
+    ]
+}

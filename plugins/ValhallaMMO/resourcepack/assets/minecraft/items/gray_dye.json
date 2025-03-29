@@ -1,0 +1,187 @@
+{
+    "model": {
+        "type": "range_dispatch",
+        "property": "custom_model_data",
+        "fallback": {
+            "type": "model",
+            "model": "item/gray_dye"
+        },
+        "entries": [
+            {
+                "threshold": 1172700,
+                "model": {
+                    "type": "model",
+                    "model": "item/gui/connection_pieces/locked_direct_vertical"
+                }
+            },
+            {
+                "threshold": 1172701,
+                "model": {
+                    "type": "model",
+                    "model": "item/gui/connection_pieces/locked_direct_horizontal"
+                }
+            },
+            {
+                "threshold": 1172702,
+                "model": {
+                    "type": "model",
+                    "model": "item/gui/connection_pieces/locked_direct_corner_botlft"
+                }
+            },
+            {
+                "threshold": 1172703,
+                "model": {
+                    "type": "model",
+                    "model": "item/gui/connection_pieces/locked_direct_corner_toplft"
+                }
+            },
+            {
+                "threshold": 1172704,
+                "model": {
+                    "type": "model",
+                    "model": "item/gui/connection_pieces/locked_direct_corner_botrgt"
+                }
+            },
+            {
+                "threshold": 1172705,
+                "model": {
+                    "type": "model",
+                    "model": "item/gui/connection_pieces/locked_direct_corner_toprgt"
+                }
+            },
+            {
+                "threshold": 1172706,
+                "model": {
+                    "type": "model",
+                    "model": "item/gui/connection_pieces/locked_continuous_vertical"
+                }
+            },
+            {
+                "threshold": 1172707,
+                "model": {
+                    "type": "model",
+                    "model": "item/gui/connection_pieces/locked_continuous_horizontal"
+                }
+            },
+            {
+                "threshold": 1172708,
+                "model": {
+                    "type": "model",
+                    "model": "item/gui/connection_pieces/locked_endpoint_horiz_right"
+                }
+            },
+            {
+                "threshold": 1172709,
+                "model": {
+                    "type": "model",
+                    "model": "item/gui/connection_pieces/locked_endpoint_horiz_left"
+                }
+            },
+            {
+                "threshold": 1172710,
+                "model": {
+                    "type": "model",
+                    "model": "item/gui/connection_pieces/locked_endpoint_verti_top"
+                }
+            },
+            {
+                "threshold": 1172711,
+                "model": {
+                    "type": "model",
+                    "model": "item/gui/connection_pieces/locked_endpoint_verti_bottom"
+                }
+            },
+            {
+                "threshold": 1172712,
+                "model": {
+                    "type": "model",
+                    "model": "item/gui/connection_pieces/locked_endpoint_corner_botlft_side"
+                }
+            },
+            {
+                "threshold": 1172713,
+                "model": {
+                    "type": "model",
+                    "model": "item/gui/connection_pieces/locked_endpoint_corner_toplft_side"
+                }
+            },
+            {
+                "threshold": 1172714,
+                "model": {
+                    "type": "model",
+                    "model": "item/gui/connection_pieces/locked_endpoint_corner_botrgt_side"
+                }
+            },
+            {
+                "threshold": 1172715,
+                "model": {
+                    "type": "model",
+                    "model": "item/gui/connection_pieces/locked_endpoint_corner_toprgt_side"
+                }
+            },
+            {
+                "threshold": 1172716,
+                "model": {
+                    "type": "model",
+                    "model": "item/gui/connection_pieces/locked_endpoint_corner_botlft_ends"
+                }
+            },
+            {
+                "threshold": 1172717,
+                "model": {
+                    "type": "model",
+                    "model": "item/gui/connection_pieces/locked_endpoint_corner_toplft_ends"
+                }
+            },
+            {
+                "threshold": 1172718,
+                "model": {
+                    "type": "model",
+                    "model": "item/gui/connection_pieces/locked_endpoint_corner_botrgt_ends"
+                }
+            },
+            {
+                "threshold": 1172719,
+                "model": {
+                    "type": "model",
+                    "model": "item/gui/connection_pieces/locked_endpoint_corner_toprgt_ends"
+                }
+            },
+            {
+                "threshold": 1172720,
+                "model": {
+                    "type": "model",
+                    "model": "item/gui/connection_pieces/locked_continuous_corner_botlft"
+                }
+            },
+            {
+                "threshold": 1172721,
+                "model": {
+                    "type": "model",
+                    "model": "item/gui/connection_pieces/locked_continuous_corner_toplft"
+                }
+            },
+            {
+                "threshold": 1172722,
+                "model": {
+                    "type": "model",
+                    "model": "item/gui/connection_pieces/locked_continuous_corner_botrgt"
+                }
+            },
+            {
+                "threshold": 1172723,
+                "model": {
+                    "type": "model",
+                    "model": "item/gui/connection_pieces/locked_continuous_corner_toprgt"
+                }
+            },
+            {
+                "threshold": 8892300,
+                "model": {
+                    "type": "model",
+                    "model": "item/materials/sharpening_stone"
+                }
+            }
+        ]
+    }
+}

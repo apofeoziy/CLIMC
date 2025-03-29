@@ -1,0 +1,181 @@
+reloaded: '&#33FF33Плагин успешно перезагружен!'
+reload-fail: '&#FF3333Не удалось перезагрузить плагин! Что-то не так в файле &f%file%&#FF3333, проверьте консоль или используйте валидатор yaml для исправления ошибок!'
+
+cleaned-up: '&#33FF33База данных успешно очищена!'
+
+manual-backup: '&#33FF33Успешно создана ручная резервная копия для &f%player%&#33FF33!'
+manual-backup-all: '&#33FF33Успешно создана ручная резервная копия для всех игроков!'
+manual-created-by: 'от: %player%'
+
+help:
+- ' '
+- '&#00aaff&lAxInventoryRestore &7» '
+- ' &7- &f/axir view <player> &7| &#00aaffОткрыть GUI восстановления'
+- ' &7- &f/axir save <player> &7| &#00aaffСоздать ручную резервную копию'
+- ' &7- &f/axir saveall &7| &#00aaffСоздать ручную резервную копию для всех игроков'
+- ' &7- &f/axir reload &7| &#00aaffПерезагрузить плагин'
+- ' &7- &f/axir cleanup &7| &#00aaffУдалить старые резервные копии (см. config.yml)'
+- ' '
+
+errors:
+  no-permission: '&#FF3333У вас нет разрешения на выполнение этой команды!'
+  player-offline: '&#FF3333Игрок должен быть онлайн для восстановления инвентаря!'
+  unknown-player: '&#FF3333У этого игрока нет сохраненных резервных копий! &#DDDDDD(ошибка: %number%)'
+  not-player: '&#FF3333Вы должны быть игроком для выполнения этой команды!'
+
+restored-shulker:
+  # это должен быть какой-то шалкеровый ящик!
+  material: SHULKER_BOX
+  name: '&#00CCFFРезервная копия инвентаря'
+  lore:
+  - '&#DDDDDD%player-uuid%'
+  - ' '
+  - ' &7- &#00FFFFДата: &f%date%'
+  - ' &7- &#00FFFFЛокация: &f%location%'
+  - ' &7- &#00FFFFВыдано: &f%staff%'
+  - ' '
+
+guis:
+  maingui:
+    title: '&0&lВосстановление > &8%player%'
+  categorygui:
+    title: '&0&lВосстановление > &8%player%'
+    item:
+      material: BARREL
+      name: '&#00CCFFДата: &#00EEFF%date%'
+      lore:
+      - ' '
+      - '&#00FFFFИнфо: &f%cause%'
+      - '&#00FFFFЛокация: &f%location%'
+      - ' '
+      - '&#00CCFF&l(!) &#00CCFFНажмите здесь, чтобы проверить предметы!'
+  previewgui:
+    title: '&0&lВосстановление > &8%player%'
+    quick-restore:
+      material: PISTON
+      name: '&#00CCFFЗаменить инвентарь игрока'
+      lore:
+      - ' '
+      - ' &7- &#00FFFFПримечание: &fэто удалит текущие предметы игрока!'
+      - ' &7- &#00FFFFИгрок должен быть онлайн для работы этой функции!'
+      - ' '
+      - '&#00CCFF&l(!) &#00CCFFНажмите здесь для замены!'
+    quick-restore-ender-chest:
+      material: ENDER_CHEST
+      name: '&#00CCFFЗаменить эндер-сундук игрока'
+      lore:
+      - ' '
+      - ' &7- &#00FFFFПримечание: &fэто удалит текущие предметы в эндер-сундуке!'
+      - ' &7- &#00FFFFИгрок должен быть онлайн для работы этой функции!'
+      - ' '
+      - '&#00CCFF&l(!) &#00CCFFНажмите здесь для замены!'
+    teleport:
+      material: ENDER_PEARL
+      name: '&#00CCFFТелепортироваться к месту события'
+      lore:
+      - ' '
+      - ' &7- &#00FFFFЛокация: &f%location%'
+      - ' '
+      - '&#00CCFF&l(!) &#00CCFFНажмите здесь для телепортации!'
+    export-as-shulker:
+      material: SHULKER_BOX
+      name: '&#00CCFFЭкспортировать предметы в шалкеровые ящики'
+      lore:
+      - ' '
+      - ' &7- &#00FFFFНеобходимо пустых слотов: &f%shulker-amount%'
+      - ' '
+      - '&#00CCFF&l(!) &#00CCFFНажмите здесь для экспорта предметов!'
+
+gui-items:
+  close:
+    material: BARRIER
+    name: '&#FF3333&lЗакрыть'
+  back:
+    material: BARRIER
+    name: '&#FF3333&lНазад'
+  previous-page:
+    material: ARROW
+    name: '&#FF6600&lПредыдущая страница'
+  next-page:
+    material: ARROW
+    name: '&#FFCC00&lСледующая страница'
+
+categories:
+  ALL:
+    raw: ALL
+    material: NETHER_STAR
+    name: '&#FFCC00&lВСЕ &7(%amount% копий)'
+    lore:
+    - ' '
+    - '&#FFCC00&l(!) &#FFCC00Нажмите здесь, чтобы просмотреть все резервные копии!'
+  ENDER_CHEST:
+    raw: ENDER_CHEST
+    material: ENDER_CHEST
+    name: '&#EE00FF&lРЕЗЕРВНЫЕ КОПИИ ЭНДЕР-СУНДУКА &7(%amount% копий)'
+    lore:
+    - ' '
+    - '&#EE00FF&l(!) &#EE00FFНажмите здесь для просмотра резервных копий!'
+  DEATH:
+    raw: DEATH
+    material: TOTEM_OF_UNDYING
+    name: '&#FF3333&lСМЕРТИ &7(%amount% копий)'
+    lore:
+    - ' '
+    - '&#FF3333&l(!) &#FF3333Нажмите здесь для просмотра резервных копий!'
+  JOIN:
+    raw: JOIN
+    material: LIME_WOOL
+    name: '&#33FF33&lВХОДЫ &7(%amount% копий)'
+    lore:
+    - ' '
+    - '&#33FF33&l(!) &#33FF33Нажмите здесь для просмотра резервных копий!'
+  QUIT:
+    raw: QUIT
+    material: RED_WOOL
+    name: '&#EE3333&lВЫХОДЫ &7(%amount% копий)'
+    lore:
+    - ' '
+    - '&#EE3333&l(!) &#EE3333Нажмите здесь для просмотра резервных копий!'
+  WORLD_CHANGE:
+    raw: WORLD CHANGE
+    material: END_PORTAL_FRAME
+    name: '&#33DD33&lСМЕНА МИРА &7(%amount% копий)'
+    lore:
+    - ' '
+    - '&#33DD33&l(!) &#33DD33Нажмите здесь для просмотра резервных копий!'
+  CONTAINER_CLOSE:
+    raw: CONTAINER_CLOSE
+    material: CHEST
+    name: '&#00DDFF&lЗАКРЫТИЕ КОНТЕЙНЕРА &7(%amount% копий)'
+    lore:
+    - ' '
+    - '&#00DDFF&l(!) &#00DDFFНажмите здесь для просмотра резервных копий!'
+  MANUAL:
+    raw: MANUAL
+    material: LEVER
+    name: '&#FFEE00&lРУЧНЫЕ РЕЗЕРВНЫЕ КОПИИ &7(%amount% копий)'
+    lore:
+    - ' '
+    - '&#FFEE00&l(!) &#FFEE00Нажмите здесь для просмотра резервных копий!'
+  AUTOMATIC:
+    raw: AUTOMATIC
+    material: CLOCK
+    name: '&#AA00FF&lАВТОМАТИЧЕСКИЕ РЕЗЕРВНЫЕ КОПИИ &7(%amount% копий)'
+    lore:
+    - ' '
+    - '&#AA00FF&l(!) &#AA00FFНажмите здесь для просмотра резервных копий!'
+
+commands:
+  invalid-value: '&#FF0000Неверный параметр: &#BB0000%value%'
+  invalid-command: '&#FF0000Неверная команда или подкоманда!'
+  missing-argument: '&#FF0000Отсутствует аргумент! Вы должны указать значение для &#BB0000%value%&#FF0000.'
+  no-permission: '&#FF0000У вас нет разрешения на доступ к этой команде!'
+  out-of-range: '&#FF0000Число &#BB0000%number% &#FF0000должно быть между &#BB0000%min% &#FF0000и &#BB0000%max%&#FF0000!'
+  player-only: '&#FF0000Вы должны быть игроком для использования этой команды!'
+  invalid-player: '&#FF0000Игрок &#BB0000%player% &#FF0000не найден!'
+  invalid-selector: '&#FF0000Вы не можете использовать этот селектор в этой команде!'
+
+update-notifier: '&#88CCFFДоступна новая версия AxInventoryRestore! &#DDDDDD(&#FFFFFFтекущая: &#FF0000%current% &#DDDDDD| &#FFFFFFпоследняя: &#00FF00%latest%&#DDDDDD)'
+
+# не изменяйте это
+version: 6

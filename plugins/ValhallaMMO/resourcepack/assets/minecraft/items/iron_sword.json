@@ -1,0 +1,124 @@
+{
+    "model": {
+        "type": "range_dispatch",
+        "property": "custom_model_data",
+        "fallback": {
+            "type": "model",
+            "model": "item/iron_sword"
+        },
+        "entries": [
+            {
+                "threshold": 1981820,
+                "model": {
+                    "type": "model",
+                    "model": "item/weapons/iron_dagger"
+                }
+            },
+            {
+                "threshold": 1981821,
+                "model": {
+                    "type": "model",
+                    "model": "item/weapons/iron_mace"
+                }
+            },
+            {
+                "threshold": 1981822,
+                "model": {
+                    "type": "model",
+                    "model": "item/weapons/iron_rapier"
+                }
+            },
+            {
+                "threshold": 1981825,
+                "model": {
+                    "type": "model",
+                    "model": "item/weapons/iron_warhammer"
+                }
+            },
+            {
+                "threshold": 1981826,
+                "model": {
+                    "type": "model",
+                    "model": "item/weapons/iron_spear"
+                }
+            },
+            {
+                "threshold": 1981827,
+                "model": {
+                    "type": "model",
+                    "model": "item/weapons/iron_greataxe"
+                }
+            },
+            {
+                "threshold": 1981840,
+                "model": {
+                    "type": "model",
+                    "model": "item/weapons/iron_knuckles"
+                }
+            },
+            {
+                "threshold": 3510001,
+                "model": {
+                    "type": "model",
+                    "model": "item/gui/skillicon_lightweapons"
+                }
+            },
+            {
+                "threshold": 9918290,
+                "model": {
+                    "type": "model",
+                    "model": "item/weapons/copper_sword"
+                }
+            },
+            {
+                "threshold": 9918390,
+                "model": {
+                    "type": "model",
+                    "model": "item/weapons/copper_dagger"
+                }
+            },
+            {
+                "threshold": 9918391,
+                "model": {
+                    "type": "model",
+                    "model": "item/weapons/copper_mace"
+                }
+            },
+            {
+                "threshold": 9918392,
+                "model": {
+                    "type": "model",
+                    "model": "item/weapons/copper_rapier"
+                }
+            },
+            {
+                "threshold": 9918395,
+                "model": {
+                    "type": "model",
+                    "model": "item/weapons/copper_warhammer"
+                }
+            },
+            {
+                "threshold": 9918396,
+                "model": {
+                    "type": "model",
+                    "model": "item/weapons/copper_spear"
+                }
+            },
+            {
+                "threshold": 9918397,
+                "model": {
+                    "type": "model",
+                    "model": "item/weapons/copper_greataxe"
+                }
+            },
+            {
+                "threshold": 9918397,
+                "model": {
+                    "type": "model",
+                    "model": "item/weapons/copper_knuckles"
+                }
+            }
+        ]
+    }
+}

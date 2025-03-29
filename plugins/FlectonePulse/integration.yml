@@ -1,0 +1,93 @@
+#  ___       ___  __  ___  __        ___ 
+# |__  |    |__  /  `  |  /  \ |\ | |__
+# |    |___ |___ \__,  |  \__/ | \| |___
+#  __             __   ___ 
+# |__) |  | |    /__` |__  
+# |    \__/ |___ .__/ |___   /\
+#                           /  \
+# __/\___  ____/\_____  ___/    \______
+#        \/           \/  
+# 
+# https://flectone.net/pulse/docs/integration/
+enable: true
+# https://flectone.net/pulse/docs/integration/deepl/
+deepl:
+  enable: false
+  auth-key: ""
+# https://flectone.net/pulse/docs/integration/discord/
+discord:
+  enable: false
+  token: ""
+  presence:
+    enable: true
+    status: "ONLINE"
+    activity:
+      enable: true
+      type: "PLAYING"
+      name: "FlectonePulse"
+      url: "https://flectone.net/pulse/"
+  channel-info:
+    enable: false
+    ticker:
+      enable: true
+      period: 1200
+  message-channel:
+    FROM_DISCORD_TO_MINECRAFT: ""
+    CHAT: ""
+  destination:
+    type: CHAT
+# https://flectone.net/pulse/docs/integration/interactivechat/
+interactivechat:
+  enable: true
+# https://flectone.net/pulse/docs/integration/luckperms/
+luckperms:
+  enable: true
+  tab-sort: false
+# https://flectone.net/pulse/docs/integration/placeholderapi/
+placeholderapi:
+  enable: true
+# https://flectone.net/pulse/docs/integration/plasmovoice/
+plasmovoice:
+  enable: true
+# https://flectone.net/pulse/docs/integration/simplevoice/
+simplevoice:
+  enable: true
+# https://flectone.net/pulse/docs/integration/skinsrestorer/
+skinsrestorer:
+  enable: true
+# https://flectone.net/pulse/docs/integration/supervanish/
+supervanish:
+  enable: true
+# https://flectone.net/pulse/docs/integration/telegram/
+telegram:
+  enable: false
+  token: ""
+  message-channel:
+    FROM_TELEGRAM_TO_MINECRAFT: []
+    CHAT: []
+  destination:
+    type: CHAT
+# https://flectone.net/pulse/docs/integration/triton/
+triton:
+  enable: true
+# https://flectone.net/pulse/docs/integration/twitch/
+twitch:
+  enable: false
+  client-id: ""
+  token: ""
+  message-channel:
+    FROM_TWITCH_TO_MINECRAFT: []
+    CHAT: []
+  follow-channel:
+    faseri4ka:
+      - "stream start https://twitch.tv/faseri4ka"
+  destination:
+    type: CHAT
+# https://flectone.net/pulse/docs/integration/vault/
+vault:
+  enable: true
+# https://flectone.net/pulse/docs/integration/yandex/
+yandex:
+  enable: false
+  token: ""
+  folder-id: ""

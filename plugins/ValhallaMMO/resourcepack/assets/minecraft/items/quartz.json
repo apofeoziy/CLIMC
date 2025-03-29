@@ -1,0 +1,89 @@
+{
+    "model": {
+        "type": "range_dispatch",
+        "property": "custom_model_data",
+        "fallback": {
+            "type": "model",
+            "model": "item/quartz"
+        },
+        "entries": [
+            {
+                "threshold": 8712390,
+                "model": {
+                    "type": "model",
+                    "model": "item/materials/ruby"
+                }
+            },
+            {
+                "threshold": 8712391,
+                "model": {
+                    "type": "model",
+                    "model": "item/materials/raw_ruby"
+                }
+            },
+            {
+                "threshold": 8712392,
+                "model": {
+                    "type": "model",
+                    "model": "item/materials/opal"
+                }
+            },
+            {
+                "threshold": 8712393,
+                "model": {
+                    "type": "model",
+                    "model": "item/materials/raw_opal"
+                }
+            },
+            {
+                "threshold": 8712394,
+                "model": {
+                    "type": "model",
+                    "model": "item/materials/sapphire"
+                }
+            },
+            {
+                "threshold": 8712395,
+                "model": {
+                    "type": "model",
+                    "model": "item/materials/raw_sapphire"
+                }
+            },
+            {
+                "threshold": 8712396,
+                "model": {
+                    "type": "model",
+                    "model": "item/materials/topaz"
+                }
+            },
+            {
+                "threshold": 8712397,
+                "model": {
+                    "type": "model",
+                    "model": "item/materials/raw_topaz"
+                }
+            },
+            {
+                "threshold": 8712398,
+                "model": {
+                    "type": "model",
+                    "model": "item/materials/peridot"
+                }
+            },
+            {
+                "threshold": 8712399,
+                "model": {
+                    "type": "model",
+                    "model": "item/materials/raw_peridot"
+                }
+            },
+            {
+                "threshold": 9827320,
+                "model": {
+                    "type": "model",
+                    "model": "item/materials/experience_gem"
+                }
+            }
+        ]
+    }
+}

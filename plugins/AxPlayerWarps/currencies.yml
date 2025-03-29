@@ -1,0 +1,81 @@
+# ДОКУМЕНТАЦИЯ: https://docs.artillex-studios.com/axplayerwarps.html
+
+# вы можете создать свои собственные валюты, используя плейсхолдеры
+# убедитесь, что ни один из плейсхолдеров не имеет форматирования
+# требуется PlaceholderAPI
+placeholder-currencies:
+  Example-Currency:
+    register: false
+    name: деньги
+    # если валюта использует целые числа, отключите это
+    # 100.5 - true
+    # 100 - false
+    uses-double: true
+    # если плейсхолдер обрабатывается даже для оффлайн-игроков, включите это
+    works-offline: false
+    settings:
+      raw-placeholder: '%vault_eco_balance_fixed%'
+      give-command: eco give %player% %price%
+      take-command: eco take %player% %price%
+
+# ИНФОРМАЦИЯ ДЛЯ ПЛАГИНОВ С НЕСКОЛЬКИМИ ВАЛЮТАМИ: (например: coinsengine, ultraeconomy, rediseconomy)
+# - вы можете включить столько валют, сколько хотите, просто добавьте разделы так же, как в примере
+currencies:
+  Experience:
+    register: true
+    name: '%price% опыта'
+  Vault:
+    register: true
+    name: '%price% денег'
+  PlayerPoints:
+    register: true
+    name: '%price% очков'
+  RoyaleEconomy:
+    register: true
+    name: '%price% денег'
+  CoinsEngine:
+    register: true
+    enabled:
+    - currency-name: coins
+      name: '%price% монет'
+    - currency-name: money
+      name: '%price% денег'
+  UltraEconomy:
+    register: true
+    enabled:
+    - currency-name: coins
+      name: '%price% монет'
+  KingdomsX:
+    register: true
+    name: '%price% очков нексуса'
+  RivalHarvesterHoes:
+    register: true
+    name: '%price% эссенции'
+  SuperMobCoins:
+    register: true
+    name: '%price% мобкоинов'
+  TheOnly-MobCoins:
+    register: true
+    name: '%price% мобкоинов'
+  TokenManager:
+    register: true
+    name: '%price% токенов'
+  AxQuestBoard:
+    register: true
+    name: '%price% квестовых очков'
+  RedisEconomy:
+    register: true
+    enabled:
+    - currency-name: coins
+      name: '%price% монет'
+  BeastTokens:
+    register: true
+    name: '%price% токенов'
+  EcoBits:
+    register: true
+    enabled:
+    - currency-name: crystals
+      name: '%price% кристаллов'
+
+# не изменяйте это
+version: 1

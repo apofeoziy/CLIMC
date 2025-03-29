@@ -1,0 +1,292 @@
+pick_race: true # Если true, игрок будет вынужден выбрать расу при входе. Если false, их раса должна быть определена через команды
+pick_class: true # Если true, игрок будет вынужден выбрать класс при входе. Если false, их класс должен быть определен через команды
+
+on_join: false # Если true, и если pick_race или pick_class включены, игроки будут выбирать свой класс или расу при входе на сервер.
+# ЕСЛИ FALSE, они смогут выбрать, когда впервые начнут двигаться.
+
+confirm_message_race: '&cТеперь вы %race%!'
+confirm_message_class: '&cТеперь вы %class%!'
+
+menus:
+  races_slots: 45
+  races_title: '&7Выберите свою расу'
+  races_decoration: # Для украшения вы можете добавить ;<число> к любой из этих записей, чтобы определить их пользовательские данные модели
+    0: GRAY_STAINED_GLASS_PANE
+    1: GRAY_STAINED_GLASS_PANE
+    2: GRAY_STAINED_GLASS_PANE
+    3: GRAY_STAINED_GLASS_PANE
+    4: GRAY_STAINED_GLASS_PANE
+    5: GRAY_STAINED_GLASS_PANE
+    6: GRAY_STAINED_GLASS_PANE
+    7: GRAY_STAINED_GLASS_PANE
+    8: GRAY_STAINED_GLASS_PANE
+    36: GRAY_STAINED_GLASS_PANE
+    37: GRAY_STAINED_GLASS_PANE
+    38: GRAY_STAINED_GLASS_PANE
+    39: GRAY_STAINED_GLASS_PANE
+    40: GRAY_STAINED_GLASS_PANE
+    41: GRAY_STAINED_GLASS_PANE
+    42: GRAY_STAINED_GLASS_PANE
+    43: GRAY_STAINED_GLASS_PANE
+    44: GRAY_STAINED_GLASS_PANE
+  classes_slots: 45
+  classes_title: '&7Выберите свой класс'
+  classes_decoration:
+    0: GRAY_STAINED_GLASS_PANE
+    1: GRAY_STAINED_GLASS_PANE
+    2: GRAY_STAINED_GLASS_PANE
+    3: GRAY_STAINED_GLASS_PANE
+    4: GRAY_STAINED_GLASS_PANE
+    5: GRAY_STAINED_GLASS_PANE
+    6: GRAY_STAINED_GLASS_PANE
+    7: GRAY_STAINED_GLASS_PANE
+    8: GRAY_STAINED_GLASS_PANE
+    36: GRAY_STAINED_GLASS_PANE
+    37: GRAY_STAINED_GLASS_PANE
+    38: GRAY_STAINED_GLASS_PANE
+    39: GRAY_STAINED_GLASS_PANE
+    40: GRAY_STAINED_GLASS_PANE
+    41: GRAY_STAINED_GLASS_PANE
+    42: GRAY_STAINED_GLASS_PANE
+    43: GRAY_STAINED_GLASS_PANE
+    44: GRAY_STAINED_GLASS_PANE
+
+# Список статистик
+# GLOBAL_EXP_GAIN - Глобальный прирост опыта
+
+# ARMOR_TOTAL - Общая броня
+# TOTAL_LIGHT_ARMOR - Общая легкая броня
+# LIGHT_ARMOR - Легкая броня
+# LIGHT_ARMOR_MULTIPLIER - Множитель легкой брони
+# TOTAL_HEAVY_ARMOR - Общая тяжелая броня
+# HEAVY_ARMOR - Тяжелая броня
+# HEAVY_ARMOR_MULTIPLIER - Множитель тяжелой брони
+# TOTAL_WEIGHTLESS_ARMOR - Общая невесомая броня
+# WEIGHTLESS_ARMOR - Невесомая броня
+# ARMOR_MULTIPLIER_BONUS - Бонус множителя брони
+# TOUGHNESS - Стойкость
+# LIGHT_ARMOR_FLAT_IGNORED - Игнорирование легкой брони (фиксированное)
+# LIGHT_ARMOR_FRACTION_IGNORED - Игнорирование легкой брони (процентное)
+# HEAVY_ARMOR_FLAT_IGNORED - Игнорирование тяжелой брони (фиксированное)
+# HEAVY_ARMOR_FRACTION_IGNORED - Игнорирование тяжелой брони (процентное)
+# ARMOR_FLAT_IGNORED - Игнорирование брони (фиксированное)
+# ARMOR_FRACTION_IGNORED - Игнорирование брони (процентное)
+
+# HEALTH_BONUS - Бонус здоровья
+# HEALTH_MULTIPLIER_BONUS - Бонус множителя здоровья
+# MOVEMENT_SPEED_BONUS - Бонус скорости передвижения
+# KNOCKBACK_RESISTANCE - Сопротивление отбрасыванию
+# TOUGHNESS_BONUS - Бонус стойкости
+# ATTACK_DAMAGE_BONUS - Бонус урона атаки
+# ATTACK_SPEED_BONUS - Бонус скорости атаки
+# LUCK_BONUS - Бонус удачи
+# BLOCK_REACH - Дальность взаимодействия с блоками
+# STEP_HEIGHT - Высота шага
+# SCALE - Масштаб
+
+# DAMAGE_DEALT - Наносимый урон
+# MELEE_DAMAGE_DEALT - Наносимый урон в ближнем бою
+# RANGED_DAMAGE_DEALT - Наносимый урон в дальнем бою
+# UNARMED_DAMAGE_DEALT - Наносимый урон без оружия
+# VELOCITY_DAMAGE_BONUS - Бонус урона от скорости
+# LIGHT_ARMOR_DAMAGE_BONUS - Бонус урона в легкой броне
+# HEAVY_ARMOR_DAMAGE_BONUS - Бонус урона в тяжелой броне
+# FIRE_DAMAGE_BONUS - Бонус огненного урона
+# EXPLOSION_DAMAGE_BONUS - Бонус взрывного урона
+# POISON_DAMAGE_BONUS - Бонус ядовитого урона
+# MAGIC_DAMAGE_BONUS - Бонус магического урона
+# LIGHTNING_DAMAGE_BONUS - Бонус урона молнией
+# FREEZING_DAMAGE_BONUS - Бонус урона от замораживания
+# RADIANT_DAMAGE_BONUS - Бонус лучистого урона
+# NECROTIC_DAMAGE_BONUS - Бонус некротического урона
+# BLUDGEONING_DAMAGE_BONUS - Бонус дробящего урона
+# FIRE_DAMAGE_DEALT - Наносимый огненный урон
+# EXPLOSION_DAMAGE_DEALT - Наносимый взрывной урон
+# POISON_DAMAGE_DEALT - Наносимый ядовитый урон
+# BLUDGEONING_DAMAGE_DEALT - Наносимый дробящий урон
+# MAGIC_DAMAGE_DEALT - Наносимый магический урон
+# LIGHTNING_DAMAGE_DEALT - Наносимый урон молнией
+# FREEZING_DAMAGE_DEALT - Наносимый урон от замораживания
+# RADIANT_DAMAGE_DEALT - Наносимый лучистый урон
+# NECROTIC_DAMAGE_DEALT - Наносимый некротический урон
+
+# POWER_ATTACK_DAMAGE_MULTIPLIER - Множитель урона мощной атаки
+# POWER_ATTACK_RADIUS - Радиус мощной атаки
+# POWER_ATTACK_DAMAGE_FRACTION - Доля урона мощной атаки
+# ATTACK_REACH_BONUS - Бонус дальности атаки
+# ATTACK_REACH_MULTIPLIER - Множитель дальности атаки
+# RANGED_INACCURACY - Неточность дальнего боя
+# RANGED_VELOCITY_BONUS - Бонус скорости снаряда
+# KNOCKBACK_BONUS - Бонус отбрасывания
+# IMMUNITY_FRAME_BONUS - Бонус кадров неуязвимости
+# IMMUNITY_FRAME_MULTIPLIER - Множитель кадров неуязвимости
+# BLEED_CHANCE - Шанс кровотечения
+# BLEED_DAMAGE - Урон от кровотечения
+# BLEED_DURATION - Длительность кровотечения
+# DODGE_CHANCE - Шанс уклонения
+# REFLECT_CHANCE - Шанс отражения
+# REFLECT_FRACTION - Доля отражения
+# DISMOUNT_CHANCE - Шанс сбросить с седла
+# STUN_CHANCE - Шанс оглушения
+# STUN_DURATION_BONUS - Бонус длительности оглушения
+# CRIT_CHANCE - Шанс критического удара
+# CRIT_DAMAGE - Урон критического удара
+# CROSSBOW_MAGAZINE - Магазин арбалета
+
+# PARRY_EFFECTIVENESS_DURATION - Длительность эффективности парирования
+# PARRY_VULNERABLE_DURATION - Длительность уязвимости при парировании
+# PARRY_ENEMY_DEBUFF_DURATION - Длительность дебаффа врага при парировании
+# PARRY_SELF_DEBUFF_DURATION - Длительность собственного дебаффа при парировании
+# PARRY_DAMAGE_REDUCTION - Снижение урона при парировании
+# PARRY_COOLDOWN - Перезарядка парирования
+# PARRY_SUCCESS_COOLDOWN_REDUCTION - Снижение перезарядки при успешном парировании
+
+# DAMAGE_RESISTANCE - Сопротивление урону
+# MELEE_RESISTANCE - Сопротивление ближнему бою
+# PROJECTILE_RESISTANCE - Сопротивление снарядам
+# BLUDGEONING_RESISTANCE - Сопротивление дробящему урону
+# FIRE_RESISTANCE - Сопротивление огню
+# EXPLOSION_RESISTANCE - Сопротивление взрывам
+# MAGIC_RESISTANCE - Сопротивление магии
+# POISON_RESISTANCE - Сопротивление яду
+# FREEZING_RESISTANCE - Сопротивление замораживанию
+# LIGHTNING_RESISTANCE - Сопротивление молнии
+# RADIANT_RESISTANCE - Сопротивление лучистому урону
+# NECROTIC_RESISTANCE - Сопротивление некротическому урону
+# FALLING_RESISTANCE - Сопротивление падению
+# STUN_RESISTANCE - Сопротивление оглушению
+# BLEED_RESISTANCE - Сопротивление кровотечению
+# CRIT_CHANCE_RESISTANCE - Сопротивление шансу критического удара
+# CRIT_DAMAGE_RESISTANCE - Сопротивление урону критического удара
+
+# HEALING_BONUS - Бонус лечения
+# HUNGER_SAVE_CHANCE - Шанс сохранения голода
+# COOLDOWN_REDUCTION - Снижение перезарядки
+# CRAFTING_TIME_REDUCTION - Снижение времени крафта
+# COOKING_SPEED_BONUS - Бонус скорости приготовления
+# AMMO_SAVE_CHANCE - Шанс сохранения боеприпасов
+# DURABILITY_BONUS - Бонус прочности
+# ENTITY_DROPS - Дроп с существ
+# ENTITY_DROP_LUCK - Удача при дропе с существ
+# JUMP_HEIGHT_MULTIPLIER - Множитель высоты прыжка
+# JUMPS_BONUS - Бонус прыжков
+# SNEAK_MOVEMENT_SPEED_BONUS - Бонус скорости передвижения при приседании
+# SPRINT_MOVEMENT_SPEED_BONUS - Бонус скорости передвижения при беге
+# DIG_SPEED - Скорость копания
+# BLOCK_SPECIFIC_DIG_SPEED - Специфическая скорость копания блоков
+# FISHING_LUCK - Удача при рыбалке
+# FISHING_SPEED_MULTIPLIER - Множитель скорости рыбалки
+# EXPLOSION_RADIUS_MULTIPLIER - Множитель радиуса взрыва
+
+# FOOD_BONUS_VEGETABLE - Бонус от овощей
+# FOOD_BONUS_SEASONING - Бонус от приправ
+# FOOD_BONUS_ALCOHOLIC - Бонус от алкоголя
+# FOOD_BONUS_BEVERAGE - Бонус от напитков
+# FOOD_BONUS_SPOILED - Бонус от испорченной пищи
+# FOOD_BONUS_SEAFOOD - Бонус от морепродуктов
+# FOOD_BONUS_MAGICAL - Бонус от магической пищи
+# FOOD_BONUS_SWEET - Бонус от сладостей
+# FOOD_BONUS_GRAIN - Бонус от зерновых
+# FOOD_BONUS_FRUIT - Бонус от фруктов
+# FOOD_BONUS_NUTS - Бонус от орехов
+# FOOD_BONUS_DAIRY - Бонус от молочных продуктов
+# FOOD_BONUS_MEAT - Бонус от мяса
+# FOOD_BONUS_FATS - Бонус от жиров
+
+# SMITHING_QUALITY_GENERAL - Общее качество ковки
+# SMITHING_QUALITY_WOOD - Качество ковки дерева
+# SMITHING_QUALITY_LEATHER - Качество ковки кожи
+# SMITHING_QUALITY_STONE - Качество ковки камня
+# SMITHING_QUALITY_CHAINMAIL - Качество ковки кольчуги
+# SMITHING_QUALITY_GOLD - Качество ковки золота
+# SMITHING_QUALITY_IRON - Качество ковки железа
+# SMITHING_QUALITY_DIAMOND - Качество ковки алмазов
+# SMITHING_QUALITY_NETHERITE - Качество ковки незерита
+# SMITHING_QUALITY_BOW - Качество ковки лука
+# SMITHING_QUALITY_CROSSBOW - Качество ковки арбалета
+# SMITHING_QUALITY_PRISMARINE - Качество ковки призмарина
+# SMITHING_QUALITY_ENDERIC - Качество ковки эндерика
+# SMITHING_FRACTION_QUALITY_GENERAL - Доля общего качества ковки
+# SMITHING_FRACTION_QUALITY_WOOD - Доля качества ковки дерева
+# SMITHING_FRACTION_QUALITY_LEATHER - Доля качества ковки кожи
+# SMITHING_FRACTION_QUALITY_STONE - Доля качества ковки камня
+# SMITHING_FRACTION_QUALITY_CHAINMAIL - Доля качества ковки кольчуги
+# SMITHING_FRACTION_QUALITY_GOLD - Доля качества ковки золота
+# SMITHING_FRACTION_QUALITY_IRON - Доля качества ковки железа
+# SMITHING_FRACTION_QUALITY_DIAMOND - Доля качества ковки алмазов
+# SMITHING_FRACTION_QUALITY_NETHERITE - Доля качества ковки незерита
+# SMITHING_FRACTION_QUALITY_BOW - Доля качества ковки лука
+# SMITHING_FRACTION_QUALITY_CROSSBOW - Доля качества ковки арбалета
+# SMITHING_FRACTION_QUALITY_PRISMARINE - Доля качества ковки призмарина
+# SMITHING_FRACTION_QUALITY_ENDERIC - Доля качества ковки эндерика
+# SMITHING_EXP_GAIN_GENERAL - Общий прирост опыта ковки
+# SMITHING_EXP_GAIN_WOOD - Прирост опыта ковки дерева
+# SMITHING_EXP_GAIN_LEATHER - Прирост опыта ковки кожи
+# SMITHING_EXP_GAIN_STONE - Прирост опыта ковки камня
+# SMITHING_EXP_GAIN_CHAINMAIL - Прирост опыта ковки кольчуги
+# SMITHING_EXP_GAIN_GOLD - Прирост опыта ковки золота
+# SMITHING_EXP_GAIN_IRON - Прирост опыта ковки железа
+# SMITHING_EXP_GAIN_DIAMOND - Прирост опыта ковки алмазов
+# SMITHING_EXP_GAIN_NETHERITE - Прирост опыта ковки незерита
+# SMITHING_EXP_GAIN_BOW - Прирост опыта ковки лука
+# SMITHING_EXP_GAIN_CROSSBOW - Прирост опыта ковки арбалета
+# SMITHING_EXP_GAIN_PRISMARINE - Прирост опыта ковки призмарина
+# SMITHING_EXP_GAIN_ENDERIC - Прирост опыта ковки эндерика
+
+# ALCHEMY_QUALITY_GENERAL - Общее качество алхимии
+# ALCHEMY_QUALITY_DEBUFF - Качество дебаффов алхимии
+# ALCHEMY_QUALITY_BUFF - Качество баффов алхимии
+# ALCHEMY_FRACTION_QUALITY_GENERAL - Доля общего качества алхимии
+# ALCHEMY_FRACTION_QUALITY_DEBUFF - Доля качества дебаффов алхимии
+# ALCHEMY_FRACTION_QUALITY_BUFF - Доля качества баффов алхимии
+# BREWING_SPEED_BONUS - Бонус скорости зельеварения
+# BREWING_INGREDIENT_SAVE_CHANCE - Шанс сохранения ингредиентов при зельеварении
+# POTION_SAVE_CHANCE - Шанс сохранения зелья
+# THROW_VELOCITY_BONUS - Бонус скорости броска
+# ALCHEMY_EXP_GAIN - Прирост опыта алхимии
+# SPLASH_INTENSITY_MINIMUM - Минимальная интенсивность взрывного зелья
+# LINGERING_DURATION_MULTIPLIER - Множитель длительности туманного зелья
+# LINGERING_RADIUS_MULTIPLIER - Множитель радиуса туманного зелья
+
+# ENCHANTING_QUALITY - Качество зачарования
+# ENCHANTING_FRACTION_QUALITY - Доля качества зачарования
+# ENCHANTING_QUALITY_ANVIL - Качество зачарования на наковальне
+# ENCHANTING_FRACTION_QUALITY_ANVIL - Доля качества зачарования на наковальне
+# ENCHANTING_AMPLIFY_CHANCE - Шанс усиления зачарования
+# ENCHANTING_LAPIS_SAVE_CHANCE - Шанс сохранения лазурита при зачаровании
+# ENCHANTING_VANILLA_EXP_GAIN - Прирост ванильного опыта при зачаровании
+# ENCHANTING_REFUND_CHANCE - Шанс возврата при зачаровании
+# ENCHANTING_REFUND_AMOUNT - Количество возврата при зачаровании
+# ENCHANTING_EXP_GAIN - Прирост опыта зачарования
+
+# BUTCHERY_DROP_MULTIPLIER - Множитель дропа при разделке
+# FARMING_DROP_MULTIPLIER - Множитель дропа при фермерстве
+# FARMING_LUCK - Удача при фермерстве
+# FARMING_EXP_GAIN - Прирост опыта фермерства
+
+# MINING_DROP_MULTIPLIER - Множитель дропа при добыче
+# MINING_LUCK - Удача при добыче
+# BLASTING_DROP_MULTIPLIER - Множитель дропа при взрыве
+# BLASTING_LUCK - Удача при взрыве
+# MINING_EXP_GAIN - Прирост опыта добычи
+
+# DIGGING_DROP_MULTIPLIER - Множитель дропа при копании
+# DIGGING_LUCK - Удача при копании
+# DIGGING_ARCHAEOLOGY_LUCK - Удача при археологии
+# DIGGING_EXP_GAIN - Прирост опыта копания
+
+# WOODCUTTING_DROP_MULTIPLIER - Множитель дропа при рубке деревьев
+# WOODCUTTING_LUCK - Удача при рубке деревьев
+# WOODCUTTING_EXP_GAIN - Прирост опыта рубки деревьев
+
+# FISHING_EXP_GAIN - Прирост опыта рыбалки
+
+# ARCHERY_EXP_GAIN - Прирост опыта стрельбы из лука
+
+# LIGHT_ARMOR_EXP_GAIN - Прирост опыта легкой брони
+
+# HEAVY_ARMOR_EXP_GAIN - Прирост опыта тяжелой брони
+
+# LIGHT_WEAPONS_EXP_GAIN - Прирост опыта легкого оружия
+
+# HEAVY_WEAPONS_EXP_GAIN - Прирост опыта тяжелого оружия

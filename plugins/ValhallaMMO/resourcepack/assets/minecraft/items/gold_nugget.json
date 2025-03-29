@@ -1,0 +1,334 @@
+{
+    "model": {
+        "type": "range_dispatch",
+        "property": "custom_model_data",
+        "fallback": {
+            "type": "model",
+            "model": "item/gold_nugget"
+        },
+        "entries": [
+            {
+                "threshold": 7780900,
+                "model": {
+                    "type": "model",
+                    "model": "item/trinkets/rough_gold_ring"
+                }
+            },
+            {
+                "threshold": 7780901,
+                "model": {
+                    "type": "model",
+                    "model": "item/trinkets/rough_gold_necklace_amulet"
+                }
+            },
+            {
+                "threshold": 7780902,
+                "model": {
+                    "type": "model",
+                    "model": "item/trinkets/rough_gold_circlet"
+                }
+            },
+            {
+                "threshold": 7780903,
+                "model": {
+                    "type": "model",
+                    "model": "item/trinkets/rough_gold_bracer"
+                }
+            },
+            {
+                "threshold": 7780910,
+                "model": {
+                    "type": "model",
+                    "model": "item/trinkets/gold_necklace_amulet"
+                }
+            },
+            {
+                "threshold": 7781098,
+                "model": {
+                    "type": "model",
+                    "model": "item/trinkets/gold_necklace_2"
+                }
+            },
+            {
+                "threshold": 7781099,
+                "model": {
+                    "type": "model",
+                    "model": "item/trinkets/gold_ring_2"
+                }
+            },
+            {
+                "threshold": 7781100,
+                "model": {
+                    "type": "model",
+                    "model": "item/trinkets/gold_ring"
+                }
+            },
+            {
+                "threshold": 7781101,
+                "model": {
+                    "type": "model",
+                    "model": "item/trinkets/ruby_gold_ring"
+                }
+            },
+            {
+                "threshold": 7781102,
+                "model": {
+                    "type": "model",
+                    "model": "item/trinkets/emerald_gold_ring"
+                }
+            },
+            {
+                "threshold": 7781103,
+                "model": {
+                    "type": "model",
+                    "model": "item/trinkets/opal_gold_ring"
+                }
+            },
+            {
+                "threshold": 7781104,
+                "model": {
+                    "type": "model",
+                    "model": "item/trinkets/sapphire_gold_ring"
+                }
+            },
+            {
+                "threshold": 7781105,
+                "model": {
+                    "type": "model",
+                    "model": "item/trinkets/topaz_gold_ring"
+                }
+            },
+            {
+                "threshold": 7781106,
+                "model": {
+                    "type": "model",
+                    "model": "item/trinkets/peridot_gold_ring"
+                }
+            },
+            {
+                "threshold": 7781107,
+                "model": {
+                    "type": "model",
+                    "model": "item/trinkets/diamond_gold_ring"
+                }
+            },
+            {
+                "threshold": 7781108,
+                "model": {
+                    "type": "model",
+                    "model": "item/trinkets/amethyst_gold_ring"
+                }
+            },
+            {
+                "threshold": 7781200,
+                "model": {
+                    "type": "model",
+                    "model": "item/trinkets/gold_necklace"
+                }
+            },
+            {
+                "threshold": 7781201,
+                "model": {
+                    "type": "model",
+                    "model": "item/trinkets/ruby_gold_necklace"
+                }
+            },
+            {
+                "threshold": 7781202,
+                "model": {
+                    "type": "model",
+                    "model": "item/trinkets/emerald_gold_necklace"
+                }
+            },
+            {
+                "threshold": 7781203,
+                "model": {
+                    "type": "model",
+                    "model": "item/trinkets/opal_gold_necklace"
+                }
+            },
+            {
+                "threshold": 7781204,
+                "model": {
+                    "type": "model",
+                    "model": "item/trinkets/sapphire_gold_necklace"
+                }
+            },
+            {
+                "threshold": 7781205,
+                "model": {
+                    "type": "model",
+                    "model": "item/trinkets/topaz_gold_necklace"
+                }
+            },
+            {
+                "threshold": 7781206,
+                "model": {
+                    "type": "model",
+                    "model": "item/trinkets/peridot_gold_necklace"
+                }
+            },
+            {
+                "threshold": 7781207,
+                "model": {
+                    "type": "model",
+                    "model": "item/trinkets/diamond_gold_necklace"
+                }
+            },
+            {
+                "threshold": 7781208,
+                "model": {
+                    "type": "model",
+                    "model": "item/trinkets/amethyst_gold_necklace"
+                }
+            },
+            {
+                "threshold": 7781300,
+                "model": {
+                    "type": "model",
+                    "model": "item/trinkets/gold_bracer"
+                }
+            },
+            {
+                "threshold": 7781301,
+                "model": {
+                    "type": "model",
+                    "model": "item/trinkets/ruby_gold_bracer"
+                }
+            },
+            {
+                "threshold": 7781302,
+                "model": {
+                    "type": "model",
+                    "model": "item/trinkets/emerald_gold_bracer"
+                }
+            },
+            {
+                "threshold": 7781303,
+                "model": {
+                    "type": "model",
+                    "model": "item/trinkets/opal_gold_bracer"
+                }
+            },
+            {
+                "threshold": 7781304,
+                "model": {
+                    "type": "model",
+                    "model": "item/trinkets/sapphire_gold_bracer"
+                }
+            },
+            {
+                "threshold": 7781305,
+                "model": {
+                    "type": "model",
+                    "model": "item/trinkets/topaz_gold_bracer"
+                }
+            },
+            {
+                "threshold": 7781306,
+                "model": {
+                    "type": "model",
+                    "model": "item/trinkets/peridot_gold_bracer"
+                }
+            },
+            {
+                "threshold": 7781307,
+                "model": {
+                    "type": "model",
+                    "model": "item/trinkets/diamond_gold_bracer"
+                }
+            },
+            {
+                "threshold": 7781308,
+                "model": {
+                    "type": "model",
+                    "model": "item/trinkets/amethyst_gold_bracer"
+                }
+            },
+            {
+                "threshold": 7781320,
+                "model": {
+                    "type": "model",
+                    "model": "item/trinkets/gold_armring"
+                }
+            },
+            {
+                "threshold": 7781330,
+                "model": {
+                    "type": "model",
+                    "model": "item/trinkets/silver_armring"
+                }
+            },
+            {
+                "threshold": 7781400,
+                "model": {
+                    "type": "model",
+                    "model": "item/trinkets/gold_circlet"
+                }
+            },
+            {
+                "threshold": 7781401,
+                "model": {
+                    "type": "model",
+                    "model": "item/trinkets/ruby_gold_circlet"
+                }
+            },
+            {
+                "threshold": 7781402,
+                "model": {
+                    "type": "model",
+                    "model": "item/trinkets/emerald_gold_circlet"
+                }
+            },
+            {
+                "threshold": 7781403,
+                "model": {
+                    "type": "model",
+                    "model": "item/trinkets/opal_gold_circlet"
+                }
+            },
+            {
+                "threshold": 7781404,
+                "model": {
+                    "type": "model",
+                    "model": "item/trinkets/sapphire_gold_circlet"
+                }
+            },
+            {
+                "threshold": 7781405,
+                "model": {
+                    "type": "model",
+                    "model": "item/trinkets/topaz_gold_circlet"
+                }
+            },
+            {
+                "threshold": 7781406,
+                "model": {
+                    "type": "model",
+                    "model": "item/trinkets/peridot_gold_circlet"
+                }
+            },
+            {
+                "threshold": 7781407,
+                "model": {
+                    "type": "model",
+                    "model": "item/trinkets/diamond_gold_circlet"
+                }
+            },
+            {
+                "threshold": 7781408,
+                "model": {
+                    "type": "model",
+                    "model": "item/trinkets/amethyst_gold_circlet"
+                }
+            },
+            {
+                "threshold": 7782110,
+                "model": {
+                    "type": "model",
+                    "model": "item/materials/gold_strip"
+                }
+            }
+        ]
+    }
+}

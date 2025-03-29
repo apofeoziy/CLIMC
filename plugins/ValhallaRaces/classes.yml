@@ -1,0 +1,171 @@
+confirm_button_type: STRUCTURE_VOID:-1
+confirm_button_name: '&aПодтвердить'
+confirm_button_lore: []
+confirm_button_position: 40
+
+classes:
+  warrior:
+    group: 1 # игрок может выбрать 1 класс из каждой группы. Если у вас 3 класса с одинаковым номером группы, игрок может выбрать один из них
+    position: 10
+    icon: IRON_SWORD:-1
+    icon_locked: BARRIER:-1
+    display_name: '&cВоин'
+    description:
+      - '&cВоины &7- это оппортунистические бойцы,'
+      - '&7которые предпочитают безопасность легких клинков'
+      - '&7и тяжелой защиты.'
+      - '&8&m                                       '
+      - '&cВоины &7получают'
+      - '&f- &c+10% &fБроня'
+      - '&f- &c+5% &fУрон в ближнем бою'
+    stat_buffs:
+      MELEE_DAMAGE_DEALT: 0.05 # 10% дополнительного урона в ближнем бою
+      ARMOR_MULTIPLIER_BONUS: 0.1 # Броня на 10% эффективнее
+    # race_filter: # Это просто пример того, как вы можете ограничить определенные классы определенными расами и потенциально создать разные классы для каждой расы
+    #   - human
+    #   - dwarf
+    #   - elf
+    # commands: # Это в основном просто пример того, как вы можете выполнять команды при разблокировке расы/класса
+    #   - minecraft:experience add %player% 1 points
+  barbarian:
+    group: 1
+    position: 19
+    icon: IRON_AXE:-1
+    icon_locked: BARRIER:-1
+    display_name: '&cВарвар'
+    description:
+      - '&cВарвары &7- это неумолимые бойцы,'
+      - '&7которые предпочитают уничтожать своих врагов'
+      - '&7с помощью чистой силы и грубой мощи.'
+      - '&8&m                                       '
+      - '&cВарвары &7получают'
+      - '&f- &c+20% &fСопротивление отбрасыванию'
+      - '&f- &c+10% &fУрон в ближнем бою'
+    stat_buffs:
+      KNOCKBACK_RESISTANCE: 0.2
+      MELEE_DAMAGE_DEALT: 0.1
+  ranger:
+    group: 1
+    position: 28
+    icon: BOW:-1
+    icon_locked: BARRIER:-1
+    display_name: '&cРейнджер'
+    description:
+      - '&cРейнджеры &7- это скрытные убийцы,'
+      - '&7которые предпочитают не сражаться в ближнем бою'
+      - '&7и вместо этого уничтожают своих врагов'
+      - '&7с безопасного расстояния.'
+      - '&8&m                                       '
+      - '&cРейнджеры &7получают'
+      - '&f- &c+2 &fТочность'
+      - '&f- &c+10% &fУрон дальнего боя'
+    stat_buffs:
+      RANGED_INACCURACY: -2
+      RANGED_DAMAGE_DEALT: 0.1
+  alchemist:
+    group: 2
+    position: 13
+    icon: BREWING_STAND:-1
+    icon_locked: BARRIER:-1
+    display_name: '&dАлхимик'
+    description:
+      - '&dАлхимики &7- это фантастические химики,'
+      - '&7способные превращать материалы в другие,'
+      - '&7плавить своих врагов зельями и'
+      - '&7помогать своей группе лечением и усилениями.'
+      - '&8&m                                       '
+      - '&dАлхимики &7получают'
+      - '&f- &d+25 &fКачество зелий'
+      - '&f- &d+50% &fСкорость варки'
+    stat_buffs:
+      ALCHEMY_QUALITY_GENERAL: 25
+      ALCHEMY_BREW_SPEED: 0.5
+  enchanter:
+    group: 2
+    position: 22
+    icon: ENCHANTMENT_TABLE:-1
+    icon_locked: BARRIER:-1
+    display_name: '&bЗачарователь'
+    description:
+      - '&bЗачарователи &7- это ученые магии,'
+      - '&7способные наделять предметы заклинаниями,'
+      - '&7чтобы усилить их свойства.'
+      - '&8&m                                       '
+      - '&bЗачарователи &7получают'
+      - '&f- &b+25 &fКачество зачарования'
+      - '&f- &b+20% &fОпыт зачарования'
+    stat_buffs:
+      ENCHANTING_QUALITY: 25
+      ENCHANTING_VANILLA_EXP_GAIN: 0.2
+  blacksmith:
+    group: 2
+    position: 31
+    icon: ANVIL:-1
+    icon_locked: BARRIER:-1
+    display_name: '&aКузнец'
+    description:
+      - '&aКузнецы &7- это эксперты по металлу,'
+      - '&7создающие более прочные инструменты и броню,'
+      - '&7а также острые, хорошо сбалансированные клинки.'
+      - '&8&m                                       '
+      - '&aКузнецы &7получают'
+      - '&f- &a+25 &fКачество ковки'
+      - '&f- &a-20% &fПотеря прочности'
+    stat_buffs:
+      SMITHING_QUALITY_GENERAL: 25
+      DURABILITY_BONUS: 0.2
+  miner:
+    group: 3
+    position: 16
+    icon: IRON_PICKAXE:-1
+    icon_locked: BARRIER:-1
+    display_name: '&eШахтер'
+    description:
+      - '&eШахтеры &7углубляются в недра земли,'
+      - '&7в поисках богатств, и служат'
+      - '&7основой промышленности.'
+      - '&8&m                                       '
+      - '&eШахтеры &7получают'
+      - '&f- &e+30% &fСкорость добычи'
+      - '&f- &e+10% &fДобыча при копании'
+    stat_buffs:
+      mining_miningdrops_add: 0.1
+      mining_miningspeedbonus_add: 0.3
+  farmer:
+    group: 3
+    position: 25
+    icon: IRON_HOE:-1
+    icon_locked: BARRIER:-1
+    display_name: '&eФермер-Рыбак'
+    description:
+      - '&eФермеры &7живут спокойной, простой жизнью,'
+      - '&7обеспечивая свои города пищей'
+      - '&7и сокровищами океана.'
+      - '&8&m                                       '
+      - '&eФермеры &7получают'
+      - '&f- &e+3 &fУдача при рыбалке'
+      - '&f- &e+30% &fДобыча при фермерстве'
+      - '&f- &e+20% &fСкорость рыбалки'
+    stat_buffs:
+      FISHING_LUCK: 3
+      FISHING_SPEED_MULTIPLIER: 0.2
+    perk_rewards:
+      farming_farmingdrops_add: 0.3
+  terraformer:
+    group: 3
+    position: 34
+    icon: IRON_SHOVEL:-1
+    icon_locked: BARRIER:-1
+    display_name: '&eТерраформер'
+    description:
+      - '&eТерраформеры &7строят, формируют и'
+      - '&7поддерживают мир вокруг них.'
+      - '&7Наиболее подходит для творческих личностей.'
+      - '&8&m                                       '
+      - '&eТерраформеры &7получают'
+      - '&f- &e+50% &fДобыча при рубке деревьев'
+      - '&f- &e+30% &fСкорость рубки и копания'
+    perk_rewards:
+      woodcutting_woodcuttingdrops_add: 0.5
+      woodcutting_woodcuttingspeedbonus_add: 0.3
+      digging_diggingspeedbonus_add: 0.3

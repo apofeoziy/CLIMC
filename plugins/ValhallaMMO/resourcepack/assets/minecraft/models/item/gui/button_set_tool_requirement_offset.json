@@ -1,0 +1,12 @@
+{
+    "parent": "item/generated",
+    "textures": {
+        "layer0": "item/gui/button_set_tool_requirement"
+    },
+    "gui_light": "front",
+    "display": {
+      "gui": {
+        "translation": [12, 9, 0]
+      }
+		}
+}

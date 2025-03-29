@@ -1,0 +1,22 @@
+display_name: <lang.skill-heavy-weapons-displayname>
+icon: IRON_AXE
+icon_data: 3510001
+description: <lang.skill-heavy-weapons-description>
+
+levelbar_title: <lang.skill-heavy-weapons-level-bar>
+levelbar_color: RED # Вы можете выбрать между BLUE, YELLOW, GREEN, PINK, PURPLE, RED, WHITE
+levelbar_style: SEGMENTED_6 # Вы можете выбрать между SEGMENTED_6, SEGMENTED_10, SEGMENTED_12, SEGMENTED_20 и SOLID
+
+# Типы предметов, которые можно наносить на оружие для передачи эффектов зелий. Обычно это должны быть только зелья, но если вы хотите
+# сделать применимыми предметы пищи, вы тоже можете это сделать.
+valid_coating_items:
+- POTION
+- SPLASH_POTION
+- LINGERING_POTION
+- SNOWBALL
+
+require_empty_offhand: true # Если true, игрокам потребуется пустая вторая рука при использовании тяжелого оружия, иначе будет применен штраф к скорости атаки
+attack_speed_reduction_occupied_offhand: 0.0 # Штраф к скорости атаки, применяемый к игроку, когда у него что-то есть во второй руке при использовании тяжелого оружия
+attack_speed_reduction_heavyweapon_in_offhand: -0.5 # Дополнительный штраф к скорости атаки, если этот предмет во второй руке также является тяжелым оружием
+# В итоге, использование двух тяжелых оружий снизит скорость атаки на 50%
+warning_dual_wielding: <lang.heavy-weapons-warning-dual-wielding> # Сообщение, отправляемое игроку при получении штрафа из-за использования двух тяжелых оружий (один раз)

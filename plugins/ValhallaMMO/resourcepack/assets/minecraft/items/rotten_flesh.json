@@ -1,0 +1,75 @@
+{
+    "model": {
+        "type": "range_dispatch",
+        "property": "custom_model_data",
+        "fallback": {
+            "type": "model",
+            "model": "item/rotten_flesh"
+        },
+        "entries": [
+            {
+                "threshold": 5829310,
+                "model": {
+                    "type": "model",
+                    "model": "item/gui/icon_ring"
+                }
+            },
+            {
+                "threshold": 5829311,
+                "model": {
+                    "type": "model",
+                    "model": "item/gui/icon_necklace"
+                }
+            },
+            {
+                "threshold": 5829312,
+                "model": {
+                    "type": "model",
+                    "model": "item/gui/icon_bracer"
+                }
+            },
+            {
+                "threshold": 5829313,
+                "model": {
+                    "type": "model",
+                    "model": "item/gui/icon_belt"
+                }
+            },
+            {
+                "threshold": 5829314,
+                "model": {
+                    "type": "model",
+                    "model": "item/gui/icon_mask"
+                }
+            },
+            {
+                "threshold": 5829315,
+                "model": {
+                    "type": "model",
+                    "model": "item/gui/icon_pin"
+                }
+            },
+            {
+                "threshold": 5829316,
+                "model": {
+                    "type": "model",
+                    "model": "item/gui/icon_circlet"
+                }
+            },
+            {
+                "threshold": 5829317,
+                "model": {
+                    "type": "model",
+                    "model": "item/gui/icon_accessory"
+                }
+            },
+            {
+                "threshold": 5829320,
+                "model": {
+                    "type": "model",
+                    "model": "item/gui/icon_locked_trinket_slot"
+                }
+            }
+        ]
+    }
+}

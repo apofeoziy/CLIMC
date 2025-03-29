@@ -1,0 +1,33 @@
+{
+    "model": {
+        "type": "range_dispatch",
+        "property": "custom_model_data",
+        "fallback": {
+            "type": "model",
+            "model": "item/barrier"
+        },
+        "entries": [
+            {
+                "threshold": 1829130,
+                "model": {
+                    "type": "model",
+                    "model": "item/gui/button_blockvalidation"
+                }
+            },
+            {
+                "threshold": 1829131,
+                "model": {
+                    "type": "model",
+                    "model": "item/gui/button_delete"
+                }
+            },
+            {
+                "threshold": 1829132,
+                "model": {
+                    "type": "model",
+                    "model": "item/gui/button_delete_confirm"
+                }
+            }
+        ]
+    }
+}

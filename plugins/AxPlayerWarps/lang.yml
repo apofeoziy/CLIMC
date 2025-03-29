@@ -1,0 +1,163 @@
+# ДОКУМЕНТАЦИЯ: https://docs.artillex-studios.com/axplayerwarps.html
+
+help:
+- ' '
+- '<gradient:#33EEBB:#3388BB><b>AxPlayerWarps</b></gradient> &7» &#BBFFDDПомощь:'
+- '  &7⋆ &f/axpw [open] [player] &7| &#BBFFDDОткрыть меню варпов'
+- '  &7⋆ &f/axpw create <name> &7| &#BBFFDDСоздать варп'
+- '  &7⋆ &f/axpw delete <warp> &7| &#BBFFDDУдалить варп'
+- '  &7⋆ &f/axpw edit <warp> &7| &#BBFFDDОткрыть редактор варпа'
+- '  &7⋆ &f/axpw warp <warp> &7| &#BBFFDDТелепортироваться к варпу'
+- '  &7⋆ &f/axpw info <warp> &7| &#BBFFDDИнформация о варпе'
+- ' '
+
+admin-help:
+- ' '
+- '<gradient:#33EEBB:#3388BB><b>AxPlayerWarps</b></gradient> &7» &#BBFFDDПомощь администратора:'
+- '  &7⋆ &f/axpwadmin reload &7| &#BBFFDDПерезагрузить плагин'
+- '  &7⋆ &f/axpwadmin delete <warp> &7| &#BBFFDDУдалить варп'
+- '  &7⋆ &f/axpwadmin setowner <warp> <player> &7| &#BBFFDDУстановить владельца варпа'
+- ' '
+
+access:
+  private: '&#EE0000Приватный'
+  whitelisted: '&#EEEE00По белому списку'
+  public: '&#00EE00Публичный'
+
+placeholders:
+  no-category: '---'
+  free: Бесплатно
+  no-rating: Нет оценок
+  star:
+    bright: '&#FFFF00⭐'
+    dark: '&#DDDDDD⭐'
+  no-search: '---'
+  warp-not-found: Варп не найден
+
+info:
+- '&#BBFFDD===== &#33EEBB&l%name% &#BBFFDD====='
+- ' '
+- ' &#33EEBBОписание:'
+- ' &#444444❙ &f%description%'
+- ' '
+- ' &#33EEBBИнформация'
+- '   &#444444❙ &#BBFFDDВладелец: &f%owner%'
+- '   &#444444❙ &#BBFFDDСоздан: &f%created%'
+- '   &#444444❙ &#BBFFDDЛокация: &f%world%, %x%, %y%, %z%'
+- '   &#444444❙ &#BBFFDDКатегория: &f%category%'
+- ' '
+- ' &#33EEBBСтатистика'
+- '   &#444444❙ &#BBFFDDПосещений: &f%visitors_unique%'
+- '   &#444444❙ &#BBFFDDРейтинг: &#FFDD00%rating_stars%'
+- '   &#444444❙ &#BBFFDDВ избранном у: &f%favorites% игроков'
+- ' '
+- ' &#33EEBBСтоимость телепортации: &#BBFFDD%price%'
+- ' &#33EEBBДоступ: &#BBFFDD%access%'
+- ' '
+- '&#BBFFDD===== &#33EEBB&l%name% &#BBFFDD====='
+
+create:
+  created: '&#BBFFDDВы успешно создали варп &#33EEBB%warp%&#BBFFDD!'
+  confirm: '&#BBFFDDСоздание варпа будет стоить вам &#33EEBB%price%&#BBFFDD! Если вы всё ещё хотите создать варп, введите эту команду снова!'
+
+whitelist:
+  clear: '&#BBFFDDВы удалили всех игроков из белого списка!'
+  remove: '&#BBFFDDВы удалили &#33EEBB%player% &#BBFFDDиз белого списка!'
+  add: '&#BBFFDDВы добавили &#33EEBB%player% &#BBFFDDв белый список!'
+
+blacklist:
+  clear: '&#BBFFDDВы удалили всех игроков из чёрного списка!'
+  remove: '&#BBFFDDВы удалили &#33EEBB%player% &#BBFFDDиз чёрного списка!'
+  add: '&#BBFFDDВы добавили &#33EEBB%player% &#BBFFDDв чёрный список!'
+
+search:
+  show: '&#BBFFDDПоказаны результаты поиска для &#33EEBB%search%&#BBFFDD!'
+  reset: '&#BBFFDDПоиск отключен!'
+
+rate:
+  add: '&#BBFFDDВы поставили оценку &#33EEBB%rating% &#BBFFDDзвезд этому варпу!'
+  remove: '&#BBFFDDВы удалили свою оценку этого варпа!'
+
+favorite:
+  add: '&#BBFFDDВы добавили варп в избранное!'
+  remove: '&#BBFFDDВы удалили этот варп из избранного!'
+
+editor:
+  update-location: '&#BBFFDDВы изменили местоположение варпа!'
+  update-name: '&#BBFFDDВы изменили название варпа!'
+  update-icon: '&#BBFFDDВы изменили иконку варпа!'
+  remove-icon: '&#BBFFDDВы удалили иконку варпа!'
+  transferred: '&#BBFFDDВы передали право владения варпом игроку &#33EEBB%player%&#BBFFDD!'
+  new-owner: '&#33EEBB%player% &#BBFFDDпередал вам право владения варпом &#33EEBB%warp%&#BBFFDD!'
+
+delete:
+  deleted: '&#BBFFDDВы удалили варп &#33EEBB%warp%&#BBFFDD!'
+
+teleport:
+  success: '&#BBFFDDВы успешно телепортировались к варпу &#33EEBB%warp%&#BBFFDD!'
+  in: '&#BBFFDDВы будете телепортированы через &#33EEBB%seconds% &#BBFFDDсекунд! Не двигайтесь!'
+
+confirm:
+  unsafe: '&#BBFFDDВарп &#33EEBB%warp% &#BBFFDDявляется &#FF0000&nнебезопасным&#BBFFDD! Телепортируйтесь снова, чтобы подтвердить, если вы всё ещё хотите телепортироваться!'
+  paid: '&#BBFFDDТелепортация к варпу &#33EEBB%warp% &#BBFFDDбудет стоить &#33EEBB%price%&#BBFFDD! Телепортируйтесь снова, чтобы подтвердить, если вы всё ещё хотите телепортироваться!'
+
+money:
+  take: '&#33EEBB%price% &#BBFFDDбыло снято с вашего баланса!'
+  got: '&#BBFFDDВы сняли &#33EEBB%price% &#BBFFDDс банка варпа!'
+
+admin:
+  deleted: '&#FF4444Вы удалили варп &#FF0000%warp%&#FF4444!'
+  setowner: '&#FF4444Вы передали варп &#FF0000%warp% &#FF4444игроку &#FF0000%player%&#FF4444!'
+
+errors:
+  disallowed-name-space: '&#FF4444Название варпа не может содержать пробелы!'
+  disallowed-name-length: '&#FF4444Длина названия варпа слишком короткая или слишком длинная!'
+  disallowed-name-blacklisted: '&#FF4444Данное название варпа запрещено!'
+  blacklist-self: '&#FF4444Вы не можете добавить себя в чёрный список!'
+  whitelist-self: '&#FF4444Вы не можете добавить себя в белый список!'
+  player-not-found: '&#FF4444Этот игрок никогда не играл на сервере!'
+  not-a-number: '&#FF4444Указанное значение не является допустимым числом!'
+  must-be-positive: '&#FF4444Указанное значение не является положительным числом!'
+  invalid-name: '&#FF4444Указанное имя недопустимо.'
+  name-exists: '&#FF4444Варп с таким именем уже существует.'
+  max-lines: '&#FF4444Вы не можете добавить больше строк в описание варпа!'
+  not-enough-balance: '&#FF4444У вас недостаточно денег для телепортации к этому варпу!'
+  create-not-enough-currency: '&#FF4444Вам нужно иметь &#FF0000%price% &#FF4444для создания варпа!'
+  cannot-create-here: '&#FF4444Вы не можете создать варп здесь, потому что это защищенная территория.'
+  disallowed-world: '&#FF4444Вы не можете создавать варпы в этом мире.'
+  blacklisted: '&#FF4444Вы не можете телепортироваться к варпу &#FF0000%warp%&#FF4444, потому что вы в чёрном списке!'
+  whitelisted: '&#FF4444Вы не можете телепортироваться к варпу &#FF0000%warp%&#FF4444, потому что он доступен только по белому списку, а вас в нём нет!'
+  private: '&#FF4444Варп &#FF0000%warp% &#FF4444в настоящее время установлен как приватный, только владелец может телепортироваться к нему!'
+  invalid-world: '&#FF4444Телепортация не удалась, этот варп находится в мире, который больше не существует!'
+  moved: '&#FF4444Вы двигались, поэтому телепортация была отменена!'
+  not-found: '&#FF4444Варп с именем &#FF0000%warp% &#FF4444не найден!'
+  limit-reached: '&#FF4444Вы достигли лимита варпов, вы не можете создать больше варпов! &#FF4444(&#FF0000%current%&#FF4444/&#EE0000%limit%&#FF4444)'
+  nothing-withdrawable: '&#FF4444Нет денег для снятия!'
+  not-your-warp: '&#FF4444Это не ваш варп!'
+
+time:
+  second: с
+  minute: м
+  hour: ч
+  day: д
+
+converting: '&#33FF33Конвертер запущен, проверьте консоль для получения дополнительной информации!'
+
+reload:
+  success: '&#33FF33Плагин успешно перезагружен!'
+  failed: '&#FF3333Не удалось перезагрузить плагин! Что-то не так в файле &f%file%&#FF3333, проверьте консоль или используйте валидатор yaml для исправления ошибок!'
+
+commands:
+  invalid-value: '&#FF0000Недопустимый параметр: &#BB0000%value%'
+  invalid-command: '&#FF0000Недопустимая команда или подкоманда!'
+  missing-argument: '&#FF0000Отсутствует аргумент! Вы должны указать значение для &#BB0000%value%&#FF0000.'
+  no-permission: '&#FF0000У вас нет разрешения на доступ к этой команде!'
+  out-of-range: '&#FF0000Число &#BB0000%number% &#FF0000должно быть между &#BB0000%min% &#FF0000и &#BB0000%max%&#FF0000!'
+  player-only: '&#FF0000Вы должны быть игроком, чтобы использовать эту команду!'
+  invalid-player: '&#FF0000Игрок &#BB0000%player% &#FF0000не найден!'
+  invalid-selector: '&#FF0000Вы не можете использовать этот селектор в этой команде!'
+
+update-notifier: '&#88CCFFДоступна новая версия AxPlayerWarps! &#DDDDDD(&#FFFFFFтекущая: &#FF0000%current% &#DDDDDD| &#FFFFFFпоследняя: &#00FF00%latest%&#DDDDDD)'
+
+# не изменяйте это
+version: 4

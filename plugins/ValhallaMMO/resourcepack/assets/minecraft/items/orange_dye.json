@@ -1,0 +1,187 @@
+{
+    "model": {
+        "type": "range_dispatch",
+        "property": "custom_model_data",
+        "fallback": {
+            "type": "model",
+            "model": "item/orange_dye"
+        },
+        "entries": [
+            {
+                "threshold": 1172800,
+                "model": {
+                    "type": "model",
+                    "model": "item/gui/connection_pieces/unlockable_direct_vertical"
+                }
+            },
+            {
+                "threshold": 1172801,
+                "model": {
+                    "type": "model",
+                    "model": "item/gui/connection_pieces/unlockable_direct_horizontal"
+                }
+            },
+            {
+                "threshold": 1172802,
+                "model": {
+                    "type": "model",
+                    "model": "item/gui/connection_pieces/unlockable_direct_corner_botlft"
+                }
+            },
+            {
+                "threshold": 1172803,
+                "model": {
+                    "type": "model",
+                    "model": "item/gui/connection_pieces/unlockable_direct_corner_toplft"
+                }
+            },
+            {
+                "threshold": 1172804,
+                "model": {
+                    "type": "model",
+                    "model": "item/gui/connection_pieces/unlockable_direct_corner_botrgt"
+                }
+            },
+            {
+                "threshold": 1172805,
+                "model": {
+                    "type": "model",
+                    "model": "item/gui/connection_pieces/unlockable_direct_corner_toprgt"
+                }
+            },
+            {
+                "threshold": 1172806,
+                "model": {
+                    "type": "model",
+                    "model": "item/gui/connection_pieces/unlockable_continuous_vertical"
+                }
+            },
+            {
+                "threshold": 1172807,
+                "model": {
+                    "type": "model",
+                    "model": "item/gui/connection_pieces/unlockable_continuous_horizontal"
+                }
+            },
+            {
+                "threshold": 1172808,
+                "model": {
+                    "type": "model",
+                    "model": "item/gui/connection_pieces/unlockable_endpoint_horiz_right"
+                }
+            },
+            {
+                "threshold": 1172809,
+                "model": {
+                    "type": "model",
+                    "model": "item/gui/connection_pieces/unlockable_endpoint_horiz_left"
+                }
+            },
+            {
+                "threshold": 1172810,
+                "model": {
+                    "type": "model",
+                    "model": "item/gui/connection_pieces/unlockable_endpoint_verti_top"
+                }
+            },
+            {
+                "threshold": 1172811,
+                "model": {
+                    "type": "model",
+                    "model": "item/gui/connection_pieces/unlockable_endpoint_verti_bottom"
+                }
+            },
+            {
+                "threshold": 1172812,
+                "model": {
+                    "type": "model",
+                    "model": "item/gui/connection_pieces/unlockable_endpoint_corner_botlft_side"
+                }
+            },
+            {
+                "threshold": 1172813,
+                "model": {
+                    "type": "model",
+                    "model": "item/gui/connection_pieces/unlockable_endpoint_corner_toplft_side"
+                }
+            },
+            {
+                "threshold": 1172814,
+                "model": {
+                    "type": "model",
+                    "model": "item/gui/connection_pieces/unlockable_endpoint_corner_botrgt_side"
+                }
+            },
+            {
+                "threshold": 1172815,
+                "model": {
+                    "type": "model",
+                    "model": "item/gui/connection_pieces/unlockable_endpoint_corner_toprgt_side"
+                }
+            },
+            {
+                "threshold": 1172816,
+                "model": {
+                    "type": "model",
+                    "model": "item/gui/connection_pieces/unlockable_endpoint_corner_botlft_ends"
+                }
+            },
+            {
+                "threshold": 1172817,
+                "model": {
+                    "type": "model",
+                    "model": "item/gui/connection_pieces/unlockable_endpoint_corner_toplft_ends"
+                }
+            },
+            {
+                "threshold": 1172818,
+                "model": {
+                    "type": "model",
+                    "model": "item/gui/connection_pieces/unlockable_endpoint_corner_botrgt_ends"
+                }
+            },
+            {
+                "threshold": 1172819,
+                "model": {
+                    "type": "model",
+                    "model": "item/gui/connection_pieces/unlockable_endpoint_corner_toprgt_ends"
+                }
+            },
+            {
+                "threshold": 1172820,
+                "model": {
+                    "type": "model",
+                    "model": "item/gui/connection_pieces/unlockable_continuous_corner_botlft"
+                }
+            },
+            {
+                "threshold": 1172821,
+                "model": {
+                    "type": "model",
+                    "model": "item/gui/connection_pieces/unlockable_continuous_corner_toplft"
+                }
+            },
+            {
+                "threshold": 1172822,
+                "model": {
+                    "type": "model",
+                    "model": "item/gui/connection_pieces/unlockable_continuous_corner_botrgt"
+                }
+            },
+            {
+                "threshold": 1172823,
+                "model": {
+                    "type": "model",
+                    "model": "item/gui/connection_pieces/unlockable_continuous_corner_toprgt"
+                }
+            },
+            {
+                "threshold": 8892301,
+                "model": {
+                    "type": "model",
+                    "model": "item/materials/copper_nugget"
+                }
+            }
+        ]
+    }
+}

@@ -1,0 +1,44 @@
+# Ignore server JAR files
+*.jar
+*.zip
+*.tar
+*.tar.gz
+*.tar.xz
+*.tar.bz2
+*.tar.wim
+*.tar.zst
+
+# Ignore server data folders
+world/
+world_nether/
+world_the_end/
+logs/
+cache/
+libraries/
+versions/
+bluemap/
+FancyAnalytics/
+# Ignore player data files
+usercache.json
+banned-ips.json
+banned-players.json
+whitelist.json
+ops.json
+
+# Ignore session and runtime files
+.console_history
+*.log
+*.log.gz
+
+# Ignore IDE files
+.idea/
+.vscode/
+*.iml
+
+# Ignore Node.js dependencies if added later
+node_modules/
+package-lock.json
+
+# Keep plugins folder structure but ignore plugin JARs
+plugins/**/*.jar 
+plugins/*.jar 

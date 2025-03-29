@@ -1,0 +1,243 @@
+{
+    "model": {
+        "type": "range_dispatch",
+        "property": "custom_model_data",
+        "fallback": {
+            "type": "model",
+            "model": "item/arrow"
+        },
+        "entries": [
+            {
+                "threshold": 1829130,
+                "model": {
+                    "type": "model",
+                    "model": "item/gui/button_nextpage"
+                }
+            },
+            {
+                "threshold": 1829131,
+                "model": {
+                    "type": "model",
+                    "model": "item/gui/button_prevpage"
+                }
+            },
+            {
+                "threshold": 3511001,
+                "model": {
+                    "type": "model",
+                    "model": "item/gui/skilltree_nw"
+                }
+            },
+            {
+                "threshold": 3511002,
+                "model": {
+                    "type": "model",
+                    "model": "item/gui/skilltree_n"
+                }
+            },
+            {
+                "threshold": 3511003,
+                "model": {
+                    "type": "model",
+                    "model": "item/gui/skilltree_ne"
+                }
+            },
+            {
+                "threshold": 3511004,
+                "model": {
+                    "type": "model",
+                    "model": "item/gui/skilltree_e"
+                }
+            },
+            {
+                "threshold": 3511005,
+                "model": {
+                    "type": "model",
+                    "model": "item/gui/skilltree_se"
+                }
+            },
+            {
+                "threshold": 3511006,
+                "model": {
+                    "type": "model",
+                    "model": "item/gui/skilltree_s"
+                }
+            },
+            {
+                "threshold": 3511007,
+                "model": {
+                    "type": "model",
+                    "model": "item/gui/skilltree_sw"
+                }
+            },
+            {
+                "threshold": 3511008,
+                "model": {
+                    "type": "model",
+                    "model": "item/gui/skilltree_w"
+                }
+            },
+            {
+                "threshold": 8778210,
+                "model": {
+                    "type": "model",
+                    "model": "item/arrows/arrow_wood"
+                }
+            },
+            {
+                "threshold": 8778211,
+                "model": {
+                    "type": "model",
+                    "model": "item/arrows/arrow_wood"
+                }
+            },
+            {
+                "threshold": 8778212,
+                "model": {
+                    "type": "model",
+                    "model": "item/arrows/arrow_flint"
+                }
+            },
+            {
+                "threshold": 8778213,
+                "model": {
+                    "type": "model",
+                    "model": "item/arrows/arrow_flint"
+                }
+            },
+            {
+                "threshold": 8778214,
+                "model": {
+                    "type": "model",
+                    "model": "item/arrows/arrow_stone"
+                }
+            },
+            {
+                "threshold": 8778215,
+                "model": {
+                    "type": "model",
+                    "model": "item/arrows/arrow_stone"
+                }
+            },
+            {
+                "threshold": 8778216,
+                "model": {
+                    "type": "model",
+                    "model": "item/arrows/arrow_copper"
+                }
+            },
+            {
+                "threshold": 8778217,
+                "model": {
+                    "type": "model",
+                    "model": "item/arrows/arrow_copper"
+                }
+            },
+            {
+                "threshold": 8778218,
+                "model": {
+                    "type": "model",
+                    "model": "item/arrows/arrow_gold"
+                }
+            },
+            {
+                "threshold": 8778219,
+                "model": {
+                    "type": "model",
+                    "model": "item/arrows/arrow_gold"
+                }
+            },
+            {
+                "threshold": 8778220,
+                "model": {
+                    "type": "model",
+                    "model": "item/arrows/arrow_iron"
+                }
+            },
+            {
+                "threshold": 8778221,
+                "model": {
+                    "type": "model",
+                    "model": "item/arrows/arrow_iron"
+                }
+            },
+            {
+                "threshold": 8778222,
+                "model": {
+                    "type": "model",
+                    "model": "item/arrows/arrow_carbon"
+                }
+            },
+            {
+                "threshold": 8778223,
+                "model": {
+                    "type": "model",
+                    "model": "item/arrows/arrow_carbon"
+                }
+            },
+            {
+                "threshold": 8778224,
+                "model": {
+                    "type": "model",
+                    "model": "item/arrows/arrow_diamond"
+                }
+            },
+            {
+                "threshold": 8778225,
+                "model": {
+                    "type": "model",
+                    "model": "item/arrows/arrow_diamond"
+                }
+            },
+            {
+                "threshold": 8778226,
+                "model": {
+                    "type": "model",
+                    "model": "item/arrows/arrow_ender"
+                }
+            },
+            {
+                "threshold": 8778227,
+                "model": {
+                    "type": "model",
+                    "model": "item/arrows/arrow_ender"
+                }
+            },
+            {
+                "threshold": 8778228,
+                "model": {
+                    "type": "model",
+                    "model": "item/arrows/arrow_netherite"
+                }
+            },
+            {
+                "threshold": 8778229,
+                "model": {
+                    "type": "model",
+                    "model": "item/arrows/arrow_incendiary"
+                }
+            },
+            {
+                "threshold": 8778230,
+                "model": {
+                    "type": "model",
+                    "model": "item/arrows/arrow_explosive"
+                }
+            },
+            {
+                "threshold": 8778231,
+                "model": {
+                    "type": "model",
+                    "model": "item/arrows/arrow_lightning"
+                }
+            },
+            {
+                "threshold": 8778232,
+                "model": {
+                    "type": "model",
+                    "model": "item/arrows/arrow_unholy"
+                }
+            }
+        ]
+    }
+}

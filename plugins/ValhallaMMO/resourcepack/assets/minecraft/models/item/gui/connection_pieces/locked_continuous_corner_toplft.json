@@ -1,0 +1,12 @@
+{
+    "parent": "item/generated",
+    "textures": {
+        "layer0": "item/gui/connection_pieces/locked_continuous_corner_toplft"
+    },
+    "gui_light": "front",
+    "display": {
+      "gui": {
+        "scale": [1.125, 1.125, 1.125]
+      }
+		}
+}

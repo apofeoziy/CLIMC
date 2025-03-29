@@ -1,0 +1,61 @@
+{
+    "model": {
+        "type": "range_dispatch",
+        "property": "custom_model_data",
+        "fallback": {
+            "type": "model",
+            "model": "item/netherite_sword"
+        },
+        "entries": [
+            {
+                "threshold": 1981820,
+                "model": {
+                    "type": "model",
+                    "model": "item/weapons/netherite_dagger"
+                }
+            },
+            {
+                "threshold": 1981821,
+                "model": {
+                    "type": "model",
+                    "model": "item/weapons/netherite_mace"
+                }
+            },
+            {
+                "threshold": 1981822,
+                "model": {
+                    "type": "model",
+                    "model": "item/weapons/netherite_rapier"
+                }
+            },
+            {
+                "threshold": 1981825,
+                "model": {
+                    "type": "model",
+                    "model": "item/weapons/netherite_warhammer"
+                }
+            },
+            {
+                "threshold": 1981826,
+                "model": {
+                    "type": "model",
+                    "model": "item/weapons/netherite_spear"
+                }
+            },
+            {
+                "threshold": 1981827,
+                "model": {
+                    "type": "model",
+                    "model": "item/weapons/netherite_greataxe"
+                }
+            },
+            {
+                "threshold": 1981840,
+                "model": {
+                    "type": "model",
+                    "model": "item/weapons/netherite_knuckles"
+                }
+            }
+        ]
+    }
+}

@@ -1,0 +1,26 @@
+display_name: <lang.skill-mining-displayname>
+icon: IRON_PICKAXE
+icon_data: 3510001
+description: <lang.skill-mining-description>
+
+levelbar_title: <lang.skill-mining-level-bar>
+levelbar_color: RED # Вы можете выбрать между BLUE, YELLOW, GREEN, PINK, PURPLE, RED, WHITE
+levelbar_style: SEGMENTED_6 # Вы можете выбрать между SEGMENTED_6, SEGMENTED_10, SEGMENTED_12, SEGMENTED_20 и SOLID
+
+vein_mining_instant: false # Если true, добыча жилы разрушает все блоки, связанные с жилой, мгновенно (иначе это будет по 1 блоку за раз)
+break_limit_vein_mining: 64 # Максимальное количество блоков, которое специальная способность Добыча Жилы может разрушить
+
+drilling_toggle_on: <lang.skill-mining-drilling-enabled>
+drilling_toggle_off: <lang.skill-mining-drilling-disabled>
+drilling_enable_sound: ENTITY_GLOW_SQUID_AMBIENT
+drilling_active_sound: BLOCK_STONE_HIT
+drilling_effect_particle: NONE # 'BLOCK_DUST'
+drilling_effect_color: '#f54242'
+
+forgiving_multipliers: true # множители дропа ниже 0 будут, если false, иногда приводить к тому, что добытые блоки не будут ничего выдавать.
+# если true, количество дропа не может быть ниже 1, поэтому только блоки, которые выдают несколько предметов (такие как руда редстоуна, лазурита,
+# золотая/железная руда с удачей) будут затронуты, но всё остальное будет выдавать как минимум 1 предмет.
+# Это можно установить на false, если вы хотите более сложный опыт для ваших игроков, хотя это может быть для них разочаровывающим
+
+remove_tnt_chaining: true # если true, динамит больше не сможет детонировать другой динамит. вместо этого, динамит, который в противном случае был бы
+# детонирован, выпадает как предмет. Рекомендуется оставить включенным для публичных серверов

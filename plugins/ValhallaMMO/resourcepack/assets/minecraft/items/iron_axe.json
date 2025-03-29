@@ -1,0 +1,33 @@
+{
+    "model": {
+        "type": "range_dispatch",
+        "property": "custom_model_data",
+        "fallback": {
+            "type": "model",
+            "model": "item/iron_axe"
+        },
+        "entries": [
+            {
+                "threshold": 3510001,
+                "model": {
+                    "type": "model",
+                    "model": "item/gui/skillicon_heavyweapons"
+                }
+            },
+            {
+                "threshold": 3510002,
+                "model": {
+                    "type": "model",
+                    "model": "item/gui/skillicon_landscaping"
+                }
+            },
+            {
+                "threshold": 9918290,
+                "model": {
+                    "type": "model",
+                    "model": "item/tools/copper_axe"
+                }
+            }
+        ]
+    }
+}

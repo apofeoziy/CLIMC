@@ -1,0 +1,19 @@
+{
+    "model": {
+        "type": "range_dispatch",
+        "property": "custom_model_data",
+        "fallback": {
+            "type": "model",
+            "model": "item/golden_apple"
+        },
+        "entries": [
+            {
+                "threshold": 1998270,
+                "model": {
+                    "type": "model",
+                    "model": "item/foods/jewelled_apple"
+                }
+            }
+        ]
+    }
+}

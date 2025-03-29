@@ -1,0 +1,145 @@
+# ДОКУМЕНТАЦИЯ: https://docs.artillex-studios.com/axplayerwarps.html
+# КОНСТРУКТОР ПРЕДМЕТОВ: https://docs.artillex-studios.com/item-builder.html
+
+title: '&0&lAxPWarps > &8Варпы (%page%/%pages%)'
+# интерфейс может иметь 1-6 рядов
+rows: 6
+# сколько предметов должно отображаться на одной странице?
+page-size: 45
+
+# ----- ПРЕДМЕТ ВАРПА -----
+
+warp:
+  name: '&#33EEBB&l%name%'
+  lore:
+  - ' '
+  - '&#33EEBBОписание:'
+  - '&#444444❙ &f%description%'
+  - ' '
+  - '&#33EEBBИнформация'
+  - '  &#444444❙ &#BBFFDDВладелец: &f%owner%'
+  - '  &#444444❙ &#BBFFDDСоздан: &f%created%'
+  - '  &#444444❙ &#BBFFDDЛокация: &f%world%, %x%, %y%, %z%'
+  - '  &#444444❙ &#BBFFDDКатегория: &f%category%'
+  - ' '
+  - '&#33EEBBСтатистика'
+  - '  &#444444❙ &#BBFFDDПосещений: &f%visitors_unique%'
+  - '  &#444444❙ &#BBFFDDРейтинг: &#FFDD00%rating_stars%'
+  - '  &#444444❙ &#BBFFDDВ избранном у: &f%favorites% игроков'
+  - ' '
+  - '&#33EEBBСтоимость телепортации: &#BBFFDD%price%'
+  - '&#33EEBBДоступ: &#BBFFDD%access%'
+  - ' '
+  - '&#33EEBB&lЛКМ &#DDDDDD» &#BBFFDDТелепортироваться'
+  - '&#33EEBB&lПКМ &#DDDDDD» &#BBFFDDОбзор и настройки'
+
+# ----- ПРЕДМЕТЫ -----
+
+my-warps:
+  slot: 45
+  # этот шрифт называется 'small caps'
+  name: '&#33EEBB&lᴍᴏɪ ᴠᴀʀᴘʏ'
+  type: ENDER_PEARL
+  lore:
+  - ' '
+  - ' &fНажмите здесь, чтобы просмотреть/редактировать/удалить'
+  - ' &fваши &#33EEBB%my_warps% &fварпы!'
+  - ' '
+  - '&#33EEBB&lНажмите &#DDDDDD» &#BBFFDDОткрыть Мои Варпы'
+  actions:
+  - '[MENU] my-warps'
+  - '[SOUND] ui.button.click|1|1'
+
+sorting:
+  slot: 46
+  material: GLOWSTONE_DUST
+  name: '&#33EEBB&lsᴏʀᴛɪʀᴏᴠᴋᴀ'
+  lore:
+  - ' '
+  - ' &#33EEBBТекущий выбор:'
+  - '  &#444444❙ &#BBFFDD%sorting_selected%'
+  - ' '
+  - '&#33EEBB&lНажмите &#DDDDDD» &#BBFFDDИзменить Сортировку'
+  - '&#33EEBB&lShift + Клик &#DDDDDD» &#BBFFDDСбросить Сортировку'
+  actions:
+  - '[SOUND] ui.button.click|1|1'
+
+previous-page:
+  slot: 48
+  material: ARROW
+  name: '&#33EEBB&lᴘʀᴇᴅʏᴅᴜsʜᴄʜᴀʏᴀ sᴛʀᴀɴɪᴛsᴀ'
+  lore:
+  - ' '
+  - ' &fНажмите здесь, чтобы вернуться'
+  - ' &fна предыдущую страницу!'
+  - ' '
+  - '&#33EEBB&lНажмите &#DDDDDD» &#BBFFDDПредыдущая Страница'
+  actions:
+  - '[SOUND] ui.button.click|1|1'
+  - '[PAGE] previous'
+
+refresh:
+  slot: 49
+  material: SUNFLOWER
+  name: '&#33EEBB&lᴏʙɴᴏᴠɪᴛь'
+  lore:
+  - ' '
+  - ' &fНажмите здесь, чтобы'
+  - ' &fобновить страницу!'
+  - ' '
+  - '&#33EEBB&lНажмите &#DDDDDD» &#BBFFDDОбновить Страницу'
+  actions:
+  - '[SOUND] ui.button.click|1|1'
+  - '[REFRESH]'
+
+next-page:
+  slot: 50
+  material: ARROW
+  name: '&#33EEBB&lsʟᴇᴅᴜʏᴜsʜᴄʜᴀʏᴀ sᴛʀᴀɴɪᴛsᴀ'
+  lore:
+  - ' '
+  - ' &fНажмите здесь, чтобы перейти'
+  - ' &fна следующую страницу!'
+  - ' '
+  - '&#33EEBB&lНажмите &#DDDDDD» &#BBFFDDСледующая Страница'
+  actions:
+  - '[SOUND] ui.button.click|1|1'
+  - '[PAGE] next'
+
+category:
+  slot: 52
+  material: HOPPER
+  name: '&#33EEBB&lᴋᴀᴛᴇɢᴏʀɪʏᴀ'
+  lore:
+  - ' '
+  - ' &#33EEBBТекущий выбор:'
+  - '  &#444444❙ &#BBFFDD%category_selected%'
+  - ' '
+  - '&#33EEBB&lНажмите &#DDDDDD» &#BBFFDDИзменить Категорию'
+  - '&#33EEBB&lShift + Клик &#DDDDDD» &#BBFFDDУдалить Фильтр Категории'
+  actions:
+  - '[SOUND] ui.button.click|1|1'
+
+search:
+  slot: 53
+  material: SPYGLASS
+  name: '&#33EEBB&lᴘᴏɪsᴋ ᴠᴀʀᴘᴏᴠ'
+  lore:
+  - ' '
+  - ' &fНажмите здесь, чтобы искать варпы по'
+  - ' &fих названию или по имени владельца!'
+  - ' '
+  - '&#33EEBBТекущий поиск: &#BBFFDD%search%'
+  - ' '
+  - '&#33EEBB&lНажмите &#DDDDDD» &#BBFFDDПоиск'
+  - '&#33EEBB&lShift + Клик &#DDDDDD» &#BBFFDDОчистить Поиск'
+  actions:
+  - '[SOUND] ui.button.click|1|1'
+
+#decoration-example:
+#  slot: 10
+#  type: STONE
+#  name: "&eУкрашение!"
+#  actions:
+#    - "[MENU] close"
+#    - "[MESSAGE] &#FF0000Сообщение"

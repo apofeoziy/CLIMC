@@ -1,0 +1,19 @@
+{
+    "model": {
+        "type": "range_dispatch",
+        "property": "custom_model_data",
+        "fallback": {
+            "type": "model",
+            "model": "item/netherite_ingot"
+        },
+        "entries": [
+            {
+                "threshold": 9827320,
+                "model": {
+                    "type": "model",
+                    "model": "item/materials/hot_netherite_ingot"
+                }
+            }
+        ]
+    }
+}

@@ -1,0 +1,20 @@
+AxGraves|1.18.0|Cz6msz34|modrinth
+AxInventoryRestore|3.5.2|t1ajCt4Y|modrinth
+AxPlayerWarps|1.7.0|QDJHDKvi|modrinth
+AxShulkers|1.18.1|TXhCFOgF|modrinth
+AxTrade|1.15.1|nZSk44a8|modrinth
+BlueMap|5.7-sponge|swbUV1cr|modrinth
+FancyNpcs|2.4.4.249|EeyAn23L|modrinth
+FlectonePulse|0.7.1|WiUMnQfl|modrinth
+InvSee++|0.29.18|bYazc7fd|modrinth
+LuckPerms|v5.4.158-neoforge|Vebnzrzj|modrinth
+PacketEvents|2.7.0|HYKaKraK|modrinth
+PluginHider|1.2-RELEASE|iYogNr3p|modrinth
+Placeholder Plugin|0.0.1-dev.0b0ac1a|U1XWdWNx|modrinth
+Terra|6.6.1-BETA-bukkit|FIlZB9L0|modrinth
+Typewriter|0.8.0-beta-154|Vm7B3ymm|modrinth
+ValhallaMMO|1.4.3|rxrgsoud|modrinth
+ValhallaRaces|2.0|TfasXXFD|modrinth
+ValhallaTrinkets|2.1|XsxeUNHW|modrinth
+ViaBackwards|5.3.0|NpvuJQoq|modrinth
+ViaVersion|5.3.0|P1OZGk5p|modrinth

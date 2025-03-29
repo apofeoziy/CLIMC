@@ -1,0 +1,37 @@
+#  ___       ___  __  ___  __        ___ 
+# |__  |    |__  /  `  |  /  \ |\ | |__
+# |    |___ |___ \__,  |  \__/ | \| |___
+#  __             __   ___ 
+# |__) |  | |    /__` |__  
+# |    \__/ |___ .__/ |___   /\
+#                           /  \
+# __/\___  ____/\_____  ___/    \______
+#        \/           \/  
+# 
+# https://flectone.net/pulse/docs/config/
+console: "Console"
+version: "0.7.0"
+language: "en_us"
+language-player: true
+metrics: true
+bungeecord: false
+velocity: false
+clusters: []
+log-filter:
+  - "Paper Async Command Builder"
+  - "Caught previously unhandled exception :"
+  - "Error received from Telegram GetUpdates Request"
+  - "OkHttp TaskRunner"
+  - "Exception in thread \"ForkJoinPool"
+# https://flectone.net/pulse/docs/config#database
+database:
+  type: SQLITE
+  name: "flectonepulse"
+  host: "localhost"
+  port: "3306"
+  user: "root"
+  password: "1234"
+  parameters: "?autoReconnect=true&useSSL=false&useUnicode=true&characterEncoding=UTF-8"
+# https://flectone.net/pulse/docs/config#module
+module:
+  enable: true
